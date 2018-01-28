@@ -1,0 +1,65 @@
+//컨텐츠 영역에 맞춰 가운데정렬 : content(); header/container/footer width:100%라서 안에서 정렬
+//기본폰트 html,body와 같은 setting : baseFont();
+//IR처리시 1. 앱솔로 날릴때 : blind(absolute); 2. 텍스트인덴트로날릴때 : blind(indent);
+
+
+//clearfix
+@mixin clearFix(){
+  &:after{
+    content:"";
+    display: block;
+    clear: both;
+  }
+}
+//box-sizing
+@mixin boxSizing(){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+//border-radius
+@mixin borderRadius($px){
+  -webkit-border-radius: $px;
+  -moz-border-radius: $px;
+  border-radius: $px;
+}
+
+
+//기본 컨텐츠 사이즈
+@mixin content(){
+  width:$container-size;
+  margin:0 auto;
+}
+
+//기본 폰트
+@mixin baseFont(){
+  font :{
+    family: $base-font;
+    size : $base-size;
+    weight : $normal;
+  }
+  color:$base-color;
+}
+
+//IR 처리 및 텍스트 히든
+@mixin blind($type){
+  @if $type == indent{
+    text-indent:-9999px;
+    line-height:0;
+    font-size:0;
+    overflow:hidden;
+  }@else if $type == absolute{
+    position: absolute;
+    left:-9999px;
+    width:0;
+    height:0;
+  }
+}
+
+//lottoball size
+@mixin lottoball($size:26px,$font:15px){
+  width:$size;
+  height:$size;
+  line-height:$size;
+  font-size:$font;
+}

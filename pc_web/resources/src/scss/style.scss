@@ -1,1 +1,355 @@
 //공통스타일
+/*style.css*/
+// google cdn 이용 (유니코드 너무 갈려져있어..)
+//base-font : 나눔고딕
+//sub-font : noto sans
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/*layout*/
+//layout관련 variable
+$header-height : 0;
+$sub-intro-height: 53px;
+$footer-height: 0;
+$lnb-width : 250px;
+#header{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  min-width:$container-size;
+  z-index:100;
+  .inner_header{
+    @include content();
+  }
+}
+#container{
+  position: relative;
+  z-index:1;
+  width:100%;
+  height:100%;
+  min-width:$container-size
+}
+.sub_intro{
+  @include content();
+  @include clearFix();
+  padding:15px 0 12px;
+  .win_info{
+    float:left;
+    padding:0 0 0 10px;
+    font-size:0;
+    %p{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .win_label{
+      @extend %p;
+      margin-right:8px;
+      font :{
+        family : $sub-notice;
+        size : 12px;
+      }
+      color:$sub-color;
+      .round {
+        color:#e33b14
+      }
+    }
+    .win_number{
+      @extend %p;
+      span{
+        margin-right:6px;
+      }
+    }
+  }
+  .path{
+    float:right;
+    padding:9px 0 0 0;
+    font : {
+      size : 12px;
+      family : $sub-notice;
+    }
+    color:#787878;
+    line-height:100%;
+    .home{
+      @include blind(indent);
+      display: inline-block;
+      width:10px;
+      height:12px;
+      background: url('#{$common-img}ico_home.png') no-repeat 0 50%;
+      vertical-align: middle;
+    }
+    .now{
+      font-weight:normal
+    }
+  }
+}
+.content_section{
+  position: relative;
+  min-height:100%;
+  width:$container-size;
+  @include boxSizing();
+  padding:($header-height + $sub-intro-height) 0 0 $lnb-width;
+  margin:-($header-height + $sub-intro-height) auto 0;
+  $border-height:5px;//파랑보더높이값임
+  %border-top{
+    &:before{
+      content:"";
+      position: absolute;
+      top:0;
+      height:$border-height;
+      background:$border-strong; //border로 쓸거라서...
+    }
+  }
+  #local_info{
+    @extend %border-top;
+    &:before{
+      width:$lnb-width;
+      left:-1px;
+    }
+    padding-top: $border-height;
+  }
+  #content{
+    @extend %border-top;
+    &:before{
+      width:100%;
+      left:0;
+    }
+    padding-top: $border-height;
+  }
+}
+#local_info{
+  @include boxSizing();
+  position: absolute;
+  left:0;
+  top:$header-height + $sub-intro-height;
+  bottom:0;
+  width:$lnb-width;
+  padding:0 0 $footer-height 0;
+  border:{
+    width:0 1px;
+    style : solid;
+    color :$border-base
+  }
+  .lnb_desc{//lnb 제목(?)
+    padding:43px 25px;
+    background: #f3f4f8;
+    border-bottom:1px solid $border-base;
+    %block{
+      display: block;
+    }
+    span{
+      @extend %block;
+      color:#787878;
+      margin-bottom: 5px;
+    }
+    strong{
+      @extend %block;
+      font : {
+        size :22px;
+        weight:$bold;
+      }
+      letter-spacing: -1px;
+      color:#3c3c3c;
+    }
+  }
+  #lnb{//lnb
+    li{
+      border-bottom:1px solid $border-base;
+      a{
+        display: block;
+        color:$base-color;
+        font : {
+          size : 15px;
+        }
+        padding:18px 25px;
+      }
+      &.on{
+        a{
+          color:$strong-color
+        }
+      }
+    }
+  }
+  .etc_info{//자투리인포메이션
+    padding:20px 12px;
+    .ad{
+
+    }
+    .etc{
+      margin:22px 0 0 0;
+      padding:0 0 0 10px;
+      letter-spacing: -1px;
+      dt{
+        font:{
+          size : 15px;
+          weight : $bold;
+        }
+        color:$sub-color;
+        margin-bottom:10px;
+      }
+      dd{
+        font-size:13px;
+        color:$light-color;
+        margin-bottom: 12px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &.cc_tel{
+          color:#85abf7;
+          font : {
+            size : 27px;
+            weight:$extra-bold
+          }
+        }
+      }
+    }
+  }
+}
+#content{
+  position: relative;
+  @include boxSizing();
+  width:$container-size - $lnb-width;
+  min-height:1000px;
+  padding:0 30px;
+  .page_title{
+    padding:40px 0;
+    text-align: center;
+    %span{
+      display: block;
+    }
+    .desc{
+      @extend %span;
+      margin-bottom: 5px;
+      color:$strong-color
+    }
+    .tit{
+      @extend %span;
+      font : {
+        weight:$bold;
+        size:28px
+      }
+      color:$base-color
+    }
+    border-bottom:1px solid $border-base;
+  }
+  .block_title{
+    padding:40px 5px 12px;
+    border-bottom:1px solid $border-darken;
+    .tit{
+      color :$base-color;
+      font : {
+        size : 20px;
+      }
+    }
+    .desc{
+      color : $light-color;
+      font : {
+        size : 15px;
+      }
+    }
+  }
+  .lotto_pang_slogan{
+    border:1px solid $border-base;
+    @include clearFix();
+    @include boxSizing();
+    width:100%;
+    padding:10px 0 10px 30px;
+    background: #fff;
+    .logo{
+      @include blind(indent);
+      float:left;
+      width:108px;
+      height:66px;
+      margin:0 20px 0 0;
+      background:url("#{$common-img}img_slogan_logo.gif") no-repeat 0 0;
+    }
+    .desc{
+      float:left;
+      line-height:185%;
+      color:#969696;
+      padding:12px 0;
+      font : {
+        size : 12px;
+        family: $sub-notice;
+      }
+    }
+  }
+}
+#footer{
+  position:relative;
+  z-index:10;
+  width:100%;
+  min-width:$container-size;
+  //margin:-70px 0 0 0;
+  .inner_footer{
+    @include content();
+  }
+}
+/*form controls*/
+input{
+  &[type="text"]{
+
+  }
+  &[type="email"]{
+
+  }
+  &[type="password"] {
+  }
+  &[type="radio"]{
+
+  }
+  &[type="checkbox"]{
+
+  }
+}
+select{
+
+}
+
+button{
+
+
+}
+
+textarea{
+
+}
+/*table*/
+
+/*list*/
+
+/*lottoball*/
+span {
+  &[class^="ball_n"] {
+    display: inline-block;
+    @include lottoball();
+    @include borderRadius(50%);
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    font: {
+      family: Arial,sans-serif;
+      weight: $bold;
+    }
+    & + .plus {
+      vertical-align: middle;
+      font-size:$base-size;
+      color: $sub-color
+    }
+  }
+  &.ball_n1th{
+    background: #f7b629;
+  }
+  &.ball_n10th{
+    background: #b5d9ed;
+  }
+  &.ball_n20th{
+    background: #ee7969;
+  }
+  &.ball_n30th{
+    background: #9b95e2;
+  }
+  &.ball_n40th{
+    background: #58ca7b;
+  }
+}

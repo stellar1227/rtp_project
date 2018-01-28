@@ -13,7 +13,8 @@ var dist = 'resources';
 var paths = {
   commonjs : src + '/js/common/*.js',
   funcjs : src + '/js/*.js',
-  scss : src + '/scss/common-ui.scss'
+  scss : src + '/scss/common-ui.scss',
+  scssAll : src + '/scss/**/*.scss'
 };
 
 gulp.task('js_common_concat', function() {
@@ -52,7 +53,7 @@ gulp.task('scss_compile', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.commonjs, ['js_common_concat']);
   gulp.watch(paths.funcjs, ['js_func_concat']);
-  gulp.watch(paths.scss, ['scss_compile']);
+  gulp.watch(paths.scssAll, ['scss_compile']);
 });
 
 gulp.task('default', ['js_common_concat', 'js_func_concat', 'scss_compile', 'watch']);

@@ -1,7 +1,7 @@
-#rtpProject
+# rtpProject
 **rtp with Mabin.kim**
 
-##folderTree
+## folderTree
 
 **mobile_web // pc_web (root 분리)**
 
@@ -38,7 +38,7 @@
         - category별 생성 (workSheet참조 - 이후 수정)
     
 
-##Naming guide
+## Naming guide
 
 **numbering 시 바로연결**
 - file : snake_case (under3)

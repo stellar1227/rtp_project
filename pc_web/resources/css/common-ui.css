@@ -1,5 +1,153 @@
 @charset "UTF-8";
 /*reset*/
-html, body { margin: 0; padding: 0; font-family: Dotum,'돋움'; }
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; }
+
+html, body { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight: 400; color: #010101; height: 100%; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 400; font-size: 100%; }
+
+em, i, address { font-style: normal; }
+
+ul, ol { list-style: none; }
+
+img { border: 0; vertical-align: top; }
+
+table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+
+a { text-decoration: none; color: #010101; }
+
+a:hover { text-decoration: underline; }
+
+input { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight: 400; color: #010101; }
+
+select { -webkit-appearance: none; font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight: 400; color: #010101; }
+
+select::-ms-expand { display: none; }
+
+button { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight: 400; color: #010101; border: 0; background: transparent; cursor: pointer; }
+
+textarea { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight: 400; color: #010101; }
+
+.blind { position: absolute; left: -9999px; width: 0; height: 0; }
+
+#skipnavi { position: absolute; left: -9999px; width: 0; height: 0; }
+
+caption { position: absolute; left: -9999px; width: 0; height: 0; }
+
+/*style.css*/
+/*layout*/
+#header { position: absolute; left: 0; top: 0; width: 100%; min-width: 1190px; z-index: 100; }
+
+#header .inner_header { width: 1190px; margin: 0 auto; }
+
+#container { position: relative; z-index: 1; width: 100%; height: 100%; min-width: 1190px; }
+
+.sub_intro { width: 1190px; margin: 0 auto; padding: 15px 0 12px; }
+
+.sub_intro:after { content: ""; display: block; clear: both; }
+
+.sub_intro .win_info { float: left; padding: 0 0 0 10px; font-size: 0; }
+
+.sub_intro .win_info .win_label, .sub_intro .win_info .win_number { display: inline-block; vertical-align: middle; }
+
+.sub_intro .win_info .win_label { margin-right: 8px; font-family: "Gulim", "굴림", sans-serif; font-size: 12px; color: #505050; }
+
+.sub_intro .win_info .win_label .round { color: #e33b14; }
+
+.sub_intro .win_info .win_number span { margin-right: 6px; }
+
+.sub_intro .path { float: right; padding: 9px 0 0 0; font-size: 12px; font-family: "Gulim", "굴림", sans-serif; color: #787878; line-height: 100%; }
+
+.sub_intro .path .home { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; display: inline-block; width: 10px; height: 12px; background: url("../img/common/ico_home.png") no-repeat 0 50%; vertical-align: middle; }
+
+.sub_intro .path .now { font-weight: normal; }
+
+.content_section { position: relative; min-height: 100%; width: 1190px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 53px 0 0 250px; margin: -53px auto 0; }
+
+.content_section #local_info:before, .content_section #content:before { content: ""; position: absolute; top: 0; height: 5px; background: #85abf7; }
+
+.content_section #local_info { padding-top: 5px; }
+
+.content_section #local_info:before { width: 250px; left: -1px; }
+
+.content_section #content { padding-top: 5px; }
+
+.content_section #content:before { width: 100%; left: 0; }
+
+#local_info { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; left: 0; top: 53px; bottom: 0; width: 250px; padding: 0 0 0 0; border-width: 0 1px; border-style: solid; border-color: #d6d6d6; }
+
+#local_info .lnb_desc { padding: 43px 25px; background: #f3f4f8; border-bottom: 1px solid #d6d6d6; }
+
+#local_info .lnb_desc span, #local_info .lnb_desc strong { display: block; }
+
+#local_info .lnb_desc span { color: #787878; margin-bottom: 5px; }
+
+#local_info .lnb_desc strong { font-size: 22px; font-weight: 700; letter-spacing: -1px; color: #3c3c3c; }
+
+#local_info #lnb li { border-bottom: 1px solid #d6d6d6; }
+
+#local_info #lnb li a { display: block; color: #010101; font-size: 15px; padding: 18px 25px; }
+
+#local_info #lnb li.on a { color: #528dff; }
+
+#local_info .etc_info { padding: 20px 12px; }
+
+#local_info .etc_info .etc { margin: 22px 0 0 0; padding: 0 0 0 10px; letter-spacing: -1px; }
+
+#local_info .etc_info .etc dt { font-size: 15px; font-weight: 700; color: #505050; margin-bottom: 10px; }
+
+#local_info .etc_info .etc dd { font-size: 13px; color: #72767e; margin-bottom: 12px; }
+
+#local_info .etc_info .etc dd:last-child { margin-bottom: 0; }
+
+#local_info .etc_info .etc dd.cc_tel { color: #85abf7; font-size: 27px; font-weight: 800; }
+
+#content { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 940px; min-height: 1000px; padding: 0 30px; }
+
+#content .page_title { padding: 40px 0; text-align: center; border-bottom: 1px solid #d6d6d6; }
+
+#content .page_title .desc, #content .page_title .tit { display: block; }
+
+#content .page_title .desc { margin-bottom: 5px; color: #528dff; }
+
+#content .page_title .tit { font-weight: 700; font-size: 28px; color: #010101; }
+
+#content .block_title { padding: 40px 5px 12px; border-bottom: 1px solid #505050; }
+
+#content .block_title .tit { color: #010101; font-size: 20px; }
+
+#content .block_title .desc { color: #72767e; font-size: 15px; }
+
+#content .lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; background: #fff; }
+
+#content .lotto_pang_slogan:after { content: ""; display: block; clear: both; }
+
+#content .lotto_pang_slogan .logo { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; float: left; width: 108px; height: 66px; margin: 0 20px 0 0; background: url("../img/common/img_slogan_logo.gif") no-repeat 0 0; }
+
+#content .lotto_pang_slogan .desc { float: left; line-height: 185%; color: #969696; padding: 12px 0; font-size: 12px; font-family: "Gulim", "굴림", sans-serif; }
+
+#footer { position: relative; z-index: 10; width: 100%; min-width: 1190px; }
+
+#footer .inner_footer { width: 1190px; margin: 0 auto; }
+
+/*form controls*/
+/*table*/
+/*list*/
+/*lottoball*/
+span[class^="ball_n"] { display: inline-block; width: 26px; height: 26px; line-height: 26px; font-size: 15px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; vertical-align: middle; text-align: center; color: #fff; font-family: Arial,sans-serif; font-weight: 700; }
+
+span[class^="ball_n"] + .plus { vertical-align: middle; font-size: 14px; color: #505050; }
+
+span.ball_n1th { background: #f7b629; }
+
+span.ball_n10th { background: #b5d9ed; }
+
+span.ball_n20th { background: #ee7969; }
+
+span.ball_n30th { background: #9b95e2; }
+
+span.ball_n40th { background: #58ca7b; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
