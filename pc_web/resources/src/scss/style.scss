@@ -308,7 +308,30 @@ input{
 }
 
 select{
-
+  min-width:99px;
+  width:auto;
+  height:44px;
+  padding:0 40px 0 20px;
+  border:1px solid $input-b-primary;
+  background-image:url("#{$common-img}/ico_select.png");
+  background-repeat : no-repeat;
+  background-position:100% 0;
+  background-color:$input-g-primary;
+  color:$base-color;
+  &.essential{
+    border:1px solid $input-b-strong;
+    background-color:$input-g-strong;
+    color:$strong-color;
+  }
+  &[disabled]{
+    border:1px solid $input-b-disabled;
+    background-color:$input-g-disabled;
+    &.essential{
+      border:1px solid $input-b-strong;
+      background-color:$input-g-disabled;
+    }
+  }
+  cursor:pointer;
 }
 
 /*button style*/

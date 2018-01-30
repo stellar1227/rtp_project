@@ -181,6 +181,14 @@ textarea { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight
 
 .input_custom input[type='radio'] + label span { margin: 0 0 0 8px; vertical-align: middle; font-size: 15px; color: #000; }
 
+select { min-width: 99px; width: auto; height: 44px; padding: 0 40px 0 20px; border: 1px solid #ccc; background-image: url("../img/common//ico_select.png"); background-repeat: no-repeat; background-position: 100% 0; background-color: #fff; color: #000; cursor: pointer; }
+
+select.essential { border: 1px solid #528dff; background-color: #e8f0f9; color: #528dff; }
+
+select[disabled] { border: 1px solid #cfcfcf; background-color: #f4f4f4; }
+
+select[disabled].essential { border: 1px solid #528dff; background-color: #f4f4f4; }
+
 /*button style*/
 .btn_primary { background: #72767e; }
 
@@ -197,6 +205,8 @@ button[disabled]:hover { background: #b8b8b8; }
 .btn_wrap { font-size: 0; }
 
 .btn_wrap[data-align="center"] { text-align: center; }
+
+.btn_wrap[data-align="center"] .btn_primary, .btn_wrap[data-align="center"] .btn_strong { width: 190px; }
 
 .btn_wrap[data-align="left"] { text-align: left; }
 

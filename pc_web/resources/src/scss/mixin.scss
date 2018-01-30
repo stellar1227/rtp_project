@@ -1,8 +1,3 @@
-//컨텐츠 영역에 맞춰 가운데정렬 : content(); header/container/footer width:100%라서 안에서 정렬
-//기본폰트 html,body와 같은 setting : baseFont();
-//IR처리시 1. 앱솔로 날릴때 : blind(absolute); 2. 텍스트인덴트로날릴때 : blind(indent);
-
-
 //clearfix
 @mixin clearFix(){
   &:after{
@@ -114,6 +109,7 @@
   }
 }
 
+
 //input custom (radio/checkbox)
 @mixin checkStyle($type){
   &[type= '#{$type}'][disabled]{
@@ -215,6 +211,7 @@
     color : $color
   }
 }
+
 
 
 //lottoball size
