@@ -41,7 +41,8 @@
 ## Naming guide
 
 **numbering 시 바로연결**
-- file : snake_case (under3)
+- file : snake_case (under3) 
+    - 카테고리_내용_용도_타입
 
 - css_class : snake_case (under3) // 줄임작성 지향하나 너무줄이면뉴뉴
     - 내용_용도_타입 || 용도_내용_타입 

@@ -36,12 +36,29 @@
 <section class="guideSection">
     <h2 class="guideTitle">Form Control</h2>
     <p class="guideDescription">form control code snippet</p>
-    <h3 class="guideItemTitle">input[type=text,password] // default, readonly, disabled</h3>
+    <articel>
+        <h3 class="guideItemTitle">input[type=text,password] // default, readonly, disabled</h3>
+        <p class="guideDescription"></p>
+        <div class="input_checkbox">
+            <input type="checkbox" id="test1">
+            <label for="test1">레이블이다 이것은짜샤</label>
+        </div>
+    </articel>
     <h3 class="guideItemTitle">input[type=radio,checkbox]// default, readonly, disabled</h3>
     <h3 class="guideItemTitle">input[type=file]</h3>
     <h3 class="guideItemTitle">select</h3>
     <h3 class="guideItemTitle">textarea</h3>
-    <h3 class="guideItemTitle">button,a</h3>
+    <article>
+        <h3 class="guideItemTitle">button,a</h3>
+        <p class="guideDescription">버튼/a 같이 동작, 기본은 btn_strong/btn_primary(디자인관련클래스) , 해당 btn의 별도 동작은 이중클래스부여(mixin으로 조절)</p>
+        <button type="button" class="btn_strong">등록하기</button>
+        <button type="button" class="btn_primary">취소하기</button>
+        <button type="button" class="btn_primary" disabled>등록하기</button><!-- button disabled상태 -->
+        <div class="btn_wrap" data-align="center"><!-- 정렬 center/right/left -->
+            <a href="#" class="btn_strong btn_submit">등록하기</a>
+            <a href="#" class="btn_primary btn_cancel">취소하기</a>
+        </div>
+    </article>
 </section>
 <section class="guideSection">
     <h2 class="guideTitle">Table</h2>
@@ -58,6 +75,9 @@
 <section class="guideSection">
     <h2 class="guideTitle">List</h2>
     <h3 class="guideItemTitle">list item - accordian</h3>
+    <article>
+        <h3 class="guideItemTitle">pagenation</h3>
+    </article>
 </section>
 <section class="guideSection">
     <h2 class="guideTitle">Popup</h2>
@@ -99,9 +119,6 @@
             </aside><!-- //하단 슬로건 -->
         </div>
     </article>
-
-</section>
-<section class="guideSection">
 
 </section>
 

@@ -56,6 +56,24 @@
   }
 }
 
+//button
+@mixin button($wid:99px, $bg:$btn-primary, $hei:off, $font:off, $color:off){
+  width:$wid;
+  background:$bg;
+  @if $hei != off{
+    height:$hei;
+    line-height:$hei;
+  }
+  @if $font != off{
+    font : {
+      size : $font;
+    }
+  }
+  @if $color != off{
+    color : $color
+  }
+}
+
 //lottoball size
 @mixin lottoball($size:26px,$font:15px){
   width:$size;

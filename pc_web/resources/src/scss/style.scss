@@ -306,10 +306,70 @@ select{
 
 }
 
-button{
-
-
+/*button style*/
+%btn{
+  display: inline-block;
+  @include boxSizing();
+  @include borderRadius(2px);
+  min-width:99px;
+  height:44px;
+  padding: 0 20px;
+  line-height:44px;
+  font : {
+    size : 15px;
+    weight:$bold;
+  }
+  color:#fff;
+  text-align: center;
+  &:hover{
+    text-underline: none;
+  }
 }
+.btn_primary{
+  @extend %btn;
+  background: $btn-primary;
+  &:hover{
+    background:darken($btn-primary, 20%);
+  }
+}
+.btn_strong{
+  @extend %btn;
+  background: $btn-strong;
+  &:hover{
+    background:darken($btn-strong, 20%);
+  }
+}
+button{
+  &[disabled]{
+    @extend %btn;
+    background: $btn-disabled;
+    &:hover{
+      background:$btn-disabled;
+    }
+  }
+}
+.btn_wrap{
+  font-size:0;
+  &[data-align="center"]{
+    text-align: center;
+  }
+  &[data-align="left"]{
+    text-align: left;
+  }
+  &[data-align="right"]{
+    text-align: right;
+  }
+  %el{
+    margin:0 5px;
+  }
+  button{
+    @extend %el;
+  }
+  a{
+    @extend %el;
+  }
+}
+
 
 textarea{
 
