@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>page layout</title>
+    <link rel="stylesheet" href="../../resources/css/common-ui.css">
+</head>
+<body>
+<div id="skipnavi">
+    <a href="#container">본문바로가기</a>
+</div>
+<!-- header include -->
+<div id="container">
+    <div class="sub_intro"><!-- sub_intro -->
+        <div class="win_info">
+            <p class="win_label">
+                <span class="round">742</span>회 로또 당첨 번호
+            </p>
+            <p class="win_number">
+                <span class="ball_n1th">1</span><!-- 1부터 9까지 class="ball_n1th" -->
+                <span class="ball_n10th">12</span><!-- 10부터 19까지 class="ball_n10th" -->
+                <span class="ball_n20th">23</span><!-- 20부터 29까지 class="ball_n20th" -->
+                <span class="ball_n30th">34</span><!-- 30부터 39까지 class="ball_n30th" -->
+                <span class="ball_n40th">48</span><!-- 40부터 49까지 class="ball_n40th" -->
+                <span class="plus">+</span>
+                <span class="ball_n1th">6</span>
+            </p>
+        </div>
+        <p class="path">
+            <span class="home">home</span>
+            &gt;
+            <span class="depth">회원가입</span>
+            &gt;
+            <strong class="now">무료회원 가입</strong>
+        </p>
+    </div><!-- //sub_intro -->
+    <div class="content_section">
+        <section id="local_info"><!-- local_info -->
+            <h2 class="blind">지역네비게이션</h2>
+            <p class="lnb_desc">
+                <span>오로지 로또팡에만 있는!</span>
+                <strong>특별한 회원 서비스</strong>
+            </p>
+            <nav id="lnb"><!-- lnb -->
+                <ul>
+                    <li class="on"><a href="#">무료 회원 가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">가입 소셜 계정 찾기</a></li>
+                    <li><a href="#">혜택! 자유이용권 구매하기</a></li>
+                    <li><a href="#">쿠폰 결제하기</a></li>
+                    <li><a href="#">로또팡 서비스 안내</a></li>
+                    <li><a href="#">테크앤조이 소개</a></li>
+                </ul>
+            </nav><!-- //lnb -->
+            <aside class="etc_info">
+                <div class="ad">
+                    <a href="#">
+                        <img src="../resources/img/temp/tmp_lnb_ad1.jpg" alt="로또팡 내 모든 서비스 무제한 이용가능!! 자유이용권 구매하기">
+                    </a><!-- N; img 관리자등록시 alt 갱신 -->
+                </div>
+                <dl class="etc">
+                    <dt>고객센터</dt>
+                    <dd class="cc_tel">070-8221-5031</dd>
+                    <dd>운영시간 : 월 ~ 금 09:00 ~ 18:00</dd>
+                </dl>
+                <dl class="etc">
+                    <dt>무통장 입금 계좌번호</dt>
+                    <dd><strong>국민</strong> 443101-01-118753</dd>
+                    <dd><strong>우리</strong> 1005-402-148847</dd>
+                    <dd><strong>신한</strong> 110-214-719112</dd>
+                    <dd>(예금주 : 서주형)</dd>
+                </dl>
+                <dl class="etc">
+                    <dt>유의사항</dt>
+                    <dd>- 1:1 회원 게시판에 입금 확인을 요청.</dd>
+                    <dd>- 주문자와 입금자 이름이 일치해야 함.</dd>
+                </dl>
+            </aside>
+        </section><!-- //local_info -->
+        <section id="content"><!-- content -->
+            <h2 class="page_title">
+                <span class="desc">특별한 회원 서비스</span>
+                <span class="tit">무료 회원 가입</span>
+            </h2>
+
+
+            
+            <h3 class="block_title">
+                <span class="tit">필수사항 입력</span>
+            </h3>
+
+            <div class="input_table"><!-- input_table : 필수사항 입력 -->
+                <table>
+                    <caption class="blind">필수사항 입력</caption>
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">계정 ID/이메일</th>
+                            <td>
+                                <b>N602221122</b>님
+                                <span data-color="blue">melissah@naver.com</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="joinNickNm">닉네임<span data-color="red">(필수)</span></label></th>
+                            <td>
+                                <input type="text" size="20" required id="joinNickNm" title="닉네임 입력">
+                                <button class="btn_primary">중복확인</button>
+                                <p class="validate_notice">이미 사용중입니다. 다른 닉네임을 입력해주세요.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="joinPhoneNum">본인명의 휴대전화<span data-color="red">(필수)</span></label></th>
+                            <td>
+                                <input type="text" size="20" required id="joinPhoneNum" title="본인명의 휴대전화 입력">
+                                <button class="btn_strong">인증하기</button>
+                                <input type="checkbox" id="chkSmsAgree" title="SMS수신동의">
+                                <label for="chkSmsAgree">SMS수신</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="joinVerifyNum">인증번호</label></th>
+                            <td>
+                                <input type="number" required id="joinVerifyNum" placeholder="문자로 발송된 인증번호 입력" title="휴대전화 인증번호 입력">
+                                <button class="btn_primary">확인</button>
+                                <p class="table_notice">매주 추천번호 2개 조합이 무료로 <span data-color="red">발송</span>됩니다.<br>현재 사용중이신 번호로 정확하게 기재 바랍니다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- //input_table : 필수사항 입력 -->
+
+            
+
+
+
+            <h3 class="block_title">
+                <span class="tit">선택사항 입력</span>
+            </h3>
+            <div class="input_table"><!-- input_table : 선택사항 입력 -->
+                <table>
+                    <caption class="blind">선택사항 입력</caption>
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><label for="birthDate">생년월일시</label></th>
+                            <td>
+                                <input type="number" id="birthDate" size="10" title="생년월일시 입력">
+                                <select name="" title="생년월일시 양력 음력 선택">
+                                    <option value="">양력</option>
+                                    <option value="">음력</option>
+                                </select><br>
+                                <select name="" title="생년월일시 십이지지 선택">
+                                    <option value="">子(자) 23:30 ~ 01:29</option>
+                                </select>
+                                <select name="" title="성별 선택">
+                                    <option value="">남자</option>
+                                    <option value="">여자</option>
+                                </select>
+                                <select name="" title="평달 윤달 선택">
+                                    <option value="">평달</option>
+                                    <option value="">윤달</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- //input_table : 선택사항 입력 -->
+
+            
+            <h3 class="block_title">
+                <span class="tit">약관 동의</span>
+            </h3>
+
+
+            <!-- [COMMENT] 김가빈 : 
+                1. 아래 182 LINE DIV 클래스 네이밍 표준 필요'ㅁ'/
+            -->
+
+            <div class="">
+                <input type="checkbox" id="chkTermsAgree" title="이용약관 동의">
+                <label for="chkTermsAgree">이용약관에 동의합니다.</label>
+                <a href="member_terms.html">자세히 보기</a>
+
+                <input type="checkbox" id="chkPrivacyAgree" title="개인정보 취급방침 동의">
+                <label for="chkPrivacyAgree">개인정보 취급방침에 동의합니다.</label>
+            </div>
+
+            <div class="btn_wrap" data-align="center">
+                <button class="btn_strong" type="button">가입하기</button>
+            </div>
+
+
+            <aside class="lotto_pang_slogan"><!-- 하단 슬로건 -->
+                <p class="logo">로또예상번호는 로또팡</p>
+                <p class="desc">로또팡의 통계, 분석자료는 국내유일의 기법을 사용하여 새로운 자료들이 자주 추가됩니다! <br>로또방송도 로또팡! 로또 통계도 로또팡!</p>
+            </aside><!-- //하단 슬로건 -->
+        </section><!-- //content -->
+    </div>
+</div>
+<!-- footer include -->
+</body>
+</html>
