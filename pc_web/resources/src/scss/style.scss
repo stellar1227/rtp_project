@@ -448,7 +448,7 @@ textarea{
       }
     }
     td{
-      padding-bottom:5px;
+      padding-bottom:10px;
       font-size:0;
       %elStyle{
         margin-right:6px;
@@ -480,6 +480,13 @@ textarea{
       color:$notice-color;
       font-size:15px;
       padding-left: 15px;
+      margin-bottom: 8px;
+      &:first-child{
+        margin-top: 0;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
     .table_notice{
       margin-top: 8px;
@@ -487,6 +494,9 @@ textarea{
       font-size:14px;
       padding-left: 15px;
       line-height:150%;
+    }
+    .verify-time{
+      color:$notice-color
     }
     span[data-color="red"]{
       color:$notice-color

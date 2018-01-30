@@ -239,7 +239,7 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .input_table table th:before { display: inline-block; content: "ㆍ"; vertical-align: middle; margin-right: 10px; }
 
-.input_table table td { padding-bottom: 5px; font-size: 0; }
+.input_table table td { padding-bottom: 10px; font-size: 0; }
 
 .input_table table td input, .input_table table td .input_custom, .input_table table td button, .input_table table td a, .input_table table td select { margin-right: 6px; vertical-align: middle; }
 
@@ -247,9 +247,15 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .input_table table .has_data { font-size: 15px; padding-bottom: 10px; }
 
-.input_table table .validate_notice { margin-top: 8px; color: #ea614e; font-size: 15px; padding-left: 15px; }
+.input_table table .validate_notice { margin-top: 8px; color: #ea614e; font-size: 15px; padding-left: 15px; margin-bottom: 8px; }
+
+.input_table table .validate_notice:first-child { margin-top: 0; }
+
+.input_table table .validate_notice:last-child { margin-bottom: 0; }
 
 .input_table table .table_notice { margin-top: 8px; color: #72767e; font-size: 14px; padding-left: 15px; line-height: 150%; }
+
+.input_table table .verify-time { color: #ea614e; }
 
 .input_table table span[data-color="red"] { color: #ea614e; }
 
