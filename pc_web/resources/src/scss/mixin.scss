@@ -58,23 +58,25 @@
 
 //input (pswd/txt)
 @mixin inputStyle($type){
-  @include boxSizing();
-  min-width:148px;
-  height:44px;
-  line-height:44px;
-  padding:0 15px;
-  border:{
-    style : solid;
-    width : 1px;
-  }
-  font-size:15px;
-  &:focus{
-    border-color:$input-b-strong;
-  }
   @if $type == default{
+    @include boxSizing();
+    min-width:148px;
+    height:44px;
+    line-height:44px;
+    padding:0 15px;
+    border:{
+      style : solid;
+      width : 1px;
+    }
+    font-size:15px;
+    &:focus{
+      border-color:$input-b-strong;
+    }
+
     border-color:$input-b-primary;
     background:$input-g-primary;
     color:$base-color;
+
     &[readonly]{
       border-color:$input-b-disabled;
       background:$input-g-disabled;
@@ -89,6 +91,7 @@
     border-color:$input-b-strong;
     background:$input-g-strong;
     color:$strong-color;
+    font-weight:$extra-bold;
     &[readonly]{
       border-color:$input-b-strong;
       background:$input-g-disabled;
@@ -104,7 +107,7 @@
 //input extend
 %iStyle{
   @include inputStyle(default);
-  &.essential{
+  &[required]{
     @include inputStyle(essential);
   }
 }

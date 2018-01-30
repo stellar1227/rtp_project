@@ -1,0 +1,14 @@
+/*member*/
+//회원가입
+.box_contents{
+  padding:25px 0;
+  border-bottom:1px solid $border-base;
+  .input_custom{
+    padding:0 0 0 60px;
+  }
+  .link_more{
+    vertical-align: middle;
+    color:$strong-color;
+    text-decoration: underline;
+  }
+}

@@ -11,13 +11,11 @@ input[readonly][type="text"], input[readonly][type="password"] { border-color: #
 
 input[disabled][type="text"], input[disabled][type="password"] { border-color: #cfcfcf; background: #f4f4f4; color: #999; }
 
-input.essential[type="text"], input.essential[type="password"] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-width: 148px; height: 44px; line-height: 44px; padding: 0 15px; border-style: solid; border-width: 1px; font-size: 15px; border-color: #528dff; background: #e8f0f9; color: #528dff; }
+input[required][type="text"], input[required][type="password"] { border-color: #528dff; background: #e8f0f9; color: #528dff; font-weight: 800; }
 
-input.essential[type="text"]:focus, input.essential[type="password"]:focus { border-color: #528dff; }
+input[required][readonly][type="text"], input[required][readonly][type="password"] { border-color: #528dff; background: #f4f4f4; color: #528dff; }
 
-input.essential[readonly][type="text"], input.essential[readonly][type="password"] { border-color: #528dff; background: #f4f4f4; color: #528dff; }
-
-input.essential[disabled][type="text"], input.essential[disabled][type="password"] { border-color: #528dff; background: #f4f4f4; color: #999; }
+input[required][disabled][type="text"], input[required][disabled][type="password"] { border-color: #528dff; background: #f4f4f4; color: #999; }
 
 .btn_primary, .btn_strong, button[disabled] { display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; min-width: 99px; height: 44px; padding: 0 20px; line-height: 44px; font-size: 15px; font-weight: 700; color: #fff; text-align: center; }
 
@@ -55,6 +53,8 @@ textarea { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight
 .blind { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #skipnavi { position: absolute; left: -9999px; width: 0; height: 0; }
+
+caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 /*style.css*/
 /*layout*/
@@ -114,6 +114,10 @@ textarea { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight
 
 #local_info .etc_info { padding: 20px 12px; }
 
+#local_info .etc_info .ad { width: 224px; height: 94px; }
+
+#local_info .etc_info .ad img { width: 100%; height: 100%; }
+
 #local_info .etc_info .etc { margin: 22px 0 0 0; padding: 0 0 0 10px; letter-spacing: -1px; }
 
 #local_info .etc_info .etc dt { font-size: 15px; font-weight: 700; color: #555; margin-bottom: 10px; }
@@ -140,7 +144,7 @@ textarea { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight
 
 #content .block_title .desc { color: #72767e; font-size: 15px; }
 
-#content .lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; background: #fff; }
+#content .lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; margin: 30px 0 0 0; background: #fff; }
 
 #content .lotto_pang_slogan:after { content: ""; display: block; clear: both; }
 
@@ -181,13 +185,17 @@ textarea { font-family: "Nanum Gothic", sans-serif; font-size: 14px; font-weight
 
 .input_custom input[type='radio'] + label span { margin: 0 0 0 8px; vertical-align: middle; font-size: 15px; color: #000; }
 
-select { min-width: 99px; width: auto; height: 44px; padding: 0 40px 0 20px; border: 1px solid #ccc; background-image: url("../img/common//ico_select.png"); background-repeat: no-repeat; background-position: 100% 0; background-color: #fff; color: #000; cursor: pointer; }
+select { min-width: 89px; width: auto; height: 44px; padding: 0 40px 0 15px; border: 1px solid #ccc; background-image: url("../img/common//ico_select.png"); background-repeat: no-repeat; background-position: 100% 0; background-color: #fff; color: #000; cursor: pointer; }
 
-select.essential { border: 1px solid #528dff; background-color: #e8f0f9; color: #528dff; }
+select[required] { border: 1px solid #528dff; background-color: #e8f0f9; color: #528dff; }
 
 select[disabled] { border: 1px solid #cfcfcf; background-color: #f4f4f4; }
 
-select[disabled].essential { border: 1px solid #528dff; background-color: #f4f4f4; }
+select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f4; }
+
+[data-width="200"] { width: 200px; }
+
+[data-width="300"] { width: 300px; }
 
 /*button style*/
 .btn_primary { background: #72767e; }
@@ -202,7 +210,7 @@ button[disabled] { background: #b8b8b8; }
 
 button[disabled]:hover { background: #b8b8b8; }
 
-.btn_wrap { font-size: 0; }
+.btn_wrap { font-size: 0; margin: 25px 0 0 0; }
 
 .btn_wrap[data-align="center"] { text-align: center; }
 
@@ -215,6 +223,38 @@ button[disabled]:hover { background: #b8b8b8; }
 .btn_wrap button, .btn_wrap a { margin: 0 5px; }
 
 /*table*/
+.input_table table tbody { border-bottom: 1px solid #d6d6d6; }
+
+.input_table table tbody tr:first-child th { padding-top: 40px; }
+
+.input_table table tbody tr:first-child td { padding-top: 40px; }
+
+.input_table table tbody tr:last-child th { padding-bottom: 40px; }
+
+.input_table table tbody tr:last-child td { padding-bottom: 40px; }
+
+.input_table table tbody tr:last-child .has_data { padding-bottom: 0; }
+
+.input_table table th { padding-bottom: 10px; text-align: left; padding-left: 60px; }
+
+.input_table table th:before { display: inline-block; content: "ㆍ"; vertical-align: middle; margin-right: 10px; }
+
+.input_table table td { padding-bottom: 5px; font-size: 0; }
+
+.input_table table td input, .input_table table td .input_custom, .input_table table td button, .input_table table td a, .input_table table td select { margin-right: 6px; vertical-align: middle; }
+
+.input_table table td .input_custom { margin-left: 5px; }
+
+.input_table table .has_data { font-size: 15px; padding-bottom: 10px; }
+
+.input_table table .validate_notice { margin-top: 8px; color: #ea614e; font-size: 15px; padding-left: 15px; }
+
+.input_table table .table_notice { margin-top: 8px; color: #72767e; font-size: 14px; padding-left: 15px; line-height: 150%; }
+
+.input_table table span[data-color="red"] { color: #ea614e; }
+
+.input_table table span[data-color="blue"] { color: #528dff; }
+
 /*list*/
 /*lottoball*/
 span[class^="ball_n"] { display: inline-block; width: 26px; height: 26px; line-height: 26px; font-size: 15px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; vertical-align: middle; text-align: center; color: #fff; font-family: Arial,sans-serif; font-weight: 700; }
@@ -230,5 +270,12 @@ span.ball_n20th { background: #ee7969; }
 span.ball_n30th { background: #9b95e2; }
 
 span.ball_n40th { background: #58ca7b; }
+
+/*member*/
+.box_contents { padding: 25px 0; border-bottom: 1px solid #d6d6d6; }
+
+.box_contents .input_custom { padding: 0 0 0 60px; }
+
+.box_contents .link_more { vertical-align: middle; color: #528dff; text-decoration: underline; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */

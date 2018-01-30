@@ -173,7 +173,12 @@ $lnb-width : 250px;
   .etc_info{//자투리인포메이션
     padding:20px 12px;
     .ad{
-
+      width:224px;
+      height:94px;
+      img{
+        width:100%;
+        height:100%;
+      }
     }
     .etc{
       margin:22px 0 0 0;
@@ -254,6 +259,7 @@ $lnb-width : 250px;
     @include boxSizing();
     width:100%;
     padding:10px 0 10px 30px;
+    margin:30px 0 0 0;//임시
     background: #fff;
     .logo{
       @include blind(indent);
@@ -308,17 +314,17 @@ input{
 }
 
 select{
-  min-width:99px;
+  min-width:89px;
   width:auto;
   height:44px;
-  padding:0 40px 0 20px;
+  padding:0 40px 0 15px;
   border:1px solid $input-b-primary;
   background-image:url("#{$common-img}/ico_select.png");
   background-repeat : no-repeat;
   background-position:100% 0;
   background-color:$input-g-primary;
   color:$base-color;
-  &.essential{
+  &[required]{
     border:1px solid $input-b-strong;
     background-color:$input-g-strong;
     color:$strong-color;
@@ -326,12 +332,20 @@ select{
   &[disabled]{
     border:1px solid $input-b-disabled;
     background-color:$input-g-disabled;
-    &.essential{
+    &[required]{
       border:1px solid $input-b-strong;
       background-color:$input-g-disabled;
     }
   }
   cursor:pointer;
+}
+
+//input, selector, textares size
+[data-width="200"]{
+  width:200px;
+}
+[data-width="300"]{
+  width:300px;
 }
 
 /*button style*/
@@ -360,6 +374,7 @@ button{
 }
 .btn_wrap{
   font-size:0;
+  margin:25px 0 0 0; //임시
   &[data-align="center"]{
     text-align: center;
     .btn_primary,.btn_strong {
@@ -388,6 +403,100 @@ textarea{
 
 }
 /*table*/
+.input_table{
+  table{
+    tbody{
+      tr{
+        @mixin cellpadding($type){
+          @if $type == top{
+            th{
+              padding-top:40px;
+            }
+            td{
+              padding-top:40px;
+            }
+          }@else if $type == bottom{
+            th{
+              padding-bottom:40px;
+            }
+            td{
+              padding-bottom:40px;
+            }
+          }
+        }
+        &:first-child{
+          @include cellpadding(top)
+        }
+        &:last-child{
+          @include cellpadding(bottom);
+          .has_data{
+            padding-bottom:0;
+          }
+        }
+      }
+      border-bottom:1px solid $border-base;
+    }
+    th{
+      padding-bottom:10px;
+      text-align: left;
+      padding-left:60px;
+      &:before{
+        display: inline-block;
+        content:"ㆍ"; //유니코드 넣을거임
+        vertical-align: middle;
+        margin-right:10px;
+      }
+    }
+    td{
+      padding-bottom:5px;
+      font-size:0;
+      %elStyle{
+        margin-right:6px;
+        vertical-align: middle;
+      }
+      input{
+       @extend %elStyle;
+      }
+      .input_custom{
+        @extend %elStyle;
+        margin-left:5px;
+      }
+      button{
+        @extend %elStyle;
+      }
+      a{
+        @extend %elStyle;
+      }
+      select{
+        @extend %elStyle;
+      }
+    }
+    .has_data{
+      font-size: 15px;
+      padding-bottom:10px;
+    }
+    .validate_notice{
+      margin-top:8px;
+      color:$notice-color;
+      font-size:15px;
+      padding-left: 15px;
+    }
+    .table_notice{
+      margin-top: 8px;
+      color:$light-color;
+      font-size:14px;
+      padding-left: 15px;
+      line-height:150%;
+    }
+    span[data-color="red"]{
+      color:$notice-color
+    }
+    span[data-color="blue"]{
+      color:$strong-color
+    }
+  }
+}
+
 
 /*list*/
 
