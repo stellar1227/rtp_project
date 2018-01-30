@@ -36,14 +36,30 @@
 <section class="guideSection">
     <h2 class="guideTitle">Form Control</h2>
     <p class="guideDescription">form control code snippet</p>
-    <articel>
+    <article>
         <h3 class="guideItemTitle">input[type=text,password] // default, readonly, disabled</h3>
         <p class="guideDescription"></p>
-        <div class="input_checkbox">
-            <input type="checkbox" id="test1">
-            <label for="test1">레이블이다 이것은짜샤</label>
+        <div class="input_checkbox"><!-- default -->
+            <input type="checkbox" id="test1" checked>
+            <label for="test1">기본</label>
         </div>
-    </articel>
+        <div class="input_checkbox"><!-- default -->
+            <input type="checkbox" id="test1">
+            <label for="test1">기본</label>
+        </div>
+        <div class="input_checkbox"><!-- disabled -->
+            <input type="checkbox" id="test3" disabled checked>
+            <label for="test3">안됨!</label>
+        </div>
+        <div class="input_checkbox"><!-- disabled -->
+            <input type="checkbox" id="test3" disabled>
+            <label for="test3">안됨!</label>
+        </div>
+        <div class="input_checkbox"><!-- 단일 -->
+            <input type="checkbox" id="test4">
+            <label for="test4" class="single">내용은써줘?</label>
+        </div>
+    </article>
     <h3 class="guideItemTitle">input[type=radio,checkbox]// default, readonly, disabled</h3>
     <h3 class="guideItemTitle">input[type=file]</h3>
     <h3 class="guideItemTitle">select</h3>

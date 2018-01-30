@@ -57,8 +57,14 @@
 }
 
 //button
-@mixin button($wid:99px, $bg:$btn-primary, $hei:off, $font:off, $color:off){
+@mixin button($wid:99px, $bg:off, $hei:off, $font:off, $color:off){
   width:$wid;
+  @if $bg != off{
+    background:$bg;
+    &:hover{
+      background:darken($bg,20%)
+    }
+  }
   background:$bg;
   @if $hei != off{
     height:$hei;
@@ -71,6 +77,21 @@
   }
   @if $color != off{
     color : $color
+  }
+}
+
+//checkbox
+.input_checkbox{
+  input{
+    &:checked{
+      & + label{
+        background: url('#{$common-img}/bg_checkbox_checked.png') no-repeat 0 0;
+      }
+    }
+
+  }
+  label{
+    background: url('#{$common-img}/bg_checkbox.png') no-repeat 0 0;
   }
 }
 
