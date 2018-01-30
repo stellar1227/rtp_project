@@ -14,17 +14,23 @@
         }
         .guideTable{
             width:100%;
+            border-collapse: collapse;
         }
         .guideTable thead th{
-            padding:10px 0;
-            font-size: 1rem;
-            background: #2d2d2d;
-            color:#fff;
+            padding: 7px 0;
+            font-weight: 400;font-size: 1rem;
+            border-right: 1px solid #687595;
+            background: #394666;
+            color: #fff;
         }
+      
         .guideTable tbody td{
-            padding:10px 20px;
+            padding:4px 12px;
             border-bottom:1px solid #ddd;
             border-right:1px solid #ddd;
+        }
+        .guideTable tbody tr:hover td {    
+            text-decoration: underline;
         }
         .guideTable tbody td:last-child{
             border-right:0;
@@ -40,6 +46,11 @@
             cursor:default;
         }
 
+        .guideTable .issue{
+            background-color:#c61919;
+            color:#fff;
+        }
+
         
     </style>
 </head>
@@ -52,7 +63,7 @@
             <th scope="col">1depth</th>
             <th scope="col">2depth</th>
             <th scope="col">3depth</th>
-            <th scope="col">4depth</th>
+            <th scope="col">화면명</th>
             <th scope="col">url</th>
             <th scope="col">status</th>
             <th scope="col">description</th>
@@ -94,6 +105,93 @@
             <td>대기</td>
             <td></td>
         </tr>
+        
+
+        <tr><!-- MEMBER -->
+            <td rowspan="9">member<br>(회원관련)</td>
+            <td>회원서비스</td>
+            <td>무료 회원가입</td>
+            <td>정보입력</td>
+            <td>무료 회원가입-정보입력</td>
+            <td><a href="../template/member/member_join_info.html" target="_blank" title="새창">member_join_info.html</a></td>
+            <td>진행</td>
+            <td>마크업 완료</td>
+        </tr>
+        <tr>
+            <td>회원서비스</td>
+            <td>무료 회원가입</td>
+            <td>가입완료</td>
+            <td>무료 회원가입-가입완료</td>
+            <td><a href="#"></a></td>
+            <td>불가</td>
+            <td>기획안 대기</td>
+        </tr>
+        <tr>
+            <td>회원서비스</td>
+            <td></td>
+            <td></td>
+            <td>로그인</td>
+            <td><a href="#"></a></td>
+            <td>대기</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>회원서비스</td>
+            <td></td>
+            <td></td>
+            <td>가입 소설 계정찾기</td>
+            <td><a href="../template/member/member_account_find.html" target="_blank" title="새창">member_account_info.html</a></td>
+            <td>진행</td>
+            <td>마크업 완료</td>
+        </tr>
+        <tr>
+            <td>회원서비스</td>
+            <td></td>
+            <td></td>
+            <td>혜택!자유이용권 구매하기</td>
+            <td><a href="#"></a></td>
+            <td>대기</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>회원서비스</td>
+            <td></td>
+            <td></td>
+            <td>쿠폰 결제하기</td>
+            <td><a href="#"></a></td>
+            <td>대기</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>회원서비스</td>
+            <td></td>
+            <td></td>
+            <td>이용약관/개인정보 취급방침/책임한계 및 법적고지</td>
+            <td><a href="#"></a></td>
+            <td>대기</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>회원서비스</td>
+            <td></td>
+            <td></td>
+            <td>로또팡 서비스 안내</td>
+            <td><a href="#"></a></td>
+            <td>불가</td>
+            <td>기획안 대기</td>
+        </tr>
+        <tr>
+            <td>회원서비스</td>
+            <td></td>
+            <td></td>
+            <td>테크앤조이 소개</td>
+            <td><a href="#"></a></td>
+            <td>불가</td>
+            <td>기획안 대기</td>
+        </tr>
+       <!-- //MEMBER -->
+
+
     </tbody>
 </table>
 <script>
@@ -110,11 +208,14 @@
             case "완료" :
                 _statuscell.setAttribute("class","completed");
                 break;
+            case "불가" :
+                _statuscell.setAttribute("class","issue");
+                break;
             default :
                 _linkcell.setAttribute("class","ready");
                 a[i].setAttribute("onclick","return false")
         }
-        _statuscell.style.textAlign = "center";
+        _statuscell.style.textAlign = "center";           
     }
 </script>
 </body>
