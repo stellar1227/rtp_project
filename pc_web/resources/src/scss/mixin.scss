@@ -202,7 +202,6 @@
       background:darken($bg,20%)
     }
   }
-  background:$bg;
   @if $hei != off{
     height:$hei;
     line-height:$hei;
