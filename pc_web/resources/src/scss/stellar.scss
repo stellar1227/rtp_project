@@ -12,3 +12,41 @@
     text-decoration: underline;
   }
 }
+
+.btn_wrap_sns{
+  padding:105px 0;
+  @mixin snsBtn($type){
+    &[data-type="#{$type}"]{
+      background:url('#{$common-img}/bg_sns_#{$type}.png') no-repeat 0 0;
+      @if $type == facebook{
+        background-color:#0a4aab;
+        color:#fff
+      }@else if $type == google{
+        background-color:#ea5d4a;
+        color:#fff
+      }@else if $type == naver{
+        background-color:#00be39;
+        color:#fff
+      }@else if $type == kakao{
+        background-color:#ffe906;
+        color:#3e2d2e
+      }
+    }
+  }
+  .btn_login_sns{
+    @include snsBtn(facebook);
+    @include snsBtn(google);
+    @include snsBtn(naver);
+    @include snsBtn(kakao);
+    display: block;
+    width:400px;
+    height:60px;
+    line-height:60px;
+    margin: 0 auto 10px;
+    text-align: center;
+    font:{
+      size : 18px;
+      weight:$bold;
+    }
+  }
+}

@@ -284,4 +284,16 @@ span.ball_n40th { background: #58ca7b; }
 
 .box_contents .link_more { vertical-align: middle; color: #528dff; text-decoration: underline; }
 
+.btn_wrap_sns { padding: 105px 0; }
+
+.btn_wrap_sns .btn_login_sns { display: block; width: 400px; height: 60px; line-height: 60px; margin: 0 auto 10px; text-align: center; font-size: 18px; font-weight: 700; }
+
+.btn_wrap_sns .btn_login_sns[data-type="facebook"] { background: url("../img/common//bg_sns_facebook.png") no-repeat 0 0; background-color: #0a4aab; color: #fff; }
+
+.btn_wrap_sns .btn_login_sns[data-type="google"] { background: url("../img/common//bg_sns_google.png") no-repeat 0 0; background-color: #ea5d4a; color: #fff; }
+
+.btn_wrap_sns .btn_login_sns[data-type="naver"] { background: url("../img/common//bg_sns_naver.png") no-repeat 0 0; background-color: #00be39; color: #fff; }
+
+.btn_wrap_sns .btn_login_sns[data-type="kakao"] { background: url("../img/common//bg_sns_kakao.png") no-repeat 0 0; background-color: #ffe906; color: #3e2d2e; }
+
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
