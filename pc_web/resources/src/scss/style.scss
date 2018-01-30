@@ -7,7 +7,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 /*layout*/
-//layout관련 variable
+//layout관련 전역 variable
 $header-height : 0;
 $sub-intro-height: 53px;
 $footer-height: 0;
@@ -285,46 +285,33 @@ $lnb-width : 250px;
     @include content();
   }
 }
+
 /*form controls*/
-input{
-  &[type="text"]{
-
-  }
-  &[type="email"]{
-
-  }
-  &[type="password"] {
-  }
-  &[type="radio"]{
-
-  }
-  &[type="checkbox"]{
-
+//checkbox, radio
+.input_custom{
+  display: inline-block;
+  vertical-align: middle;
+  input{
+    @include blind(absolute);
+    @include checkStyle(checkbox);
+    @include checkStyle(radio);
   }
 }
+
+input{
+  &[type="text"]{
+    @extend %iStyle;
+  }
+  &[type="password"] {
+    @extend %iStyle;
+  }
+}
+
 select{
 
 }
 
 /*button style*/
-%btn{
-  display: inline-block;
-  @include boxSizing();
-  @include borderRadius(2px);
-  min-width:99px;
-  height:44px;
-  padding: 0 20px;
-  line-height:44px;
-  font : {
-    size : 15px;
-    weight:$bold;
-  }
-  color:#fff;
-  text-align: center;
-  &:hover{
-    text-underline: none;
-  }
-}
 .btn_primary{
   @extend %btn;
   background: $btn-primary;

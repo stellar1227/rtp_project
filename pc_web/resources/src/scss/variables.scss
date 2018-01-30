@@ -11,9 +11,10 @@ $sub-util : "Dotum", "돋움" , sans-serif;
 //font-size - 기본 14px, 타이틀 관련 사이즈,
 $base-size : 14px;
 
-//color - 기본 #000 , 서브컬러 #555, 연한놈 #72767e 강조 #528dff 공지성강조 #ea614e
+//color - 기본 #000 , 서브컬러 #555, 연한놈 #72767e 강조 #528dff 공지성강조 #ea614e 폼디스에이블 #999
 $base-color : #000;
 $sub-color : #555;
+$disabled-color : #999;
 $light-color : #72767e;
 $strong-color : #528dff;
 $notice-color : #ea614e;
@@ -37,6 +38,14 @@ $border-darken : #505050;
 $btn-primary : #72767e;
 $btn-strong : #528dff;
 $btn-disabled : #b8b8b8;
+
+//input-color -b, border / g, background
+$input-b-primary : #ccc;
+$input-g-primary : #fff;
+$input-b-strong : #528dff;
+$input-g-strong : #e8f0f9;
+$input-b-disabled : #cfcfcf;
+$input-g-disabled : #f4f4f4;
 
 //resource 경로
 $common-img : "../img/common/";

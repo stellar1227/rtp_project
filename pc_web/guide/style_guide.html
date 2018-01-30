@@ -39,28 +39,54 @@
     <article>
         <h3 class="guideItemTitle">input[type=text,password] // default, readonly, disabled</h3>
         <p class="guideDescription"></p>
-        <div class="input_checkbox"><!-- default -->
-            <input type="checkbox" id="test1" checked>
-            <label for="test1">기본</label>
-        </div>
-        <div class="input_checkbox"><!-- default -->
-            <input type="checkbox" id="test1">
-            <label for="test1">기본</label>
-        </div>
-        <div class="input_checkbox"><!-- disabled -->
-            <input type="checkbox" id="test3" disabled checked>
-            <label for="test3">안됨!</label>
-        </div>
-        <div class="input_checkbox"><!-- disabled -->
-            <input type="checkbox" id="test3" disabled>
-            <label for="test3">안됨!</label>
-        </div>
-        <div class="input_checkbox"><!-- 단일 -->
-            <input type="checkbox" id="test4">
-            <label for="test4" class="single">내용은써줘?</label>
-        </div>
+        <input type="text" /><!-- default -->
+        <input type="text" readonly />
+        <input type="text" disabled />
+        <input type="text" class="essential" /><!-- 필수 -->
+        <input type="text" class="essential" readonly /><!-- 필수 -->
+        <input type="text" class="essential" disabled /><!-- 필수 -->
     </article>
-    <h3 class="guideItemTitle">input[type=radio,checkbox]// default, readonly, disabled</h3>
+    <h3 class="guideItemTitle">input[type=radio,checkbox]// default, disabled</h3>
+    <div class="input_custom"><!-- default -->
+        <input type="radio" id="test1" name="t1" checked >
+        <label for="test1"><span>기본</span></label>
+    </div>
+    <div class="input_custom"><!-- default -->
+        <input type="radio" id="test2" name="t1">
+        <label for="test2"><span>기본</span></label>
+    </div>
+    <div class="input_custom"><!-- disabled -->
+        <input type="radio" id="test3" name="t11" disabled checked>
+        <label for="test3"><span>안됨</span></label>
+    </div>
+    <div class="input_custom"><!-- disabled -->
+        <input type="radio" id="test4" name="t11" disabled>
+        <label for="test4"><span>안됨</span></label>
+    </div>
+    <div class="input_custom"><!-- 단일 -->
+        <input type="radio" id="test5" name="t21">
+        <label for="test5"><span class="blind">단일이라 안보여야되는 텍스트지뭐</span></label>
+    </div>
+    <div class="input_custom"><!-- default -->
+        <input type="checkbox" id="test11" checked>
+        <label for="test11"><span>기본</span></label>
+    </div>
+    <div class="input_custom"><!-- default -->
+        <input type="checkbox" id="test12">
+        <label for="test12"><span>기본</span></label>
+    </div>
+    <div class="input_custom"><!-- disabled -->
+        <input type="checkbox" id="test13" disabled checked>
+        <label for="test13"><span>안됨</span></label>
+    </div>
+    <div class="input_custom"><!-- disabled -->
+        <input type="checkbox" id="test14" disabled>
+        <label for="test14"><span>안됨</span></label>
+    </div>
+    <div class="input_custom"><!-- 단일 -->
+        <input type="checkbox" id="test15">
+        <label for="test15"><span class="blind">단일이라 안보여야되는 텍스트지뭐</span></label>
+    </div>
     <h3 class="guideItemTitle">input[type=file]</h3>
     <h3 class="guideItemTitle">select</h3>
     <h3 class="guideItemTitle">textarea</h3>

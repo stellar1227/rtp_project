@@ -56,7 +56,144 @@
   }
 }
 
+//iconsprite
+%ico_form_sprite{
+  background:url('#{$common-img}/ico_form_sprite.png') no-repeat;
+}
+
+//input (pswd/txt)
+@mixin inputStyle($type){
+  @include boxSizing();
+  min-width:148px;
+  height:44px;
+  line-height:44px;
+  padding:0 15px;
+  border:{
+    style : solid;
+    width : 1px;
+  }
+  font-size:15px;
+  &:focus{
+    border-color:$input-b-strong;
+  }
+  @if $type == default{
+    border-color:$input-b-primary;
+    background:$input-g-primary;
+    color:$base-color;
+    &[readonly]{
+      border-color:$input-b-disabled;
+      background:$input-g-disabled;
+      color:$sub-color;
+    }
+    &[disabled]{
+      border-color:$input-b-disabled;
+      background:$input-g-disabled;
+      color:$disabled-color;
+    }
+  }@else if $type == essential{
+    border-color:$input-b-strong;
+    background:$input-g-strong;
+    color:$strong-color;
+    &[readonly]{
+      border-color:$input-b-strong;
+      background:$input-g-disabled;
+      color:$strong-color;
+    }
+    &[disabled]{
+      border-color:$input-b-strong;
+      background:$input-g-disabled;
+      color:$disabled-color;
+    }
+  }
+}
+//input extend
+%iStyle{
+  @include inputStyle(default);
+  &.essential{
+    @include inputStyle(essential);
+  }
+}
+
+//input custom (radio/checkbox)
+@mixin checkStyle($type){
+  &[type= '#{$type}'][disabled]{
+    & + label{
+      &:before{
+        @if $type == checkbox{
+          background-position:-105px -35px
+        }@else if $type == radio{
+          background-position:-105px 0
+        }
+      }
+    }
+    &[type= '#{$type}']:checked + label{
+      &:before{
+        @if $type == checkbox{
+          background-position:-70px -35px
+        }@else if $type == radio{
+          background-position:-70px 0
+        }
+      }
+    }
+  }
+  &[type= '#{$type}']:checked{
+    & + label{
+      &:before{
+        @if $type == checkbox{
+          background-position:0 -35px
+        }@else if $type == radio{
+          background-position:0 0
+        }
+      }
+    }
+  }
+  &[type= '#{$type}'] + label{
+    &:before{
+      content:"";
+      display: inline-block;
+      vertical-align: middle;
+      width:25px;
+      height:25px;
+      @extend %ico_form_sprite;
+      @if $type == checkbox{
+        background-position:-35px -35px;
+      }@else if $type == radio{
+        background-position:-35px 0
+      }
+    }
+    span{
+      margin:0 0 0 8px;
+      vertical-align: middle;
+      font:{
+        size : 15px
+      }
+      color:$base-color;
+    }
+    cursor:pointer
+  }
+}
+
 //button
+//btn class생성을 위한 extend
+%btn{
+  display: inline-block;
+  @include boxSizing();
+  @include borderRadius(2px);
+  min-width:99px;
+  height:44px;
+  padding: 0 20px;
+  line-height:44px;
+  font : {
+    size : 15px;
+    weight:$bold;
+  }
+  color:#fff;
+  text-align: center;
+  &:hover{
+    text-decoration: none;
+  }
+}
+//추가설정을위한 mixin
 @mixin button($wid:99px, $bg:off, $hei:off, $font:off, $color:off){
   width:$wid;
   @if $bg != off{
@@ -80,20 +217,6 @@
   }
 }
 
-//checkbox
-.input_checkbox{
-  input{
-    &:checked{
-      & + label{
-        background: url('#{$common-img}/bg_checkbox_checked.png') no-repeat 0 0;
-      }
-    }
-
-  }
-  label{
-    background: url('#{$common-img}/bg_checkbox.png') no-repeat 0 0;
-  }
-}
 
 //lottoball size
 @mixin lottoball($size:26px,$font:15px){
