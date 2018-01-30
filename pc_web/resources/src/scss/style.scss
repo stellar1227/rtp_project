@@ -352,6 +352,9 @@ button{
   font-size:0;
   &[data-align="center"]{
     text-align: center;
+    .btn_primary,.btn_strong {
+      @include button(190px)
+    }
   }
   &[data-align="left"]{
     text-align: left;
