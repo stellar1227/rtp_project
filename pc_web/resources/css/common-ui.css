@@ -80,7 +80,7 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 .sub_intro .path { float: right; padding: 9px 0 0 0; font-size: 12px; font-family: "Gulim", "굴림", sans-serif; color: #787878; line-height: 100%; }
 
-.sub_intro .path .home { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; display: inline-block; width: 10px; height: 12px; background: url("../img/common/ico_home.png") no-repeat 0 50%; vertical-align: middle; }
+.sub_intro .path .home { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; display: inline-block; width: 10px; height: 12px; background: url("../img/common/ico_home.png") no-repeat 0 0; vertical-align: middle; }
 
 .sub_intro .path .now { font-weight: normal; }
 
@@ -144,7 +144,7 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #content .block_title .desc { color: #72767e; font-size: 15px; }
 
-#content .lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; margin: 30px 0 0 0; background: #fff; }
+#content .lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; margin: 80px 0 0 0; background: #fff; }
 
 #content .lotto_pang_slogan:after { content: ""; display: block; clear: both; }
 
@@ -197,6 +197,8 @@ select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f
 
 [data-width="300"] { width: 300px; }
 
+[data-width="500"] { width: 500px; }
+
 /*button style*/
 .btn_primary { background: #72767e; }
 
@@ -210,11 +212,11 @@ button[disabled] { background: #b8b8b8; }
 
 button[disabled]:hover { background: #b8b8b8; }
 
-.btn_wrap { font-size: 0; margin: 25px 0 0 0; }
+.btn_wrap { font-size: 0; margin: 40px 0 0 0; }
 
 .btn_wrap[data-align="center"] { text-align: center; }
 
-.btn_wrap[data-align="center"] .btn_primary, .btn_wrap[data-align="center"] .btn_strong { width: 190px; }
+.btn_wrap[data-align="center"] .btn_primary, .btn_wrap[data-align="center"] .btn_strong { width: 200px; }
 
 .btn_wrap[data-align="left"] { text-align: left; }
 
@@ -243,9 +245,11 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .input_table table td input, .input_table table td .input_custom, .input_table table td button, .input_table table td a, .input_table table td select { margin-right: 6px; vertical-align: middle; }
 
+.input_table table td .has_data + .input_custom { margin-left: 13px; }
+
 .input_table table td .input_custom { margin-left: 5px; }
 
-.input_table table .has_data { font-size: 15px; padding-bottom: 10px; }
+.input_table table .has_data { font-size: 15px; padding-bottom: 10px; vertical-align: inherit; }
 
 .input_table table .validate_notice { margin-top: 8px; color: #ea614e; font-size: 15px; padding-left: 15px; margin-bottom: 8px; }
 
@@ -295,5 +299,9 @@ span.ball_n40th { background: #58ca7b; }
 .btn_wrap_sns .btn_login_sns[data-type="naver"] { background: url("../img/common//bg_sns_naver.png") no-repeat 0 0; background-color: #00be39; color: #fff; }
 
 .btn_wrap_sns .btn_login_sns[data-type="kakao"] { background: url("../img/common//bg_sns_kakao.png") no-repeat 0 0; background-color: #ffe906; color: #3e2d2e; }
+
+input[data-align="center"] { text-align: center; }
+
+input[data-align="right"] { text-align: right; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
