@@ -17,7 +17,7 @@
   padding:105px 0;
   @mixin snsBtn($type){
     &[data-type="#{$type}"]{
-      background:url('#{$common-img}/bg_sns_#{$type}.png') no-repeat 0 0;
+      background:url('#{$common-img}bg_sns_#{$type}.png') no-repeat 0 0;
       @if $type == facebook{
         background-color:#0a4aab;
         color:#fff

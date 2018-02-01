@@ -216,6 +216,7 @@ $lnb-width : 250px;
   width:$container-size - $lnb-width;
   min-height:1000px;
   padding:0 30px;
+  /*title*/
   .page_title{
     padding:40px 0;
     text-align: center;
@@ -253,6 +254,23 @@ $lnb-width : 250px;
       }
     }
   }
+  .table_title{
+    font:{
+      weight:$normal;
+      size : 20px;
+    }
+    margin-bottom:15px;
+    span[data-color="red"]{
+      font-weight:$bold;
+      color:$notice-color;
+    }
+    span.desc{
+      margin-left: 10px;
+      font-size:14px;
+      color :$light-color;
+    }
+  }
+  /*로또팡 슬로건*/
   .lotto_pang_slogan{
     border:1px solid $border-base;
     @include clearFix();
@@ -278,6 +296,13 @@ $lnb-width : 250px;
         size : 12px;
         family: $sub-notice;
       }
+      span[data-color="blue"]{
+        color:$strong-color;
+      }
+    }
+    .btn_go{
+      padding:12px 20px 0 0;
+      float:right;
     }
   }
 }
@@ -312,14 +337,21 @@ input{
     @extend %iStyle;
   }
 }
-
+textarea{
+  @extend %iStyle;
+  min-width:auto;
+  width:100%;
+  min-height:60px;
+  line-height:140%;
+  padding:15px;
+}
 select{
   min-width:89px;
   width:auto;
   height:44px;
   padding:0 40px 0 15px;
   border:1px solid $input-b-primary;
-  background-image:url("#{$common-img}/ico_select.png");
+  background-image:url("#{$common-img}ico_select.png");
   background-repeat : no-repeat;
   background-position:100% 0;
   background-color:$input-g-primary;
@@ -399,56 +431,44 @@ button{
 }
 
 
-textarea{
-
-}
 /*table*/
 .input_table{
+  padding:35px 0 0;
+  border-bottom:1px solid $border-base;
   table{
     tbody{
-      tr{
-        @mixin cellpadding($type){
-          @if $type == top{
-            th{
-              padding-top:40px;
-            }
-            td{
-              padding-top:40px;
-            }
-          }@else if $type == bottom{
-            th{
-              padding-bottom:40px;
-            }
-            td{
-              padding-bottom:40px;
-            }
+      & + tbody{
+        tr:first-child{
+          border-top:1px solid $border-base;
+          td{
+            padding-top:40px;
           }
-        }
-        &:first-child{
-          @include cellpadding(top)
-        }
-        &:last-child{
-          @include cellpadding(bottom);
-          .has_data{
-            padding-bottom:0;
+          th{
+            padding-top:55px;
           }
         }
       }
-      border-bottom:1px solid $border-base;
+      tr:last-child{
+        td,th{
+          padding-bottom:40px;
+        }
+      }
     }
     th{
-      padding-bottom:10px;
+      padding:15px 0 15px 60px;
+      vertical-align: top;
       text-align: left;
-      padding-left:60px;
       &:before{
         display: inline-block;
-        content:"ㆍ"; //유니코드 넣을거임
+        content:"\2022"; //유니코드 넣을거임
         vertical-align: middle;
         margin-right:10px;
+        font-size:20px;
+        color:#8a9fc7
       }
     }
     td{
-      padding-bottom:10px;
+      padding:5px 0;
       font-size:0;
       %elStyle{
         margin-right:6px;
@@ -473,7 +493,7 @@ textarea{
     }
     .has_data{
       font-size: 15px;
-      padding-bottom:10px;
+      padding-bottom:5px;
     }
     .validate_notice{
       margin-top:8px;
@@ -506,7 +526,173 @@ textarea{
     }
   }
 }
+.data_table{
+  border:1px solid $border-base;
+  table{
+    thead{
+      th{
+        padding:11px 0;
+        background: $thead-th-color;
+        border : {
+          width : 0 1px 1px 0;
+          style : solid;
+          color :$border-base;
+        }
+        font : {
+          size : $base-size;
+          weight:$normal;
+        }
+        color:$light-color;
+      }
+    }
+    tbody{
+      %tableCell{
+        padding:16px 0;
+        text-align: center;
+        border : {
+          width : 0 1px 1px 0;
+          style : solid;
+          color :$border-base;
+        }
+        &[data-align]{
+          padding-left:15px;
+          padding-right:15px;
+          text-align: left;
+        }
+      }
+      th{
+        @extend %tableCell;
+        background:$thead-th-color;
+        &.mid_th{
+          background:$tbody-th-color;
+        }
+      }
+      td{
+        @extend %tableCell;
+      }
+      tr{
+        td:last-child{
+          border-right:0;
+        }
+        &:last-child{
+          th{
+            border-bottom:0;
+          }
+          td{
+            border-bottom:0;
+          }
+        }
+      }
+    }
+    span[data-color="red"]{
+      color: $notice-color;
+    }
+    span[data-color="blue"]{
+      font : {
+        weight:$extra-bold
+      }
+      color : $strong-color;
+    }
+  }
+}
 
+/*tab*/
+.tab{
+  display:flex;
+  li{
+    flex:1;
+    a{
+      display: block;
+      text-align: center;
+      height:46px;
+      line-height:46px;
+      border:1px solid $border-base;
+      font:{
+        size:16px;
+        weight:$normal;
+      }
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    margin-left:-1px;
+    &:first-child{
+      margin-left:0;
+    }
+    &.on{
+      position: relative;
+      z-index:1;
+      a{
+        border-color:$strong-color;
+        color:#fff;
+        font-weight:$bold;
+        background: $strong-color;
+      }
+    }
+  }
+}
+
+/*pagenation*/
+.pagenation{
+  margin-top:35px;
+  font-size:0;
+  %button{
+    @include boxSizing();
+    display: inline-block;
+    vertical-align: middle;
+    width:30px;
+    height:30px;
+    border:1px solid $border-base;
+    text-align: center;
+    line-height:26px;
+    margin-left:-1px;
+    font-size:12px;
+    color:$light-color;
+  }
+  %btn_pagination{
+    @include blind(indent);
+    background:url("#{$common-img}btn_pagination.png") no-repeat 0 0;
+  }
+  .btn_first{
+    @extend %btn_pagination;
+    @extend %button;
+    margin-left:0;
+    background-position: 0 0;
+  }
+  .btn_prev{
+    @extend %btn_pagination;
+    @extend %button;
+    background-position: 0 -38px;
+  }
+  .btn_next{
+    @extend %btn_pagination;
+    @extend %button;
+    background-position: -38px -38px;
+  }
+  .btn_end{
+    @extend %btn_pagination;
+    @extend %button;
+    background-position: -38px 0;
+  }
+  .now{
+    @extend %button;
+    position: relative;
+    color:$base-color;
+    font-weight:$bold;
+    &:after{
+      content:"";
+      position: absolute;
+      bottom:-1px;
+      left:-1px;
+      width:30px;
+      height:3px;
+      background:$strong-color;
+    }
+  }
+  a{
+    @extend %button;
+  }
+}
 
 /*list*/
 
