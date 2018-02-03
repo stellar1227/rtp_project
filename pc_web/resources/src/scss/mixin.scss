@@ -53,7 +53,7 @@
 
 //iconsprite
 %ico_form_sprite{
-  background:url('#{$common-img}/ico_form_sprite.png') no-repeat;
+  background:url('#{$common-img}ico_form_sprite.png') no-repeat;
 }
 
 //input (pswd/txt)
@@ -71,6 +71,7 @@
     font-size:15px;
     &:focus{
       border-color:$input-b-strong;
+      outline:0;
     }
 
     border-color:$input-b-primary;
