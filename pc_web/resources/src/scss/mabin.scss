@@ -1,4 +1,13 @@
-// SNS 로그인 버튼
-.btn_wrap_sns {
-	
+//임시. data-align 관련 속성들 어케합치징
+input{
+  &[data-align="center"]{
+	text-align:center;
+  }
+  &[data-align="right"]{
+	text-align:right;
+  }
 }
+
+//input_table : TD에 그냥 CDATA넣으면 font-size 0 되어버림 ;ㅁ; 무조건 has_data를 넣어야하나용?
+//input_table : tr 에 border 들어간 디자인 분기 필요 (ㅅㅂ)
+//data-font=SIZE : 사이즈별로 인자받아서..

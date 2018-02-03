@@ -75,7 +75,7 @@ $lnb-width : 250px;
       display: inline-block;
       width:10px;
       height:12px;
-      background: url('#{$common-img}ico_home.png') no-repeat 0 50%;
+      background: url('#{$common-img}ico_home.png') no-repeat 0 0;
       vertical-align: middle;
     }
     .now{
@@ -277,7 +277,7 @@ $lnb-width : 250px;
     @include boxSizing();
     width:100%;
     padding:10px 0 10px 30px;
-    margin:30px 0 0 0;//임시
+    margin:80px 0 0 0;
     background: #fff;
     .logo{
       @include blind(indent);
@@ -379,6 +379,9 @@ select{
 [data-width="300"]{
   width:300px;
 }
+[data-width="500"]{
+  width:500px;
+}
 
 /*button style*/
 .btn_primary{
@@ -406,11 +409,11 @@ button{
 }
 .btn_wrap{
   font-size:0;
-  margin:25px 0 0 0; //임시
+  margin:40px 0 0 0;
   &[data-align="center"]{
     text-align: center;
     .btn_primary,.btn_strong {
-      @include button(190px)
+      @include button(200px)
     }
   }
   &[data-align="left"]{
@@ -460,7 +463,7 @@ button{
       text-align: left;
       &:before{
         display: inline-block;
-        content:"\2022"; //유니코드 넣을거임
+        content:"\2022"; 
         vertical-align: middle;
         margin-right:10px;
         font-size:20px;
@@ -476,6 +479,9 @@ button{
       }
       input{
        @extend %elStyle;
+      }
+      .has_data+.input_custom {
+        margin-left:13px;
       }
       .input_custom{
         @extend %elStyle;
@@ -494,10 +500,11 @@ button{
     .has_data{
       font-size: 15px;
       padding-bottom:5px;
+      vertical-align:inherit; 
     }
     .validate_notice{
       margin-top:8px;
-      color:$notice-color;
+      color:$notice-color; 
       font-size:15px;
       padding-left: 15px;
       margin-bottom: 8px;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>가입 소셜계정 찾기 | 로또팡</title>
+    <title>쿠폰결제하기| 로또팡</title>
     <link rel="stylesheet" href="../../resources/css/common-ui.css">
 </head>
 <body>
@@ -30,9 +30,9 @@
         <p class="path">
             <span class="home">home</span>
             &gt;
-            <span class="depth">회원가입</span>
+            <span class="depth">특별한 회원 서비스</span>
             &gt;
-            <strong class="now">가입 소설 계정찾기</strong>
+            <strong class="now">쿠폰결제하기</strong>
         </p>
     </div><!-- //sub_intro -->
     <div class="content_section">
@@ -46,9 +46,9 @@
                 <ul>
                     <li><a href="#">무료 회원 가입</a></li>
                     <li><a href="#">로그인</a></li>
-                    <li class="on"><a href="#">가입 소셜 계정 찾기</a></li>
+                    <li><a href="#">가입 소셜 계정 찾기</a></li>
                     <li><a href="#">혜택! 자유이용권 구매하기</a></li>
-                    <li><a href="#">쿠폰 결제하기</a></li>
+                    <li class="on"><a href="#">쿠폰 결제하기</a></li>
                     <li><a href="#">로또팡 서비스 안내</a></li>
                     <li><a href="#">테크앤조이 소개</a></li>
                 </ul>
@@ -81,47 +81,40 @@
         <section id="content"><!-- content -->
             <h2 class="page_title">
                 <span class="desc">특별한 회원 서비스</span>
-                <span class="tit">가입 소셜 계정 찾기</span>
+                <span class="tit">쿠폰 결제하기</span>
             </h2>
 
-            <h3 class="block_title">
-                <span class="tit">가입 소셜 계정 정보 입력</span>
-                <span class="desc">회원 가입 시 입력하셨던 정보로만 확인이 가능합니다.</span>
-            </h3>
 
+
+            <h3 class="block_title">
+                <span class="tit">쿠폰번호 입력</span>
+            </h3>
+            
             <div class="input_table"><!-- input_table -->
                 <table>
-                    <caption class="blind">가입 소설 계정 정보 입력</caption>
+                    <caption>쿠폰번호 입력</caption>
                     <colgroup>
-                        <col style="width:30.7%">
+                        <col style="width:21.7%">
                         <col style="width:auto">
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th scope="row"><label for="joinPhoneNum">본인명의 휴대전화</label></th>
+                            <th scope="row"><label for="couponNum">쿠폰번호</label></th>
                             <td>
-                                <input type="text" data-width="300" required id="joinPhoneNum" title="본인명의 휴대전화 입력">
-                                <button class="btn_strong">인증하기</button>
-                                <p class="validate_notice">전화번호를 다시 확인해 주세요</p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><label for="joinVerifyNum">인증번호</label></th>
-                            <td>
-                                <input type="text" data-width="300" id="joinVerifyNum" placeholder="문자로 발송된 인증번호 입력" title="휴대전화 인증번호 입력">
-                                <button class="btn_primary">확인</button>
-                                <p class="table_notice"><span class="verify-time">4분 55초</span> 인증이 필요합니다.</p>
+                                <input type="text" data-width="500" id="couponNum"  title="쿠폰번호 입력">
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div><!-- //input_table  -->
+            
 
 
             <div class="btn_wrap" data-align="center">
                 <button class="btn_strong" type="button">확인</button>
             </div>
-            
+
+
 
             <aside class="lotto_pang_slogan"><!-- 하단 슬로건 -->
                 <p class="logo">로또예상번호는 로또팡</p>
@@ -131,5 +124,6 @@
     </div>
 </div>
 <!-- footer include -->
+<script src="../../resources/lib/jquery-1.12.4.min.js"></script>
 </body>
 </html>

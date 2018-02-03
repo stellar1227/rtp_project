@@ -120,15 +120,24 @@
                         <tr>
                             <th scope="row"><label for="joinPhoneNum">본인명의 휴대전화<span data-color="red">(필수)</span></label></th>
                             <td>
-                                <input type="text" data-width="300" required id="joinPhoneNum" title="본인명의 휴대전화 입력">
-                                <button class="btn_strong">인증하기</button>
+                                <span data-hide="phoneNum">
+                                    <input type="text" data-width="300" required id="joinPhoneNum" title="본인명의 휴대전화 입력">
+                                    <button class="btn_strong">인증하기</button>
+                                </span>
+
+                                <!-- [Design - 번호 인증 완료될 경우 ] 
+                                    1.  아래 <span id="phoneNum"> 요소가 SHOW 됩니다.
+                                    2. $('[data-hide="phoneNum"]').remove() 됩니다. (Hide 처리하면 디자인 어그러짐.)
+                                 -->
+                                <span class="has_data" data-color="blue"  id="phoneNum" style="display:none">000-0000-0000</span>
+
                                 <div class="input_custom">
                                     <input type="checkbox" id="chkSmsAgree" title="SMS수신동의">
                                     <label for="chkSmsAgree"><span>SMS수신</span></label>
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <tr  data-hide="phoneNum">
                             <th scope="row"><label for="joinVerifyNum">인증번호</label></th>
                             <td>
                                 <input type="text"  data-width="300" id="joinVerifyNum" placeholder="문자로 발송된 인증번호 입력" title="휴대전화 인증번호 입력">
