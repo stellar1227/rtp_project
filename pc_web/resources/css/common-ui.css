@@ -144,13 +144,13 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #content .block_title .desc { color: #72767e; font-size: 15px; }
 
-#content .lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; margin: 80px 0 0 0; background: #fff; }
 #content .table_title { font-weight: 400; font-size: 20px; margin-bottom: 15px; }
 
 #content .table_title span[data-color="red"] { font-weight: 700; color: #ea614e; }
 
 #content .table_title span.desc { margin-left: 10px; font-size: 14px; color: #72767e; }
 
+#content .lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; margin: 80px 0 0 0; background: #fff; }
 
 #content .lotto_pang_slogan:after { content: ""; display: block; clear: both; }
 
@@ -205,11 +205,17 @@ select[disabled] { border: 1px solid #cfcfcf; background-color: #f4f4f4; }
 
 select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f4; }
 
-[data-width="200"] { width: 200px; }
+[data-width='200'] { width: 200px; }
 
-[data-width="300"] { width: 300px; }
+[data-width='300'] { width: 300px; }
 
-[data-width="500"] { width: 500px; }
+[data-width='500'] { width: 500px; }
+
+[data-font='18'] { font-size: 18px; }
+
+[data-font='20'] { font-size: 20px; }
+
+[data-font='26'] { font-size: 26px; }
 
 /*button style*/
 .btn_primary { background: #72767e; }
@@ -277,11 +283,13 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .data_table { border: 1px solid #d6d6d6; }
 
-.data_table table thead th { padding: 11px 0; background: #f3f4f8; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; font-size: 14px; font-weight: 400; color: #72767e; }
+.data_table table thead th { padding: 8px 0; background: #f3f4f8; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; font-size: 15px; font-weight: 400; color: #72767e; }
+
+.data_table table thead th:last-child { border-right: 0; }
 
 .data_table table tbody th, .data_table table tbody td { padding: 16px 0; text-align: center; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; }
 
-.data_table table tbody th[data-align], .data_table table tbody td[data-align] { padding-left: 15px; padding-right: 15px; text-align: left; }
+.data_table table tbody th[data-align], .data_table table tbody td[data-align] { padding-left: 27px; padding-right: 27px; text-align: left; }
 
 .data_table table tbody th { background: #f3f4f8; }
 
@@ -369,5 +377,43 @@ span.ball_n40th { background: #58ca7b; }
 input[data-align="center"] { text-align: center; }
 
 input[data-align="right"] { text-align: right; }
+
+[data-color="red"] { color: #ea614e; }
+
+[data-color="blue"] { color: #528dff; }
+
+.block_title + .data_table { margin-left: 60px; margin-right: 60px; margin-top: 33px; }
+
+.list_mem_benefit { display: flex; padding: 33px 60px 0; }
+
+.list_mem_benefit li { flex: 1; padding: 32px 0 26px; margin: 0 9px; border: 1px solid #d6d6d6; text-align: center; }
+
+.list_mem_benefit li > span:after { display: block; content: ""; width: 60px; height: 60px; margin: 17px auto 8px; background: url("../img/content/ico_coupon_benefit.png") no-repeat 0 0; }
+
+.list_mem_benefit li[data-icon=type2] > span:after { background-position: -60px 0; }
+
+.list_mem_benefit li[data-icon=type3] > span:after { background-position: -120px 0; }
+
+.list_mem_benefit li[data-icon=type4] > span:after { background-position: -180px 0; }
+
+.list_mem_benefit li p { line-height: 150%; }
+
+.list_free_ticket { display: table; width: 100%; }
+
+.list_free_ticket > div { display: table-cell; vertical-align: middle; }
+
+.list_free_ticket > div:first-child { width: 25%; }
+
+.list_free_ticket > div:nth-child(2) { width: 61%; }
+
+.list_free_ticket > div span[data-color="red"] { font-weight: 800; }
+
+.list_free_ticket > div .percent { display: inline-block; width: 58px; height: 47px; padding-top: 11px; border-radius: 50px; background-color: #ea614e; line-height: 120%; text-align: center; color: #fff; }
+
+.tip_notice { padding: 9px 13px 11px; margin-top: 18px; background-color: #e6e6e6; }
+
+.tip_notice dt, .tip_notice dd { display: inline-block; }
+
+.tip_notice dt { padding: 1px 10px 3px; margin-right: 8px; background-color: #fff; border: 1px solid #cacaca; border-radius: 2px; color: #999; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */

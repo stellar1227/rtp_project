@@ -372,16 +372,35 @@ select{
   cursor:pointer;
 }
 
+
 //input, selector, textares size
-[data-width="200"]{
-  width:200px;
+//[COMMENT] 김가빈 :  Map 방식으로 변경했어요, 불필요하다면 원복해주세요'-'/ 
+$dataWidth: (
+  200: 200px,
+  300: 300px,
+  500: 500px
+);
+ 
+@each $elemWidth, $value in $dataWidth {
+  [data-width='#{$elemWidth}'] {
+    width:$value
+  }
 }
-[data-width="300"]{
-  width:300px;
+
+// font-size [COMMENT] 김가빈 : 디자인상 폰트사이즈가 다양해서 추가하였습니다
+$dataFontSize: (
+  18: 18px,
+  20: 20px,
+  26: 26px
+);
+ 
+@each $elemFontSize, $value in $dataFontSize {
+  [data-font='#{$elemFontSize}'] {
+    font-size:$value
+  }
 }
-[data-width="500"]{
-  width:500px;
-}
+
+
 
 /*button style*/
 .btn_primary{
@@ -538,7 +557,7 @@ button{
   table{
     thead{
       th{
-        padding:11px 0;
+        padding:8px 0;
         background: $thead-th-color;
         border : {
           width : 0 1px 1px 0;
@@ -546,10 +565,14 @@ button{
           color :$border-base;
         }
         font : {
-          size : $base-size;
+          size : 15px;
           weight:$normal;
         }
         color:$light-color;
+        
+        &:last-child {
+          border-right:0;
+        }
       }
     }
     tbody{
@@ -562,8 +585,8 @@ button{
           color :$border-base;
         }
         &[data-align]{
-          padding-left:15px;
-          padding-right:15px;
+          padding-left:27px;
+          padding-right:27px;
           text-align: left;
         }
       }
