@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>page layout</title>
+    <link rel="stylesheet" href="../resources/css/common-ui.css">
+</head>
+<body>
+<button type="button" class="btn_alert">저는 알림이요</button>
+<button type="button" class="btn_confirm">저는 컨펌이요</button>
+<button type="button" class="btn_layer">그냥 레이어호출</button>
+
+<div class="common_layer">
+    <div class="layer_wrap">
+        <div class="inner_layer_content"><!-- id 연결로 호출시에 여기에 컨텐츠 들어감 -->
+            <strong class="layer_tit">결제하기</strong>
+            <div id="goPurchase" class="charge_layer">
+                <div class="data_table" data-align="left">
+                    <table>
+                        <caption>결제할 내용</caption>
+                        <colgroup>
+                            <col style="width:25%">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="mid_th">금액</th>
+                                <td>
+                                    <b>로또팡 방송청취 이용권 (기본 5회 분량)</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="mid_th">서비스명</th>
+                                <td>
+                                    <b data-color="red">3,300원</b>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="layer_btn">
+            <button type="button" class="btn_strong btn_ok">구매하기</button>
+            <button type="button" class="btn_primary btn_cancel">취소</button>
+        </div>
+        <button type="button" class="btn_layer_close">닫기</button>
+    </div>
+</div>
+<!-- 일반 레이어 :레이아웃을 제외하고 컨텐츠 부분만 마크업하면됩니다. -->
+
+<!-- //일반레이어 -->
+<script src="../resources/lib/jquery-1.12.4.min.js"></script>
+<script src="../resources/src/js/common-ui.js"></script>
+<script>
+
+    //ex)입니다.
+    //alert 부를때
+
+    //confirm 부를때
+
+    //contents가 있는 그냥 layerpop을 열때
+
+</script>
+</body>
+</html>
