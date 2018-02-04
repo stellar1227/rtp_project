@@ -176,7 +176,7 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #content .block_title .desc { color: #72767e; font-size: 15px; }
 
-#content .block_title + .data_table { margin-left: 60px; margin-right: 60px; margin-top: 33px; }
+#content .block_title + .data_table { margin-top: 33px; }
 
 #content .table_title { font-weight: 400; font-size: 20px; margin-bottom: 15px; }
 
@@ -336,7 +336,7 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .input_table .link_page { margin-left: 10px; vertical-align: top; }
 
-.data_table { border: 1px solid #d6d6d6; }
+.data_table { margin-left: 60px; margin-right: 60px; border: 1px solid #d6d6d6; }
 
 .data_table thead th { padding: 8px 0; background: #f3f4f8; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; font-size: 15px; font-weight: 400; color: #72767e; }
 
@@ -358,6 +358,8 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .data_table tbody tr:last-child td { border-bottom: 0; }
 
+.data_table tbody tr.divide td { background-color: #fbfbfb; }
+
 .data_table span[data-color="blue"] { font-weight: 800; }
 
 .data_table .link_page { margin-left: 10px; vertical-align: top; }
@@ -378,7 +380,7 @@ button[disabled]:hover { background: #b8b8b8; }
 .tab li.on a { border-color: #528dff; color: #fff; font-weight: 700; background: #528dff; }
 
 /*pagenation*/
-.pagenation { margin-top: 35px; font-size: 0; }
+.pagenation { margin-top: 35px; font-size: 0; text-align: center; }
 
 .pagenation .btn_first, .pagenation .btn_prev, .pagenation .btn_next, .pagenation .btn_end, .pagenation .now, .pagenation a { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: inline-block; vertical-align: middle; width: 30px; height: 30px; border: 1px solid #d6d6d6; text-align: center; line-height: 26px; margin-left: -1px; font-size: 12px; color: #72767e; }
 
@@ -530,8 +532,14 @@ input[data-align="right"] { text-align: right; }
 
 .box_contents.actions { overflow: hidden; padding-left: 60px; padding-right: 60px; }
 
-.box_contents.actions .article { float: left; }
+.box_contents.actions .article, .box_contents.actions .actions { display: table-cell; vertical-align: middle; }
 
-.box_contents.actions .actions { float: right; }
+.box_contents.actions .article { width: 100%; }
+
+.box_contents.actions .actions { white-space: nowrap; }
+
+.box_contents.actions + .lotto_pang_slogan { margin-top: -1px; }
+
+.pagenation + .box_contents.actions { margin-top: 35px; border-top: 1px solid #ccc; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */

@@ -109,10 +109,26 @@ input{
 	padding-left:60px;
 	padding-right:60px;
 
+	.article,.actions {
+		display:table-cell;
+		vertical-align:middle;
+	}
 	.article {
-		float:left;
+		width:100%;
 	}
 	.actions {
-		float:right;
+		white-space:nowrap;
 	}
+
+	&  + .lotto_pang_slogan {
+      margin-top:-1px;
+    }
+}
+
+
+
+// box_contents - 컨텐츠 순서별 디자인 Custom
+.pagenation + .box_contents.actions {
+	margin-top:35px;
+	border-top:1px solid #ccc;
 }
