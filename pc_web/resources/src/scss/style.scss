@@ -417,6 +417,24 @@ $dataFontSize: (
     background:darken($btn-strong, 20%);
   }
 }
+.btn_table{
+    @extend %btn;
+    min-width: 80px;
+    height: 35px;
+    margin-left:10px;margin-right:10px;
+    border:1px solid #bbbf;
+    background:$btn-table;
+    vertical-align: middle;
+    line-height: 35px;
+    color:#333;
+
+    &:hover{
+      background:darken($btn-strong, 20%);
+      border-color:darken($btn-strong, 20%);
+      color:#fff;
+    }
+  }
+
 button{
   &[disabled]{
     @extend %btn;
@@ -426,6 +444,18 @@ button{
     }
   }
 }
+
+
+
+// [COMMENT] table 안쪽 button 추가햇쪄용. (이상하면 수정부탁드림다.)
+.data_table table tbody td.cell_inner_btns {
+  
+  padding-top:10px;padding-bottom:10px;
+
+  
+
+}
+
 .btn_wrap{
   font-size:0;
   margin:40px 0 0 0;
