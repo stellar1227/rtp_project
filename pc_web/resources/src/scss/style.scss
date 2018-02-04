@@ -10,7 +10,7 @@
 //layout관련 전역 variable
 $header-height : 0;
 $sub-intro-height: 53px;
-$footer-height: 0;
+$footer-height: 94px;
 $lnb-width : 250px;
 #header{
   position: absolute;
@@ -27,8 +27,9 @@ $lnb-width : 250px;
   position: relative;
   z-index:1;
   width:100%;
-  height:100%;
-  min-width:$container-size
+  min-height:100%;
+  min-width:$container-size;
+  padding:$header-height 0 $footer-height 0;
 }
 .sub_intro{
   @include content();
@@ -82,46 +83,21 @@ $lnb-width : 250px;
       font-weight:normal
     }
   }
+  border-bottom:5px solid $border-strong;
 }
 .content_section{
   position: relative;
-  min-height:100%;
   width:$container-size;
+  min-height:1110px;
   @include boxSizing();
-  padding:($header-height + $sub-intro-height) 0 0 $lnb-width;
-  margin:-($header-height + $sub-intro-height) auto 0;
-  $border-height:5px;//파랑보더높이값임
-  %border-top{
-    &:before{
-      content:"";
-      position: absolute;
-      top:0;
-      height:$border-height;
-      background:$border-strong; //border로 쓸거라서...
-    }
-  }
-  #local_info{
-    @extend %border-top;
-    &:before{
-      width:$lnb-width;
-      left:-1px;
-    }
-    padding-top: $border-height;
-  }
-  #content{
-    @extend %border-top;
-    &:before{
-      width:100%;
-      left:0;
-    }
-    padding-top: $border-height;
-  }
+  padding:0 0 0 $lnb-width;
+  margin:0 auto;
 }
 #local_info{
   @include boxSizing();
   position: absolute;
   left:0;
-  top:$header-height + $sub-intro-height;
+  top:0;
   bottom:0;
   width:$lnb-width;
   padding:0 0 $footer-height 0;
@@ -214,7 +190,6 @@ $lnb-width : 250px;
   position: relative;
   @include boxSizing();
   width:$container-size - $lnb-width;
-  min-height:1000px;
   padding:0 30px;
   /*title*/
   .page_title{
@@ -253,6 +228,13 @@ $lnb-width : 250px;
         size : 15px;
       }
     }
+    &  + .data_table {
+      margin : {
+        left : 60px;
+        right : 60px;
+        top : 33px;
+      }
+    }
   }
   .table_title{
     font:{
@@ -262,47 +244,11 @@ $lnb-width : 250px;
     margin-bottom:15px;
     span[data-color="red"]{
       font-weight:$bold;
-      color:$notice-color;
     }
     span.desc{
       margin-left: 10px;
       font-size:14px;
       color :$light-color;
-    }
-  }
-  /*로또팡 슬로건*/
-  .lotto_pang_slogan{
-    border:1px solid $border-base;
-    @include clearFix();
-    @include boxSizing();
-    width:100%;
-    padding:10px 0 10px 30px;
-    margin:80px 0 0 0;
-    background: #fff;
-    .logo{
-      @include blind(indent);
-      float:left;
-      width:108px;
-      height:66px;
-      margin:0 20px 0 0;
-      background:url("#{$common-img}img_slogan_logo.gif") no-repeat 0 0;
-    }
-    .desc{
-      float:left;
-      line-height:185%;
-      color:#969696;
-      padding:12px 0;
-      font : {
-        size : 12px;
-        family: $sub-notice;
-      }
-      span[data-color="blue"]{
-        color:$strong-color;
-      }
-    }
-    .btn_go{
-      padding:12px 20px 0 0;
-      float:right;
     }
   }
 }
@@ -311,9 +257,64 @@ $lnb-width : 250px;
   z-index:10;
   width:100%;
   min-width:$container-size;
-  //margin:-70px 0 0 0;
+  margin:-$footer-height 0 0 0;
+  border-top:1px solid $border-base;
+  background: $bg-base;
   .inner_footer{
+    @include boxSizing();
     @include content();
+    height:$footer-height - 1px;
+    padding:22px 0 0 95px;
+    color:#888;
+    .util_link{
+      display: none;
+    }
+    .company_info{
+      font : {
+        family : $sub-notice;
+        size: 0;
+      };
+      & > span{
+        position: relative;
+        font-size:12px;
+        line-height:183%;
+        padding:0 12px;
+        &:first-child{
+          padding-left:0;
+          &:before{
+            display: none;
+          }
+        }
+        &:before{
+          content:"";
+          position: absolute;
+          left:0;
+          top:0;
+          width:1px;
+          height:12px;
+          background: #b4b4b4;
+        }
+      }
+      .name{
+        color:$sub-color;
+      }
+      .copyright{
+        font : {
+          family: Arial, sans-serif;
+          size : 10px;
+        }
+        vertical-align: bottom;
+        &:before{
+          display: none;
+        }
+      }
+    }
+    .partner{
+      display: none;
+    }
+    .footer_logo{
+      display: none;
+    }
   }
 }
 
@@ -414,18 +415,18 @@ $dataFontSize: (
   }
 }
 
-//[COMMENT] 김가빈 : 테이블 내부 버튼 추가.
+//테이블안의 하양이버튼이로구나
 .btn_table{
     @extend %btn;
     min-width: 80px;
     height: 35px;
-    margin-left:10px;margin-right:10px;
+    margin-left:10px;
+    margin-right:10px;
     border:1px solid #bbbf;
     background:$btn-table;
     vertical-align: middle;
     line-height: 35px;
     color:#333;
-
     &:hover{
       background:darken($btn-strong, 20%);
       border-color:darken($btn-strong, 20%);
@@ -441,17 +442,6 @@ button{
       background:$btn-disabled;
     }
   }
-}
-
-
-
-// [COMMENT] table 안쪽 button 추가햇쪄용. (이상하면 수정부탁드림다.)
-.data_table table tbody td.cell_inner_btns {
-  
-  padding-top:10px;padding-bottom:10px;
-
-  
-
 }
 
 .btn_wrap{
@@ -590,84 +580,84 @@ button{
   .verify-time{
     color:$notice-color
   }
-  span[data-color="red"]{
-    color:$notice-color
-  }
-  span[data-color="blue"]{
-    color:$strong-color
+  .link_page {
+    margin-left:10px;
+    vertical-align:top;
   }
 }
 .data_table{
   border:1px solid $border-base;
-  table{
-    thead{
-      th{
-        padding:8px 0;
-        background: $thead-th-color;
-        border : {
-          width : 0 1px 1px 0;
-          style : solid;
-          color :$border-base;
-        }
-        font : {
-          size : 15px;
-          weight:$normal;
-        }
-        color:$light-color;
-        
-        &:last-child {
-          border-right:0;
-        }
+  thead{
+    th{
+      padding:8px 0;
+      background: $thead-th-color;
+      border : {
+        width : 0 1px 1px 0;
+        style : solid;
+        color :$border-base;
       }
-    }
-    tbody{
-      %tableCell{
-        padding:16px 0;
-        text-align: center;
-        border : {
-          width : 0 1px 1px 0;
-          style : solid;
-          color :$border-base;
-        }
-        &[data-align]{
-          padding-left:27px;
-          padding-right:27px;
-          text-align: left;
-        }
-      }
-      th{
-        @extend %tableCell;
-        background:$thead-th-color;
-        &.mid_th{
-          background:$tbody-th-color;
-        }
-      }
-      td{
-        @extend %tableCell;
-      }
-      tr{
-        td:last-child{
-          border-right:0;
-        }
-        &:last-child{
-          th{
-            border-bottom:0;
-          }
-          td{
-            border-bottom:0;
-          }
-        }
-      }
-    }
-    span[data-color="red"]{
-      color: $notice-color;
-    }
-    span[data-color="blue"]{
       font : {
-        weight:$extra-bold
+        size : 15px;
+        weight:$normal;
       }
-      color : $strong-color;
+      color:$light-color;
+
+      &:last-child {
+        border-right:0;
+      }
     }
+  }
+  tbody{
+    %tableCell{
+      padding:16px 0;
+      text-align: center;
+      border : {
+        width : 0 1px 1px 0;
+        style : solid;
+        color :$border-base;
+      }
+      &[data-align]{
+        padding-left:27px;
+        padding-right:27px;
+        text-align: left;
+      }
+    }
+    th{
+      @extend %tableCell;
+      background:$thead-th-color;
+      &.mid_th{
+        background:$tbody-th-color;
+      }
+    }
+    td{
+      @extend %tableCell;
+      &.cell_inner_btns {
+        padding-top:10px;
+        padding-bottom:10px;
+      }
+    }
+    tr{
+      td:last-child{
+        border-right:0;
+      }
+      &:last-child{
+        th{
+          border-bottom:0;
+        }
+        td{
+          border-bottom:0;
+        }
+      }
+    }
+  }
+  span[data-color="blue"]{
+    font : {
+      weight:$extra-bold
+    }
+  }
+  .link_page {
+    margin-left:10px;
+    vertical-align:top;
   }
 }
 
@@ -805,4 +795,55 @@ span {
   &.ball_n40th{
     background: #58ca7b;
   }
+}
+
+/*로또팡 슬로건*/
+.lotto_pang_slogan{
+  border:1px solid $border-base;
+  @include clearFix();
+  @include boxSizing();
+  width:100%;
+  padding:10px 0 10px 30px;
+  margin:80px 0 0 0;
+  background: $bg-default;
+  .logo{
+    @include blind(indent);
+    float:left;
+    width:108px;
+    height:66px;
+    margin:0 20px 0 0;
+    background:url("#{$common-img}img_slogan_logo.gif") no-repeat 0 0;
+  }
+  .desc{
+    float:left;
+    line-height:185%;
+    color:#969696;
+    padding:12px 0;
+    font : {
+      size : 12px;
+      family: $sub-notice;
+    }
+    span[data-color="blue"]{
+      color:$strong-color;
+    }
+  }
+  .btn_go{
+    padding:12px 20px 0 0;
+    float:right;
+  }
+}
+
+/*text*/
+[data-color="red"]{
+  color:$notice-color;
+}
+[data-color="blue"]{
+  color:$strong-color;
+}
+
+/*anchor*/
+.link_page {
+  vertical-align: middle;
+  color:$strong-color;
+  text-decoration: underline;
 }

@@ -8,24 +8,6 @@ input{
   }
 }
 
-// [COMMENT] data-color=red/blue 전역으로 이케 빼면 안되나영?'ㅁ'/
-[data-color="red"]{
-	color:$notice-color;
-}
-[data-color="blue"]{
-	color:$strong-color;
-}
-
-
-
-//[COMMENT] block_title + data_table 의 경우 여백처리했숩니당 'ㅁ'
-.block_title + .data_table {
-	margin : {
-        left : 60px;
-        right : 60px;
-        top : 33px;
-      }
-}
 
 //member_free_ticket 커스텀
 // list_mem_benefit
@@ -119,18 +101,6 @@ input{
 }
 
 
-
-
-// [COMMENT] Anchor Reset 로 빼야게뜸
-.link_page {
-    vertical-align: middle;
-    color:$strong-color;
-    text-decoration: underline;
- }
-td .link_page {
-	margin-left:10px;
-	vertical-align:top;
-}
 
 
 // 좌측 Article + 우측 action contents 

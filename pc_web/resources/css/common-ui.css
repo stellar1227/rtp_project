@@ -62,9 +62,9 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #header .inner_header { width: 1190px; margin: 0 auto; }
 
-#container { position: relative; z-index: 1; width: 100%; height: 100%; min-width: 1190px; }
+#container { position: relative; z-index: 1; width: 100%; min-height: 100%; min-width: 1190px; padding: 0 0 94px 0; }
 
-.sub_intro { width: 1190px; margin: 0 auto; padding: 15px 0 12px; }
+.sub_intro { width: 1190px; margin: 0 auto; padding: 15px 0 12px; border-bottom: 5px solid #85abf7; }
 
 .sub_intro:after { content: ""; display: block; clear: both; }
 
@@ -84,19 +84,9 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 .sub_intro .path .now { font-weight: normal; }
 
-.content_section { position: relative; min-height: 100%; width: 1190px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 53px 0 0 250px; margin: -53px auto 0; }
+.content_section { position: relative; width: 1190px; min-height: 1110px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 0 0 250px; margin: 0 auto; }
 
-.content_section #local_info:before, .content_section #content:before { content: ""; position: absolute; top: 0; height: 5px; background: #85abf7; }
-
-.content_section #local_info { padding-top: 5px; }
-
-.content_section #local_info:before { width: 250px; left: -1px; }
-
-.content_section #content { padding-top: 5px; }
-
-.content_section #content:before { width: 100%; left: 0; }
-
-#local_info { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; left: 0; top: 53px; bottom: 0; width: 250px; padding: 0 0 0 0; border-width: 0 1px; border-style: solid; border-color: #d6d6d6; }
+#local_info { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: absolute; left: 0; top: 0; bottom: 0; width: 250px; padding: 0 0 94px 0; border-width: 0 1px; border-style: solid; border-color: #d6d6d6; }
 
 #local_info .lnb_desc { padding: 43px 25px; background: #f3f4f8; border-bottom: 1px solid #d6d6d6; }
 
@@ -128,7 +118,7 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #local_info .etc_info .etc dd.cc_tel { color: #85abf7; font-size: 27px; font-weight: 800; }
 
-#content { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 940px; min-height: 1000px; padding: 0 30px; /*title*/ /*로또팡 슬로건*/ }
+#content { position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 940px; padding: 0 30px; /*title*/ }
 
 #content .page_title { padding: 40px 0; text-align: center; border-bottom: 1px solid #d6d6d6; }
 
@@ -144,27 +134,39 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #content .block_title .desc { color: #72767e; font-size: 15px; }
 
+#content .block_title + .data_table { margin-left: 60px; margin-right: 60px; margin-top: 33px; }
+
 #content .table_title { font-weight: 400; font-size: 20px; margin-bottom: 15px; }
 
-#content .table_title span[data-color="red"] { font-weight: 700; color: #ea614e; }
+#content .table_title span[data-color="red"] { font-weight: 700; }
 
 #content .table_title span.desc { margin-left: 10px; font-size: 14px; color: #72767e; }
 
-#content .lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; margin: 80px 0 0 0; background: #fff; }
+#footer { position: relative; z-index: 10; width: 100%; min-width: 1190px; margin: -94px 0 0 0; border-top: 1px solid #d6d6d6; background: #fafafa; }
 
-#content .lotto_pang_slogan:after { content: ""; display: block; clear: both; }
+#footer .inner_footer { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 1190px; margin: 0 auto; height: 93px; padding: 22px 0 0 95px; color: #888; }
 
-#content .lotto_pang_slogan .logo { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; float: left; width: 108px; height: 66px; margin: 0 20px 0 0; background: url("../img/common/img_slogan_logo.gif") no-repeat 0 0; }
+#footer .inner_footer .util_link { display: none; }
 
-#content .lotto_pang_slogan .desc { float: left; line-height: 185%; color: #969696; padding: 12px 0; font-size: 12px; font-family: "Gulim", "굴림", sans-serif; }
+#footer .inner_footer .company_info { font-family: "Gulim", "굴림", sans-serif; font-size: 0; }
 
-#content .lotto_pang_slogan .desc span[data-color="blue"] { color: #528dff; }
+#footer .inner_footer .company_info > span { position: relative; font-size: 12px; line-height: 183%; padding: 0 12px; }
 
-#content .lotto_pang_slogan .btn_go { padding: 12px 20px 0 0; float: right; }
+#footer .inner_footer .company_info > span:first-child { padding-left: 0; }
 
-#footer { position: relative; z-index: 10; width: 100%; min-width: 1190px; }
+#footer .inner_footer .company_info > span:first-child:before { display: none; }
 
-#footer .inner_footer { width: 1190px; margin: 0 auto; }
+#footer .inner_footer .company_info > span:before { content: ""; position: absolute; left: 0; top: 0; width: 1px; height: 12px; background: #b4b4b4; }
+
+#footer .inner_footer .company_info .name { color: #555; }
+
+#footer .inner_footer .company_info .copyright { font-family: Arial, sans-serif; font-size: 10px; vertical-align: bottom; }
+
+#footer .inner_footer .company_info .copyright:before { display: none; }
+
+#footer .inner_footer .partner { display: none; }
+
+#footer .inner_footer .footer_logo { display: none; }
 
 /*form controls*/
 .input_custom { display: inline-block; vertical-align: middle; }
@@ -235,8 +237,6 @@ button[disabled] { background: #b8b8b8; }
 
 button[disabled]:hover { background: #b8b8b8; }
 
-.data_table table tbody td.cell_inner_btns { padding-top: 10px; padding-bottom: 10px; }
-
 .btn_wrap { font-size: 0; margin: 40px 0 0 0; }
 
 .btn_wrap[data-align="center"] { text-align: center; }
@@ -292,33 +292,33 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .input_table .verify-time { color: #ea614e; }
 
-.input_table span[data-color="red"] { color: #ea614e; }
-
-.input_table span[data-color="blue"] { color: #528dff; }
+.input_table .link_page { margin-left: 10px; vertical-align: top; }
 
 .data_table { border: 1px solid #d6d6d6; }
 
-.data_table table thead th { padding: 8px 0; background: #f3f4f8; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; font-size: 15px; font-weight: 400; color: #72767e; }
+.data_table thead th { padding: 8px 0; background: #f3f4f8; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; font-size: 15px; font-weight: 400; color: #72767e; }
 
-.data_table table thead th:last-child { border-right: 0; }
+.data_table thead th:last-child { border-right: 0; }
 
-.data_table table tbody th, .data_table table tbody td { padding: 16px 0; text-align: center; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; }
+.data_table tbody th, .data_table tbody td { padding: 16px 0; text-align: center; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; }
 
-.data_table table tbody th[data-align], .data_table table tbody td[data-align] { padding-left: 27px; padding-right: 27px; text-align: left; }
+.data_table tbody th[data-align], .data_table tbody td[data-align] { padding-left: 27px; padding-right: 27px; text-align: left; }
 
-.data_table table tbody th { background: #f3f4f8; }
+.data_table tbody th { background: #f3f4f8; }
 
-.data_table table tbody th.mid_th { background: #fbfbfb; }
+.data_table tbody th.mid_th { background: #fbfbfb; }
 
-.data_table table tbody tr td:last-child { border-right: 0; }
+.data_table tbody td.cell_inner_btns { padding-top: 10px; padding-bottom: 10px; }
 
-.data_table table tbody tr:last-child th { border-bottom: 0; }
+.data_table tbody tr td:last-child { border-right: 0; }
 
-.data_table table tbody tr:last-child td { border-bottom: 0; }
+.data_table tbody tr:last-child th { border-bottom: 0; }
 
-.data_table table span[data-color="red"] { color: #ea614e; }
+.data_table tbody tr:last-child td { border-bottom: 0; }
 
-.data_table table span[data-color="blue"] { font-weight: 800; color: #528dff; }
+.data_table span[data-color="blue"] { font-weight: 800; }
+
+.data_table .link_page { margin-left: 10px; vertical-align: top; }
 
 /*tab*/
 .tab { display: flex; }
@@ -370,6 +370,62 @@ span.ball_n30th { background: #9b95e2; }
 
 span.ball_n40th { background: #58ca7b; }
 
+/*로또팡 슬로건*/
+.lotto_pang_slogan { border: 1px solid #d6d6d6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; padding: 10px 0 10px 30px; margin: 80px 0 0 0; background: #fff; }
+
+.lotto_pang_slogan:after { content: ""; display: block; clear: both; }
+
+.lotto_pang_slogan .logo { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; float: left; width: 108px; height: 66px; margin: 0 20px 0 0; background: url("../img/common/img_slogan_logo.gif") no-repeat 0 0; }
+
+.lotto_pang_slogan .desc { float: left; line-height: 185%; color: #969696; padding: 12px 0; font-size: 12px; font-family: "Gulim", "굴림", sans-serif; }
+
+.lotto_pang_slogan .desc span[data-color="blue"] { color: #528dff; }
+
+.lotto_pang_slogan .btn_go { padding: 12px 20px 0 0; float: right; }
+
+/*text*/
+[data-color="red"] { color: #ea614e; }
+
+[data-color="blue"] { color: #528dff; }
+
+/*anchor*/
+.link_page { vertical-align: middle; color: #528dff; text-decoration: underline; }
+
+/*main*/
+.main #container { padding-bottom: 223px; }
+
+.main #footer { background: #e7e8ec; height: 223px; margin-top: -223px; border-top: 0; }
+
+.main #footer .inner_footer { position: relative; padding: 22px 170px 0 0; color: #666; }
+
+.main #footer .inner_footer .util_link { display: block; margin-bottom: 25px; font-family: "Gulim", "굴림", sans-serif; font-size: 0; }
+
+.main #footer .inner_footer .util_link a { color: #666; position: relative; font-size: 12px; padding: 0 30px; }
+
+.main #footer .inner_footer .util_link a:first-child { padding-left: 0; }
+
+.main #footer .inner_footer .util_link a:first-child:before { display: none; }
+
+.main #footer .inner_footer .util_link a:before { content: ""; position: absolute; left: 0; top: 50%; width: 1px; height: 12px; margin-top: -6px; background: #b4b4b4; }
+
+.main #footer .inner_footer .company_info { margin-bottom: 25px; }
+
+.main #footer .inner_footer .company_info > span { color: #666; }
+
+.main #footer .inner_footer .company_info > span:before { background: #666; }
+
+.main #footer .inner_footer .company_info .name { display: block; color: #000; }
+
+.main #footer .inner_footer .company_info .name + span { padding-left: 0; }
+
+.main #footer .inner_footer .company_info .copyright { display: block; padding-left: 0; }
+
+.main #footer .inner_footer .partner { display: block; font-size: 0; }
+
+.main #footer .inner_footer .partner a { margin-right: 45px; }
+
+.main #footer .inner_footer .footer_logo { display: block; position: absolute; right: 0; top: 60px; }
+
 /*member*/
 .box_contents { padding: 25px 0; border-bottom: 1px solid #d6d6d6; }
 
@@ -392,12 +448,6 @@ span.ball_n40th { background: #58ca7b; }
 input[data-align="center"] { text-align: center; }
 
 input[data-align="right"] { text-align: right; }
-
-[data-color="red"] { color: #ea614e; }
-
-[data-color="blue"] { color: #528dff; }
-
-.block_title + .data_table { margin-left: 60px; margin-right: 60px; margin-top: 33px; }
 
 .list_mem_benefit { display: flex; padding: 33px 60px 0; }
 
@@ -435,10 +485,6 @@ input[data-align="right"] { text-align: right; }
 .verify_phone_input { width: 222px; }
 
 .verify_phone_time { display: inline-block; width: 72px; margin-right: 6px; font-size: 14px; border-bottom: 1px solid #ccc; text-align: center; line-height: 42px; vertical-align: middle; color: #528dff; }
-
-.link_page { vertical-align: middle; color: #528dff; text-decoration: underline; }
-
-td .link_page { margin-left: 10px; vertical-align: top; }
 
 .box_contents.actions { overflow: hidden; padding-left: 60px; padding-right: 60px; }
 

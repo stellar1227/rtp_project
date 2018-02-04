@@ -1,3 +1,87 @@
+/*main*/
+.main{
+  $footer-height : 223px;
+  #container{
+    padding-bottom:$footer-height;
+  }
+  #footer{
+    background: $bg-section;
+    height:$footer-height;
+    margin-top:-$footer-height;
+    border-top:0;
+
+    .inner_footer{
+      position: relative;
+      padding:22px 170px 0 0;
+      color:#666;
+      .util_link{
+        display: block;
+        margin-bottom: 25px;
+        font : {
+          family : $sub-notice;
+          size: 0;
+        };
+        a{
+          color:#666;
+          position: relative;
+          font-size:12px;
+          padding:0 30px;
+          &:first-child{
+            padding-left:0;
+            &:before{
+              display: none;
+            }
+          }
+          &:before{
+            content:"";
+            position: absolute;
+            left:0;
+            top:50%;
+            width:1px;
+            height:12px;
+            margin-top:-6px;
+            background: #b4b4b4;
+          }
+        }
+      }
+      .company_info{
+        margin-bottom: 25px;
+        & > span{
+          color:#666;
+          &:before{
+            background: #666;
+          }
+        }
+        .name{
+          display: block;
+          color :$base-color;
+          & + span{
+            padding-left:0;
+          }
+        }
+        .copyright{
+          display: block;
+          padding-left:0
+        }
+      }
+      .partner{
+        display: block;
+        font-size:0;
+        a{
+          margin-right:45px;
+        }
+      }
+      .footer_logo{
+        display: block;
+        position: absolute;
+        right:0;
+        top:60px;
+      }
+    }
+  }
+}
+
+
 /*member*/
 //회원가입
 .box_contents{
@@ -12,7 +96,6 @@
     text-decoration: underline;
   }
 }
-
 .btn_wrap_sns{
   padding:105px 0;
   @mixin snsBtn($type){
