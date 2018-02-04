@@ -356,11 +356,7 @@ $lnb-width : 250px;
       }
     }
     &  + .data_table {
-      margin : {
-        left : 60px;
-        right : 60px;
-        top : 33px;
-      }
+      margin-top:33px;
     }
   }
   .table_title{
@@ -713,6 +709,12 @@ button{
   }
 }
 .data_table{
+  //[COMMENT] 갑 : margin left, right 공통이라서 이동했어요!
+  margin : {
+    left : 60px;
+    right : 60px;
+  } 
+
   border:1px solid $border-base;
   &[data-align="left"]{
     tbody{
@@ -785,6 +787,11 @@ button{
           border-bottom:0;
         }
       }
+      &.divide {
+        td {
+          background-color:#fbfbfb;
+        }
+      }
     }
   }
   span[data-color="blue"]{
@@ -838,6 +845,9 @@ button{
 .pagenation{
   margin-top:35px;
   font-size:0;
+
+  text-align:center; //[COMMENT] 김가빈 추가 : 가운데 정렬 했어영 
+
   %button{
     @include boxSizing();
     display: inline-block;
