@@ -5,7 +5,7 @@
 //font-family - 기본 나눔고딕, 서브 본고딕, 굴림, 돋움
 $base-font : "Nanum Gothic", sans-serif;
 $sub-font : "Noto Sans KR", sans-serif;
-$sub-notice : "Gulim", "굴림", sans-serif;
+$util-font : "Gulim", "굴림", sans-serif;
 
 //font-size - 기본 14px, 타이틀 관련 사이즈,
 $base-size : 14px;
@@ -32,6 +32,7 @@ $extra-bold : 800;
 $bg-base : #fafafa;
 $bg-section : #e7e8ec;
 $bg-default : #fff;
+$bg-light : #f3f4f8;
 
 //border-color - 기본 #d6d6d6, 강조 #85abf7
 $border-base : #d6d6d6;

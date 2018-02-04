@@ -8,7 +8,7 @@
 
 /*layout*/
 //layout관련 전역 variable
-$header-height : 0;
+$header-height : 152px;
 $sub-intro-height: 53px;
 $footer-height: 94px;
 $lnb-width : 250px;
@@ -19,8 +19,135 @@ $lnb-width : 250px;
   width:100%;
   min-width:$container-size;
   z-index:100;
+  background: #282564;
   .inner_header{
+    @include boxSizing();
     @include content();
+    @include clearFix();
+    position: relative;
+    padding:42px 0 0 0;
+    height:$header-height;
+    .logo{
+      float:left;
+      padding-left:5px;
+    }
+    #gnb{
+      position: relative;
+      float:right;
+      padding:40px 0 0 100px;
+      .main_menu{
+        overflow: hidden;
+        li{
+          float:left;
+          padding:0 33px;
+          height:70px;
+          line-height:70px;
+          &:last-child{
+            padding-right:0
+          }
+        }
+        a{
+          display: block;
+          height:100%;
+          color:#dcdcdc;
+          font :{
+            size : 16px;
+            weight: $bold;
+          }
+        }
+      }
+      .all_menu{
+        @include boxSizing();
+        display: none; //jQuery에서 show시에 자동으로 display:table
+        position: absolute;
+        right:0;
+        width:$container-size;
+        background: $bg-default;
+        border:{
+          width:0 1px 5px;
+          style :solid;
+          color : $border-strong $border-base;
+        }
+        border-bottom:5px solid $border-strong;
+        .menu_block{
+          @include boxSizing();
+          display: table-cell;
+          width:20%;
+          border-right:1px solid $border-base;
+          background:$bg-light;
+          &:last-child{
+            border-right:0;
+          }
+          .tit{
+            display: block;
+            padding:18px 0;
+            font : {
+              size : 16px;
+              weight : $bold;
+            }
+            color :#4889e1;
+            background: $bg-default;
+            text-align: center;
+          }
+          ul{
+            padding:15px 7px;
+            li{
+              a{
+                padding:10px 20px;
+                display: block;
+                color:$sub-color;
+                &:hover{
+                  background: $border-strong;
+                  color:#fff;
+                  font-weight:$extra-bold;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .util_link{
+      position: absolute;
+      right:0;
+      top:14px;
+      font-size:0;
+      %el{
+        color:#8e8ea2;
+        font : {
+          family: $util-font;
+          size : 12px;
+        }
+        vertical-align: middle;
+      }
+      a{
+        position: relative;
+        @extend %el;
+        padding:0 15px;
+        &:before{
+          content:"";
+          position: absolute;
+          right:0;
+          top:0;
+          width:1px;
+          height:12px;
+          background: #494778;
+        }
+        &:last-child{
+          padding-right:0;
+          &:before{
+            display: none;
+          }
+        }
+      }
+      button{
+        @extend %el;
+        border:1px solid #8e8ea2;
+        width:67px;
+        height:23px;
+      }
+    }
   }
 }
 #container{
@@ -47,7 +174,7 @@ $lnb-width : 250px;
       @extend %p;
       margin-right:8px;
       font :{
-        family : $sub-notice;
+        family : $util-font;
         size : 12px;
       }
       color:$sub-color;
@@ -67,7 +194,7 @@ $lnb-width : 250px;
     padding:9px 0 0 0;
     font : {
       size : 12px;
-      family : $sub-notice;
+      family : $util-font;
     }
     color:#787878;
     line-height:100%;
@@ -271,9 +398,9 @@ $lnb-width : 250px;
     }
     .company_info{
       font : {
-        family : $sub-notice;
+        family : $util-font;
         size: 0;
-      };
+      }
       & > span{
         position: relative;
         font-size:12px;
@@ -821,7 +948,7 @@ span {
     padding:12px 0;
     font : {
       size : 12px;
-      family: $sub-notice;
+      family: $util-font;
     }
     span[data-color="blue"]{
       color:$strong-color;
