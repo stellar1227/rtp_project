@@ -417,6 +417,8 @@ $dataFontSize: (
     background:darken($btn-strong, 20%);
   }
 }
+
+//[COMMENT] 김가빈 : 테이블 내부 버튼 추가.
 .btn_table{
     @extend %btn;
     min-width: 80px;
