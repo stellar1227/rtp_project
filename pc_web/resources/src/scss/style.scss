@@ -373,33 +373,29 @@ select{
 }
 
 
-//input, selector, textares size
-//[COMMENT] 김가빈 :  Map 방식으로 변경했어요, 불필요하다면 원복해주세요'-'/ 
+/*input, selector, textares size*/
 $dataWidth: (
   200: 200px,
   300: 300px,
   500: 500px
 );
- 
 @each $elemWidth, $value in $dataWidth {
   [data-width='#{$elemWidth}'] {
     width:$value
   }
 }
 
-// font-size [COMMENT] 김가빈 : 디자인상 폰트사이즈가 다양해서 추가하였습니다
+//특정 data아닌 단순 사이즈 ex)data_table내부 사용?
 $dataFontSize: (
   18: 18px,
   20: 20px,
   26: 26px
 );
- 
 @each $elemFontSize, $value in $dataFontSize {
   [data-font='#{$elemFontSize}'] {
     font-size:$value
   }
 }
-
 
 
 /*button style*/
@@ -457,99 +453,116 @@ button{
 .input_table{
   padding:35px 0 0;
   border-bottom:1px solid $border-base;
-  table{
+  &.list_type{
+    padding:0;
     tbody{
-      & + tbody{
-        tr:first-child{
-          border-top:1px solid $border-base;
-          td{
-            padding-top:40px;
-          }
-          th{
-            padding-top:55px;
-          }
-        }
-      }
       tr:last-child{
         td,th{
-          padding-bottom:40px;
+          padding-bottom:15px;
+          border-bottom:0
         }
       }
     }
     th{
-      padding:15px 0 15px 60px;
-      vertical-align: top;
-      text-align: left;
-      &:before{
-        display: inline-block;
-        content:"\2022"; 
-        vertical-align: middle;
-        margin-right:10px;
-        font-size:20px;
-        color:#8a9fc7
-      }
+      border-bottom:1px solid $border-base;
+      vertical-align: middle;
     }
     td{
-      padding:5px 0;
-      font-size:0;
-      %elStyle{
-        margin-right:6px;
-        vertical-align: middle;
-      }
-      input{
-       @extend %elStyle;
-      }
-      .has_data+.input_custom {
-        margin-left:13px;
-      }
-      .input_custom{
-        @extend %elStyle;
-        margin-left:5px;
-      }
-      button{
-        @extend %elStyle;
-      }
-      a{
-        @extend %elStyle;
-      }
-      select{
-        @extend %elStyle;
+      padding:15px 0;
+      border-bottom:1px solid $border-base
+    }
+  }
+  tbody{
+    & + tbody{
+      tr:first-child{
+        border-top:1px solid $border-base;
+        td{
+          padding-top:40px;
+        }
+        th{
+          padding-top:55px;
+        }
       }
     }
-    .has_data{
-      font-size: 15px;
-      padding-bottom:5px;
-      vertical-align:inherit; 
-    }
-    .validate_notice{
-      margin-top:8px;
-      color:$notice-color; 
-      font-size:15px;
-      padding-left: 15px;
-      margin-bottom: 8px;
-      &:first-child{
-        margin-top: 0;
-      }
-      &:last-child{
-        margin-bottom: 0;
+    tr:last-child{
+      td, & th{
+        padding-bottom:40px;
       }
     }
-    .table_notice{
-      margin-top: 8px;
-      color:$light-color;
-      font-size:14px;
-      padding-left: 15px;
-      line-height:150%;
+  }
+  th{
+    padding:15px 0 15px 60px;
+    vertical-align: top;
+    text-align: left;
+    &:before{
+      display: inline-block;
+      content:"\2022";
+      vertical-align: middle;
+      margin-right:10px;
+      font-size:20px;
+      color:#8a9fc7
     }
-    .verify-time{
-      color:$notice-color
+  }
+  td{
+    padding:5px 0;
+    font-size:0;
+    %elStyle{
+      margin-right:6px;
+      vertical-align: middle;
     }
-    span[data-color="red"]{
-      color:$notice-color
+    input{
+      @extend %elStyle;
     }
-    span[data-color="blue"]{
-      color:$strong-color
+    .has_data+.input_custom {
+      margin-left:13px;
     }
+    .input_custom{
+      @extend %elStyle;
+      margin-left:5px;
+    }
+    button{
+      @extend %elStyle;
+    }
+    a{
+      @extend %elStyle;
+    }
+    select{
+      @extend %elStyle;
+    }
+  }
+  .has_data{
+    font-size: 15px;
+    padding-bottom:5px;
+    vertical-align:inherit;
+  }
+  .validate_notice{
+    margin-top:8px;
+    color:$notice-color;
+    font-size:15px;
+    padding-left: 15px;
+    margin-bottom: 8px;
+    &:first-child{
+      margin-top: 0;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .table_notice{
+    margin-top: 8px;
+    color:$light-color;
+    font-size:14px;
+    padding-left: 15px;
+    line-height:150%;
+  }
+  .verify-time{
+    color:$notice-color
+  }
+  span[data-color="red"]{
+    color:$notice-color
+  }
+  span[data-color="blue"]{
+    color:$strong-color
   }
 }
 .data_table{
