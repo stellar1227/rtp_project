@@ -17,9 +17,9 @@ input[required][readonly][type="text"], input[required][readonly][type="password
 
 input[required][disabled][type="text"], input[required][disabled][type="password"], textarea[required][disabled] { border-color: #528dff; background: #f4f4f4; color: #999; }
 
-.btn_primary, .btn_strong, button[disabled] { display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; min-width: 99px; height: 44px; padding: 0 20px; line-height: 44px; font-size: 15px; font-weight: 700; color: #fff; text-align: center; }
+.btn_primary, .btn_strong, .btn_table, button[disabled] { display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; min-width: 99px; height: 44px; padding: 0 20px; line-height: 44px; font-size: 15px; font-weight: 700; color: #fff; text-align: center; }
 
-.btn_primary:hover, .btn_strong:hover, button[disabled]:hover { text-decoration: none; }
+.btn_primary:hover, .btn_strong:hover, .btn_table:hover, button[disabled]:hover { text-decoration: none; }
 
 /*reset*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; }
@@ -226,9 +226,15 @@ select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f
 
 .btn_strong:hover { background: #0050eb; }
 
+.btn_table { min-width: 80px; height: 35px; margin-left: 10px; margin-right: 10px; border: 1px solid #bbbf; background: #fff; vertical-align: middle; line-height: 35px; color: #333; }
+
+.btn_table:hover { background: #0050eb; border-color: #0050eb; color: #fff; }
+
 button[disabled] { background: #b8b8b8; }
 
 button[disabled]:hover { background: #b8b8b8; }
+
+.data_table table tbody td.cell_inner_btns { padding-top: 10px; padding-bottom: 10px; }
 
 .btn_wrap { font-size: 0; margin: 40px 0 0 0; }
 
@@ -415,5 +421,20 @@ input[data-align="right"] { text-align: right; }
 .tip_notice dt, .tip_notice dd { display: inline-block; }
 
 .tip_notice dt { padding: 1px 10px 3px; margin-right: 8px; background-color: #fff; border: 1px solid #cacaca; border-radius: 2px; color: #999; }
+
+/* 휴대전화 + 인증번호 */
+.verify_phone_input { width: 222px; }
+
+.verify_phone_time { display: inline-block; width: 72px; margin-right: 6px; font-size: 14px; border-bottom: 1px solid #ccc; text-align: center; line-height: 42px; vertical-align: middle; color: #528dff; }
+
+.link_page { vertical-align: middle; color: #528dff; text-decoration: underline; }
+
+td .link_page { margin-left: 10px; vertical-align: top; }
+
+.box_contents.actions { overflow: hidden; padding-left: 60px; padding-right: 60px; }
+
+.box_contents.actions .article { float: left; }
+
+.box_contents.actions .actions { float: right; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */

@@ -80,8 +80,6 @@ input{
 	}
 }
 
-//[COMMENT] 요청 : input_table : tr 에 border 들어간 디자인 분기 필요 ㅠㅠ
-
 
 .tip_notice {
 	padding:9px 13px 11px;
@@ -104,4 +102,47 @@ input{
 }
 
 
+/* 휴대전화 + 인증번호 */
+.verify_phone_input {
+	width:222px;
+}
+.verify_phone_time {
+    display: inline-block;
+    width:72px;
+    margin-right: 6px;
+	font-size:$base-size;
+	border-bottom:1px solid #ccc;
+	text-align:center;
+    line-height: 42px;
+    vertical-align: middle;
+    color:$strong-color;
+}
 
+
+
+
+// [COMMENT] Anchor Reset 로 빼야게뜸
+.link_page {
+    vertical-align: middle;
+    color:$strong-color;
+    text-decoration: underline;
+ }
+td .link_page {
+	margin-left:10px;
+	vertical-align:top;
+}
+
+
+// 좌측 Article + 우측 action contents 
+.box_contents.actions {
+	overflow:hidden;
+	padding-left:60px;
+	padding-right:60px;
+
+	.article {
+		float:left;
+	}
+	.actions {
+		float:right;
+	}
+}
