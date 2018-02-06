@@ -339,6 +339,11 @@ $lnb-width : 250px;
       color:$base-color
     }
     border-bottom:1px solid $border-base;
+
+    &  + .data_table,
+    &  + .table_title {
+      margin-top:33px;
+    }
   }
   .block_title{
     padding:40px 5px 12px;
@@ -364,7 +369,12 @@ $lnb-width : 250px;
       weight:$normal;
       size : 20px;
     }
-    margin-bottom:15px;
+    //[COMMENT] table_title : data_table 전용이라고 ?! 가정하여 margin 좌우 추가하였씁니다  
+    margin : {
+      left:60px;
+      right:60px;
+      bottom:15px;
+    }
     span[data-color="red"]{
       font-weight:$bold;
     }
@@ -931,7 +941,7 @@ span {
     background: #f7b629;
   }
   &.ball_n10th{
-    background: #b5d9ed;
+    background: #5fb4dc;
   }
   &.ball_n20th{
     background: #ee7969;
