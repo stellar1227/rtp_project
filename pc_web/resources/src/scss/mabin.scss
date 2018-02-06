@@ -132,3 +132,28 @@ input{
 	margin-top:35px;
 	border-top:1px solid #ccc;
 }
+
+//stats_reemergence.html
+.ball_desc {
+	margin-right:25px;
+	margin-left:5px;
+	font-weight:$extra-bold;
+	&:last-child {margin-right:0;}
+}
+
+
+
+//page_title_banner - [COMMENT] 갑 : 임시
+.page_title_banner {
+	margin-top:-1px;
+	margin-bottom:35px;
+}
+
+//[COMMENT] 갑 : stats_couple_two.html td에서 워드브레이킹이 안되어서 추가하였습니당.
+.data_table {
+	tbody {
+		td {
+			word-wrap: break-word;
+		}
+	}
+}

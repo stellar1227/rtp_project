@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>[WorkSheet-로또팡   ]</title>
     <style>
+        body {
+            padding-bottom: 40px;
+        }
         .guideIntro{
             font-size:2rem;
             font-weight:bold;
@@ -26,6 +29,7 @@
       
         .guideTable tbody td{
             padding:4px 12px;
+            font-size:14px;
             border-bottom:1px solid #ddd;
             border-right:1px solid #ddd;
         }
@@ -306,7 +310,80 @@
             <td>불가</td>
             <td class="date"></td>
             <td>기획안 대기</td>
+        </tr><!-- //MYPAGE -->
+        
+
+
+
+        <tr><!-- STATS -->
+            <td rowspan="10">stats<br>(로또통계 비법자료)</td>
+            <td>로또통계 비법자료</td>
+            <td>비법자료 전체보기</td>
+            <td></td>
+            <td>당첨번호 재출현 주기 분석</td>
+            <td><a href="../template/stats/stats_reemergence.html" target="_blank" title="새창">stats_reemergence.html</a></td>
+            <td>완료</td>
+            <td class="date">02-06</td>
+            <td></td>
         </tr>
+        <tr>
+            <td>로또통계 비법자료</td>
+            <td>비법자료 전체보기</td>
+            <td></td>
+            <td>당첨번호 출현횟수 분석</td>
+            <td><a href="../template/stats/stats_win_total.html" target="_blank" title="새창">stats_win_total.html</a></td>
+            <td>완료</td>
+            <td class="date">02-06</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>로또통계 비법자료</td>
+            <td>비법자료 전체보기</td>
+            <td></td>
+            <td>전체 당첨 번호</td>
+            <td><a href="../template/stats/stats_win_text.html" target="_blank" title="새창">stats_win_text.html</a></td>
+            <td>완료</td>
+            <td class="date">02-06</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>로또통계 비법자료</td>
+            <td>비법자료 전체보기</td>
+            <td></td>
+            <td>당첨번호 출현횟수분석 (최근10주)</td>
+            <td><a href="../template/stats/stats_win_second.html" target="_blank" title="새창">stats_win_second.html</a></td>
+            <td>완료</td>
+            <td class="date">02-06</td>
+            <td>PPT - slide 69번 : 메뉴- 5번,10번 항목 메뉴명 동일함. 확인필요</td>
+        </tr>
+        <tr>
+            <td>로또통계 비법자료</td>
+            <td>비법자료 전체보기</td>
+            <td></td>
+            <td>2커플 수의 당첨출현현황(1번대~40번대)</td>
+            <td><a href="../template/stats/stats_couple_two.html" target="_blank" title="새창">stats_couple_two.html</a></td>
+            <td>완료</td>
+            <td class="date">02-06</td>
+            <td>표-'2커플수'의 로또볼 색상(디자인)만 달라질뿐,
+                <br>내부 화면 구성이 1,10,20,30,40 번대 모두 동일합니다.
+                <br>상기의 이유로 HTML을 번호대 별로 분기하는것은 양방으로 혼란이 우려되어,
+                <br>HTML상에 주석으로만 로또볼 디자인 분기에 대하여 표기해 두었습니다.(LINE 125)
+                <br>요청하실 경우, 각 번호대별로 HTML 분기해드리겠습니다.
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>로또통계 비법자료</td>
+            <td>비법자료 전체보기</td>
+            <td></td>
+            <td>3커플 수의 당첨출현현황</td>
+            <td><a href="../template/stats/stats_couple_three.html" target="_blank" title="새창">stats_couple_three.html</a></td>
+            <td>완료</td>
+            <td class="date">02-06</td>
+            <td></td>
+        </tr>
+
 
     </tbody>
 </table>
@@ -336,7 +413,7 @@
 
 
     var newDateCell = Table.getElementsByClassName('date'),
-        newDate     = '02-04';
+        newDate     = '02-06';
 
     for(var i = 0,len=newDateCell.length; i < len; i++){
         if ( newDateCell[i].textContent == newDate )  {

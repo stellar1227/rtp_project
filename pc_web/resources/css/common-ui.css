@@ -170,6 +170,8 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #content .page_title .tit { font-weight: 700; font-size: 28px; color: #000; }
 
+#content .page_title + .data_table, #content .page_title + .table_title { margin-top: 33px; }
+
 #content .block_title { padding: 40px 5px 12px; border-bottom: 1px solid #505050; }
 
 #content .block_title .tit { color: #000; font-size: 20px; }
@@ -178,7 +180,7 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 #content .block_title + .data_table { margin-top: 33px; }
 
-#content .table_title { font-weight: 400; font-size: 20px; margin-bottom: 15px; }
+#content .table_title { font-weight: 400; font-size: 20px; margin-left: 60px; margin-right: 60px; margin-bottom: 15px; }
 
 #content .table_title span[data-color="red"] { font-weight: 700; }
 
@@ -410,7 +412,7 @@ span[class^="ball_n"] + .plus { vertical-align: middle; font-size: 14px; color: 
 
 span.ball_n1th { background: #f7b629; }
 
-span.ball_n10th { background: #b5d9ed; }
+span.ball_n10th { background: #5fb4dc; }
 
 span.ball_n20th { background: #ee7969; }
 
@@ -575,5 +577,13 @@ input[data-align="right"] { text-align: right; }
 .box_contents.actions + .lotto_pang_slogan { margin-top: -1px; }
 
 .pagenation + .box_contents.actions { margin-top: 35px; border-top: 1px solid #ccc; }
+
+.ball_desc { margin-right: 25px; margin-left: 5px; font-weight: 800; }
+
+.ball_desc:last-child { margin-right: 0; }
+
+.page_title_banner { margin-top: -1px; margin-bottom: 35px; }
+
+.data_table tbody td { word-wrap: break-word; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
