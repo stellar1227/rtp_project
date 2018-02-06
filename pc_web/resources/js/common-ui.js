@@ -36,11 +36,7 @@
     var layerPop = function(opt){
         this._opt = {
             type : null,
-            msg : "",
-            title : null,
-            contSelector : null,
-            okBtnTxt : "확인",
-            cancelBtnTxt : "취소"
+            msg : "도도도도"
         };
         $.extend(true,this._opt,opt);
     };
@@ -50,24 +46,15 @@
         console.log(this._opt)
     };
 
-    layerPop.prototype.confirm = function(){
-        this._opt.type = "confirm";
-        console.log(this._opt);
-    };
     var opt = {
         msg : "dddd"
     };
-    var opt1 = {
-        msg : "1111"
-    };
-    var a = new layerPop(opt);
-    a.alert();
-
-    var b = new layerPop(opt1);
-    b.confirm();
+    new a = layerPop(opt);
+    a.alert(opt);
     //document.ready
-
     $(function(){
+
+
         gnb.init(); //gnb
         /*var oc = new layerPop({
             type : "alert",

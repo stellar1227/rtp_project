@@ -11,21 +11,21 @@ var concat = require('gulp-concat'),
 var src = 'resources/src';
 var dist = 'resources';
 var paths = {
-  commonjs : src + '/js/common/*.js',
-  funcjs : src + '/js/*.js',
+  commonjs : src + '/js/*.js',/*
+  funcjs : src + '/js/!*.js',*/
   scss : src + '/scss/common-ui.scss',
   scssAll : src + '/scss/**/*.scss'
 };
 
 gulp.task('js_common_concat', function() {
   return gulp.src(paths.commonjs)
-    .pipe(concat('common.js'))
+    .pipe(concat('common-ui.js'))
     .pipe(gulp.dest(dist + '/js'))
     .pipe(uglify())
-    .pipe(rename('common.min.js'))
+    .pipe(rename('common-ui.min.js'))
     .pipe(gulp.dest(dist + '/js'))
 });
-
+/*
 gulp.task('js_func_concat', function() {
   return gulp.src(paths.funcjs)
     .pipe(concat('func.js'))
@@ -33,7 +33,7 @@ gulp.task('js_func_concat', function() {
     .pipe(uglify())
     .pipe(rename('func.min.js'))
     .pipe(gulp.dest(dist + '/js'))
-});
+});*/
 
 var scssOptions = {
   outputStyle: 'compact', //values : nested, expanded, compact, compressed
@@ -56,4 +56,4 @@ gulp.task('watch', function() {
   gulp.watch(paths.scssAll, ['scss_compile']);
 });
 
-gulp.task('default', ['js_common_concat', 'js_func_concat', 'scss_compile', 'watch']);
+gulp.task('default', ['js_common_concat', /*'js_func_concat', */'scss_compile', 'watch']);
