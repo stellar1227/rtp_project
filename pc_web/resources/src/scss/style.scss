@@ -997,6 +997,7 @@ span {
 
 /*layerPop*/
 .common_layer{
+  display: none;
   position: fixed;
   z-index:500;
   left:50%;
@@ -1040,6 +1041,7 @@ span {
       line-height:183%;
     }
     .data_table[data-align="left"]{
+      margin:0;
       th{
         padding-left:15px;
         padding-right:15px;
@@ -1060,7 +1062,7 @@ span {
       .btn_ok{
         width:100%;
       }
-    }
+    }//나중에 플렉스로 바꿔야징
     %btnStyle{
       @include borderRadius(0);
       height:60px;
