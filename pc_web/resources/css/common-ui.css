@@ -358,6 +358,8 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .data_table tbody th.mid_th { background: #fbfbfb; }
 
+.data_table tbody th.last_cell { border-bottom: 0; }
+
 .data_table tbody td { word-wrap: break-word; }
 
 .data_table tbody td.cell_inner_btns { padding-top: 10px; padding-bottom: 10px; }
@@ -485,6 +487,8 @@ span.ball_n40th { background: #58ca7b; }
 [data-color="blue"] { color: #528dff; }
 
 [data-color="gray"] { color: #7b8caf; }
+
+[data-color="green"] { color: #20b820; }
 
 /*anchor*/
 .link_page { vertical-align: middle; color: #528dff; text-decoration: underline; }

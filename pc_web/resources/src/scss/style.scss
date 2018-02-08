@@ -778,6 +778,9 @@ button{
       &.mid_th{
         background:$tbody-th-color;
       }
+      &.last_cell{
+        border-bottom:0;
+      }
     }
     td{
       @extend %tableCell;
@@ -1127,6 +1130,10 @@ span {
 
 [data-color="gray"]{
   color:$light-color;
+}
+
+[data-color="green"]{
+  color:$etc-color;
 }
 
 /*anchor*/
