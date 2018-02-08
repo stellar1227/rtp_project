@@ -350,7 +350,7 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .data_table thead th:last-child { border-right: 0; }
 
-.data_table tbody th, .data_table tbody td { padding: 16px 10px; text-align: center; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; }
+.data_table tbody th, .data_table tbody td { padding: 16px 0; text-align: center; border-width: 0 1px 1px 0; border-style: solid; border-color: #d6d6d6; }
 
 .data_table tbody th[data-align], .data_table tbody td[data-align] { padding-left: 27px; padding-right: 27px; text-align: left; }
 
@@ -369,6 +369,8 @@ button[disabled]:hover { background: #b8b8b8; }
 .data_table tbody tr:last-child td { border-bottom: 0; }
 
 .data_table tbody tr.divide td { background-color: #fbfbfb; }
+
+.data_table span[data-color="blue"] { font-weight: 800; }
 
 .data_table .link_page { margin-left: 10px; vertical-align: top; }
 
@@ -477,14 +479,14 @@ span.ball_n40th { background: #58ca7b; }
 
 .lotto_pang_slogan .desc { float: left; line-height: 185%; color: #969696; padding: 12px 0; font-size: 12px; font-family: "Gulim", "굴림", sans-serif; }
 
+.lotto_pang_slogan .desc span[data-color="blue"] { color: #528dff; }
+
 .lotto_pang_slogan .btn_go { padding: 12px 20px 0 0; float: right; }
 
 /*text*/
 [data-color="red"] { color: #ea614e; }
 
 [data-color="blue"] { color: #528dff; }
-
-[data-color="gray"] { color: #7b8caf; }
 
 /*anchor*/
 .link_page { vertical-align: middle; color: #528dff; text-decoration: underline; }
@@ -641,16 +643,6 @@ input[data-align="right"] { text-align: right; }
 
 .ball_desc:last-child { margin-right: 0; }
 
-.page_title_banner { margin-bottom: 35px; margin-top: -1px; border-width: 1px 0; border-style: solid; border-color: #ebebeb transparent #c6c6c6; letter-spacing: -2px; background: #fbfbfb url("../img/content/banner_stats.png") no-repeat 160px 15px; }
-
-.page_title_banner > a { display: block; height: 103px; padding-left: 390px; padding-top: 34px; margin-top: -1px; font-size: 22px; }
-
-.page_title_banner p { margin-top: 8px; font-size: 19px; }
-
-.page_title_banner p span { font-size: 16px; margin-left: 12px; text-decoration: underline; color: #5b5b5b; }
-
-.page_title_banner strong { font-size: 24px; }
-
-.page_title_banner strong span { position: relative; top: -2px; font-size: 18px; margin: 5px; padding: 1px 11px 6px; border-radius: 50px; background-color: #18699b; letter-spacing: 0; color: #fff; }
+.page_title_banner { margin-top: -1px; margin-bottom: 35px; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
