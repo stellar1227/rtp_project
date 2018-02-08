@@ -759,7 +759,7 @@ button{
   }
   tbody{
     %tableCell{
-      padding:16px 0;
+      padding:16px 10px;
       text-align: center;
       border : {
         width : 0 1px 1px 0;
@@ -806,11 +806,7 @@ button{
       }
     }
   }
-  span[data-color="blue"]{
-    font : {
-      weight:$extra-bold
-    }
-  }
+
   .link_page {
     margin-left:10px;
     vertical-align:top;
@@ -1114,9 +1110,6 @@ span {
       size : 12px;
       family: $util-font;
     }
-    span[data-color="blue"]{
-      color:$strong-color;
-    }
   }
   .btn_go{
     padding:12px 20px 0 0;
@@ -1130,6 +1123,10 @@ span {
 }
 [data-color="blue"]{
   color:$strong-color;
+}
+
+[data-color="gray"]{
+  color:$light-color;
 }
 
 /*anchor*/
