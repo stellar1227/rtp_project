@@ -293,7 +293,47 @@
 </section>
 <section class="guideSection">
     <h2 class="guideTitle">List</h2>
-    <h3 class="guideItemTitle">list item - accordian</h3>
+    <article>
+        <h3 class="guideItemTitle">list item - accordian</h3>
+        <div class="accodian_list faq"><!-- faq가 세부 class -->
+            <article><!-- loop -->
+                <header class="list_title">
+                    <span class="category" data-type="question" title="질문">Q</span>
+                    <h1 class="tit">[결제] 가상계좌 무통장 입금은 어떻게 하나요? </h1>
+                </header>
+                <div class="list_contents">
+                    <span class="category" data-type="answer" title="답변">A</span>
+                    <div class="comment"><!-- editor에서 뿌려지는 영역 -->
+                        안녕하세요. 로또팡 입니다. 무통장 입금의 경우, 아래의 계좌로 입금해주시면 됩니다. <br>
+                        <br>
+                        국민  443101-01-118753 <br>
+                        우리 1005-402-148847 <br>
+                        신한 110-214-719112 <br>
+                        <br> <br>
+                        예금주 : 서주형
+                    </div><!-- //editor에서 뿌려지는 영역 -->
+                </div>
+            </article><!-- //loop -->
+            <article><!-- loop -->
+                <header class="list_title">
+                    <span class="category" data-type="question" title="질문">Q</span>
+                    <h1 class="tit">[결제] 가상계좌 무통장 입금은 어떻게 하나요? </h1>
+                </header>
+                <div class="list_contents">
+                    <span class="category" data-type="answer" title="답변">A</span>
+                    <div class="comment"><!-- editor에서 뿌려지는 영역 -->
+                        안녕하세요. 로또팡 입니다. 무통장 입금의 경우, 아래의 계좌로 입금해주시면 됩니다. <br>
+                        <br>
+                        국민  443101-01-118753 <br>
+                        우리 1005-402-148847 <br>
+                        신한 110-214-719112 <br>
+                        <br> <br>
+                        예금주 : 서주형
+                    </div><!-- //editor에서 뿌려지는 영역 -->
+                </div>
+            </article><!-- //loop -->
+        </div>
+    </article>
     <article>
         <h3 class="guideItemTitle">pagenation</h3>
         <div class="pagenation">
@@ -333,14 +373,17 @@
     <article>
         <h3 class="guideItemTitle">pageTitle</h3>
         <div id="content"><!-- content 종속 -->
+            <p class="guideDescription">sub h2 page title</p>
             <h2 class="page_title">
                 <span class="desc">특별한 회원 서비스</span>
                 <span class="tit">무료 회원 가입</span>
             </h2>
+            <p class="guideDescription">sub h3 contents title</p>
             <h3 class="block_title">
                 <span class="tit">필수사항 입력</span>
                 <span class="desc">기존에 가입되어 있는 SNS 계정으로 로그인 하세요.</span>
             </h3>
+            <p class="guideDescription">sub table title</p>
             <strong class="table_title">
                 연금복권 <span data-color="red">310</span>회 당첨번호<span class="desc">이번주는 연금복권 311회차 입니다.</span>
             </strong>
@@ -352,9 +395,19 @@
                 </div>
             </aside><!-- //하단 슬로건 -->
         </div>
+        <h2 class="guideItemTitle">file upload</h2>
+        <div class="file_upload">
+            <input type="file" id="file_id">
+            <label for="file_id" class="btn_primary btn_file_find">파일 찾기</label>
+            <div class="file_name">
+                <span class="name"></span>
+                <button type="button" class="btn_file_del">삭제</button>
+            </div>
+        </div>
     </article>
 
 </section>
-
+<script src="../resources/lib/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/common-ui.min.js"></script>
 </body>
 </html>

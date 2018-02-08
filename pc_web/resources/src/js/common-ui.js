@@ -1,5 +1,6 @@
 /*common-ui.js*/
 var rtp = (function($){
+
     /*gnb*/
     var gnb = {
         init : function(){
@@ -17,6 +18,53 @@ var rtp = (function($){
             })
         }
 
+    };
+
+    /*toggle_list*/
+    var toggleList = {
+        init : function(){
+            var target = $(".accodian_list");
+            this.title = target.find(".list_title");
+            this.addEvent();
+        },
+        addEvent : function(){
+            var self = this;
+            this.title.on("click", function(){
+                self.toggle($(this));
+            })
+        },
+        toggle : function(t){
+            t.toggleClass("on");
+            t.next(".list_contents").slideToggle(300);
+        }
+    };
+
+    /*file_upload*/
+    var fileUpload = {
+        init : function(){
+            var target = $(".file_upload");
+            this.inputFile = target.find("input:file");
+            this.btnFileRemove = target.find(".btn_file_del");
+            this.addEvent();
+        },
+        addEvent : function(){
+            var self = this;
+            this.inputFile.on("change", function(){
+                if($(this).val() === undefined) return;
+                self.addFile($(this));
+            });
+            this.btnFileRemove.on("click", function(){
+               self.removeFile($(this))
+            })
+        },
+        removeFile : function(t){
+            t.siblings(".name").text("").removeClass("on");
+            t.closest(".file_upload").find("input:file").val("");
+        },
+        addFile : function(t){
+            var _val = t.val();
+            t.closest(".file_upload").find(".name").text(_val).addClass("on");
+        }
     };
 
     /*layer*/ //나중에 수정좀 할가 ㅠ
@@ -172,7 +220,7 @@ var rtp = (function($){
         var obj = new layerPop(option);
         obj.confirm();
     };
-    var primaryUI = function(option){
+    var primaryUI = function(option){//layer 호출 시 사용
         var obj = new layerPop(option);
         obj.init();
     };
@@ -182,11 +230,10 @@ var rtp = (function($){
 
     $(function(){
         gnb.init(); //gnb
-        /*var oc = new layerPop({
-            type : "alert",
-            msg :"알림입니다.",
-        });*/
-    })
+        $(".accodian_list").length && toggleList.init(); //toggleList
+        $(".file_upload").length && fileUpload.init(); //inputFile
+
+    });
 
     return {
         alertUI : alertUI,

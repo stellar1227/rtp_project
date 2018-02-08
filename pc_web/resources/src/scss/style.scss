@@ -217,7 +217,7 @@ $lnb-width : 250px;
   width:$container-size;
   min-height:1110px;
   @include boxSizing();
-  padding:0 0 0 $lnb-width;
+  padding:0 0 40px $lnb-width;
   margin:0 auto;
 }
 #local_info{
@@ -369,7 +369,7 @@ $lnb-width : 250px;
       weight:$normal;
       size : 20px;
     }
-    //[COMMENT] table_title : data_table 전용이라고 ?! 가정하여 margin 좌우 추가하였씁니다  
+
     margin : {
       left:60px;
       right:60px;
@@ -511,7 +511,8 @@ select{
 $dataWidth: (
   200: 200px,
   300: 300px,
-  500: 500px
+  500: 500px,
+  100p : 100%
 );
 @each $elemWidth, $value in $dataWidth {
   [data-width='#{$elemWidth}'] {
@@ -659,29 +660,29 @@ button{
     }
   }
   td{
-    padding:5px 0;
+    padding:5px 60px 5px 0;
     font-size:0;
     %elStyle{
       margin-right:6px;
       vertical-align: middle;
     }
-    input{
+    & > input{
       @extend %elStyle;
     }
-    .has_data+.input_custom {
+    & > .has_data +.input_custom {
       margin-left:13px;
     }
-    .input_custom{
+    & > .input_custom{
       @extend %elStyle;
       margin-left:5px;
     }
-    button{
+    & > button{
       @extend %elStyle;
     }
-    a{
+    & > a{
       @extend %elStyle;
     }
-    select{
+    & > select{
       @extend %elStyle;
     }
   }
@@ -719,7 +720,7 @@ button{
   }
 }
 .data_table{
-  //[COMMENT] 갑 : margin left, right 공통이라서 이동했어요!
+
   margin : {
     left : 60px;
     right : 60px;
@@ -784,6 +785,7 @@ button{
         padding-top:10px;
         padding-bottom:10px;
       }
+      word-wrap: break-word;
     }
     tr{
       td:last-child{
@@ -856,7 +858,7 @@ button{
   margin-top:35px;
   font-size:0;
 
-  text-align:center; //[COMMENT] 김가빈 추가 : 가운데 정렬 했어영 
+  text-align:center;
 
   %button{
     @include boxSizing();
@@ -916,7 +918,139 @@ button{
   }
 }
 
-/*list*/
+/*accordian*/
+.accodian_list{
+  article{
+    border-bottom:1px solid $border-base;
+    .list_title{
+      position: relative;
+      padding:15px 60px 15px 40px;
+      .tit{
+        display: inline-block;
+        font : {
+          size : 15px;
+          weight: $bold;
+        }
+      }
+      .category{
+        margin-right:14px;
+      }
+      &:after{
+        content:"";
+        position: absolute;
+        right:20px;
+        top:50%;
+        width:20px;
+        height:20px;
+        margin-top:-10px;
+        background:url('#{$common-img}ico_toggle.png') no-repeat 0 0;
+      }
+      &.on:after{
+        background-position:0 -30px;
+      }
+      cursor:pointer
+    }
+    .status{
+      display: inline-block;
+      padding:0 6px;
+      font : {
+        weight:$bold;
+        size : 13px;
+      }
+      border:1px solid $border-base;
+      border-radius:2px;
+      height:18px;
+      margin-left:14px;
+      line-height:18px;
+      &[data-type="submit_ok"]{
+        color:$disabled-color;
+      }
+      &[data-type="answer_ok"]{
+        color:$notice-color;
+      }
+     }
+    .list_contents{
+      display: none;
+      background: $bg-base;
+      border-top:1px solid $border-base;
+      padding : 25px 60px 25px 85px;
+      .category{
+        vertical-align: top;
+      }
+      .comment{
+        display: inline-block;
+        line-height:150%;
+        font-size:15px;
+      }
+    }
+  }
+}
+/*qna flag*/
+.category{
+  display: inline-block;
+  border:1px solid $border-base;
+  border-radius:2px;
+  width:25px;
+  height:18px;
+  line-height:18px;
+  font : {
+    family:Arial,sans-serif;
+    weight:$bold;
+    size : 12px;
+  }
+  text-align: center;
+  vertical-align: middle;
+  &[data-type="question"]{
+    color:$strong-color;
+  }
+  &[data-type="answer"]{
+    color:$notice-color;
+  }
+}
+
+/*file_upload*/
+.file_upload{
+  position: relative;
+  padding-right:110px;
+  overflow: hidden;
+  input[type="file"]{
+    @include blind(absolute);
+  }
+  .btn_file_find{
+    position: absolute;
+    right:0;
+    top:0;
+    cursor:pointer
+  }
+  .file_name{
+    @include boxSizing();
+    position: relative;
+    width:100%;
+    height:44px;
+    padding-right:44px;
+    border:1px solid $border-base;
+    .name{
+      padding-left:14px;
+      line-height:42px;
+      font-size:15px;
+      color : $light-color;
+      &.on + .btn_file_del{
+        display: block;
+      }
+    }
+    .btn_file_del{
+      @include blind(indent);
+      display: none;
+      position: absolute;
+      right:0;
+      top:50%;
+      margin-top:-22px;
+      width:44px;
+      height:44px;
+      background:url('#{$common-img}btn_file_del.png') no-repeat 50% 50%;
+    }
+  }
+}
 
 /*lottoball*/
 span {

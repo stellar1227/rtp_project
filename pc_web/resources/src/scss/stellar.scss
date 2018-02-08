@@ -134,6 +134,40 @@
   }
 }
 
+/*고객센터*/
+.qna_write{
+  textarea{
+    height:265px;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+}
+.qna{
+  .tit{
+    width:630px;
+  }
+  .numbering{
+    display: inline-block;
+    width:35px;
+    font : {
+      size : 15px;
+      weight:$bold;
+    }
+    color:$strong-color
+  }
+}
+.faq_notice{
+  margin:12px 0 40px;
+  .category{
+
+  }
+  & > p{
+    display: inline;
+    vertical-align: middle;
+    margin-left:10px;
+  }
+}
+
 /*각페이지별 레이어*/
 .charge_layer{
   padding-bottom:60px;
