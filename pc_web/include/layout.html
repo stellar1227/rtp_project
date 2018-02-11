@@ -114,15 +114,21 @@
                 <span>오로지 로또팡에만 있는!</span>
                 <strong>특별한 회원 서비스</strong>
             </p>
-            <nav id="lnb"><!-- lnb -->
-                <ul>
-                    <li class="on"><a href="#">무료 회원 가입</a></li>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">가입 소셜 계정 찾기</a></li>
-                    <li><a href="#">혜택! 자유이용권 구매하기</a></li>
-                    <li><a href="#">쿠폰 결제하기</a></li>
-                    <li><a href="#">로또팡 서비스 안내</a></li>
-                    <li><a href="#">테크앤조이 소개</a></li>
+            <nav id="lnb"><!-- lnb [Comment] 메뉴명은 SB참조-->
+                <ul class="menu"><!-- 2018-02-11 클래스 추가 -->
+                    <li class="on">
+                        <a href="#">로또 통계자료</a>
+                        <ul class="sub_menu"><!-- 2018-02-11 3뎁스 추가 -->
+                            <li class="on"><a href="#">전체보기</a></li>
+                            <li><a href="#">당첨번호 재출현 주기 분석</a></li>
+                            <li><a href="#">당첨번호 출현횟수 분석</a></li>
+                            <li><a href="#">6개 조합 분석</a></li>
+                        </ul><!-- //2018-02-11 3뎁스 추가 -->
+                        <button type="button" class="btn_menu_toggle">하위메뉴열기</button><!-- sub_menu 있을 경우만 넣어주세요 -->
+                    </li>
+                    <li>
+                        <a href="#">로또 비법자료</a>
+                    </li>
                 </ul>
             </nav><!-- //lnb -->
             <aside class="etc_info">

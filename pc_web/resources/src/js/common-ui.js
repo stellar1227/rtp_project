@@ -20,6 +20,31 @@ var rtp = (function($){
 
     };
 
+    /*lnb*/
+    var lnb = {
+        init : function(){
+            var target = $("#lnb");
+            this.toggleBtn = target.find(".btn_menu_toggle");
+            this.setting(target);
+            this.addEvent();
+        },
+        setting : function(t){
+            var onMenu = t.find(".menu");
+            onMenu.find("li.on").find(".sub_menu").addClass("open").show();
+        },
+        addEvent : function(){
+            var self = this;
+            this.toggleBtn.on("click", function(){
+                self.toggle($(this));
+            })
+        },
+        toggle : function(t){
+            var _t = t.siblings(".sub_menu");
+            _t.toggleClass('open');
+            _t.stop().slideToggle(300);
+        }
+    };
+
     /*toggle_list*/
     var toggleList = {
         init : function(){
@@ -230,6 +255,7 @@ var rtp = (function($){
 
     $(function(){
         gnb.init(); //gnb
+        $("#lnb").find(".sub_menu").length && lnb.init();
         $(".accodian_list").length && toggleList.init(); //toggleList
         $(".file_upload").length && fileUpload.init(); //inputFile
 

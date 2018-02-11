@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>스타트번호 출현 현황 | 로또팡</title>
+    <title>연속번호 출현현황 | 로또팡</title>
     <link rel="stylesheet" href="../../resources/css/common-ui.css">
 </head>
 <body>
@@ -34,7 +34,7 @@
             &gt;
             <span class="depth">로또 통계자료 전체보기</span>
             &gt;
-            <strong class="now">스타트번호 출현 현황</strong>
+            <strong class="now">연속번호 출현현황</strong>
         </p>
     </div><!-- //sub_intro -->
     <div class="content_section">
@@ -82,9 +82,11 @@
         <section id="content"><!-- content -->
             <h2 class="page_title">
                 <span class="desc">로또 통계자료 전체보기</span>
-                <span class="tit">스타트번호 출현 현황</span>
+                <span class="tit">연속번호 출현현황</span>
             </h2>
 
+            
+            <!-- [COMMENT] 갑 : 서브페이지에 공통으로 쓸 'ㅁ' 이미지 배너 (?) 이자 타이틀(?) 영역입니다 클래스네이밍 괴발스럽게 한듯?! 확인해주세여 케케-->
             <div class="page_title_banner">
                 <!-- 이미지 교체예정 -->
                 <img src="../../resources/img/temp/tmp-banner.png" alt="">
@@ -100,151 +102,142 @@
 
             <div class="data_table"><!-- data_table  -->
                 <table>
-                    <caption class="table_caption">스타트번호 출현 현황</caption>
+                    <caption class="table_caption">연속번호 출현현황 표</caption>
                     <colgroup>
-                        <col style="width:17%">
                         <col style="width:auto">
-                        <col style="width:auto">
-                        <col style="width:auto">
-                        <col style="width:auto">
-                        <col style="width:auto">
-                        <col style="width:auto">
-                        <col style="width:auto">
+                        <col style="width:11%">
+                        <col style="width:11%">
+                        <col style="width:11%">
+                        <col style="width:11%">
+                        <col style="width:11%">
+                        <col style="width:11%">
+                        <col style="width:11%">
+                        <col style="width:11%">
                     </colgroup>
                     <thead>
                         <tr>
                             <th scope="col">회차</th>
-                            <th scope="col">첫번째<br>출현</th>
-                            <th scope="col">두번쨰</th>
-                            <th scope="col">세번쨰</th>
-                            <th scope="col">네번쨰</th>
-                            <th scope="col">다섯번쨰</th>
-                            <th scope="col">여섯번쨰</th>
-                            <th scope="col">스타트<br>번호</th>
+                            <th scope="col">번호1</th>
+                            <th scope="col">번호2</th>
+                            <th scope="col">번호3</th>
+                            <th scope="col">번호4</th>
+                            <th scope="col">번호5</th>
+                            <th scope="col">번호6</th>
+                            <th scope="col">연속번호 <br>여부</th>
+                            <th scope="col">합계</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">로또 <span data-color="blue">767</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
-                            <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
-                            <td>8</td>
-                            <!-- 
-                                    [Design]
-                                    로또볼 디자인은 아래처럼 클래스로 분기됩니다. 
-                                    1. 1~9 : ball_n1th
-                                    2. 10~19 : ball_n10th
-                                    3. 20~29 : ball_n20th
-                                    4. 30~39 : ball_n30th
-                                    5. 40~49 : ball_n40th
-
-                                    출현팀 텍스트 컬러 red는 span.ball_desc 에  data-color="red" 속성추가해주시면 됩니다.
-                                -->
-                            <td><span class="ball_n1th">5</span></td>
-                        </tr>
                         <tr class="divide">
-                            <th scope="row">로또 <span data-color="blue">766</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
-                            <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
                             <td>8</td>
-                            <td><span class="ball_n10th">19</span></td>
+                            <td>27</td>
+                            <td><span class="ball_n30th">39</span></td>
+                            <td><span class="ball_n40th">43</span></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
                         </tr>
-
                         <tr>
-                            <th scope="row">로또 <span data-color="blue">765</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
-                            <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
-                            <td>8</td>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
+                            <td><span class="ball_n1th">8</span></td>
                             <td><span class="ball_n20th">27</span></td>
+                            <td>39</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
                         </tr>
-
                         <tr class="divide">
-                            <th scope="row">로또 <span data-color="blue">764</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
-                            <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
                             <td>8</td>
-                            <td><span class="ball_n30th">32</span></td>
+                            <td>27</td>
+                            <td><span class="ball_n30th">39</span></td>
+                            <td><span class="ball_n40th">43</span></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
                         </tr>
-
                         <tr>
-                            <th scope="row">로또 <span data-color="blue">763</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
-                            <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
-                            <td>8</td>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
+                            <td><span class="ball_n10th">18</span></td>
                             <td><span class="ball_n20th">27</span></td>
+                            <td>39</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
                         </tr>
-
                         <tr class="divide">
-                            <th scope="row">로또 <span data-color="blue">762</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
-                            <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
                             <td>8</td>
-                            <td><span class="ball_n40th">41</span></td>
+                            <td>27</td>
+                            <td><span class="ball_n30th">39</span></td>
+                            <td><span class="ball_n40th">43</span></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
                         </tr>
-
                         <tr>
-                            <th scope="row">로또 <span data-color="blue">761</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
-                            <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
-                            <td>8</td>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
+                            <td><span class="ball_n1th">8</span></td>
                             <td><span class="ball_n20th">27</span></td>
-                        </tr>
-
-                        <tr class="divide">
-                            <th scope="row">로또 <span data-color="blue">760</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
                             <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
-                            <td>8</td>
-                            <td><span class="ball_n40th">41</span></td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
                         </tr>
-
+                        <tr class="divide">
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td>27</td>
+                            <td><span class="ball_n30th">39</span></td>
+                            <td><span class="ball_n40th">43</span></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
                         <tr>
-                            <th scope="row">로또 <span data-color="blue">759</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
+                            <td><span class="ball_n10th">18</span></td>
+                            <td><span class="ball_n20th">27</span></td>
                             <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
-                            <td>8</td>
-                            <td><span class="ball_n30th">33</span></td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
                         </tr>
-
                         <tr class="divide">
-                            <th scope="row">로또 <span data-color="blue">758</span>회</th>
-                            <td>5</td>
-                            <td>40</td>
-                            <td>39</td>
-                            <td>34</td>
-                            <td>27</td>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
                             <td>8</td>
-                            <td><span class="ball_n1th">7</span></td>
+                            <td>27</td>
+                            <td><span class="ball_n30th">39</span></td>
+                            <td><span class="ball_n40th">43</span></td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
                         </tr>
-                        
-
+                        <tr>
+                            <td>로또<span data-color="blue">767</span>회</td>
+                            <td>4</td>
+                            <td><span class="ball_n10th">18</span></td>
+                            <td><span class="ball_n20th">27</span></td>
+                            <td>39</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>1</td>
+                        </tr>
                     </tbody>
                 </table>
             </div><!-- //data_table -->
@@ -259,8 +252,6 @@
                 <button type="button" class="btn_end">끝</button>
             </div>
 
-
-            
 
             <div class="box_contents actions">
                 <div class="article">

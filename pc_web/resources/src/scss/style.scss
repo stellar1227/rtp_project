@@ -251,25 +251,70 @@ $lnb-width : 250px;
         size :22px;
         weight:$bold;
       }
-      letter-spacing: -1px;
+      letter-spacing: -2px;
       color:#3c3c3c;
     }
   }
   #lnb{//lnb
-    li{
-      border-bottom:1px solid $border-base;
-      a{
-        display: block;
-        color:$base-color;
-        font : {
-          size : 15px;
+    .menu{
+      & > li{
+        position: relative;
+        border-bottom:1px solid $border-base;
+        & > a{
+          display: block;
+          color:$base-color;
+          letter-spacing:-1px;
+          font : {
+            size : 15px;
+          }
+          padding:18px 25px;
         }
-        padding:18px 25px;
+        &.on{
+          &> a{
+            color:$strong-color
+          }
+        }
+        .btn_menu_toggle{
+          @include blind(indent);
+          width:13px;
+          height:13px;
+          position: absolute;
+          right:22px;
+          top:22px;
+          background:url('#{$common-img}/ico_lnb_toggle.png') no-repeat 0 0;
+        }
       }
-      &.on{
+    }
+    .sub_menu{
+      display: none;
+      border-top:1px solid $border-base;
+      padding:8px;
+      li{
         a{
-          color:$strong-color
+          display: block;
+          padding:13px;
+          font : {
+            family:$util-font;
+            size : 12px;
+          }
+          color:$light-color;
         }
+        &.on{
+          a{
+            color:$sub-color;
+            background: #f0f4fe;
+          }
+        }
+        /*&:hover{
+          a{
+            color:$sub-color;
+            background: #f0f4fe;
+            text-decoration: none;
+          }
+        }*/
+      }
+      &.open + .btn_menu_toggle{
+        background-position: 0 -23px;
       }
     }
   }
@@ -340,10 +385,12 @@ $lnb-width : 250px;
     }
     border-bottom:1px solid $border-base;
 
-    &  + .data_table,
-    &  + .table_title {
+    &  + .data_table{
       margin-top:33px;
     }
+    /*&  + .table_title {
+      margin-top:33px;
+    }*/
   }
   .block_title{
     padding:40px 5px 12px;
@@ -365,6 +412,8 @@ $lnb-width : 250px;
     }
   }
   .table_title{
+    margin-top:50px;
+    display: block;
     font:{
       weight:$normal;
       size : 20px;
@@ -382,6 +431,9 @@ $lnb-width : 250px;
       margin-left: 10px;
       font-size:14px;
       color :$light-color;
+    }
+    & + .accodian_list{
+      border-top:1px solid $border-darken;
     }
   }
 }
@@ -580,7 +632,7 @@ button{
 
 .btn_wrap{
   font-size:0;
-  margin:40px 0 0 0;
+  margin:40px 60px 0;
   &[data-align="center"]{
     text-align: center;
     .btn_primary,.btn_strong {
@@ -594,7 +646,10 @@ button{
     text-align: right;
   }
   %el{
-    margin:0 5px;
+    margin-rigt:10px;
+    &:last-child{
+      margin-right:0;
+    }
   }
   button{
     @extend %el;
@@ -718,9 +773,17 @@ button{
     margin-left:10px;
     vertical-align:top;
   }
+  .bars{
+    font-size:14px;
+    display: inline-block;
+    margin-right:15px;
+    vertical-align: middle;
+  }
 }
 .data_table{
-
+  & + &{
+    margin-top:10px;
+  }
   margin : {
     left : 60px;
     right : 60px;
@@ -789,6 +852,9 @@ button{
         padding-bottom:10px;
       }
       word-wrap: break-word;
+      &.last_cell{
+        border-bottom:0;
+      }
     }
     tr{
       td:last-child{
