@@ -898,15 +898,20 @@ button{
       padding:13px 0;
       border-bottom:1px solid $border-base;
       text-align: center;
+      word-break:break-all;
       &[data-align="left"]{
         text-align: left;
       }
       a.link{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         display: block;
-        width:750px;
+        width:100%;
         overflow:hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        padding-right:20px;
       }
       .edit_contents{
         text-align: left;
@@ -926,6 +931,7 @@ button{
   li{
     padding:13px 30px;
     overflow: hidden;
+    word-break:break-all;
     &.prev{
       border-bottom:1px solid $border-base;
 

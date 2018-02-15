@@ -399,17 +399,17 @@ button[disabled]:hover { background: #b8b8b8; }
 /*board*/
 .board_table thead th { border-bottom: 1px solid #d6d6d6; padding: 15px 0; font-size: 15px; font-weight: 700; background: #f3f4f8; }
 
-.board_table tbody td { padding: 13px 0; border-bottom: 1px solid #d6d6d6; text-align: center; }
+.board_table tbody td { padding: 13px 0; border-bottom: 1px solid #d6d6d6; text-align: center; word-break: break-all; }
 
 .board_table tbody td[data-align="left"] { text-align: left; }
 
-.board_table tbody td a.link { display: block; width: 750px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.board_table tbody td a.link { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; padding-right: 20px; }
 
 .board_table tbody td .edit_contents { text-align: left; padding: 20px 40px; min-height: 300px; }
 
 .mini_board_list { margin-top: 70px; border-width: 1px 0; border-style: solid; border-color: #d6d6d6; }
 
-.mini_board_list li { padding: 13px 30px; overflow: hidden; }
+.mini_board_list li { padding: 13px 30px; overflow: hidden; word-break: break-all; }
 
 .mini_board_list li.prev { border-bottom: 1px solid #d6d6d6; }
 
