@@ -1,0 +1,231 @@
+//임시. data-align 관련 속성들 어케합치징
+input{
+  &[data-align="center"]{
+	text-align:center;
+  }
+  &[data-align="right"]{
+	text-align:right;
+  }
+}
+
+
+//member_free_ticket 커스텀
+// list_mem_benefit
+.list_mem_benefit {
+	display:flex;
+	padding:33px 60px 0;
+	li {
+		flex:1;
+		padding:32px 0 26px;
+		margin:0 9px;
+		border:1px solid #d6d6d6;
+		text-align:center;
+
+		> span:after {
+			display:block;content:"";
+			width:60px;height:60px;
+			margin:17px auto 8px;
+			background:url("#{$content-img}ico_coupon_benefit.png") no-repeat 0 0;
+		}
+		&[data-icon=type2] >span:after{background-position:-60px 0;}
+		&[data-icon=type3] >span:after{background-position:-120px 0;}
+		&[data-icon=type4] >span:after{background-position:-180px 0;}
+
+		p {line-height:150%}
+	}
+}
+// list_free_coupon (in data_table)
+.list_free_ticket {
+	display:table;
+	width:100%;	
+	> div {
+		display:table-cell;
+		vertical-align:middle;
+		&:first-child {width:25%}
+		&:nth-child(2) {width:61%}
+
+
+		span[data-color="red"] {
+			font-weight:$extra-bold;
+		}
+
+		.percent {
+			display:inline-block;
+			width:58px;height:47px;
+			padding-top:11px;
+			border-radius:50px;
+			background-color:$notice-color;
+			line-height:120%;
+			text-align:center;
+			color:#fff;
+		}
+	}
+}
+
+
+.tip_notice {
+	padding:9px 13px 11px;
+	margin-top:18px;
+	background-color:#e6e6e6;	
+	
+	dt,dd {display:inline-block;}
+
+	dt {
+		padding:1px 10px 3px;
+		margin-right:8px;
+		background-color:#fff;
+		border:1px solid #cacaca;
+		border-radius:2px;
+		color:#999;
+	}
+
+	dd {
+	}
+}
+
+
+/* 휴대전화 + 인증번호 */
+.verify_phone_input {
+	width:222px;
+}
+.verify_phone_time {
+    display: inline-block;
+    width:72px;
+    margin-right: 6px;
+	font-size:$base-size;
+	border-bottom:1px solid #ccc;
+	text-align:center;
+    line-height: 42px;
+    vertical-align: middle;
+    color:$strong-color;
+}
+
+
+
+
+// 좌측 Article + 우측 action contents 
+.box_contents.actions {
+	overflow:hidden;
+	padding-left:60px;
+	padding-right:60px;
+
+	.article,.actions {
+		display:table-cell;
+		vertical-align:middle;
+	}
+	.article {
+		width:100%;
+	}
+	.actions {
+		white-space:nowrap;
+	}
+
+	&  + .lotto_pang_slogan {
+      margin-top:-1px;
+    }
+}
+
+
+
+// box_contents - 컨텐츠 순서별 디자인 Custom
+.pagenation + .box_contents.actions {
+	margin-top:35px;
+	border-top:1px solid #ccc;
+}
+
+//stats_reemergence.html
+.ball_desc {
+	margin-right:25px;
+	margin-left:5px;
+	font-weight:$extra-bold;
+	&:last-child {margin-right:0;}
+}
+
+
+
+//page_title_banner - [COMMENT] 갑 : 임시
+.page_title_banner {
+	margin-bottom: 35px;
+	margin-top:-1px;
+    border : {
+    	width: 1px 0;
+    	style: solid;
+    	color:#ebebeb transparent #c6c6c6;
+    }
+
+	& > a {
+		display:block;
+	    height: 103px;
+	    padding-left: 390px;padding-top: 34px;
+	    margin-top:-1px;
+	    font-size: 22px;
+	}
+
+    letter-spacing: -2px;
+	background:#fbfbfb url("#{$content-img}banner_stats.png") no-repeat 160px 15px;
+
+	p {
+		margin-top: 8px;
+	    font-size: 19px;
+	    span {
+    	    font-size: 16px;
+		    margin-left: 12px;
+		    text-decoration: underline;
+		    color: #5b5b5b;
+	    }
+	}
+
+	strong {
+		font-size:24px;
+
+		span {
+			position: relative;top: -2px;
+		    font-size: 18px;
+		    margin: 5px;
+			padding: 1px 11px 6px;
+		    border-radius: 50px;
+		    background-color: #18699b;
+		    letter-spacing: 0;
+		    color: #fff;
+		}
+	}
+}
+
+
+
+.data_table {
+	tbody tr td {
+		//[COMMENT] 갑 : 배경셀 diff 추가 
+		&[data-bg="diff"] {
+		    background-color: #ffff99;
+		    font-weight: $bold;
+		    color: #e10200;
+
+		}
+
+		//[COMMENT] 갑 : stats_more_than_last 부등호 추가
+		[data-sign] {
+			display:inline-block;
+			width:2em;height:2em;
+			font-weight:$bold;
+			border-radius:50px;
+			line-height:1.8em;
+			color:#fff;
+		} 
+
+		[data-sign="big"] {
+			background-color:#6196d4;
+			text-indent:2px;
+		}
+
+		[data-sign="small"] {
+			background-color:#ffc500;
+			text-indent:-2px;
+		}
+
+		[data-sign="equal"] {
+			background-color:#949494;
+		}
+	}
+}
+

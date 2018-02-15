@@ -1,0 +1,227 @@
+//clearfix
+@mixin clearFix(){
+  &:after{
+    content:"";
+    display: block;
+    clear: both;
+  }
+}
+//box-sizing
+@mixin boxSizing(){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+//border-radius
+@mixin borderRadius($px){
+  -webkit-border-radius: $px;
+  -moz-border-radius: $px;
+  border-radius: $px;
+}
+
+
+//기본 컨텐츠 사이즈
+@mixin content(){
+  width:$container-size;
+  margin:0 auto;
+}
+
+//기본 폰트
+@mixin baseFont(){
+  font :{
+    family: $base-font;
+    size : $base-size;
+    weight : $normal;
+  }
+  color:$base-color;
+}
+
+//IR 처리 및 텍스트 히든
+@mixin blind($type){
+  @if $type == indent{
+    text-indent:-9999px;
+    line-height:0;
+    font-size:0;
+    overflow:hidden;
+  }@else if $type == absolute{
+    position: absolute;
+    left:-9999px;
+    width:0;
+    height:0;
+  }
+}
+
+//iconsprite
+%ico_form_sprite{
+  background:url('#{$common-img}ico_form_sprite.png') no-repeat;
+}
+
+//input (pswd/txt)
+@mixin inputStyle($type){
+  @if $type == default{
+    @include boxSizing();
+    min-width:148px;
+    height:44px;
+    line-height:44px;
+    padding:0 15px;
+    border:{
+      style : solid;
+      width : 1px;
+    }
+    font-size:15px;
+    &:focus{
+      border-color:$input-b-strong;
+      outline:0;
+    }
+
+    border-color:$input-b-primary;
+    background:$input-g-primary;
+    color:$base-color;
+
+    &[readonly]{
+      border-color:$input-b-disabled;
+      background:$input-g-disabled;
+      color:$sub-color;
+    }
+    &[disabled]{
+      border-color:$input-b-disabled;
+      background:$input-g-disabled;
+      color:$disabled-color;
+    }
+  }@else if $type == essential{
+    border-color:$input-b-strong;
+    background:$input-g-strong;
+    color:$strong-color;
+    font-weight:$extra-bold;
+    &[readonly]{
+      border-color:$input-b-strong;
+      background:$input-g-disabled;
+      color:$strong-color;
+    }
+    &[disabled]{
+      border-color:$input-b-strong;
+      background:$input-g-disabled;
+      color:$disabled-color;
+    }
+  }
+}
+//input extend
+%iStyle{
+  @include inputStyle(default);
+  &[required]{
+    @include inputStyle(essential);
+  }
+}
+
+
+//input custom (radio/checkbox)
+@mixin checkStyle($type){
+  &[type= '#{$type}'][disabled]{
+    & + label{
+      &:before{
+        @if $type == checkbox{
+          background-position:-105px -35px
+        }@else if $type == radio{
+          background-position:-105px 0
+        }
+      }
+    }
+    &[type= '#{$type}']:checked + label{
+      &:before{
+        @if $type == checkbox{
+          background-position:-70px -35px
+        }@else if $type == radio{
+          background-position:-70px 0
+        }
+      }
+    }
+  }
+  &[type= '#{$type}']:checked{
+    & + label{
+      &:before{
+        @if $type == checkbox{
+          background-position:0 -35px
+        }@else if $type == radio{
+          background-position:0 0
+        }
+      }
+    }
+  }
+  &[type= '#{$type}'] + label{
+    &:before{
+      content:"";
+      display: inline-block;
+      vertical-align: middle;
+      width:25px;
+      height:25px;
+      @extend %ico_form_sprite;
+      @if $type == checkbox{
+        background-position:-35px -35px;
+      }@else if $type == radio{
+        background-position:-35px 0
+      }
+    }
+    span{
+      margin:0 0 0 8px;
+      vertical-align: middle;
+      font:{
+        size : 15px
+      }
+      color:$base-color;
+    }
+    cursor:pointer
+  }
+}
+
+//button
+//btn class생성을 위한 extend
+%btn{
+  display: inline-block;
+  @include boxSizing();
+  @include borderRadius(2px);
+  min-width:99px;
+  height:44px;
+  padding: 0 20px;
+  line-height:44px;
+  font : {
+    size : 15px;
+    weight:$bold;
+  }
+  color:#fff;
+  text-align: center;
+  &:hover{
+    text-decoration: none;
+  }
+}
+//추가설정을위한 mixin
+@mixin button($wid:99px, $bg:off, $hei:off, $font:off, $color:off){
+  width:$wid;
+  @if $bg != off{
+    background:$bg;
+    &:hover{
+      background:darken($bg,20%)
+    }
+  }
+  @if $hei != off{
+    height:$hei;
+    line-height:$hei;
+  }
+  @if $font != off{
+    font : {
+      size : $font;
+    }
+  }
+  @if $color != off{
+    color : $color
+  }
+}
+
+
+
+//lottoball size
+@mixin lottoball($size:26px,$font:15px){
+  width:$size;
+  height:$size;
+  line-height:$size;
+  font-size:$font;
+}

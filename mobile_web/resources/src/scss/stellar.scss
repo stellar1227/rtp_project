@@ -1,0 +1,415 @@
+/*main*/
+.main{
+  $footer-height : 223px;
+  #container{
+    padding-bottom:$footer-height;
+  }
+  #footer{
+    background: $bg-section;
+    height:$footer-height;
+    margin-top:-$footer-height;
+    border-top:0;
+
+    .inner_footer{
+      position: relative;
+      padding:22px 170px 0 0;
+      color:#666;
+      .util_link{
+        display: block;
+        margin-bottom: 25px;
+        font : {
+          family : $util-font;
+          size: 0;
+        };
+        a{
+          color:#666;
+          position: relative;
+          font-size:12px;
+          padding:0 30px;
+          &:first-child{
+            padding-left:0;
+            &:before{
+              display: none;
+            }
+          }
+          &:before{
+            content:"";
+            position: absolute;
+            left:0;
+            top:50%;
+            width:1px;
+            height:12px;
+            margin-top:-6px;
+            background: #b4b4b4;
+          }
+        }
+      }
+      .company_info{
+        margin-bottom: 25px;
+        & > span{
+          color:#666;
+          &:before{
+            background: #666;
+          }
+        }
+        .name{
+          display: block;
+          color :$base-color;
+          & + span{
+            padding-left:0;
+          }
+        }
+        .copyright{
+          display: block;
+          padding-left:0
+        }
+      }
+      .partner{
+        display: block;
+        font-size:0;
+        a{
+          margin-right:45px;
+        }
+      }
+      .footer_logo{
+        display: block;
+        position: absolute;
+        right:0;
+        top:60px;
+      }
+    }
+  }
+}
+
+/*한눈에 보는테이블*/
+.wide_table{
+  margin:0 60px;
+  height:500px;
+  overflow:auto;
+  .data_table{
+    @include boxSizing();
+    width:400%;
+    margin:0;
+  }
+}
+
+/*조합기 전체보기*/
+.input_table{
+  &.banner_type{
+    overflow: hidden;
+    table{
+      float:left;
+      width:68%;
+    }
+    .banner{
+      float:right;
+      width:276px;
+      height:148px;
+      img{
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+}
+.mix_t_radio{
+  display: inline-block;
+  .input_custom{
+    margin-right:30px;
+  }
+  select + & {
+    margin-left:15px;
+  }
+}
+.lotto_mix_list{
+  margin:45px 60px 0;
+  li{
+    display: table;
+    width:100%;
+    border:1px solid $border-base;
+    margin-bottom:8px;
+    &:last-child{
+      margin-bottom:0;
+    }
+    .info{
+      display: table-cell;
+      vertical-align: middle;
+      width:475px;
+      padding:10px;
+      .number_ribbons{
+        display: inline-block;
+        vertical-align: middle;
+        width: 46px;
+        height:68px;
+        background: url("#{$common-img}bg_num_ribbons.png") no-repeat 0 0;
+        text-align: center;
+        color:#2c3b74;
+        line-height:100%;
+        margin-right:20px;
+        strong{
+          display: block;
+          margin-bottom:5px;
+          padding-top:11px;
+          font : {
+            weight:$extra-bold;
+            size : 18px;
+          }
+        }
+      }
+      .desc{
+        display: inline-block;
+        vertical-align: middle;
+        span{
+          display: block;
+          margin-bottom:6px;
+          color : $strong-color;
+        }
+      }
+    }
+    .how_many{
+      display: table-cell;
+      vertical-align: middle;
+      width:105px;
+      text-align: center;
+      font-size:15px;
+      strong{
+        display: block;
+        margin-bottom:3px;
+        font-size:18px;
+      }
+      border:{
+        width:0 1px;
+        style : solid;
+        color : $border-base
+      }
+    }
+    .mix_go{
+      display: table-cell;
+      padding:0 18px;
+      vertical-align: middle;
+      .btn_primary{
+        width:122px;
+      }
+    }
+  }
+}
+.btn_top_wrap{
+  overflow: hidden;
+  margin:30px 60px 10px;
+  .notice{
+    float:left;
+    padding-top:25px;
+    padding-left:10px;
+  }
+  .btn_strong{
+    float:right;
+  }
+}
+
+/*대세 추천번호*/
+.hurry_box{
+  p{
+    line-height:160%;
+    margin-bottom:15px;
+  }
+  span{
+    display: block;
+    margin-top:15px;
+  }
+}
+.data_table{
+  .we{
+    td{
+      background: #ffecd5;
+      color:#ea614e;
+      font-weight:$bold;
+    }
+    .point{
+      position: relative;
+      span{
+        @include blind(indent);
+        position: absolute;
+        left:-30px;
+        top:-37px;
+        width:42px;
+        height:42px;
+        background:url('#{$content-img}ico_point.png') no-repeat 0 0;
+      }
+    }
+  }
+}
+.contents_hurry_up{
+  margin:55px 60px 0;
+  padding:40px;
+  background: url('#{$content-img}cont_hurry_up.png') no-repeat 50% 0;
+  strong{
+    display: block;
+    margin-bottom:17px;
+    font :{
+      weight:$bold;
+      size:28px;
+    }
+    color:$strong-color;
+  }
+  p{
+    line-height:170%;
+    margin-bottom:27px;
+    &:last-of-type{
+      margin-bottom:0;
+    }
+  }
+  em{
+    margin-top:70px;
+    display: block;
+    font :{
+      weight:$bold;
+      size:16px
+    }
+  }
+}
+.lotto_pang_slogan{
+  .point{
+    @include boxSizing();
+    float:left;
+    color:#fff;
+    width:61px;
+    height:61px;
+    padding:10px 0 0 0;
+    margin-right:8px;
+    background: url('#{$content-img}ico_slogan_point.png') no-repeat 0 0;
+    text-align: center;
+    line-height:140%;
+    font : {
+      family : $util-font;
+      size: 12px;
+    }
+    b{
+      font : {
+        family:$base-font;
+        weight:$bold;
+        size : 21px;
+      }
+      letter-spacing: -1px;
+      line-height:100%;
+    }
+  }
+}
+
+/*연금복권*/
+.ticket_top{
+  th{
+    font :{
+      size : 18px;
+      weight:$normal
+    }
+    line-height:170%
+  }
+  td{
+    font : {
+      weight: $extra-bold;
+      size : 20px;
+    }
+    color :$light-color;
+  }
+}
+.data_table{
+  .dot{
+    display: inline-block;
+    @include blind(indent);
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background: #9eabc5;
+  }
+}
+
+/*member*/
+//회원가입
+.box_contents{
+  padding:25px 0;
+  border-bottom:1px solid $border-base;
+  .input_custom{
+    padding:0 0 0 60px;
+  }
+  .link_more{
+    vertical-align: middle;
+    color:$strong-color;
+    text-decoration: underline;
+  }
+}
+.btn_wrap_sns{
+  padding:105px 0;
+  @mixin snsBtn($type){
+    &[data-type="#{$type}"]{
+      background:url('#{$common-img}bg_sns_#{$type}.png') no-repeat 0 0;
+      @if $type == facebook{
+        background-color:#0a4aab;
+        color:#fff
+      }@else if $type == google{
+        background-color:#ea5d4a;
+        color:#fff
+      }@else if $type == naver{
+        background-color:#00be39;
+        color:#fff
+      }@else if $type == kakao{
+        background-color:#ffe906;
+        color:#3e2d2e
+      }
+    }
+  }
+  .btn_login_sns{
+    @include snsBtn(facebook);
+    @include snsBtn(google);
+    @include snsBtn(naver);
+    @include snsBtn(kakao);
+    display: block;
+    width:400px;
+    height:60px;
+    line-height:60px;
+    margin: 0 auto 10px;
+    text-align: center;
+    font:{
+      size : 18px;
+      weight:$bold;
+    }
+  }
+}
+
+/*고객센터*/
+.qna_write{
+  textarea{
+    height:265px;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+}
+.qna{
+  .tit{
+    width:630px;
+  }
+  .numbering{
+    display: inline-block;
+    width:35px;
+    font : {
+      size : 15px;
+      weight:$bold;
+    }
+    color:$strong-color
+  }
+}
+.faq_notice{
+  margin:12px 0 40px;
+  .category{
+
+  }
+  & > p{
+    display: inline;
+    vertical-align: middle;
+    margin-left:10px;
+  }
+}
+
+/*각페이지별 레이어*/
+.charge_layer{
+  padding-bottom:60px;
+}

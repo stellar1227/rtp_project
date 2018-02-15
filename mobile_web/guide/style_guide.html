@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Component style guide</title>
+    <link rel="stylesheet" href="../resources/css/common-ui.css">
+    <style>
+        .guideIntro{
+            font-size:2rem;
+            font-weight:bold;
+            margin-bottom:40px;
+        }
+        .guideSection{
+            margin-bottom:40px;
+        }
+        .guideTitle{
+            font-size:1.7rem;
+            font-weight:bold;
+            margin-bottom:20px;
+
+        }
+        .guideTitle:before{
+            content:"\2022";
+            display: inline-block;
+            vertical-align: middle;
+            font-size:20px;
+        }
+        .guideDescription{
+            margin-bottom:30px;
+            color:#e33b14;
+        }
+        .guideItemTitle{
+            font-size:1.5rem;
+            margin-bottom:10px;
+        }
+        .guideItemTitle:before{
+            content:" - ";
+            display: inline-block;
+            vertical-align: middle;
+            margin:0 6px;
+        }
+        .guideCode{
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+<!-- 작성중이다 html말고 jade 쓰고싶기도 하다. 아님 vue같은거 써서 만들면 좋은데 운영안되겠지. -->
+<h1 class="guideIntro">Component Style Guide</h1>
+<section class="guideSection">
+    <h2 class="guideTitle">Form Control</h2>
+    <p class="guideDescription">form control code snippet</p>
+    <article>
+        <h3 class="guideItemTitle">input[type=text,password] // default, readonly, disabled</h3>
+        <input type="text" /><!-- default -->
+        <input type="text" readonly />
+        <input type="text" disabled />
+        <input type="text" required /><!-- 필수 -->
+        <input type="text" required readonly /><!-- 필수 -->
+        <input type="text" required disabled /><!-- 필수 -->
+    </article>
+    <h3 class="guideItemTitle">input[type=radio,checkbox]// default, disabled</h3>
+    <div class="input_custom"><!-- default -->
+        <input type="radio" id="test1" name="t1" checked >
+        <label for="test1"><span>기본</span></label>
+    </div>
+    <div class="input_custom"><!-- default -->
+        <input type="radio" id="test2" name="t1">
+        <label for="test2"><span>기본</span></label>
+    </div>
+    <div class="input_custom"><!-- disabled -->
+        <input type="radio" id="test3" name="t11" disabled checked>
+        <label for="test3"><span>안됨</span></label>
+    </div>
+    <div class="input_custom"><!-- disabled -->
+        <input type="radio" id="test4" name="t11" disabled>
+        <label for="test4"><span>안됨</span></label>
+    </div>
+    <div class="input_custom"><!-- 단일 -->
+        <input type="radio" id="test5" name="t21">
+        <label for="test5"><span class="blind">단일이라 안보여야되는 텍스트지뭐</span></label>
+    </div>
+    <div class="input_custom"><!-- default -->
+        <input type="checkbox" id="test11" checked>
+        <label for="test11"><span>기본</span></label>
+    </div>
+    <div class="input_custom"><!-- default -->
+        <input type="checkbox" id="test12">
+        <label for="test12"><span>기본</span></label>
+    </div>
+    <div class="input_custom"><!-- disabled -->
+        <input type="checkbox" id="test13" disabled checked>
+        <label for="test13"><span>안됨</span></label>
+    </div>
+    <div class="input_custom"><!-- disabled -->
+        <input type="checkbox" id="test14" disabled>
+        <label for="test14"><span>안됨</span></label>
+    </div>
+    <div class="input_custom"><!-- 단일 -->
+        <input type="checkbox" id="test15">
+        <label for="test15"><span class="blind">단일이라 안보여야되는 텍스트지뭐</span></label>
+    </div>
+    <h3 class="guideItemTitle">input[type=file]</h3>
+    <article>
+        <h3 class="guideItemTitle">select</h3>
+        <select name=""><!-- default -->
+            <option value="">흘럴ㄹ러</option>
+        </select>
+        <select name="" required><!-- 필수 -->
+            <option value="">흘럴ㄹ러</option>
+        </select>
+        <select name="" disabled><!-- default -->
+            <option value="">흘럴ㄹ러</option>
+        </select>
+        <select name="" required disabled><!-- 필수 -->
+            <option value="">흘럴ㄹ러</option>
+        </select>
+    </article>
+    <article>
+        <h3 class="guideItemTitle">textarea</h3>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </article>
+    <article>
+        <h3 class="guideItemTitle">button,a</h3>
+        <p class="guideDescription">버튼/a 같이 동작, 기본은 btn_strong/btn_primary(디자인관련클래스) , 해당 btn의 별도 동작은 이중클래스부여(mixin으로 조절)</p>
+        <button type="button" class="btn_strong">등록하기</button>
+        <button type="button" class="btn_primary">취소하기</button>
+        <button type="button" class="btn_primary" disabled>등록하기</button><!-- button disabled상태 -->
+        <div class="btn_wrap" data-align="center"><!-- 정렬 center/right/left -->
+            <a href="#" class="btn_strong btn_submit">등록하기</a>
+            <a href="#" class="btn_primary btn_cancel">취소하기</a>
+        </div>
+    </article>
+</section>
+<section class="guideSection">
+    <h2 class="guideTitle">Table</h2>
+    <p class="guideDescription">list/view/input table code snippet</p>
+    <p class="guideDescription">colgroup setting / align class</p>
+    <article>
+        <h3 class="guideItemTitle">input table - horizontal (only tbody)</h3>
+        <div class="input_table"><!-- input_table : 필수사항 입력 -->
+            <table>
+                <caption>필수사항 입력</caption>
+                <colgroup>
+                    <col style="width:30.7%">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th scope="row">계정 ID/이메일</th>
+                    <td>
+                        <p class="has_data">
+                            <b>N602221122</b>님
+                            <span data-color="blue">melissah@naver.com</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="joinNickNm">닉네임<span data-color="red">(필수)</span></label></th>
+                    <td>
+                        <input type="text" data-width="300" required id="joinNickNm" title="닉네임 입력">
+                        <button class="btn_primary">중복확인</button>
+                        <p class="validate_notice">이미 사용중입니다. 다른 닉네임을 입력해주세요.</p>
+                    </td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <th scope="row"><label for="joinPhoneNum">본인명의 휴대전화<span data-color="red">(필수)</span></label></th>
+                    <td>
+                        <input type="text" data-width="300" required id="joinPhoneNum" title="본인명의 휴대전화 입력">
+                        <button class="btn_strong">인증하기</button>
+                        <div class="input_custom">
+                            <input type="checkbox" id="chkSmsAgree" title="SMS수신동의">
+                            <label for="chkSmsAgree"><span>SMS수신</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="joinVerifyNum">인증번호</label></th>
+                    <td>
+                        <input type="text"  data-width="300" id="joinVerifyNum" placeholder="문자로 발송된 인증번호 입력" title="휴대전화 인증번호 입력">
+                        <button class="btn_primary">확인</button>
+                        <p class="table_notice">매주 추천번호 2개 조합이 무료로 <span data-color="red">발송</span>됩니다.<br>현재 사용중이신 번호로 정확하게 기재 바랍니다.</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div><!-- //input_table : 필수사항 입력 -->
+    </article>
+    <article>
+        <h3 class="guideItemTitle">data table - horizontal (only tbody)</h3>
+        <div class="data_table"><!-- class="list_type" data-align="left"(전체) -->
+            <table>
+                <caption>통계데이터</caption>
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="rowgroup" rowspan="2" class="last_cell">
+                            2등
+                        </th>
+                        <th scope="row" class="mid_th">
+                            2조
+                        </th>
+                        <td>
+                            -
+                        </td>
+                        <td data-align="left"><!-- 안타깝지만 레프트정렬 -->
+                            <span data-color="red">레프트정렬</span>
+                        </td>
+                        <td>
+                            으어어
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="mid_th">
+                            4조
+                        </th>
+                        <td>
+                            -
+                        </td>
+                        <td data-align="left"><!-- 안타깝지만 레프트정렬 -->
+                            <span data-color="red">레프트정렬</span>
+                        </td>
+                        <td>
+                            으어어
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+    <article>
+        <h3 class="guideItemTitle">data table - vertical (with thead)</h3>
+        <div class="data_table">
+            <table>
+                <caption>통계데이터</caption>
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:auto">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">회차</th>
+                    <th scope="col">총 생성 그룹수</th>
+                    <th scope="col">단수 그룹수</th>
+                    <th scope="col">그룹핑 성공여부</th>
+                    <th scope="col">그룹핑 보기</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            로또 <span data-color="blue">767</span>회
+                        </td>
+                        <td>
+                            26개 그룹
+                        </td>
+                        <td>
+                            -
+                        </td>
+                        <td data-align="left"><!-- 안타깝지만 레프트정렬 -->
+                            <span data-color="red">레프트정렬</span>
+                        </td>
+                        <td>
+                            으어어
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</section>
+<section class="guideSection">
+    <h2 class="guideTitle">Tab</h2>
+    <p class="guideDescription">tab link addClass('on')</p>
+    <ul class="tab">
+        <li class="on"><a href="#">전체보기</a></li>
+        <li><a href="#">결제</a></li>
+        <li><a href="#">회원정보</a></li>
+        <li><a href="#">기타</a></li>
+    </ul>
+</section>
+<section class="guideSection">
+    <h2 class="guideTitle">List</h2>
+    <article>
+        <h3 class="guideItemTitle">list item - accordian</h3>
+        <div class="accodian_list faq"><!-- faq가 세부 class -->
+            <article><!-- loop -->
+                <header class="list_title">
+                    <span class="category" data-type="question" title="질문">Q</span>
+                    <h1 class="tit">[결제] 가상계좌 무통장 입금은 어떻게 하나요? </h1>
+                </header>
+                <div class="list_contents">
+                    <span class="category" data-type="answer" title="답변">A</span>
+                    <div class="comment"><!-- editor에서 뿌려지는 영역 -->
+                        안녕하세요. 로또팡 입니다. 무통장 입금의 경우, 아래의 계좌로 입금해주시면 됩니다. <br>
+                        <br>
+                        국민  443101-01-118753 <br>
+                        우리 1005-402-148847 <br>
+                        신한 110-214-719112 <br>
+                        <br> <br>
+                        예금주 : 서주형
+                    </div><!-- //editor에서 뿌려지는 영역 -->
+                </div>
+            </article><!-- //loop -->
+            <article><!-- loop -->
+                <header class="list_title">
+                    <span class="category" data-type="question" title="질문">Q</span>
+                    <h1 class="tit">[결제] 가상계좌 무통장 입금은 어떻게 하나요? </h1>
+                </header>
+                <div class="list_contents">
+                    <span class="category" data-type="answer" title="답변">A</span>
+                    <div class="comment"><!-- editor에서 뿌려지는 영역 -->
+                        안녕하세요. 로또팡 입니다. 무통장 입금의 경우, 아래의 계좌로 입금해주시면 됩니다. <br>
+                        <br>
+                        국민  443101-01-118753 <br>
+                        우리 1005-402-148847 <br>
+                        신한 110-214-719112 <br>
+                        <br> <br>
+                        예금주 : 서주형
+                    </div><!-- //editor에서 뿌려지는 영역 -->
+                </div>
+            </article><!-- //loop -->
+        </div>
+    </article>
+    <article>
+        <h3 class="guideItemTitle">pagenation</h3>
+        <div class="pagenation">
+            <button type="button" class="btn_first">처음</button>
+            <button type="button" class="btn_prev">이전</button>
+            <strong class="now" title="현재페이지">1</strong>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <button type="button" class="btn_next">다음</button>
+            <button type="button" class="btn_end">끝</button>
+        </div>
+    </article>
+</section>
+<section class="guideSection">
+    <h2 class="guideTitle">Popup</h2>
+    <p class="guideDescription">insert page : body.appendChild</p>
+    <h3 class="guideItemTitle">simple alert/confirm</h3>
+    <h3 class="guideItemTitle">contents popup</h3>
+</section>
+<section class="guideSection">
+    <h2 class="guideTitle">Text</h2>
+    <p class="guideDescription">text style</p>
+    <h3 class="guideItemTitle">text style in form</h3>
+    <h3 class="guideItemTitle">text style in contents</h3>
+</section>
+<section class="guideSection">
+    <h2 class="guideTitle">Contents Patterns</h2>
+    <p class="guideDescription">layout</p>
+    <article>
+        <h3 class="guideItemTitle">lotto ball</h3>
+        <span class="ball_n1th">1</span><!-- 1부터 9까지 class="ball_n1th" -->
+        <span class="ball_n10th">12</span><!-- 10부터 19까지 class="ball_n10th" -->
+        <span class="ball_n20th">23</span><!-- 20부터 29까지 class="ball_n20th" -->
+        <span class="ball_n30th">34</span><!-- 30부터 39까지 class="ball_n30th" -->
+        <span class="ball_n40th">48</span><!-- 40부터 49까지 class="ball_n40th" -->
+    </article>
+    <article>
+        <h3 class="guideItemTitle">pageTitle</h3>
+        <div id="content"><!-- content 종속 -->
+            <p class="guideDescription">sub h2 page title</p>
+            <h2 class="page_title">
+                <span class="desc">특별한 회원 서비스</span>
+                <span class="tit">무료 회원 가입</span>
+            </h2>
+            <p class="guideDescription">sub h3 contents title</p>
+            <h3 class="block_title">
+                <span class="tit">필수사항 입력</span>
+                <span class="desc">기존에 가입되어 있는 SNS 계정으로 로그인 하세요.</span>
+            </h3>
+            <p class="guideDescription">sub table title</p>
+            <strong class="table_title">
+                연금복권 <span data-color="red">310</span>회 당첨번호<span class="desc">이번주는 연금복권 311회차 입니다.</span>
+            </strong>
+            <aside class="lotto_pang_slogan"><!-- 하단 슬로건 -->
+                <p class="logo">로또예상번호는 로또팡</p>
+                <p class="desc">로또보다 당첨확률 높아 좋고! <span data-color="blue">20년동안 꼬박꼬박! 내 노후는 연금복권</span><br>당첨확인 연금복권 정보도 로또팡에서!</p>
+                <div class="btn_go">
+                    <button type="button" class="btn_primary">간편 자동당첨 확인</button>
+                </div>
+            </aside><!-- //하단 슬로건 -->
+        </div>
+        <h2 class="guideItemTitle">file upload</h2>
+        <div class="file_upload">
+            <input type="file" id="file_id">
+            <label for="file_id" class="btn_primary btn_file_find">파일 찾기</label>
+            <div class="file_name">
+                <span class="name"></span>
+                <button type="button" class="btn_file_del">삭제</button>
+            </div>
+        </div>
+    </article>
+
+</section>
+<script src="../resources/lib/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/common-ui.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>page layout</title>
+    <link rel="stylesheet" href="../resources/css/common-ui.css">
+</head>
+<body>
+<button type="button" class="btn_alert">저는 알림이요</button>
+<button type="button" class="btn_confirm">저는 컨펌이요</button>
+<button type="button" class="btn_layer">그냥 레이어호출</button>
+
+
+<div id="goPurchase" class="charge_layer" style="visibility:hidden">
+    <!-- 일반 레이어 :레이아웃을 제외하고 컨텐츠 부분만 마크업하면됩니다. -->
+    <div class="data_table" data-align="left">
+        <table>
+            <caption>결제할 내용</caption>
+            <colgroup>
+                <col style="width:25%">
+                <col style="width:auto">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th scope="row" class="mid_th">금액</th>
+                <td>
+                    <b>로또팡 방송청취 이용권 (기본 5회 분량)</b>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="mid_th">서비스명</th>
+                <td>
+                    <b data-color="red">3,300원</b>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- //일반레이어 -->
+<script src="../resources/lib/jquery-1.12.4.min.js"></script>
+<script src="../resources/js/common-ui.min.js"></script>
+<script>
+
+    //ex)입니다.
+    /*
+    * @description layerpop
+    * @param opt : Object
+    * @param opt.type : String (alert, confirm - default : null)
+    * @param opt.title : String (default null) - 상단 타이틀
+    * @param opt.msg : String (defalut "") - 단순 텍스트 메시지
+    * @param opt.contSelector : jQuery selector (ex - #id, .class / defalut null) - 연결할 컨텐츠id
+    * @param opt.okCallBack : function - 확인 콜백
+    * @param opt.cancelCallBack : function - 취소 콜백
+    * @param opt.okBtnTxt : String (default "확인") - 확인 텍스트
+    * @param opt.cancelBtnTxt : String (default "취소") - 취소 텍스트
+    * */
+    //alert 부를때
+    $(".btn_alert").on("click", function(){
+        rtp.alertUI({
+            msg : "그냥 알림이고 닫기기능은 기본입니다 트랜잭션은 멈추지않습니다"
+        });
+        /*rtp.alertUI({
+            msg : "그냥 알림이고 닫기기능은 기본입니다. 콜백은있을때만 작성해주세요",
+            okCallBack : function(){
+                console.log('ok');
+            }
+        });*/
+
+    });
+    //confirm 부를때
+    $(".btn_confirm").on("click",function(){
+        rtp.confirmUI({
+            msg : "오버라이드확인",
+            okCallBack : function(){
+                console.log('아하');
+            },
+            cancelCallBack : function(){
+                console.log('no');
+            }
+
+        });
+    });
+    //contents가 있는 그냥 layerpop을 열때 물론 컨텐츠가 있는 레이어 마크업의 경우는
+    //html에 미리 마크업해서 숨겨두고 연결해드림요.
+    $(".btn_layer").on("click",function(){
+        rtp.primaryUI({
+            title : "결과확인",
+            contSelector : "goPurchase"
+        })
+    })
+</script>
+</body>
+</html>
