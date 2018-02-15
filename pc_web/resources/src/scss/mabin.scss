@@ -143,7 +143,7 @@ input{
 
 
 
-//page_title_banner - [COMMENT] 갑 : 임시
+//page_title_banner
 .page_title_banner {
 	margin-bottom: 35px;
 	margin-top:-1px;
@@ -159,24 +159,24 @@ input{
 	    padding-left: 390px;padding-top: 34px;
 	    margin-top:-1px;
 	    font-size: 22px;
+		p {
+			margin-top: 8px;
+		    font-size: 19px;
+		    span {
+	    	    font-size: 16px;
+			    margin-left: 12px;
+			    text-decoration: underline;
+			    color: #5b5b5b;
+		    }
+		}
 	}
 
     letter-spacing: -2px;
 	background:#fbfbfb url("#{$content-img}banner_stats.png") no-repeat 160px 15px;
 
-	p {
-		margin-top: 8px;
-	    font-size: 19px;
-	    span {
-    	    font-size: 16px;
-		    margin-left: 12px;
-		    text-decoration: underline;
-		    color: #5b5b5b;
-	    }
-	}
 
 	strong {
-		font-size:24px;
+		font-size:1.1em;
 
 		span {
 			position: relative;top: -2px;
@@ -184,10 +184,50 @@ input{
 		    margin: 5px;
 			padding: 1px 11px 6px;
 		    border-radius: 50px;
-		    background-color: #18699b;
 		    letter-spacing: 0;
+		    background-color: #18699b;
 		    color: #fff;
 		}
+	}
+
+	.sub_tit {
+		display:inline-block;
+		font-size:1.2em;
+    	padding: 3px 17px 5px;
+    	margin-bottom:17px;
+	    border-radius: 50px;
+		background-color: #18699b;
+		color: #fff;
+	}
+	.desc {
+		padding-left:7px;
+		font-size:1.1em;
+		line-height:1.3em;
+
+		p {
+			font:inherit;	
+		}
+		.result {
+			margin-top:15px
+		}
+	}
+
+	// 로또통계 비법자료 [COMMENT] 갑 : data-type 으로 각 서브 큰 줄기 나눠서 bg 이미지 바꾸고.. 등등 할 생각이옵니다.
+	&[data-type] {
+		padding:25px 0;
+		letter-spacing:-1px;
+	}
+	&[data-type="stats_suggest"] {
+		min-height:165px;
+		padding-left:240px;
+		
+		background : {
+			image:url("../img/content/banner_stats_suggest.png");
+			position:100px center;
+		}
+	}
+	span[class^="ball_n"] {
+		letter-spacing:normal;
 	}
 }
 
@@ -229,3 +269,4 @@ input{
 	}
 }
 
+      
