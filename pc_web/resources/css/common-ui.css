@@ -780,6 +780,4 @@ input[data-align="right"] { text-align: right; }
 
 .data_table tbody tr td [data-sign="equal"] { background-color: #949494; }
 
-.wide_table { height: 570px; border-right: 1px solid #e3e3e3; }
-
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
