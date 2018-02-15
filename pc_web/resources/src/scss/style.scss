@@ -882,6 +882,36 @@ button{
   }
 }
 
+/*board*/
+.board_table{
+  thead{
+    th{
+      border-bottom:1px solid $border-base;
+      padding:15px 0;
+      font-size:15px;
+      font-weight:$bold;
+      background: $bg-light;
+    }
+  }
+  tbody{
+    td{
+      padding:13px 0;
+      border-bottom:1px solid $border-base;
+      text-align: center;
+      &[data-align="left"]{
+        text-align: left;
+      }
+      a.link{
+        display: block;
+        width:750px;
+        overflow:hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
 /*tab*/
 .tab{
   display:flex;
