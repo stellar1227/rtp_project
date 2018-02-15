@@ -405,6 +405,26 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .board_table tbody td a.link { display: block; width: 750px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
+.board_table tbody td .edit_contents { text-align: left; padding: 20px 40px; min-height: 300px; }
+
+.mini_board_list { margin-top: 70px; border-width: 1px 0; border-style: solid; border-color: #d6d6d6; }
+
+.mini_board_list li { padding: 13px 30px; overflow: hidden; }
+
+.mini_board_list li.prev { border-bottom: 1px solid #d6d6d6; }
+
+.mini_board_list li.prev .dir:after { top: 3px; border-width: 5px; border-style: solid; border-color: transparent transparent #555 transparent; }
+
+.mini_board_list li.next .dir:after { top: 8px; border-width: 5px; border-style: solid; border-color: #555 transparent transparent transparent; }
+
+.mini_board_list li .dir { position: relative; float: left; padding-right: 40px; }
+
+.mini_board_list li .dir:after { position: absolute; right: 15px; content: ""; width: 0; height: 0; }
+
+.mini_board_list li .tit { float: left; width: 720px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+
+.mini_board_list li span.tit { color: #7b8caf; }
+
 /*tab*/
 .tab { display: flex; }
 

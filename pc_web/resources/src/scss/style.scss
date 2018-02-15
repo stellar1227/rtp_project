@@ -908,6 +908,74 @@ button{
         text-overflow: ellipsis;
         white-space: nowrap;
       }
+      .edit_contents{
+        text-align: left;
+        padding:20px 40px;
+        min-height: 300px;
+      }
+    }
+  }
+}
+.mini_board_list{
+  margin-top:70px;
+  border:{
+    width: 1px 0;
+    style : solid;
+    color :$border-base
+  }
+  li{
+    padding:13px 30px;
+    overflow: hidden;
+    &.prev{
+      border-bottom:1px solid $border-base;
+
+      .dir{
+        &:after{
+          top:3px;
+          border:{
+            width : 5px;
+            style :solid;
+            color : transparent transparent $border-darken transparent;
+          }
+        }
+      }
+    }
+    &.next{
+      .dir{
+        &:after{
+          top:8px;
+          border:{
+            width : 5px;
+            style :solid;
+            color : $border-darken transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .dir{
+      position: relative;
+      float:left;
+      padding-right:40px;
+      &:after{
+        position: absolute;
+        right:15px;
+        content:"";
+        width:0;
+        height:0;
+      }
+    }
+    .tit{
+      float:left;
+      width:720px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    a.tit{
+
+    }
+    span.tit{
+      color:$light-color
     }
   }
 }
