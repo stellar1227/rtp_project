@@ -307,7 +307,7 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .btn_wrap[data-align="right"] { text-align: right; }
 
-.btn_wrap #header .inner_header .util_link a, #header .inner_header .util_link .btn_wrap a, .btn_wrap #header .inner_header .util_link button, #header .inner_header .util_link .btn_wrap button, .btn_wrap button, .btn_wrap a { margin-rigt: 10px; }
+.btn_wrap #header .inner_header .util_link a, #header .inner_header .util_link .btn_wrap a, .btn_wrap #header .inner_header .util_link button, #header .inner_header .util_link .btn_wrap button, .btn_wrap button, .btn_wrap a { margin-right: 10px; }
 
 .btn_wrap #header .inner_header .util_link a:last-child, #header .inner_header .util_link .btn_wrap a:last-child, .btn_wrap #header .inner_header .util_link button:last-child, #header .inner_header .util_link .btn_wrap button:last-child, .btn_wrap button:last-child, .btn_wrap a:last-child { margin-right: 0; }
 
@@ -769,5 +769,17 @@ input[data-align="right"] { text-align: right; }
 .page_title_banner strong { font-size: 24px; }
 
 .page_title_banner strong span { position: relative; top: -2px; font-size: 18px; margin: 5px; padding: 1px 11px 6px; border-radius: 50px; background-color: #18699b; letter-spacing: 0; color: #fff; }
+
+.data_table tbody tr td[data-bg="diff"] { background-color: #ffff99; font-weight: 700; color: #e10200; }
+
+.data_table tbody tr td [data-sign] { display: inline-block; width: 2em; height: 2em; font-weight: 700; border-radius: 50px; line-height: 1.8em; color: #fff; }
+
+.data_table tbody tr td [data-sign="big"] { background-color: #6196d4; text-indent: 2px; }
+
+.data_table tbody tr td [data-sign="small"] { background-color: #ffc500; text-indent: -2px; }
+
+.data_table tbody tr td [data-sign="equal"] { background-color: #949494; }
+
+.wide_table { height: 570px; border-right: 1px solid #e3e3e3; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
