@@ -190,3 +190,49 @@ input{
 		}
 	}
 }
+
+
+
+.data_table {
+	tbody tr td {
+		//[COMMENT] 갑 : 배경셀 diff 추가 
+		&[data-bg="diff"] {
+		    background-color: #ffff99;
+		    font-weight: $bold;
+		    color: #e10200;
+
+		}
+
+		//[COMMENT] 갑 : stats_more_than_last 부등호 추가
+		[data-sign] {
+			display:inline-block;
+			width:2em;height:2em;
+			font-weight:$bold;
+			border-radius:50px;
+			line-height:1.8em;
+			color:#fff;
+		} 
+
+		[data-sign="big"] {
+			background-color:#6196d4;
+			text-indent:2px;
+		}
+
+		[data-sign="small"] {
+			background-color:#ffc500;
+			text-indent:-2px;
+		}
+
+		[data-sign="equal"] {
+			background-color:#949494;
+		}
+	}
+}
+
+
+
+// [COMMENT] 갑 : .wide_table 스크롤 이중 안되게 해달라는거같아서 ㅠㅠ 높이조절, 우측 보더 추가했어요
+.wide_table {
+	height:570px;
+	border-right:1px solid #e3e3e3;
+}

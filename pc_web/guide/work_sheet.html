@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>[WorkSheet-로또팡   ]</title>
+    <title>[WorkSheet-로또팡]</title>
     <style>
         body {
             padding-bottom: 40px;
@@ -124,6 +124,7 @@
         <td>
             <ul>
                 <li><span data-date>2018-02-09</span>컨펌요청</li>
+                <li><span data-date>2018-02-12</span>컨펌완료</li>
             </ul>
         </td>
     </tr>
@@ -133,6 +134,16 @@
 <!-- 갑 작업중 'ㅅ'/ 
 <button id="btn_newDeliver">신규만</button>-->
 <table class="guideTable">
+    <colgroup>
+        <col style="width:auto">
+        <col style="width:auto">
+        <col style="width:auto">
+        <col style="width:auto">
+        <col style="width:auto">
+        <col style="width:4.6em">
+        <col style="width:4.6em">
+        <col style="width:auto">
+    </colgroup>
     <thead>
         <tr>
             <th scope="col">type</th>
@@ -181,17 +192,6 @@
             </td>
         </tr>
 
-        <tr>
-            <td >main</td>
-            <td>main</td>
-            <td></td>
-            <td></td>
-            <td><a href="../template/main/main.html" target="_blank" title="새창">main.html</a></td>
-            <td>진행</td>
-            <td class="date"></td>
-            <td>메인키비쥬얼 교체필요</td>
-        </tr>
-
         <tr><!-- CS -->
             <td rowspan="9">cs<br>(고객센터)</td>
             <td>안심고객센터</td>
@@ -215,19 +215,19 @@
             <td>안심고객센터</td>
             <td>공지사항</td>
             <td>공지사항-List</td>
-            <td><a href="../template/cs/cs_notice_list.html" target="_blank" title="새창">cs_notice_list.html</a></td>
-            <td>진행</td>
+            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td>대기</td>
             <td class="date"></td>
-            <td>일단 마크업디자인대기</td>
+            <td>디자인대기</td>
         </tr>
         <tr>
             <td>안심고객센터</td>
             <td>공지사항</td>
             <td>공지사항-View</td>
-            <td><a href="../template/cs/cs_notice_view.html" target="_blank" title="새창">cs_notice_view.html</a></td>
-            <td>진행</td>
+            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td>대기</td>
             <td class="date"></td>
-            <td>일단 마크업디자인대기</td>
+            <td>디자인대기</td>
         </tr>
         <tr>
             <td>안심고객센터</td>
@@ -388,18 +388,26 @@
             <td>그룹핑</td>
             <td>그룹출현</td>
             <td><a href="../template/mix/.html" target="_blank" title="새창">.html</a></td>
-            <td>불가</td>
+            <td>대기</td>
             <td class="date"></td>
-            <td>[기획]내용수급대기</td>
+            <td>
+                <ul>
+                    <li>PPT1.6 신규분량. 차후작업</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>통계보기</td>
             <td>그룹핑</td>
             <td>회차별통계</td>
             <td><a href="../template/mix/.html" target="_blank" title="새창">.html</a></td>
-            <td>불가</td>
+            <td>대기</td>
             <td class="date"></td>
-            <td>[기획]내용수급대기</td>
+            <td>
+                <ul>
+                    <li>PPT1.6 신규분량. 차후작업</li>
+                </ul>
+            </td>
         </tr>
 
         <tr><!-- MYPAGE -->
@@ -466,45 +474,70 @@
 
 
         <tr><!-- STATS -->
-            <td rowspan="48">stats<br>(로또통계 비법자료)</td>
+            <td rowspan="49">stats<br>(로또통계 비법자료)</td>
             <td>로또통계 비법자료</td>
+            <td>통계자료</td>
             <td>전체보기</td>
+            <td><a href="../template/stats/stats_all_main.html" target="_blank" title="새창">stats_all_main.html</a></td>
+            <td>대기</td>
+            <td class="date"></td>
+            <td>디자인필요</td>
+        </tr>
+        <tr>
+            <td>로또통계 비법자료</td>
+            <td>통계자료</td>
             <td>당첨번호 재출현 주기 분석</td>
             <td><a href="../template/stats/stats_reemergence.html" target="_blank" title="새창">stats_reemergence.html</a></td>
             <td>완료</td>
-            <td class="date">02-06</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>당첨번호 출현횟수 분석</td>
             <td><a href="../template/stats/stats_win_total.html" target="_blank" title="새창">stats_win_total.html</a></td>
             <td>완료</td>
-            <td class="date">02-06</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>전체 당첨 번호</td>
             <td><a href="../template/stats/stats_win_text.html" target="_blank" title="새창">stats_win_text.html</a></td>
             <td>완료</td>
             <td class="date">02-06</td>
-            <td></td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
-            <td>당첨번호 출현횟수분석 (최근10주)</td>
+            <td>통계자료</td>
+            <td>안타깝다.. 로또2등 당첨번호</td>
             <td><a href="../template/stats/stats_win_second.html" target="_blank" title="새창">stats_win_second.html</a></td>
             <td>완료</td>
-            <td class="date">02-06</td>
-            <td>[기획]PPT - slide 69번 : 메뉴- 5번,10번 항목 메뉴명 동일함. 확인필요</td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>메뉴명 변경, 상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>홀수당첨번호 분석</td>
             <td><a href="#" target="_blank" title="새창"></a></td>
             <td>대기</td>
@@ -513,33 +546,35 @@
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>2커플 수의 당첨출현현황(1번대)</td>
             <td><a href="../template/stats/stats_couple_two1.html" target="_blank" title="새창">stats_couple_two1.html</a></td>
             <td>완료</td>
-            <td class="date">02-06</td>
+            <td class="date">02-15</td>
             <td>
                 <ul>
                     <li><span data-date>2018-02-08</span>기존에 주석으로 볼만 바꿔 하나로 전달드렸으나 <br> 요청사항에 의해 번호대 별로 템플릿 나누어서 다시 전달</li>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>2커플 수의 당첨출현현황(10번대)</td>
             <td><a href="../template/stats/stats_couple_two10.html" target="_blank" title="새창">stats_couple_two10.html</a></td>
             <td>완료</td>
-            <td class="date">02-08</td>
+            <td class="date">02-15</td>
             <td>
                 <ul>
                     <li><span data-date>2018-02-08</span>기존에 주석으로 볼만 바꿔 하나로 전달드렸으나 <br> 요청사항에 의해 번호대 별로 템플릿 나누어서 다시 전달</li>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>2커플 수의 당첨출현현황(20번대)</td>
             <td><a href="../template/stats/stats_couple_two20.html" target="_blank" title="새창">stats_couple_two20.html</a></td>
             <td>완료</td>
@@ -547,56 +582,67 @@
             <td>
                 <ul>
                     <li><span data-date>2018-02-08</span>기존에 주석으로 볼만 바꿔 하나로 전달드렸으나 <br> 요청사항에 의해 번호대 별로 템플릿 나누어서 다시 전달</li>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>2커플 수의 당첨출현현황(30번대)</td>
             <td><a href="../template/stats/stats_couple_two30.html" target="_blank" title="새창">stats_couple_two30.html</a></td>
             <td>완료</td>
-            <td class="date">02-08</td>
+            <td class="date">02-15</td>
             <td>
                 <ul>
                     <li><span data-date>2018-02-08</span>기존에 주석으로 볼만 바꿔 하나로 전달드렸으나 <br> 요청사항에 의해 번호대 별로 템플릿 나누어서 다시 전달</li>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>2커플 수의 당첨출현현황(40번대)</td>
             <td><a href="../template/stats/stats_couple_two40.html" target="_blank" title="새창">stats_couple_two40.html</a></td>
             <td>완료</td>
-            <td class="date">02-08</td>
+            <td class="date">02-15</td>
             <td>
                 <ul>
                     <li><span data-date>2018-02-08</span>기존에 주석으로 볼만 바꿔 하나로 전달드렸으나 <br> 요청사항에 의해 번호대 별로 템플릿 나누어서 다시 전달</li>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>3커플 수의 당첨출현현황</td>
             <td><a href="../template/stats/stats_couple_three.html" target="_blank" title="새창">stats_couple_three.html</a></td>
             <td>완료</td>
-            <td class="date">02-06</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>모든 당첨출현 회차 분석</td>
             <td><a href="../template/stats/stats_all_number.html" target="_blank" title="새창">stats_all_number.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
-            <td>전체보기</td>
+            <td>통계자료</td>
             <td>로또일련번호로 6개 조합 찾기</td>
             <td><a href="#" target="_blank" title="새창"></a></td>
             <td>대기</td>
@@ -609,17 +655,22 @@
             <td>당번 합계 출현현황</td>
             <td><a href="../template/stats/stats_total_appear.html" target="_blank" title="새창">stats_total_appear.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td>[기획]칸의 배경의 의미가 무슨뜻인가요? 필요시 코드를 추가하겠습니다.</td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-11</span>최초전달</li>
+                    <li><span data-date>2018-02-19</span>합계 180초과 td 색상코드 속성 추가 전달</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
             <td>통계자료</td>
             <td>당첨번호 홀짝 출현현황</td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
-            <td>불가</td>
+            <td><a href="../template/stats/stats_odd_even.html" target="_blank" title="새창">stats_odd_even.html</a></td>
+            <td>진행</td>
             <td class="date"></td>
-            <td>[기획]게이지 이미지는 어떤것을 표시하나요? 확인부탁드립니다</td>
+            <td>디자인필요</td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -627,8 +678,12 @@
             <td>당첨번호 AC값 분석</td>
             <td><a href="../template/stats/stats_history_ac.html" target="_blank" title="새창">stats_history_ac.html</a></td>
             <td>완료</td>
-            <td class="date">02-08</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -636,8 +691,12 @@
             <td>끝수 출현현황</td>
             <td><a href="../template/stats/stats_history_end.html" target="_blank" title="새창">stats_history_end.html</a></td>
             <td>완료</td>
-            <td class="date">02-08</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -645,8 +704,12 @@
             <td>최근 10주 당첨번호 중복 출현 횟수</td>
             <td><a href="../template/stats/stats_last10_week.html" target="_blank" title="새창">stats_last10_week.html</a></td>
             <td>완료</td>
-            <td class="date">02-08</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -654,8 +717,12 @@
             <td>최근 5주 당첨번호 중복 출현 횟수</td>
             <td><a href="../template/stats/stats_last5_week.html" target="_blank" title="새창">stats_last5_week.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -663,8 +730,13 @@
             <td>이월수 현황</td>
             <td><a href="../template/stats/stats_before_forward.html" target="_blank" title="새창">stats_before_forward.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td>[기획]칸의 배경의 의미가 무슨뜻인가요? 필요시 코드를 추가하겠습니다.</td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-11</span>최초전달</li>
+                    <li><span data-date>2018-02-19</span>이월 td 색상코드 속성 추가 전달</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -672,8 +744,14 @@
             <td>당첨번호 기초자료</td>
             <td><a href="../template/stats/stats_more_than_last.html" target="_blank" title="새창">stats_more_than_last.html</a></td>
             <td>완료</td>
-            <td class="date">02-08</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li>
+                        <span data-date>2018-02-19</span>상단배너 교체, &gt; , &lt;, = 부등호 표기 추가 전달</li>
+                    </li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -681,8 +759,12 @@
             <td>연속번호 출현현황</td>
             <td><a href="../template/stats/stats_chain_appear.html" target="_blank" title="새창">stats_chain_appear.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>연번 2번이상 td 색상코드 속성 추가 전달,상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -690,10 +772,13 @@
             <td>스타트번호 출현현황</td>
             <td><a href="../template/stats/stats_start_num.html" target="_blank" title="새창">stats_start_num.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
+            <td class="date">02-15</td>
             <td>
-                최초완료02-08<br>
-                * git 버전관리하면서 로그가 남은 파일을<br> 전달드렸던터라 재전달 드립니다.2018-02-11
+                <ul>
+                    <li><span data-date>2018-02-08</span>최초전달</li>
+                    <li><span data-date>2018-02-11</span>git 로그가 들어갔었어서 최종본다시 전달</li>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -702,11 +787,13 @@
             <td>과거 구매결과 분석</td>
             <td><a href="../template/stats/stats_past_history.html" target="_blank" title="새창">stats_past_history.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
+            <td class="date">02-15</td>
             <td>
-                최초완료02-08 <br>
-                * git 버전관리하면서 로그가 남은 파일을 <br>전달드렸던터라 재전달 드립니다.2018-02-11
-                [기획]내부테이블 4,5등의 밑줄 텍스트 및 <br>No칸의 체크박스는 무엇을 의미하는지 확인부탁드립니다.
+                <ul>
+                    <li><span data-date>2018-02-08</span>최초전달</li>
+                    <li><span data-date>2018-02-11</span>git 로그가 들어갔었어서 최종본다시 전달</li>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
             </td>
         </tr>
         <tr>
@@ -716,14 +803,14 @@
             <td><a href="#" target="_blank" title="새창"></a></td>
             <td>불가</td>
             <td class="date"></td>
-            <td>[기획]내용필요, 체크박스의 의미도 알수없습니다.</td>
+            <td></td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
             <td>통계자료</td>
             <td>로또 완전조합 (다운로드)</td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
-            <td>대기</td>
+            <td><a href="../template/stats/stats_completed_mixing.html" target="_blank" title="새창">stats_completed_mixing.html</a></td>
+            <td>진행</td>
             <td class="date"></td>
             <td>디자인필요</td>
         </tr>
@@ -734,7 +821,7 @@
             <td><a href="../template/stats/stats_appear_numbering.html" target="_blank" title="새요창">stats_appear_numbering.html</a></td>
             <td>완료</td>
             <td class="date">02-11</td>
-            <td>화살표이미지 나중에 변경</td>
+            <td>[디자인]화살표이미지 나중에 변경</td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -742,15 +829,19 @@
             <td>당첨번호 이웃숫자 분석</td>
             <td><a href="../template/stats/stats_win_siblings.html" target="_blank" title="새창">stats_win_siblings.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td> </td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
             <td>통계자료</td>
             <td>할로겐 vs 비너스 추첨기</td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
-            <td>대기</td>
+            <td><a href="../template/stats/stats_halogen_venus.html" target="_blank" title="새창">stats_halogen_venus.html</a></td>
+            <td>진행</td>
             <td class="date"></td>
             <td></td>
         </tr>
@@ -760,8 +851,13 @@
             <td>한번호대 출현현황</td>
             <td><a href="../template/stats/stats_one_line_appear.html" target="_blank" title="새창">stats_one_line_appear.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td>[기획]색이 있는 칸의 의미를 확인해주세요. 나중에 필요하실경우 코드를 추가하겠습니다.</td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-11</span>최초전달</li>
+                    <li><span data-date>2018-02-19</span>전멸번호 td 색상코드 속성 추가 전달,상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -769,8 +865,12 @@
             <td>한눈에 보는 당첨분포도</td>
             <td><a href="../template/stats/stats_one_eye.html" target="_blank" title="새창">stats_one_eye.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -778,8 +878,12 @@
             <td>로또용어정리</td>
             <td><a href="../template/stats/stats_lotto_word.html" target="_blank" title="새창">stats_lotto_word.html</a></td>
             <td>완료</td>
-            <td class="date">02-11</td>
-            <td></td>
+            <td class="date">02-15</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-19</span>상단배너 교체</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td>로또통계 비법자료</td>
@@ -794,7 +898,7 @@
             <td>로또통계 비법자료</td>
             <td>비법자료</td>
             <td>1번이 나온 다음 회차에 45번은 제외수?</td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_next_one_exception45.html" target="_blank" title="새창">stats_next_one_exception45.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -804,7 +908,7 @@
             <td>비법자료</td>
             <td>당번중 작은 숫자에 X2, -1 번호는 제외?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_x2minus1_exception.html" target="_blank" title="새창">stats_x2minus1_exception.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -814,7 +918,7 @@
             <td>비법자료</td>
             <td>짝수 5개 나온 다음 회차에 2번은 제외?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_even5_next2_exception.html" target="_blank" title="새창">stats_even5_next2_exception.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -824,7 +928,7 @@
             <td>비법자료</td>
             <td>끝수 6이 2개이상 2연속이면 다음에 6번?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_last6_continue2_next6.html" target="_blank" title="새창">stats_last6_continue2_next6.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -834,7 +938,7 @@
             <td>비법자료</td>
             <td>한번호대 3개출현 다음에 그 번호대는?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_one_time3_next.html" target="_blank" title="새창">stats_one_time3_next.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -844,7 +948,7 @@
             <td>비법자료</td>
             <td>18번이 2회 연속 출현하는 스타일인가?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_twice18_continued.html" target="_blank" title="새창">stats_twice18_continued.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -854,7 +958,7 @@
             <td>비법자료</td>
             <td>연번이 2커플 출현 다음에 또 연번 출현?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_couple2_appear_couple.html" target="_blank" title="새창">stats_couple2_appear_couple.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -864,7 +968,7 @@
             <td>비법자료</td>
             <td>44번이 나온 다음 회차에 4번은 제외?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_next44_next4_exception.html" target="_blank" title="새창">next44_next4_exception.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -874,7 +978,7 @@
             <td>비법자료</td>
             <td>동일 끝수 4개 출현! 다음에 끝수가 또?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_same_last4_too.html" target="_blank" title="새창">stats_same_last4_too.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -884,7 +988,7 @@
             <td>비법자료</td>
             <td>회차를 분해해서 나온 번호는 제외수?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_part_of_exception.html" target="_blank" title="새창">stats_part_of_exception.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -894,7 +998,7 @@
             <td>비법자료</td>
             <td>당번중 제일 큰수-작은수는 다음회에?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_max_min_next.html" target="_blank" title="새창">stats_max_min_next.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -904,7 +1008,7 @@
             <td>비법자료</td>
             <td>Cold수가 5개이상 출현 후, 또 cold 수?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_cold5_cold.html" target="_blank" title="새창">stats_cold5_cold.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -914,7 +1018,7 @@
             <td>비법자료</td>
             <td>11,22.. 가 당번이면 다음에 O 번호 있다!
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_eleven_zero.html" target="_blank" title="새창">stats_eleven_zero.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -924,7 +1028,7 @@
             <td>비법자료</td>
             <td>5주내 당번으로만 조합하면 최고 몇등?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_weeks5_what.html" target="_blank" title="새창">stats_weeks5_what.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -934,7 +1038,7 @@
             <td>비법자료</td>
             <td>스타트번호 25번이상 그 다음 회차는?
             </td>
-            <td><a href="#" target="_blank" title="새창"></a></td>
+            <td><a href="../template/stats/stats_start25_next.html" target="_blank" title="새창">stats_start25_next.html</a></td>
             <td>대기</td>
             <td class="date"></td>
             <td></td>
@@ -1135,7 +1239,7 @@
 
 
     var newDateCell = Table.getElementsByClassName('date'),
-        newDate     = '02-12';
+        newDate     = '02-15';
 
     for(var i = 0,len=newDateCell.length; i < len; i++){
         if ( newDateCell[i].textContent == newDate )  {
