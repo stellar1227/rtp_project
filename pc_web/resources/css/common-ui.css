@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 .input_custom input[type='checkbox'] + label:before, .input_custom input[type='radio'] + label:before { background: url("../img/common/ico_form_sprite.png") no-repeat; }
 
