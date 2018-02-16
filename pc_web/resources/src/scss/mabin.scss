@@ -34,6 +34,44 @@ input{
 		p {line-height:150%}
 	}
 }
+
+
+// list_all_keyitem
+.list_all_keyitem {
+	display:flex;
+	margin-bottom:40px;
+	border : {
+		style:solid;
+		width:1px;
+		color:#e6e6e6;
+		radius:4px;
+	}
+	
+	li {
+		flex:1;
+		padding:27px 0 19px;
+		border-left:1px solid #f2f2f2;
+		text-align:center;
+		color:#555;
+
+		&:first-child {
+			border-left:0;
+		}
+		&:before {
+			display:block;content:"";
+			width:80px;height:43px;
+			margin:0 auto 10px;
+			background:url("#{$content-img}ico_all_keyitem.png") no-repeat 0 0;
+		}
+		&[data-icon=type1]:before{background-position:12px 0;}
+		&[data-icon=type2]:before{background-position:-84px 0;}
+		&[data-icon=type3]:before{background-position:-188px 0;}
+		&[data-icon=type4]:before{width:105px;background-position:-303px 0;}
+		&[data-icon=type5]:before{background-position:-432px 0;}
+
+		p {line-height:150%}
+	}
+}
 // list_free_coupon (in data_table)
 .list_free_ticket {
 	display:table;
@@ -101,8 +139,6 @@ input{
 }
 
 
-
-
 // 좌측 Article + 우측 action contents 
 .box_contents.actions {
 	overflow:hidden;
@@ -126,6 +162,30 @@ input{
 }
 
 
+
+// [COMMENT] btn_wrap + box_contents 상단 border, margin-top 처리
+.btn_wrap + .box_contents {
+	margin-top:40px;
+	border-top:1px solid #d6d6d6;
+}
+
+#content {
+	.btn_top_wrap {
+		.table_title {
+			display:inline-block;
+			margin:0;
+			margin-top:5px;
+
+		}
+	}
+
+	.page_title_banner + .block_title {padding-top:0;}
+}
+
+// [COMMENT] 갑 : 보더를 없앤것이 필요하여 ㅠㅠ..
+#content .block_title[data-type="noborder"] {
+	border-bottom:0;
+}
 
 // box_contents - 컨텐츠 순서별 디자인 Custom
 .pagenation + .box_contents.actions {
@@ -210,25 +270,116 @@ input{
 		.result {
 			margin-top:15px
 		}
+
+
 	}
 
 	// 로또통계 비법자료 [COMMENT] 갑 : data-type 으로 각 서브 큰 줄기 나눠서 bg 이미지 바꾸고.. 등등 할 생각이옵니다.
 	&[data-type] {
 		padding:25px 0;
+		padding-left:240px;
+		background : {
+			image:none;
+			position:100px center;
+		}
 		letter-spacing:-1px;
 	}
 	&[data-type="stats_suggest"] {
+		background-image:url("#{$content-img}banner_stats_suggest.png");
 		min-height:165px;
-		padding-left:240px;
 		
+	}
+	&[data-type="lotto_mix"] {
 		background : {
-			image:url("../img/content/banner_stats_suggest.png");
-			position:100px center;
+			position:59px center;
+			image:url("#{$content-img}banner_lotto_mix.png");
+		}
+	}
+	&[data-type="fortune"] {
+		background : {
+			position:65px 60%;
+			image:url("#{$content-img}banner_fortune.png");
 		}
 	}
 	span[class^="ball_n"] {
 		letter-spacing:normal;
 	}
+}
+
+
+// list_all_item - 로또 통계/비법자료 전체보기
+.list_all_item {
+	padding:40px;
+
+	li {
+		display:table;
+		width:100%;	
+		position:relative;
+		padding-bottom:20px;
+		margin-bottom:20px;
+		border-bottom:1px solid #ccc;
+		cursor:pointer;
+		
+		&:after {
+			display:block;content:"";
+			position:absolute;right:10px;top:50%;
+			width:19px;height:35px;
+			margin-top:-27.5px;
+			background:url("#{$content-img}ico_all_more.gif") -31px 0 no-repeat;
+			transition:background-position ease .2s;
+		}
+
+		&:hover:after {
+			background-position:0 0;
+		}
+		&:hover a {
+			text-decoration:underline;
+
+		}
+			
+
+		.img,.desc {
+			display:table-cell;
+		}
+		.img {
+			overflow:hidden;
+			width:130px;height:120px;
+			border:1px solid #ccc;
+			a {
+				display:block;
+				height:100%;
+			}
+			img {
+				max-width:100%;
+			}
+		}
+		.desc {
+			padding: {
+				right:60px;
+				left:25px;
+			}
+			strong {
+				display:block;
+				margin-bottom:8px;
+			}
+			a {
+				display:block;
+			}
+			.tip {
+				padding : {
+					left:28px;
+					top:8px;
+				}
+			    margin-top: 10px;
+			    border-top: 1px dashed #dfdede;
+				background:url("#{$content-img}ico_all_tip.png") 0 8px no-repeat;
+			    color: #006d56;
+			}
+		}
+	}
+
+
+
 }
 
 
