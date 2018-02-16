@@ -2,7 +2,7 @@
 var rtp = (function($){
 
     /*gnb*/
-    var gnb = {
+  /*  var gnb = {
         init : function(){
             var target = $("#gnb");
             this.allMenu = target.find(".all_menu");
@@ -18,10 +18,10 @@ var rtp = (function($){
             })
         }
 
-    };
+    };*/
 
     /*lnb*/
-    var lnb = {
+   /* var lnb = {
         init : function(){
             var target = $("#lnb");
             this.toggleBtn = target.find(".btn_menu_toggle");
@@ -43,7 +43,7 @@ var rtp = (function($){
             _t.toggleClass('open');
             _t.stop().slideToggle(300);
         }
-    };
+    };*/
 
     /*toggle_list*/
     var toggleList = {
@@ -253,9 +253,9 @@ var rtp = (function($){
 
     //document.ready
 
-    $(function(){
-        gnb.init(); //gnb
-        $("#lnb").find(".sub_menu").length && lnb.init();
+    $(function(){ //todo sideNavi && gnb script
+        /*gnb.init(); //gnb
+        $("#lnb").find(".sub_menu").length && lnb.init();*/
         $(".accodian_list").length && toggleList.init(); //toggleList
         $(".file_upload").length && fileUpload.init(); //inputFile
 

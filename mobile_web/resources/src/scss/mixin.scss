@@ -20,7 +20,7 @@
 }
 
 
-//기본 컨텐츠 사이즈
+//기본 컨텐츠 사이즈 TODO : 정리 후 삭제
 @mixin content(){
   width:$container-size;
   margin:0 auto;
@@ -54,21 +54,22 @@
 //iconsprite
 %ico_form_sprite{
   background:url('#{$common-img}ico_form_sprite.png') no-repeat;
+  background-size:85px auto;
 }
 
 //input (pswd/txt)
 @mixin inputStyle($type){
   @if $type == default{
     @include boxSizing();
-    min-width:148px;
+    min-width:53%;
     height:44px;
     line-height:44px;
-    padding:0 15px;
+    padding:0 10px;
     border:{
       style : solid;
       width : 1px;
     }
-    font-size:15px;
+    font-size:$font14px;
     &:focus{
       border-color:$input-b-strong;
       outline:0;
@@ -120,18 +121,18 @@
     & + label{
       &:before{
         @if $type == checkbox{
-          background-position:-105px -35px
+          background-position:-66px -22px
         }@else if $type == radio{
-          background-position:-105px 0
+          background-position:-66px 0
         }
       }
     }
     &[type= '#{$type}']:checked + label{
       &:before{
         @if $type == checkbox{
-          background-position:-70px -35px
+          background-position:-44px -22px
         }@else if $type == radio{
-          background-position:-70px 0
+          background-position:-44px 0
         }
       }
     }
@@ -140,7 +141,7 @@
     & + label{
       &:before{
         @if $type == checkbox{
-          background-position:0 -35px
+          background-position:0 -22px
         }@else if $type == radio{
           background-position:0 0
         }
@@ -152,20 +153,21 @@
       content:"";
       display: inline-block;
       vertical-align: middle;
-      width:25px;
-      height:25px;
+      width:19px;
+      height:19px;
+
       @extend %ico_form_sprite;
       @if $type == checkbox{
-        background-position:-35px -35px;
+        background-position:-22px -22px;
       }@else if $type == radio{
-        background-position:-35px 0
+        background-position:-22px 0
       }
     }
     span{
-      margin:0 0 0 8px;
+      margin:0 0 0 6px;
       vertical-align: middle;
       font:{
-        size : 15px
+        size : $font14px;
       }
       color:$base-color;
     }
@@ -179,12 +181,12 @@
   display: inline-block;
   @include boxSizing();
   @include borderRadius(2px);
-  min-width:99px;
+  min-width:24.7%;
   height:44px;
-  padding: 0 20px;
+  padding: 0 7px;
   line-height:44px;
   font : {
-    size : 15px;
+    size : $font14px;
     weight:$bold;
   }
   color:#fff;
@@ -194,7 +196,7 @@
   }
 }
 //추가설정을위한 mixin
-@mixin button($wid:99px, $bg:off, $hei:off, $font:off, $color:off){
+@mixin button($wid:24.7%, $bg:off, $hei:off, $font:off, $color:off){
   width:$wid;
   @if $bg != off{
     background:$bg;
@@ -219,7 +221,7 @@
 
 
 //lottoball size
-@mixin lottoball($size:26px,$font:15px){
+@mixin lottoball($size:22px,$font:0.89rem){
   width:$size;
   height:$size;
   line-height:$size;

@@ -1,507 +1,12 @@
 //공통스타일
 /*style.css*/
 // google cdn 이용 (유니코드 너무 갈려져있어..)
-//base-font : 나눔고딕
-//sub-font : noto sans
+//base-font : 노토산스
 @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 /*layout*/
 //layout관련 전역 variable
-$header-height : 152px;
-$sub-intro-height: 53px;
-$footer-height: 94px;
-$lnb-width : 250px;
-#header{
-  position: absolute;
-  left:0;
-  top:0;
-  width:100%;
-  min-width:$container-size;
-  z-index:100;
-  background: #282564;
-  .inner_header{
-    @include boxSizing();
-    @include content();
-    @include clearFix();
-    position: relative;
-    padding:42px 0 0 0;
-    height:$header-height;
-    .logo{
-      float:left;
-      padding-left:5px;
-    }
-    #gnb{
-      position: relative;
-      float:right;
-      padding:40px 0 0 100px;
-      .main_menu{
-        overflow: hidden;
-        li{
-          float:left;
-          padding:0 33px;
-          height:70px;
-          line-height:70px;
-          &:last-child{
-            padding-right:0
-          }
-        }
-        a{
-          display: block;
-          height:100%;
-          color:#dcdcdc;
-          font :{
-            size : 16px;
-            weight: $bold;
-          }
-        }
-      }
-      .all_menu{
-        @include boxSizing();
-        display: none; //jQuery에서 show시에 자동으로 display:table
-        position: absolute;
-        right:0;
-        width:$container-size;
-        background: $bg-default;
-        border:{
-          width:0 1px 5px;
-          style :solid;
-          color : $border-strong $border-base;
-        }
-        border-bottom:5px solid $border-strong;
-        .menu_block{
-          @include boxSizing();
-          display: table-cell;
-          width:20%;
-          border-right:1px solid $border-base;
-          background:$bg-light;
-          &:last-child{
-            border-right:0;
-          }
-          .tit{
-            display: block;
-            padding:18px 0;
-            font : {
-              size : 16px;
-              weight : $bold;
-            }
-            color :#4889e1;
-            background: $bg-default;
-            text-align: center;
-          }
-          ul{
-            padding:15px 7px;
-            li{
-              a{
-                padding:10px 20px;
-                display: block;
-                color:$sub-color;
-                &:hover{
-                  background: $border-strong;
-                  color:#fff;
-                  font-weight:$extra-bold;
-                  text-decoration: none;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    .util_link{
-      position: absolute;
-      right:0;
-      top:14px;
-      font-size:0;
-      %el{
-        color:#8e8ea2;
-        font : {
-          family: $util-font;
-          size : 12px;
-        }
-        vertical-align: middle;
-      }
-      a{
-        position: relative;
-        @extend %el;
-        padding:0 15px;
-        &:before{
-          content:"";
-          position: absolute;
-          right:0;
-          top:0;
-          width:1px;
-          height:12px;
-          background: #494778;
-        }
-        &:last-child{
-          padding-right:0;
-          &:before{
-            display: none;
-          }
-        }
-      }
-      button{
-        @extend %el;
-        border:1px solid #8e8ea2;
-        width:67px;
-        height:23px;
-      }
-    }
-  }
-}
-#container{
-  position: relative;
-  z-index:1;
-  width:100%;
-  min-height:100%;
-  min-width:$container-size;
-  padding:$header-height 0 $footer-height 0;
-}
-.sub_intro{
-  @include content();
-  @include clearFix();
-  padding:15px 0 12px;
-  .win_info{
-    float:left;
-    padding:0 0 0 10px;
-    font-size:0;
-    %p{
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .win_label{
-      @extend %p;
-      margin-right:8px;
-      font :{
-        family : $util-font;
-        size : 12px;
-      }
-      color:$sub-color;
-      .round {
-        color:#e33b14
-      }
-    }
-    .win_number{
-      @extend %p;
-      span{
-        margin-right:6px;
-      }
-    }
-  }
-  .path{
-    float:right;
-    padding:9px 0 0 0;
-    font : {
-      size : 12px;
-      family : $util-font;
-    }
-    color:#787878;
-    line-height:100%;
-    .home{
-      @include blind(indent);
-      display: inline-block;
-      width:10px;
-      height:12px;
-      background: url('#{$common-img}ico_home.png') no-repeat 0 0;
-      vertical-align: middle;
-    }
-    .now{
-      font-weight:normal
-    }
-  }
-  border-bottom:5px solid $border-strong;
-}
-.content_section{
-  position: relative;
-  width:$container-size;
-  min-height:1110px;
-  @include boxSizing();
-  padding:0 0 40px $lnb-width;
-  margin:0 auto;
-}
-#local_info{
-  @include boxSizing();
-  position: absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:$lnb-width;
-  padding:0 0 $footer-height 0;
-  border:{
-    width:0 1px;
-    style : solid;
-    color :$border-base
-  }
-  .lnb_desc{//lnb 제목(?)
-    padding:43px 25px;
-    background: #f3f4f8;
-    border-bottom:1px solid $border-base;
-    %block{
-      display: block;
-    }
-    span{
-      @extend %block;
-      color:#787878;
-      margin-bottom: 5px;
-    }
-    strong{
-      @extend %block;
-      font : {
-        size :22px;
-        weight:$bold;
-      }
-      letter-spacing: -2px;
-      color:#3c3c3c;
-    }
-  }
-  #lnb{//lnb
-    .menu{
-      & > li{
-        position: relative;
-        border-bottom:1px solid $border-base;
-        & > a{
-          display: block;
-          color:$base-color;
-          letter-spacing:-1px;
-          font : {
-            size : 15px;
-          }
-          padding:18px 25px;
-        }
-        &.on{
-          &> a{
-            color:$strong-color
-          }
-        }
-        .btn_menu_toggle{
-          @include blind(indent);
-          width:13px;
-          height:13px;
-          position: absolute;
-          right:22px;
-          top:22px;
-          background:url('#{$common-img}/ico_lnb_toggle.png') no-repeat 0 0;
-        }
-      }
-    }
-    .sub_menu{
-      display: none;
-      border-top:1px solid $border-base;
-      padding:8px;
-      li{
-        a{
-          display: block;
-          padding:13px;
-          font : {
-            family:$util-font;
-            size : 12px;
-          }
-          color:$light-color;
-        }
-        &.on{
-          a{
-            color:$sub-color;
-            background: #f0f4fe;
-          }
-        }
-        /*&:hover{
-          a{
-            color:$sub-color;
-            background: #f0f4fe;
-            text-decoration: none;
-          }
-        }*/
-      }
-      &.open + .btn_menu_toggle{
-        background-position: 0 -23px;
-      }
-    }
-  }
-  .etc_info{//자투리인포메이션
-    padding:20px 12px;
-    .ad{
-      width:224px;
-      height:94px;
-      img{
-        width:100%;
-        height:100%;
-      }
-    }
-    .etc{
-      margin:22px 0 0 0;
-      padding:0 0 0 10px;
-      letter-spacing: -1px;
-      dt{
-        font:{
-          size : 15px;
-          weight : $bold;
-        }
-        color:$sub-color;
-        margin-bottom:10px;
-      }
-      dd{
-        font-size:13px;
-        color:$light-color;
-        margin-bottom: 12px;
-        &:last-child{
-          margin-bottom: 0;
-        }
-        &.cc_tel{
-          color:#85abf7;
-          font : {
-            size : 27px;
-            weight:$extra-bold
-          }
-        }
-      }
-    }
-  }
-}
-#content{
-  position: relative;
-  @include boxSizing();
-  width:$container-size - $lnb-width;
-  padding:0 30px;
-  /*title*/
-  .page_title{
-    padding:40px 0;
-    text-align: center;
-    %span{
-      display: block;
-    }
-    .desc{
-      @extend %span;
-      margin-bottom: 5px;
-      color:$strong-color
-    }
-    .tit{
-      @extend %span;
-      font : {
-        weight:$bold;
-        size:28px
-      }
-      color:$base-color
-    }
-    border-bottom:1px solid $border-base;
 
-    &  + .data_table{
-      margin-top:33px;
-    }
-    /*&  + .table_title {
-      margin-top:33px;
-    }*/
-  }
-  .block_title{
-    padding:40px 5px 12px;
-    border-bottom:1px solid $border-darken;
-    .tit{
-      color :$base-color;
-      font : {
-        size : 20px;
-      }
-    }
-    .desc{
-      color : $light-color;
-      font : {
-        size : 15px;
-      }
-    }
-    &  + .data_table {
-      margin-top:33px;
-    }
-  }
-  .table_title{
-    margin-top:50px;
-    display: block;
-    font:{
-      weight:$normal;
-      size : 20px;
-    }
-
-    margin : {
-      left:60px;
-      right:60px;
-      bottom:15px;
-    }
-    span[data-color="red"]{
-      font-weight:$bold;
-    }
-    span.desc{
-      margin-left: 10px;
-      font-size:14px;
-      color :$light-color;
-    }
-    & + .accodian_list{
-      border-top:1px solid $border-darken;
-    }
-  }
-}
-#footer{
-  position:relative;
-  z-index:10;
-  width:100%;
-  min-width:$container-size;
-  margin:-$footer-height 0 0 0;
-  border-top:1px solid $border-base;
-  background: $bg-base;
-  .inner_footer{
-    @include boxSizing();
-    @include content();
-    height:$footer-height - 1px;
-    padding:22px 0 0 95px;
-    color:#888;
-    .util_link{
-      display: none;
-    }
-    .company_info{
-      font : {
-        family : $util-font;
-        size: 0;
-      }
-      & > span{
-        position: relative;
-        font-size:12px;
-        line-height:183%;
-        padding:0 12px;
-        &:first-child{
-          padding-left:0;
-          &:before{
-            display: none;
-          }
-        }
-        &:before{
-          content:"";
-          position: absolute;
-          left:0;
-          top:0;
-          width:1px;
-          height:12px;
-          background: #b4b4b4;
-        }
-      }
-      .name{
-        color:$sub-color;
-      }
-      .copyright{
-        font : {
-          family: Arial, sans-serif;
-          size : 10px;
-        }
-        vertical-align: bottom;
-        &:before{
-          display: none;
-        }
-      }
-    }
-    .partner{
-      display: none;
-    }
-    .footer_logo{
-      display: none;
-    }
-  }
-}
 
 /*form controls*/
 //checkbox, radio
@@ -527,20 +32,21 @@ textarea{
   @extend %iStyle;
   min-width:auto;
   width:100%;
-  min-height:60px;
+  min-height:180px;
   line-height:140%;
-  padding:15px;
+  padding:10px;
 }
 select{
-  min-width:89px;
+  min-width:24.7%;
   width:auto;
   height:44px;
-  padding:0 40px 0 15px;
+  padding:0 26px 0 10px;
   border:1px solid $input-b-primary;
   background-image:url("#{$common-img}ico_select.png");
   background-repeat : no-repeat;
   background-position:100% 0;
   background-color:$input-g-primary;
+  background-size:26px auto;
   color:$base-color;
   &[required]{
     border:1px solid $input-b-strong;
@@ -559,12 +65,12 @@ select{
 }
 
 
-/*input, selector, textares size*/
+/*input, selector, textares size*/ //todo 확인해서 추가
 $dataWidth: (
-  200: 200px,
+  /*200: 200px,
   300: 300px,
   500: 500px,
-  100p : 100%
+  100p : 100%*/
 );
 @each $elemWidth, $value in $dataWidth {
   [data-width='#{$elemWidth}'] {
@@ -572,11 +78,11 @@ $dataWidth: (
   }
 }
 
-//특정 data아닌 단순 사이즈 ex)data_table내부 사용?
+//특정 data아닌 단순 사이즈 ex)data_table내부 사용?//todo 확인해서 추가
 $dataFontSize: (
-  18: 18px,
+  /*18: 18px,
   20: 20px,
-  26: 26px
+  26: 26px*/
 );
 @each $elemFontSize, $value in $dataFontSize {
   [data-font='#{$elemFontSize}'] {
@@ -601,8 +107,8 @@ $dataFontSize: (
   }
 }
 
-//테이블안의 하양이버튼이로구나
-.btn_table{
+//todo 테이블안의 하양이버튼이로구나 있는지 확인
+/*.btn_table{
     @extend %btn;
     min-width: 80px;
     height: 35px;
@@ -619,7 +125,7 @@ $dataFontSize: (
       color:#fff;
     }
   }
-
+*/
 button{
   &[disabled]{
     @extend %btn;
@@ -632,11 +138,14 @@ button{
 
 .btn_wrap{
   font-size:0;
-  margin:40px 60px 0;
+  display:-webkit-box;
+  -webkit-box-orient:horizontal;
+  display:flex;
   &[data-align="center"]{
     text-align: center;
-    .btn_primary,.btn_strong {
-      @include button(200px)
+    .btn_primary , & .btn_strong{
+      -webkit-box-flex: 1;
+      flex:1;
     }
   }
   &[data-align="left"]{
@@ -646,7 +155,7 @@ button{
     text-align: right;
   }
   %el{
-    margin-right:10px;
+     margin-right:1.6%;
     &:last-child{
       margin-right:0;
     }
@@ -660,16 +169,16 @@ button{
 }
 
 
-/*table*/
+/*table*/ //todo 사이즈 간격확인
 .input_table{
-  padding:35px 0 0;
+  /*padding:25px 0 0;*/
   border-bottom:1px solid $border-base;
   &.list_type{
-    padding:0;
+    //
     tbody{
       tr:last-child{
         td,th{
-          padding-bottom:15px;
+         //todo 확인  padding-bottom:15px;
           border-bottom:0
         }
       }
@@ -684,7 +193,7 @@ button{
     }
   }
   tbody{
-    & + tbody{
+    /*& + tbody{
       tr:first-child{
         border-top:1px solid $border-base;
         td{
@@ -699,37 +208,39 @@ button{
       td, & th{
         padding-bottom:40px;
       }
-    }
+    }*/
   }
   th{
-    padding:15px 0 15px 60px;
+    padding:14px 0 14px 15px;
     vertical-align: top;
     text-align: left;
     &:before{
+      @include borderRadius(50%);
       display: inline-block;
-      content:"\2022";
+      content:"";
       vertical-align: middle;
-      margin-right:10px;
-      font-size:20px;
-      color:#8a9fc7
+      margin-right:7px;
+      width:4px;
+      height:4px;
+      background:#8a9fc7;
     }
   }
   td{
-    padding:5px 60px 5px 0;
+    padding:7px 15px 7px 0;
     font-size:0;
     %elStyle{
-      margin-right:6px;
+      margin-right:1.38%;
       vertical-align: middle;
     }
     & > input{
       @extend %elStyle;
     }
-    & > .has_data +.input_custom {
+    /*& > .has_data +.input_custom {
       margin-left:13px;
-    }
+    }*/
     & > .input_custom{
-      @extend %elStyle;
-      margin-left:5px;
+      @extend %elStyle;/*
+      margin-left:1.38%;*/
     }
     & > button{
       @extend %elStyle;
@@ -742,15 +253,14 @@ button{
     }
   }
   .has_data{
-    font-size: 15px;
+    font-size: $font15px;
     padding-bottom:5px;
     vertical-align:inherit;
   }
   .validate_notice{
     margin-top:8px;
     color:$notice-color;
-    font-size:15px;
-    padding-left: 15px;
+    font-size: $font15px;
     margin-bottom: 8px;
     &:first-child{
       margin-top: 0;
@@ -762,8 +272,8 @@ button{
   .table_notice{
     margin-top: 8px;
     color:$light-color;
-    font-size:14px;
-    padding-left: 15px;
+    font-size:$font14px;/*
+    padding-left: 15px;*/
     line-height:150%;
   }
   .verify-time{
@@ -774,20 +284,16 @@ button{
     vertical-align:top;
   }
   .bars{
-    font-size:14px;
+    font-size:$font14px;
     display: inline-block;
-    margin-right:15px;
+    margin-right:1.38%;
     vertical-align: middle;
   }
 }
 .data_table{
   & + &{
-    margin-top:10px;
+    margin-top:10px; //todo 나중에 확인
   }
-  margin : {
-    left : 60px;
-    right : 60px;
-  } 
 
   border:1px solid $border-base;
   &[data-align="left"]{
@@ -810,7 +316,7 @@ button{
         color :$border-base;
       }
       font : {
-        size : 15px;
+        size : $font15px;
         weight:$normal;
       }
       color:$light-color;
@@ -822,16 +328,16 @@ button{
   }
   tbody{
     %tableCell{
-      padding:16px 10px;
+      padding:14px 13px;
       text-align: center;
       border : {
         width : 0 1px 1px 0;
         style : solid;
         color :$border-base;
       }
-      &[data-align]{
-        padding-left:27px;
-        padding-right:27px;
+      &[data-align="left"]{
+       /* padding-left:27px;
+        padding-right:27px;*/
         text-align: left;
       }
     }
@@ -848,8 +354,8 @@ button{
     td{
       @extend %tableCell;
       &.cell_inner_btns {
-        padding-top:10px;
-        padding-bottom:10px;
+        /*padding-top:10px;
+        padding-bottom:10px;*/
       }
       word-wrap: break-word;
       &.last_cell{
@@ -877,25 +383,25 @@ button{
   }
 
   .link_page {
-    margin-left:10px;
+   /* margin-left:10px;*/
     vertical-align:top;
   }
 }
 
-/*board*/
+/*board*/ //todo 간격확인
 .board_table{
   thead{
     th{
       border-bottom:1px solid $border-base;
-      padding:15px 0;
-      font-size:15px;
+      padding:14px 0;
+      font-size:$font15px;
       font-weight:$bold;
       background: $bg-light;
     }
   }
   tbody{
     td{
-      padding:13px 0;
+      padding:12px 0;
       border-bottom:1px solid $border-base;
       text-align: center;
       word-break:break-all;
@@ -911,25 +417,25 @@ button{
         overflow:hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        padding-right:20px;
+        /*padding-right:20px;*/
       }
       .edit_contents{
         text-align: left;
-        padding:20px 40px;
-        min-height: 300px;
+        /*padding:20px 40px;
+        min-height: 300px;*/
       }
     }
   }
 }
-.mini_board_list{
-  margin-top:70px;
+.mini_board_list{//todo 간격확인
+  /*margin-top:70px;*/
   border:{
     width: 1px 0;
     style : solid;
     color :$border-base
   }
   li{
-    padding:13px 30px;
+   /* padding:13px 30px;*/
     overflow: hidden;
     word-break:break-all;
     &.prev{
@@ -937,7 +443,7 @@ button{
 
       .dir{
         &:after{
-          top:3px;
+          /*top:3px;*/
           border:{
             width : 5px;
             style :solid;
@@ -949,7 +455,7 @@ button{
     &.next{
       .dir{
         &:after{
-          top:8px;
+          /*top:8px;*/
           border:{
             width : 5px;
             style :solid;
@@ -961,10 +467,10 @@ button{
     .dir{
       position: relative;
       float:left;
-      padding-right:40px;
+      /*padding-right:40px;*/
       &:after{
         position: absolute;
-        right:15px;
+        /*right:15px;*/
         content:"";
         width:0;
         height:0;
@@ -972,7 +478,7 @@ button{
     }
     .tit{
       float:left;
-      width:720px;
+      /*width:720px;*/
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
@@ -986,11 +492,15 @@ button{
   }
 }
 
-/*tab*/
+/*tab*/ //todo 디자인변경
+/*
 .tab{
+  display:-webkit-box;
+  -webkit-box-orient:horizontal;
   display:flex;
   li{
     flex:1;
+    -webkit-box-flex: 1;
     a{
       display: block;
       text-align: center;
@@ -998,7 +508,7 @@ button{
       line-height:46px;
       border:1px solid $border-base;
       font:{
-        size:16px;
+        size:$font16px;
         weight:$normal;
       }
       &:hover{
@@ -1020,146 +530,66 @@ button{
       }
     }
   }
-}
+}*/
 
-/*pagenation*/
-.pagenation{
-  margin-top:35px;
-  font-size:0;
 
-  text-align:center;
-
-  %button{
-    @include boxSizing();
-    display: inline-block;
-    vertical-align: middle;
-    width:30px;
-    height:30px;
-    border:1px solid $border-base;
-    text-align: center;
-    line-height:26px;
-    margin-left:-1px;
-    font-size:12px;
-    color:$light-color;
-  }
-  %btn_pagination{
-    @include blind(indent);
-    background:url("#{$common-img}btn_pagination.png") no-repeat 0 0;
-  }
-  .btn_first{
-    @extend %btn_pagination;
-    @extend %button;
-    margin-left:0;
-    background-position: 0 0;
-  }
-  .btn_prev{
-    @extend %btn_pagination;
-    @extend %button;
-    background-position: 0 -38px;
-  }
-  .btn_next{
-    @extend %btn_pagination;
-    @extend %button;
-    background-position: -38px -38px;
-  }
-  .btn_end{
-    @extend %btn_pagination;
-    @extend %button;
-    background-position: -38px 0;
-  }
-  .now{
-    @extend %button;
-    position: relative;
-    color:$base-color;
-    font-weight:$bold;
-    &:after{
-      content:"";
-      position: absolute;
-      bottom:-1px;
-      left:-1px;
-      width:30px;
-      height:3px;
-      background:$strong-color;
-    }
-  }
-  a{
-    @extend %button;
-  }
-}
-
-/*accordian*/
+/*accordian*/ //todo ok
 .accodian_list{
   article{
     border-bottom:1px solid $border-base;
     .list_title{
       position: relative;
-      padding:15px 60px 15px 40px;
+      padding:15px 28px 15px 0;
       .tit{
         display: inline-block;
         font : {
-          size : 15px;
+          size :$font14px;
           weight: $bold;
         }
       }
       .category{
-        margin-right:14px;
+       left:0;
       }
       &:after{
         content:"";
         position: absolute;
-        right:20px;
+        right:8px;
         top:50%;
-        width:20px;
-        height:20px;
-        margin-top:-10px;
+        width:13px;
+        height:7px;
+        margin-top:-3px;
         background:url('#{$common-img}ico_toggle.png') no-repeat 0 0;
+        background-size:13px auto;
       }
       &.on:after{
-        background-position:0 -30px;
+        background-position:0 -10px;
       }
       cursor:pointer
     }
-    .status{
-      display: inline-block;
-      padding:0 6px;
-      font : {
-        weight:$bold;
-        size : 13px;
-      }
-      border:1px solid $border-base;
-      border-radius:2px;
-      height:18px;
-      margin-left:14px;
-      line-height:18px;
-      &[data-type="submit_ok"]{
-        color:$disabled-color;
-      }
-      &[data-type="answer_ok"]{
-        color:$notice-color;
-      }
-     }
     .list_contents{
+      position: relative;
       display: none;
       background: $bg-base;
       border-top:1px solid $border-base;
-      padding : 25px 60px 25px 85px;
+      padding : 15px 15px 15px 0;
       .category{
-        vertical-align: top;
+        left:14px;
       }
       .comment{
         display: inline-block;
         line-height:150%;
-        font-size:15px;
+        font-size:$font14px;
       }
     }
   }
 }
-/*qna flag*/
+
+/*qna flag*/ //todo ok
 .category{
   display: inline-block;
   border:1px solid $border-base;
   border-radius:2px;
-  width:25px;
+  width:21px;
   height:18px;
   line-height:18px;
   font : {
@@ -1177,10 +607,10 @@ button{
   }
 }
 
-/*file_upload*/
+/*file_upload*/ //todo ok
 .file_upload{
   position: relative;
-  padding-right:110px;
+  padding-right:94px;
   overflow: hidden;
   input[type="file"]{
     @include blind(absolute);
@@ -1196,12 +626,17 @@ button{
     position: relative;
     width:100%;
     height:44px;
-    padding-right:44px;
+    padding-right:40px;
     border:1px solid $border-base;
     .name{
-      padding-left:14px;
+      display: block;
+      width:100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-left:10px;
       line-height:42px;
-      font-size:15px;
+      font-size:$font14px;
       color : $light-color;
       &.on + .btn_file_del{
         display: block;
@@ -1214,14 +649,15 @@ button{
       right:0;
       top:50%;
       margin-top:-22px;
-      width:44px;
+      width:40px;
       height:44px;
       background:url('#{$common-img}btn_file_del.png') no-repeat 50% 50%;
+      background-size:11px auto;
     }
   }
 }
 
-/*lottoball*/
+/*lottoball*/// todo ok
 span {
   &[class^="ball_n"] {
     display: inline-block;
@@ -1257,7 +693,7 @@ span {
   }
 }
 
-/*로또팡 슬로건*/
+/*!*로또팡 슬로건*!
 .lotto_pang_slogan{
   border:1px solid $border-base;
   @include clearFix();
@@ -1288,7 +724,7 @@ span {
     padding:12px 20px 0 0;
     float:right;
   }
-}
+}*/
 
 /*text*/
 [data-color="red"]{
@@ -1313,19 +749,20 @@ span {
   text-decoration: underline;
 }
 
-/*layerPop*/
+/*layerPop*/ //ok
 .common_layer{
   display: none;
   position: fixed;
   z-index:500;
   left:50%;
   top:50%;
+  width:91.8%;
   .layer_wrap{
     @include boxSizing();
     position: relative;
     z-index:500;
     background: $bg-default;
-    padding:0 15px 75px;
+    padding:0 15px 49px;
   }
   &:after{
     content:"";
@@ -1339,30 +776,30 @@ span {
   }
   .inner_layer_content{
     position: relative;
-    width:400px;
-    padding-top:75px;
+    padding-top:49px;
     .layer_tit{
       position: absolute;
       left:0;
       top:0;
       width:100%;
-      height:59px;
-      line-height:60px;
-      border-bottom:1px solid $border-base;
-      font-size:22px;
+      height:49px;
+      line-height:49px;
+      font-size:$font18px;
+      text-align: center;
+      color:$sub-color;
     }
     .msg{
-      padding-top:45px;
-      min-height:120px;
-      font-size:18px;
+      padding-top:15px;
+      min-height:95px;
+      font-size:$font16px;
       text-align: center;
       line-height:183%;
     }
     .data_table[data-align="left"]{
       margin:0;
       th{
-        padding-left:15px;
-        padding-right:15px;
+        padding-left:10px;
+        padding-right:10px;
       }
       td{
         padding-left:10px;
@@ -1383,8 +820,10 @@ span {
     }//나중에 플렉스로 바꿔야징
     %btnStyle{
       @include borderRadius(0);
-      height:60px;
+      height:49px;
+      line-height:49px;
       width:50%;
+      font-size:$font16px;
     }
     .btn_ok{
       @extend %btnStyle;
@@ -1396,11 +835,12 @@ span {
   .btn_layer_close{
     @include blind(indent);
     position: absolute;
-    top:15px;
-    right:15px;
-    width:30px;
-    height:29px;
+    top:-40px;
+    right:0;
+    width:31px;
+    height:31px;
     background:url("#{$common-img}btn_layer_close.png") no-repeat 0 0;
+    background-size:31px auto;
 
   }
 }

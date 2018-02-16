@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>page layout</title>
     <link rel="stylesheet" href="../resources/css/common-ui.css">
 </head>
@@ -12,30 +12,32 @@
 <button type="button" class="btn_layer">그냥 레이어호출</button>
 
 
-<div id="goPurchase" class="charge_layer" style="visibility:hidden">
+<div id="goPurchase" style="visibility:hidden">
     <!-- 일반 레이어 :레이아웃을 제외하고 컨텐츠 부분만 마크업하면됩니다. -->
-    <div class="data_table" data-align="left">
-        <table>
-            <caption>결제할 내용</caption>
-            <colgroup>
-                <col style="width:25%">
-                <col style="width:auto">
-            </colgroup>
-            <tbody>
-            <tr>
-                <th scope="row" class="mid_th">금액</th>
-                <td>
-                    <b>로또팡 방송청취 이용권 (기본 5회 분량)</b>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row" class="mid_th">서비스명</th>
-                <td>
-                    <b data-color="red">3,300원</b>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="charge_layer">
+        <div class="data_table" data-align="left">
+            <table>
+                <caption>결제할 내용</caption>
+                <colgroup>
+                    <col style="width:25%">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th scope="row" class="mid_th">금액</th>
+                    <td>
+                        <b>로또팡 방송청취 이용권 (기본 5회 분량)</b>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="mid_th">서비스명</th>
+                    <td>
+                        <b data-color="red">3,300원</b>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -86,8 +88,12 @@
     //contents가 있는 그냥 layerpop을 열때 물론 컨텐츠가 있는 레이어 마크업의 경우는
     //html에 미리 마크업해서 숨겨두고 연결해드림요.
     $(".btn_layer").on("click",function(){
-        rtp.primaryUI({
-            title : "결과확인",
+        /*rtp.primaryUI({
+            title : "결제하기",
+            contSelector : "goPurchase"
+        })*/
+        rtp.alertUI({
+            title : "결제하기",
             contSelector : "goPurchase"
         })
     })

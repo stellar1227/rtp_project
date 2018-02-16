@@ -375,7 +375,7 @@
   }
 }
 
-/*고객센터*/
+/*고객센터*/ //ok
 .qna_write{
   textarea{
     height:265px;
@@ -384,17 +384,48 @@
   }
 }
 .qna{
-  .tit{
-    width:630px;
-  }
-  .numbering{
-    display: inline-block;
-    width:35px;
-    font : {
-      size : 15px;
-      weight:$bold;
+  article{
+    .list_title{
+      padding-left:35px;
+      padding-right:93px;
     }
-    color:$strong-color
+    .numbering{
+      position: absolute;
+      left:0;
+      top:15px;
+      width:28px;
+      text-align: center;
+      font : {
+        size :$font14px;
+        weight:$bold;
+      }
+      color:$strong-color
+    }
+    .status{
+      position: absolute;
+      right:31px;
+      top:50%;
+      margin-top:-9px;
+      padding:0 5px;
+      font : {
+        weight:$bold;
+        size : $font13px;
+      }
+      border:1px solid $border-base;
+      border-radius:2px;
+      height:18px;
+      line-height:18px;
+      &[data-type="submit_ok"]{
+        color:$disabled-color;
+      }
+      &[data-type="answer_ok"]{
+        color:$notice-color;
+      }
+    }
+    .list_contents{
+      padding-left:15px;
+      padding-right:15px;
+    }
   }
 }
 .faq_notice{
@@ -408,8 +439,22 @@
     margin-left:10px;
   }
 }
+.faq{
+  article{
+    .list_title{
+      padding-left:31px;
+    }
+    .list_contents{
+      padding-left:44px;
+    }
+    .category{
+      position: absolute;
+      top:16px;
+    }
+  }
+}
 
-/*각페이지별 레이어*/
+/*각페이지별 레이어*/ //ok
 .charge_layer{
-  padding-bottom:60px;
+  padding-bottom:30px;
 }

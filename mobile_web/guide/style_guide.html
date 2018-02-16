@@ -143,12 +143,10 @@
             <table>
                 <caption>필수사항 입력</caption>
                 <colgroup>
-                    <col style="width:30.7%">
-                    <col style="width:auto">
+                    <col style="width:100%">
                 </colgroup>
                 <tbody>
                 <tr>
-                    <th scope="row">계정 ID/이메일</th>
                     <td>
                         <p class="has_data">
                             <b>N602221122</b>님
@@ -157,9 +155,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="joinNickNm">닉네임<span data-color="red">(필수)</span></label></th>
                     <td>
-                        <input type="text" data-width="300" required id="joinNickNm" title="닉네임 입력">
+                        <input type="text" data-width="300" required title="닉네임 입력">
                         <button class="btn_primary">중복확인</button>
                         <p class="validate_notice">이미 사용중입니다. 다른 닉네임을 입력해주세요.</p>
                     </td>
@@ -167,7 +164,6 @@
                 </tbody>
                 <tbody>
                 <tr>
-                    <th scope="row"><label for="joinPhoneNum">본인명의 휴대전화<span data-color="red">(필수)</span></label></th>
                     <td>
                         <input type="text" data-width="300" required id="joinPhoneNum" title="본인명의 휴대전화 입력">
                         <button class="btn_strong">인증하기</button>
@@ -178,7 +174,6 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="joinVerifyNum">인증번호</label></th>
                     <td>
                         <input type="text"  data-width="300" id="joinVerifyNum" placeholder="문자로 발송된 인증번호 입력" title="휴대전화 인증번호 입력">
                         <button class="btn_primary">확인</button>
@@ -334,18 +329,6 @@
             </article><!-- //loop -->
         </div>
     </article>
-    <article>
-        <h3 class="guideItemTitle">pagenation</h3>
-        <div class="pagenation">
-            <button type="button" class="btn_first">처음</button>
-            <button type="button" class="btn_prev">이전</button>
-            <strong class="now" title="현재페이지">1</strong>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <button type="button" class="btn_next">다음</button>
-            <button type="button" class="btn_end">끝</button>
-        </div>
-    </article>
 </section>
 <section class="guideSection">
     <h2 class="guideTitle">Popup</h2>
@@ -372,29 +355,7 @@
     </article>
     <article>
         <h3 class="guideItemTitle">pageTitle</h3>
-        <div id="content"><!-- content 종속 -->
-            <p class="guideDescription">sub h2 page title</p>
-            <h2 class="page_title">
-                <span class="desc">특별한 회원 서비스</span>
-                <span class="tit">무료 회원 가입</span>
-            </h2>
-            <p class="guideDescription">sub h3 contents title</p>
-            <h3 class="block_title">
-                <span class="tit">필수사항 입력</span>
-                <span class="desc">기존에 가입되어 있는 SNS 계정으로 로그인 하세요.</span>
-            </h3>
-            <p class="guideDescription">sub table title</p>
-            <strong class="table_title">
-                연금복권 <span data-color="red">310</span>회 당첨번호<span class="desc">이번주는 연금복권 311회차 입니다.</span>
-            </strong>
-            <aside class="lotto_pang_slogan"><!-- 하단 슬로건 -->
-                <p class="logo">로또예상번호는 로또팡</p>
-                <p class="desc">로또보다 당첨확률 높아 좋고! <span data-color="blue">20년동안 꼬박꼬박! 내 노후는 연금복권</span><br>당첨확인 연금복권 정보도 로또팡에서!</p>
-                <div class="btn_go">
-                    <button type="button" class="btn_primary">간편 자동당첨 확인</button>
-                </div>
-            </aside><!-- //하단 슬로건 -->
-        </div>
+
         <h2 class="guideItemTitle">file upload</h2>
         <div class="file_upload">
             <input type="file" id="file_id">

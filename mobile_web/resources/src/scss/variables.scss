@@ -1,18 +1,22 @@
 //all elements
 
-
-
-//font-family - 기본 나눔고딕, 서브 본고딕, 굴림, 돋움
-$base-font : "Nanum Gothic", sans-serif;
-$sub-font : "Noto Sans KR", sans-serif;
+//font-family - 기본 본고딕, 굴림
+$base-font : "Noto Sans KR", sans-serif;
 $util-font : "Gulim", "굴림", sans-serif;
 
 //font-size - 기본 14px, 타이틀 관련 사이즈,
 $base-size : 14px;
+$font13px : 0.92rem;
+$font14px : 1rem;
+$font15px : 1.07rem;
+$font16px : 1.15rem;
+$font17px : 1.21rem;
+$font18px : 1.28rem;
 
-//color - 기본 #000 , 서브컬러 #555, 연한놈 #72767e 강조 #528dff 공지성강조 #ea614e 폼디스에이블 #999
-$base-color : #000;
-$sub-color : #555;
+
+//color - 기본 #555 , 서브컬러 #000(pc랑 기본 반대), 연한놈 #72767e 강조 #528dff 공지성강조 #ea614e 폼디스에이블 #999
+$base-color : #555;
+$sub-color : #000;
 $disabled-color : #999;
 $light-color : #7b8caf;
 $strong-color : #528dff;
@@ -62,5 +66,5 @@ $common-img : "../img/common/";
 $content-img : "../img/content/";
 $temp-img : "../img/temp/";
 
-//container size - 기본 1190px
+//container size - 기본 1190px todo 확인 후 삭제
 $container-size : 1190px;
