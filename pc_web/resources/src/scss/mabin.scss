@@ -421,3 +421,72 @@ input{
 }
 
       
+//  toggle title , cotents 
+#content [data-toggle] {
+	button {
+		width:100%;
+		text-align:left;
+	}
+
+	&.block_title {
+		padding:0;
+		margin-top:40px;
+		button {
+			padding:0 5px 12px
+		}
+	}
+	position:relative;
+	&:after {
+		display:block;content:"";
+		position:absolute;right:10px;top:9px;
+		width:33px;height:17px;
+		background:url("#{$content-img}ico_toggle.gif") 0 -30px no-repeat;	
+		transition:background-position ease .2s;
+	}
+	&:hover:after {
+		background-position:0 0
+	}
+	
+	&.open:after {
+		transform: rotate(180deg)
+	}
+}
+[data-toggle].open + [data-toggle-cont] {
+	display:block;
+} 
+
+[data-toggle-cont] {
+	display:none;
+}
+
+
+// 장문 텍스트 박스 디자인 (약관 등)
+.text_box {
+	padding:30px 40px;
+	border:1px solid #ccc;
+	h1 {
+		padding:20px 0;
+		margin-top:30px;
+		font-weight:$bold;
+		font-size:16px;
+		border-top:1px dashed #ccc;
+		
+		&:first-child {
+			margin-top:0;
+			padding-top:0;
+			border-top:0;
+		}
+	}
+	p {
+		margin-bottom:10px;
+	}
+	ul, ol {
+		padding:25px 35px;
+		background-color:#fafafa;
+	}
+	li {
+		margin-bottom:8px;
+	}
+
+
+}

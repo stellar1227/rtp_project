@@ -871,4 +871,34 @@ input[data-align="right"] { text-align: right; }
 
 .data_table tbody tr td [data-sign="equal"] { background-color: #949494; }
 
+#content [data-toggle] { position: relative; }
+
+#content [data-toggle] button { width: 100%; text-align: left; }
+
+#content [data-toggle].block_title { padding: 0; margin-top: 40px; }
+
+#content [data-toggle].block_title button { padding: 0 5px 12px; }
+
+#content [data-toggle]:after { display: block; content: ""; position: absolute; right: 10px; top: 9px; width: 33px; height: 17px; background: url("../img/content/ico_toggle.gif") 0 -30px no-repeat; transition: background-position ease .2s; }
+
+#content [data-toggle]:hover:after { background-position: 0 0; }
+
+#content [data-toggle].open:after { transform: rotate(180deg); }
+
+[data-toggle].open + [data-toggle-cont] { display: block; }
+
+[data-toggle-cont] { display: none; }
+
+.text_box { padding: 30px 40px; border: 1px solid #ccc; }
+
+.text_box h1 { padding: 20px 0; margin-top: 30px; font-weight: 700; font-size: 16px; border-top: 1px dashed #ccc; }
+
+.text_box h1:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+
+.text_box p { margin-bottom: 10px; }
+
+.text_box ul, .text_box ol { padding: 25px 35px; background-color: #fafafa; }
+
+.text_box li { margin-bottom: 8px; }
+
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
