@@ -487,6 +487,21 @@ input{
 	li {
 		margin-bottom:8px;
 	}
+}
+
+//[COMMENT] 탭 관련 CSS 추가했어요 ..'ㅁ' - cs_terms.html
+[data-tab-cont] {
+	display:none;
+}
+.page_title + .tab {
+	margin-top:40px;
+}
 
 
+//[COMMENT] 이용약관 , 제휴문의 등 full_page 관련 추가 했어용
+.content_section.full_page {
+	padding-left:0;
+	#content {
+		width:100%
+	}
 }

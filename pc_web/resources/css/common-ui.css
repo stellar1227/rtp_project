@@ -901,4 +901,12 @@ input[data-align="right"] { text-align: right; }
 
 .text_box li { margin-bottom: 8px; }
 
+[data-tab-cont] { display: none; }
+
+.page_title + .tab { margin-top: 40px; }
+
+.content_section.full_page { padding-left: 0; }
+
+.content_section.full_page #content { width: 100%; }
+
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
