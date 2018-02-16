@@ -215,15 +215,28 @@ input{
 	// 로또통계 비법자료 [COMMENT] 갑 : data-type 으로 각 서브 큰 줄기 나눠서 bg 이미지 바꾸고.. 등등 할 생각이옵니다.
 	&[data-type] {
 		padding:25px 0;
+		padding-left:240px;
+		background : {
+			image:none;
+			position:100px center;
+		}
 		letter-spacing:-1px;
 	}
 	&[data-type="stats_suggest"] {
+		background-image:url("../img/content/banner_stats_suggest.png");
 		min-height:165px;
-		padding-left:240px;
 		
+	}
+	&[data-type="lotto_mix"] {
 		background : {
-			image:url("../img/content/banner_stats_suggest.png");
-			position:100px center;
+			position:59px center;
+			image:url("../img/content/banner_lotto_mix.png");
+		}
+	}
+	&[data-type="fortune"] {
+		background : {
+			position:65px 60%;
+			image:url("../img/content/banner_fortune.png");
 		}
 	}
 	span[class^="ball_n"] {

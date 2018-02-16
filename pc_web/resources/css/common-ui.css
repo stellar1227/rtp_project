@@ -798,9 +798,13 @@ input[data-align="right"] { text-align: right; }
 
 .page_title_banner .desc .result { margin-top: 15px; }
 
-.page_title_banner[data-type] { padding: 25px 0; letter-spacing: -1px; }
+.page_title_banner[data-type] { padding: 25px 0; padding-left: 240px; background-image: none; background-position: 100px center; letter-spacing: -1px; }
 
-.page_title_banner[data-type="stats_suggest"] { min-height: 165px; padding-left: 240px; background-image: url("../img/content/banner_stats_suggest.png"); background-position: 100px center; }
+.page_title_banner[data-type="stats_suggest"] { background-image: url("../img/content/banner_stats_suggest.png"); min-height: 165px; }
+
+.page_title_banner[data-type="lotto_mix"] { background-position: 59px center; background-image: url("../img/content/banner_lotto_mix.png"); }
+
+.page_title_banner[data-type="fortune"] { background-position: 65px 60%; background-image: url("../img/content/banner_fortune.png"); }
 
 .page_title_banner span[class^="ball_n"] { letter-spacing: normal; }
 
