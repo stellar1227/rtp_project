@@ -205,6 +205,8 @@ input{
 
 //page_title_banner
 .page_title_banner {
+	position:relative;
+	overflow:hidden;
 	margin-bottom: 35px;
 	margin-top:-1px;
     border : {
@@ -259,6 +261,37 @@ input{
 		background-color: #18699b;
 		color: #fff;
 	}
+	
+	.sub_desc {
+		position:relative;
+		float:left;
+		margin-right:40px;
+		min-width:190px;
+		padding: 15px 28px 20px;
+		border-radius:100px;
+
+		font-size: 1.2em;
+		line-height: 1.5em;
+		box-shadow: 0px 5px 0px rgba(0,0,0,.08);
+		background-color: #305a97;
+	    text-align: center;
+		color: #fff;
+
+		&:after {
+			content:"";
+			position:absolute;right:-20px;top:50%;
+			margin-top:-27px;
+			border : {
+				style:solid;
+				width:25px 0 25px 50px;
+				color:transparent transparent transparent #305a97;
+			}
+		}
+	}
+	.tit_area {
+		float:left;
+	}
+
 	.desc {
 		padding-left:7px;
 		font-size:1.1em;
@@ -270,8 +303,11 @@ input{
 		.result {
 			margin-top:15px
 		}
+	}
 
-
+	.forms {
+		padding:0 5px 0;
+		margin-top:10px;
 	}
 
 	// 로또통계 비법자료 [COMMENT] 갑 : data-type 으로 각 서브 큰 줄기 나눠서 bg 이미지 바꾸고.. 등등 할 생각이옵니다.
@@ -283,6 +319,10 @@ input{
 			position:100px center;
 		}
 		letter-spacing:-1px;
+	}
+	&[data-type~="desctype"] {
+		// page_title_banner 공통배너 하단에 description 타입으로 붙는 banner
+		padding-left:80px;
 	}
 	&[data-type="stats_suggest"] {
 		background-image:url("#{$content-img}banner_stats_suggest.png");
@@ -301,10 +341,43 @@ input{
 			image:url("#{$content-img}banner_fortune.png");
 		}
 	}
+
+	&[data-type="odd_analysis"] {
+		background : {
+			position:65px 60%;
+			image:url("#{$content-img}banner_odd_analysis.png");
+		}
+	}
+	&[data-type="mix_six"] {
+		padding-left:305px;
+		background : {
+			position:115px 60%;
+			// image:url("#{$content-img}banner_mix_six.png");
+		}
+	}
 	span[class^="ball_n"] {
 		letter-spacing:normal;
 	}
+
+
+
+
+	& + .page_title_banner {
+		box-shadow:0 4px 0px #fcfcfc;
+		.sub_tit {
+			margin-bottom:5px;
+			padding : {
+				top:0;bottom:0;
+				left:27px;
+			}
+			background:transparent url("#{$content-img}ico_desc_chk.png") 0 bottom no-repeat;
+			color:#333
+		}
+		margin-top:-36px;
+		background-color:#fff;
+	}
 }
+
 
 
 // list_all_item - 로또 통계/비법자료 전체보기
@@ -434,6 +507,8 @@ input{
       
 //  toggle title , cotents 
 #content [data-toggle] {
+	position:relative;
+	
 	button {
 		width:100%;
 		text-align:left;
@@ -443,15 +518,15 @@ input{
 		padding:0;
 		margin-top:40px;
 		button {
-			padding:0 5px 12px
+			padding:0 5px 12px;
 		}
 	}
-	position:relative;
+	
 	&:after {
 		display:block;content:"";
 		position:absolute;right:10px;top:9px;
 		width:33px;height:17px;
-		background:url("#{$content-img}ico_toggle.gif") 0 -30px no-repeat;	
+		background:url("#{$content-img}ico_toggle.gif") 0 -31px no-repeat;	
 		transition:background-position ease .2s;
 	}
 	&:hover:after {
@@ -514,5 +589,217 @@ input{
 	padding-left:0;
 	#content {
 		width:100%
+	}
+}
+
+
+// [COMMENT] 단독 paragraph 디자인 추가 (desc_priamry) - stats_mix_six.html
+#content {
+	& > .desc_primary {
+		padding : {
+			left:60px;
+			right:60px;
+		}
+	}
+	.desc_primary {
+		margin: {
+			top:15px;
+			bottom:15px;
+		}
+		&[data-type="label"] {
+			display:inline-block;
+			margin : {
+				top:12px;
+				bottom:12px;
+				right:15px
+			}
+		}
+	}
+}
+
+
+
+// graph_odd_even 홀짝 출현현황 그래프 - stats_odd_even.html
+.graph_odd_even {
+	display:flex;
+	position:relative;
+	overflow:hidden;
+	width:358px;
+	margin:0 auto;
+	border-radius:20px;
+	border:1px solid #bbb;
+	background-color:#f9f9f9;
+
+	&:after {
+		display:block;content:"";
+		position:absolute;
+		left:0;right:0;top:0;bottom:0;
+		background:url("#{$content-img}bg_odd_even_graph.png") 0 center no-repeat;	
+		
+	}
+	[data-graph] {		
+		flex:1;
+		position:relative;
+		height:26px;
+		font-size:0;
+		&:after {
+			display:inline-block;content:"";
+			position:absolute;top:0;bottom:0;	
+		}
+	}
+
+	$dataGraphStack: (
+	  1: 30px,
+	  2: 60px,
+	  3: 90px,
+	  4: 120px,
+	  5: 150%
+	);
+	@each $grapStack, $value in $dataGraphStack {
+	  [data-count='#{$grapStack}']:after {
+	    width:$value
+	  }
+	}
+	[data-graph="odd"] {
+		&:after {
+			right:0;
+			background-image:linear-gradient(#ffdb74 30%, #fbba58 100%)
+		}
+	}
+	[data-graph="even"] {
+		&:after {
+			left:0;
+			background-image:linear-gradient(#517eb1 30%, #3c5d82 100%)
+		}
+	}
+}
+
+//[COMMENT] board_table 하단 btn_wrap
+.board_table {
+	& + .btn_wrap {
+		margin : {
+			left:0;right:0;
+			top:30px;
+		}
+		& + .pagenation {
+
+		}
+	}
+}
+//[COMMENT] block_title desc 아닌 다른 컨텐츠 삽입용
+.block_title {
+	.actions {
+		padding-left:10px;
+		.link_page {
+			font-size:16px;
+			vertical-align:bottom;
+		}
+	}
+}
+
+//[COMMENT] 좌 / 우 1row 믹스 컨텐츠
+.mix_contents {
+	padding:15px 0;
+	margin-top:20px;
+
+	border-bottom:1px solid #ccc;
+	
+	& > :first-child { 
+		float:left;
+	}
+	
+	& > :last-child {
+		float:right;
+	}
+	
+	&:after {
+		display:block;content:"";
+		clear:both;
+	}
+
+	.pagenation {
+		margin-top:7px;
+	}
+	&[data-type="article_btns"] {
+		
+		a {
+			font-size:$base-size;
+		}
+	}
+
+}
+
+
+
+// 하단 플러스회원권 구매 banner
+.board_table {
+	.nodata {
+		td {
+			height:160px;
+			padding-top:50px;
+			font-size:18px;
+			background:url("#{$content-img}ico_table_nodata.png") center 45px no-repeat;
+			
+		}
+	}
+}
+.banner_plus_member {
+	position:relative;
+	box-sizing:border-box;	
+	overflow:hidden;
+	height:95px;
+	margin-top:70px;
+	padding: 13px 0 0 45px;
+	background:#223863 url("#{$content-img}bg_banner_plus_member.png") right -60px no-repeat;	
+	border-radius:3px;
+	color:#fff;
+
+	.percent {
+		display:inline-block;
+		width:70px;height:56px;
+		padding-top:14px;
+		border-radius:100px;
+		font-size:1.3em;
+		background-color:#4378dc;
+		box-shadow: 4px 0 4px rgba(0,0,0,.10);
+		line-height:1em;
+		text-align:center;
+		vertical-align:middle;
+		letter-spacing:-1px;
+		color:#fff;
+		
+		span {
+			font-size:.9em;
+			font-weight:$normal
+		}
+	}
+
+	.btn_plus {
+		position:absolute;right:20px;top:18px; bottom:18px;
+		padding:8px 45px 10px;
+		font-size:1.3em;
+		background-color:rgba(67, 120, 220, 0.88);
+		box-shadow:0px 2px 11px rgba(0,0,0,.7);
+
+		letter-spacing:-1px;
+		border-radius:3px;
+		color:#fff
+	}
+	
+
+	.desc {
+		display:inline-block;
+
+		padding-left:16px;
+		padding-top:7px;
+		font-size:1.2em;
+		line-height:1.5em;
+		vertical-align:top;
+		
+		b {
+			display:block;
+			font-size:1.2em;
+			letter-spacing:-1px;
+		}
 	}
 }
