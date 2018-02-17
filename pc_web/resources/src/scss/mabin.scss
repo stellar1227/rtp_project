@@ -418,6 +418,17 @@ input{
 			background-color:#949494;
 		}
 	}
+
+
+	.b_arr {
+		display:inline-block;
+		font-size:0;
+		width:18px;height:18px;
+		margin:0 10px;
+		letter-spacing:-100px;
+		background:url("#{$content-img}ico_next_ball.png") 0 0 no-repeat;	
+		vertical-align:middle;
+	}
 }
 
       
