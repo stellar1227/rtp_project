@@ -560,6 +560,7 @@ select{
 /*input, selector, textares size*/
 $dataWidth: (
   200: 200px,
+  250: 250px,
   300: 300px,
   500: 500px,
   100p : 100%
@@ -572,6 +573,7 @@ $dataWidth: (
 
 //특정 data아닌 단순 사이즈 ex)data_table내부 사용?
 $dataFontSize: (
+  16: 16px,
   18: 18px,
   20: 20px,
   26: 26px
