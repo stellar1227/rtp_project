@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>쿠폰결제하기| 로또팡</title>
+    <title>마이 조합관리 | 로또팡</title>
     <link rel="stylesheet" href="../../resources/css/common-ui.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
             &gt;
             <span class="depth">특별한 회원 서비스</span>
             &gt;
-            <strong class="now">쿠폰결제하기</strong>
+            <strong class="now">마이 조합관리</strong>
         </p>
     </div><!-- //sub_intro -->
     <div class="content_section">
@@ -44,12 +44,9 @@
             </p>
             <nav id="lnb"><!-- lnb -->
                 <ul>
-                    <li><a href="#">무료 회원 가입</a></li>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">가입 소셜 계정 찾기</a></li>
+                    <li><a href="#">마이페이지(정보변경)</a></li>
+                    <li class="on"><a href="#">마이 조합 관리</a></li>
                     <li><a href="#">혜택! 자유이용권 구매하기</a></li>
-                    <li class="on"><a href="#">쿠폰 결제하기</a></li>
-                    <li><a href="#">로또팡 서비스 안내</a></li>
                     <li><a href="#">테크앤조이 소개</a></li>
                 </ul>
             </nav><!-- //lnb -->
@@ -81,45 +78,173 @@
         <section id="content"><!-- content -->
             <h2 class="page_title">
                 <span class="desc">특별한 회원 서비스</span>
-                <span class="tit">쿠폰 결제하기</span>
+                <span class="tit">마이 조합관리</span>
             </h2>
 
-
-
-            <h3 class="block_title">
-                <span class="tit">쿠폰번호 입력</span>
-            </h3>
-            
-            <div class="input_table"><!-- input_table -->
-                <table>
-                    <caption>쿠폰번호 입력</caption>
-                    <colgroup>
-                        <col style="width:21.7%">
-                        <col style="width:auto">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row"><label for="couponNum">쿠폰번호</label></th>
-                            <td>
-                                <input type="text" data-width="500" id="couponNum"  title="쿠폰번호 입력">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><!-- //input_table  -->
-            
-
-
-            <div class="btn_wrap" data-align="center">
-                <button class="btn_strong" type="button">확인</button>
+            <div class="mix_contents" data-type="article_btns">
+                <div class="article">
+                    <p class="desc_primary" data-type="label">
+                        <b data-color="blue">767</b>회 저장한 조합은 총
+                        <b>4</b>개 입니다.
+                    </p>
+                    <select name="" id="">
+                        <option value="">회차 선택</option>
+                        <option value="">767</option>
+                        <option value="">766</option>
+                    </select><br>
+                    
+                </div>
+                <div class="btns">
+                    <button class="btn_strong" type="button">대세추천번호 관리</button>
+                </div>
             </div>
 
 
+            <h3 class="block_title">
+                <span class="tit">마이조합 목록</span>
+                <span class="actions">
+                    <a href="#" class="link_page">3등, 4등 전용 보장 조합 받기!(유료보장회원 전용)</a>
+                </span>
+            </h3>
 
-            <aside class="lotto_pang_slogan"><!-- 하단 슬로건 -->
-                <p class="logo">로또예상번호는 로또팡</p>
-                <p class="desc">로또팡의 통계, 분석자료는 국내유일의 기법을 사용하여 새로운 자료들이 자주 추가됩니다! <br>로또예상번호는 로또팡!</p>
-            </aside><!-- //하단 슬로건 -->
+
+            <div class="board_table">
+                <table>
+                    <caption>공지사항리스트</caption>
+                    <colgroup>
+                        <col style="width:10%">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:auto">
+                        <col style="width:20%">
+
+                    </colgroup>
+                    <thead>
+
+                        <tr>
+                            <th scope="col">
+                                <div class="input_custom">
+                                    <input type="checkbox" id="all_chk" name="">
+                                    <label for="all_chk"><span class="blind">전체 선택</span></label>
+                                </div>
+                            </th>
+                            <th scope="col">No</th>
+                            <th scope="col">번호1</th>
+                            <th scope="col">번호2</th>
+                            <th scope="col">번호3</th>
+                            <th scope="col">번호4</th>
+                            <th scope="col">번호5</th>
+                            <th scope="col">번호6</th>
+                            <th scope="col">당첨결과</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- [Design] 아래 tr class="nodata" 는 조합 Data가 없을때 출력되는 tr입니다. 데이터가 있을경우 표현되지 않습니다. -->
+                        <tr class="nodata">
+                            <td colspan="9">
+                                이번회차, 아직 저장한 my 조합이 없습니다.
+                                <br>최고의 조합관리 서비스 OPEN!!
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_1" name="">
+                                    <label for="mix_chk1_1"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td class="no">1</td>
+                            <td>1</td>
+                            <td>12</td>
+                            <td>34</td>
+                            <td>42</td>
+                            <td>9</td>
+                            <td>7</td>
+                            <td>추첨예정</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_1" name="">
+                                    <label for="mix_chk1_1"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td class="no">2</td>
+                            <td>1</td>
+                            <td>12</td>
+                            <td>34</td>
+                            <td>42</td>
+                            <td>9</td>
+                            <td>7</td>
+                            <td>추첨예정</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_1" name="">
+                                    <label for="mix_chk1_1"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td class="no">3</td>
+                            <td>1</td>
+                            <td>12</td>
+                            <td>34</td>
+                            <td>42</td>
+                            <td>9</td>
+                            <td>7</td>
+                            <td>추첨예정</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_1" name="">
+                                    <label for="mix_chk1_1"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td class="no">4</td>
+                            <td>1</td>
+                            <td>12</td>
+                            <td>34</td>
+                            <td>42</td>
+                            <td>9</td>
+                            <td>7</td>
+                            <td>추첨예정</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            
+
+            <div class="mix_contents">
+                <div class="btns">
+                    <button type="button" class="btn_primary">선택 삭제</button>
+                    <button type="button" class="btn_primary">선택번호 인쇄</button>
+                </div>
+                <div class="article">
+                    <div class="pagenation">
+                        <!-- [Design] 좌측 버튼과 조합된 형태로, 총 paging 갯수는 10개를 넘지 말아주세요 -->
+                        <button type="button" class="btn_first">처음</button>
+                        <button type="button" class="btn_prev">이전</button>
+                        <strong class="now" title="현재페이지">1</strong>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <button type="button" class="btn_next">다음</button>
+                        <button type="button" class="btn_end">끝</button>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="banner_plus_member"><!-- banner_plus_member -->
+                <strong class="percent">62%<br><span>할인</span></strong>
+                <p class="desc">지금, 플러스회원권을 구매하면!<b>대세 추천번호가 따라온다</b></p>
+                <button class="btn_plus">플러스회원권 구입하기</button>
+            </div><!-- //banner_plus_member -->
+
         </section><!-- //content -->
     </div>
 </div>
