@@ -191,16 +191,16 @@
   }
   color:#fff;
   text-align: center;
-  &:hover{
+  &:focus{
     text-decoration: none;
   }
 }
 //추가설정을위한 mixin
-@mixin button($wid:24.7%, $bg:off, $hei:off, $font:off, $color:off){
+@mixin button($wid:24.7%, $bg:off, $hei:off, $font:off, $color:off, $border:off){
   width:$wid;
   @if $bg != off{
     background:$bg;
-    &:hover{
+    &:focus{
       background:darken($bg,20%)
     }
   }
@@ -216,6 +216,10 @@
   @if $color != off{
     color : $color
   }
+  @if $border != off{
+    border:$border;
+  }
+  text-align: center;
 }
 
 

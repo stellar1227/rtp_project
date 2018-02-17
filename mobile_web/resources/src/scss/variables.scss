@@ -6,6 +6,8 @@ $util-font : "Gulim", "굴림", sans-serif;
 
 //font-size - 기본 14px, 타이틀 관련 사이즈,
 $base-size : 14px;
+$font11px : 0.79rem;
+$font12px : 0.86rem;
 $font13px : 0.92rem;
 $font14px : 1rem;
 $font15px : 1.07rem;
@@ -17,9 +19,9 @@ $font18px : 1.28rem;
 //color - 기본 #555 , 서브컬러 #000(pc랑 기본 반대), 연한놈 #72767e 강조 #528dff 공지성강조 #ea614e 폼디스에이블 #999
 $base-color : #555;
 $sub-color : #000;
-$disabled-color : #999;
+$disabled-color : #969696;
 $light-color : #7b8caf;
-$strong-color : #528dff;
+$strong-color : #6998f4;
 $notice-color : #ea614e;
 $etc-color :#20b820;
 
@@ -41,7 +43,7 @@ $bg-default : #fff;
 $bg-light : #f3f4f8;
 
 //border-color - 기본 #d6d6d6, 강조 #85abf7
-$border-base : #d6d6d6;
+$border-base : #e5e5e5;
 $border-strong : #85abf7;
 $border-darken : #555;
 $thead-th-color : #f3f4f8;
@@ -50,6 +52,7 @@ $tbody-th-color : #fbfbfb;
 //btn-color  - 회색 #72767e, 강조 #528dff
 $btn-primary : #72767e;
 $btn-strong : #528dff;
+$btn-link : #fafafa;
 $btn-table : #fff;
 $btn-disabled : #b8b8b8;
 

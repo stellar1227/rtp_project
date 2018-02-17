@@ -2,48 +2,38 @@
 var rtp = (function($){
 
     /*gnb*/
-  /*  var gnb = {
+    var gnb = {
         init : function(){
             var target = $("#gnb");
-            this.allMenu = target.find(".all_menu");
+            this.gnb = target.find(".gnb");
+            this.gMenu = this.gnb.find("li");
+            this.addEvent();
+        },
+        addEvent : function(){
+            this.gMenu.on("click", function(){
+                var $id = $(this).find("a").attr("href");
+                $($id).toggleClass("on").siblings(".depth").removeClass("on");
+                $(this).toggleClass("on").siblings("li").removeClass("on");
+            })
+        }
+    };
+    var sideNavi = {
+        init : function(){
+            var target = $("#sideMenu");
+            this.btnNavi = target.prev(".btn_side_navi");
+            this.closeBtn = target.find(".btn_nav_close");
             this.addEvent(target);
         },
         addEvent : function(_t){
-            var self = this;
-            _t.on("mouseenter", function(){
-                self.allMenu.slideDown(300);
+            this.btnNavi.on("click", function(){
+                _t.addClass("on")
             });
-            _t.on("mouseleave", function(){
-                self.allMenu.stop().slideUp(300);
+            this.closeBtn.on("click", function(){
+                _t.removeClass("on")
             })
         }
 
-    };*/
-
-    /*lnb*/
-   /* var lnb = {
-        init : function(){
-            var target = $("#lnb");
-            this.toggleBtn = target.find(".btn_menu_toggle");
-            this.setting(target);
-            this.addEvent();
-        },
-        setting : function(t){
-            var onMenu = t.find(".menu");
-            onMenu.find("li.on").find(".sub_menu").addClass("open").show();
-        },
-        addEvent : function(){
-            var self = this;
-            this.toggleBtn.on("click", function(){
-                self.toggle($(this));
-            })
-        },
-        toggle : function(t){
-            var _t = t.siblings(".sub_menu");
-            _t.toggleClass('open');
-            _t.stop().slideToggle(300);
-        }
-    };*/
+    };
 
     /*toggle_list*/
     var toggleList = {
@@ -254,8 +244,8 @@ var rtp = (function($){
     //document.ready
 
     $(function(){ //todo sideNavi && gnb script
-        /*gnb.init(); //gnb
-        $("#lnb").find(".sub_menu").length && lnb.init();*/
+        gnb.init(); //gnb
+        sideNavi.init();
         $(".accodian_list").length && toggleList.init(); //toggleList
         $(".file_upload").length && fileUpload.init(); //inputFile
 
