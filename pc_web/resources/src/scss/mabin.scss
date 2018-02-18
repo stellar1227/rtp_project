@@ -999,3 +999,20 @@ input{
 
 	}
 }
+
+// 다운로드 목록
+.list_download {
+	overflow:auto;
+	max-height:300px;
+	margin-top:30px;
+	border:1px solid #e9e9e9;
+	
+	li {
+		a {
+			display:block;
+			padding:2px 0 4px 32px;
+			background:url("#{$content-img}ico_download.png") 0 0 no-repeat;
+			color:$strong-color;
+		}
+	}
+}
