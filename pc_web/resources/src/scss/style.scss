@@ -361,79 +361,6 @@ $lnb-width : 250px;
   @include boxSizing();
   width:$container-size - $lnb-width;
   padding:0 30px;
-  /*title*/
-  .page_title{
-    padding:40px 0;
-    text-align: center;
-    %span{
-      display: block;
-    }
-    .desc{
-      @extend %span;
-      margin-bottom: 5px;
-      color:$strong-color
-    }
-    .tit{
-      @extend %span;
-      font : {
-        weight:$bold;
-        size:28px
-      }
-      color:$base-color
-    }
-    border-bottom:1px solid $border-base;
-
-    &  + .data_table{
-      margin-top:33px;
-    }
-    /*&  + .table_title {
-      margin-top:33px;
-    }*/
-  }
-  .block_title{
-    padding:40px 5px 12px;
-    border-bottom:1px solid $border-darken;
-    .tit{
-      color :$base-color;
-      font : {
-        size : 20px;
-      }
-    }
-    .desc{
-      color : $light-color;
-      font : {
-        size : 15px;
-      }
-    }
-    &  + .data_table {
-      margin-top:33px;
-    }
-  }
-  .table_title{
-    margin-top:50px;
-    display: block;
-    font:{
-      weight:$normal;
-      size : 20px;
-    }
-
-    margin : {
-      left:60px;
-      right:60px;
-      bottom:15px;
-    }
-    span[data-color="red"]{
-      font-weight:$bold;
-    }
-    span.desc{
-      margin-left: 10px;
-      font-size:14px;
-      color :$light-color;
-    }
-    & + .accodian_list{
-      border-top:1px solid $border-darken;
-    }
-  }
 }
 #footer{
   position:relative;
@@ -498,6 +425,81 @@ $lnb-width : 250px;
     .footer_logo{
       display: none;
     }
+  }
+}
+
+
+/*title*/
+.page_title{
+  padding:40px 0;
+  text-align: center;
+  %span{
+    display: block;
+  }
+  .desc{
+    @extend %span;
+    margin-bottom: 5px;
+    color:$strong-color
+  }
+  .tit{
+    @extend %span;
+    font : {
+      weight:$bold;
+      size:28px
+    }
+    color:$base-color
+  }
+  border-bottom:1px solid $border-base;
+
+  &  + .data_table{
+    margin-top:33px;
+  }
+  /*&  + .table_title {
+    margin-top:33px;
+  }*/
+}
+.block_title{
+  padding:40px 5px 12px;
+  border-bottom:1px solid $border-darken;
+  .tit{
+    color :$base-color;
+    font : {
+      size : 20px;
+    }
+  }
+  .desc{
+    color : $light-color;
+    font : {
+      size : 15px;
+    }
+  }
+  &  + .data_table {
+    margin-top:33px;
+  }
+}
+.table_title{
+  margin-top:50px;
+  display: block;
+  font:{
+    weight:$normal;
+    size : 20px;
+  }
+
+  margin : {
+    left:60px;
+    right:60px;
+    bottom:15px;
+  }
+  span[data-color="red"]{
+    font-weight:$bold;
+  }
+  span.desc{
+    margin-left: 10px;
+    font-size:14px;
+    color :$light-color;
+  }
+  & + .accodian_list{
+    border-top:1px solid $border-darken;
   }
 }
 
@@ -635,7 +637,7 @@ button{
   margin:40px 60px 0;
   &[data-align="center"]{
     text-align: center;
-    .btn_primary,.btn_strong {
+    .btn_primary,.btn_strong{
       @include button(200px)
     }
   }

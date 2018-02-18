@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>page layout</title>
+    <title>메인 | 로또팡</title>
     <link rel="stylesheet" href="../../resources/css/common-ui.css">
+    <link rel="stylesheet" href="../../resources/lib/jquery.bxslider.min.css">
 </head>
 <body class="main"><!-- main의 경우 body class="main" -->
 <div id="skipnavi">
@@ -93,22 +94,390 @@
         </div>
     </div><!-- //sub_intro -->
     <div class="top_section">
-        <div class="main_visual">
-
-        </div>
-        <section class="login_section">
-            <h2 class="blind">로그인 영역</h2>
-            <p class="notice">복잡한 회원 가입없이 빠르게 로그인</p>
-            <ul class="sns_login">
-                <li><a href="#"><img src="../../resources/img/content/sns_login_naver.png" alt="네이버계정으로 로그인"></a></li>
-                <li><a href="#"><img src="../../resources/img/content/sns_login_google.png" alt="구글계정으로 로그인"></a></li>
-                <li><a href="#"><img src="../../resources/img/content/sns_login_facebook.png" alt="페이스북계정으로 로그인"></a></li>
-                <li><a href="#"><img src="../../resources/img/content/sns_login_kakao.png" alt="카카오계정으로 로그인"></a></li>
+        <h2 class="blind">메인배너영역 및 로그인</h2>
+        <div class="visual_sec">
+            <ul class="slide" id="mainSlider">
+                <li><a href="#"><img src="../../resources/img/temp/tmp_main_banner1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="../../resources/img/temp/tmp_main_banner2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="../../resources/img/temp/tmp_main_banner3.jpg" alt=""></a></li>
             </ul>
-            <a href="#" class="link_search_id">가입계정 찾기</a>
-            <a href="#" class="link_free_ticket">자유이용권 구매</a>
-        </section>
+        </div>
+        <div class="login_sec">
+            <!-- 로그인 전 -->
+            <h3 class="block_title">로그인</h3>
+            <p class="desc">복잡한 회원 가입없이 빠르게 로그인</p>
+            <ul class="sns_list">
+                <li><a href="#"><img src="../../resources/img/common/link_login_naver.png" alt="네이버아이디로 로그인"></a></li>
+                <li><a href="#"><img src="../../resources/img/common/link_login_google.png" alt="구글아이디로 로그인"></a></li>
+                <li><a href="#"><img src="../../resources/img/common/link_login_facebook.png" alt="페이스북아이디로 로그인"></a></li>
+                <li><a href="#"><img src="../../resources/img/common/link_login_kakao.png" alt="카카오톡 아이디로 로그인"></a></li>
+            </ul>
+            <a href="#" class="btn_link">가입 계정 찾기</a>
+            <a href="#" class="btn_link">자유이용권 구매</a>
+            <!-- //로그인 전 -->
+            <!-- 로그인 후
+            <h3 class="block_title">
+                로또팡 <span class="desc">님</span>
+            </h3>
+            <p class="mycoin">
+                <span class="name">My 코인</span>
+                <span class="money">500원</span>
+            </p>
+            <dl class="ticket">
+                <dt>3개월 자유이용권</dt>
+                <dd>
+                    2017.10.19 ~ 2018.01.18 <br>
+                    (30일 남음)
+                </dd>
+            </dl>
+            <div class="btn_wrap">
+                <a href="#" class="btn_link">내 정보</a>
+                <a href="#" class="btn_link">로그아웃</a>
+            </div>
+            <a href="#" class="btn_link">로또팡 로또 조합기</a>
+             //로그인 후 -->
+        </div>
     </div>
+    <section id="content">
+        <h2 class="blind">본문영역</h2>
+        <div class="box_contents_section">
+            <div class="box_cont_cols">
+                <article class="box_conts">
+                    <h3 class="block_title">역대 <b>최대</b> 출현 best5</h3>
+                    <ol class="lotto_list">
+                        <li>
+                            <span class="ball_n1th">3</span>
+                            <p class="appear_num">
+                                100회
+                                <span>(766회 / 14일째 미출현)</span>
+                            </p>
+                        </li>
+                        <li>
+                            <span class="ball_n10th">13</span>
+                            <p class="appear_num">
+                                90회
+                                <span>(765회 / 6일째 미출현)</span>
+                            </p>
+                        </li>
+                        <li>
+                            <span class="ball_n20th">23</span>
+                            <p class="appear_num">
+                                50회
+                                <span>(766회 / 14일째 미출현)</span>
+                            </p>
+                        </li>
+                        <li>
+                            <span class="ball_n30th">30</span>
+                            <p class="appear_num">
+                                40회
+                                <span>(766회 / 14일째 미출현)</span>
+                            </p>
+                        </li>
+                        <li>
+                            <span class="ball_n40th">43</span>
+                            <p class="appear_num">
+                                10회
+                                <span>(766회 / 28일째 미출현)</span>
+                            </p>
+                        </li>
+                    </ol>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+                <article class="box_conts">
+                    <h3 class="block_title">역대 <b>최소</b> 출현 best5</h3>
+                    <ol class="lotto_list">
+                        <li>
+                            <span class="ball_n1th">3</span>
+                            <p class="appear_num">
+                                12회
+                            </p>
+                        </li>
+                        <li>
+                            <span class="ball_n10th">13</span>
+                            <p class="appear_num">
+                                34회
+                            </p>
+                        </li>
+                        <li>
+                            <span class="ball_n20th">23</span>
+                            <p class="appear_num">
+                                45회
+                            </p>
+                        </li>
+                        <li>
+                            <span class="ball_n30th">30</span>
+                            <p class="appear_num">
+                                47회
+                            </p>
+                        </li>
+                        <li>
+                            <span class="ball_n40th">43</span>
+                            <p class="appear_num">
+                                48회
+                            </p>
+                        </li>
+                    </ol>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+                <article class="box_conts long">
+                    <h3 class="block_title">포츈 82</h3>
+                    <span class="thumb_img">
+                        <img src="../../resources/img/content/main_conts_thumbs1.jpg" alt="">
+                    </span>
+                    <ul class="fortune_list">
+                        <li>
+                            <a href="#">
+                                <strong>시기별 재물운세</strong>
+                                <p>나의 재물운을 확인해보세요!</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong>요즘 재물기운</strong>
+                                <p>나의 재물운을 확인해보세요!</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong>나의 간단 재물운</strong>
+                                <p>나의 재물운을 확인해보세요!</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong>재물을 지키는 방법</strong>
+                                <p>나의 재물운을 확인해보세요!</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+                <article class="box_conts">
+                    <h3 class="block_title">로또팡 모바일웹</h3>
+                    <span class="thumb_img">
+                        <img src="../../resources/img/content/main_conts_thumbs2.jpg" alt="">
+                    </span>
+                    <p class="thumb_desc">로또팡 모바일웹 바로가기</p>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+            </div>
+            <div class="box_cont_cols">
+                <article class="box_conts">
+                    <h3 class="table_title">
+                        <span data-color="red">782</span>회차 <b>로또</b> 당첨 번호
+                        <span class="date">
+                            <span class="btn_arrow">날짜</span><!--기획서에 요건이 나와있지않아 일단 자리만 만듬요 -->
+                            2017.11.25 추첨
+                        </span>
+                    </h3>
+                    <div class="box_win_info">
+                        <p class="winner_info">
+                            <span>1등 당첨자 : <em>2</em>명</span>
+                            <span>당첨금액 : <em>6,339,000,000</em>원</span>
+                        </p>
+                        <p class="win_number">
+                            <span class="ball_n1th">1</span><!-- 1부터 9까지 class="ball_n1th" -->
+                            <span class="ball_n10th">12</span><!-- 10부터 19까지 class="ball_n10th" -->
+                            <span class="ball_n20th">23</span><!-- 20부터 29까지 class="ball_n20th" -->
+                            <span class="ball_n30th">34</span><!-- 30부터 39까지 class="ball_n30th" -->
+                            <span class="ball_n40th">48</span><!-- 40부터 49까지 class="ball_n40th" -->
+                            <span class="plus">+</span>
+                            <span class="ball_n1th">6</span>
+                        </p>
+                        <a href="#" class="link_win_more">로또 당첨결과 종합분석 더 보기 &gt;</a>
+                        <button type="button" class="prev_num">이전회차 불러오기</button>
+                        <button type="button" class="next_num">다음회차 불러오기</button>
+                    </div>
+                </article>
+                <article class="box_conts">
+                    <h3 class="table_title">당첨결과 분석</h3>
+                    <div class="data_table">
+                        <table>
+                            <caption>당첨결과 분석표</caption>
+                            <colgroup>
+                                <col style="width:auto">
+                                <col style="width:38%">
+                                <col style="width:38%">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">횟수</th>
+                                <th scope="col">지난 회차 (757회)</th>
+                                <th scope="col">지지난 회차 (766회)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th class="mid_th" scope="row">합계</th>
+                                <td>152</td>
+                                <td>132</td>
+                            </tr>
+                            <tr>
+                                <th class="mid_th" scope="row">홀짝</th>
+                                <td>2:4</td>
+                                <td>2:4</td>
+                            </tr>
+                            <tr>
+                                <th class="mid_th" scope="row">ac값<button type="button" class="btn_question">자세한내용설명</button></th>
+                                <td>10</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th class="mid_th" scope="row">이웃수<button type="button" class="btn_question">자세한내용설명</button></th>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+                <article class="box_conts">
+                    <h3 class="table_title">
+                        <span data-color="red">320</span>회차 <b>연금 복권 520</b> 당첨 번호
+                        <span class="date">
+                            <span class="btn_arrow">날짜</span><!--기획서에 요건이 나와있지않아 일단 자리만 만듬요 -->
+                            2017.11.25 추첨
+                        </span>
+                    </h3>
+                    <div class="box_win_info">
+                        <dl class="ticket_win">
+                            <dt>
+                               <b>1등</b>
+                               (월<span data-color="blue">500</span>만원 <br>
+                               x <span data-color="blue">20</span>년)
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <li>
+                                        <span class="h"><em>3</em>조</span>
+                                        <span>8</span>
+                                        <span>0</span>
+                                        <span>9</span>
+                                        <span>6</span>
+                                        <span>0</span>
+                                        <span>1</span>
+                                    </li>
+                                    <li>
+                                        <span class="h"><em>5</em>조</span>
+                                        <span>1</span>
+                                        <span>9</span>
+                                        <span>2</span>
+                                        <span>6</span>
+                                        <span>0</span>
+                                        <span>7</span>
+                                    </li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <a href="#" class="link_win_more">연금 복권 당첨결과 더 보기  &gt;</a>
+                    </div>
+                </article>
+                <div class="double_wrap">
+                    <article class="box_conts">
+                        <h3 class="block_title">공지사항</h3>
+                        <ul class="notice_list">
+                            <li><a href="#">방송 시작합니다.</a></li>
+                            <li><a href="#">여객선 사고 방송으로 이번 회차 로..</a></li>
+                            <li><a href="#">여객선 사고 방송으로 이번 회차 로..</a></li>
+                            <li><a href="#">여객선 사고 방송으로 이번 회차 로..</a></li>
+                            <li><a href="#">여객선 사고 방송으로 이번 회차 로..</a></li>
+                        </ul>
+                        <a href="#" class="link_more">컨텐츠더보기</a>
+                    </article>
+                    <article class="box_conts">
+                        <h3 class="block_title">당첨 후기</h3>
+                        <ul class="notice_list">
+                            <li><a href="#"><span class="name">현이님</span>이번 회차 4등!!!</a></li>
+                            <li><a href="#"><span class="name">권토중래</span>2등입니다!!! 믿어지지..5000원 당첨! 5000원 당첨!.</a></li>
+                            <li><a href="#"><span class="name">솔이</span>이젠 방송 안하나요? 700회차5000원 당첨!</a></li>
+                            <li><a href="#"><span class="name">허랑</span>4등이네요. 그래도 좋네요5000원 당첨!</a></li>
+                            <li><a href="#"><span class="name">일심</span>5000원 당첨!!로..로..5000원 당첨!</a></li>
+                        </ul>
+                        <a href="#" class="link_more">컨텐츠더보기</a>
+                    </article>
+                </div>
+                <div class="double_wrap">
+                    <article class="box_conts">
+                        <h3 class="block_title">나만의 조합법</h3>
+                        <span class="thumb_img">
+                            <img src="../../resources/img/content/main_conts_thumbs3.jpg" alt="">
+                        </span>
+                        <p class="thumb_desc">나만의 번호가 따로 있다? <br>
+사주로 확인하는 나만의 로또번호!
+</p>
+                        <a href="#" class="link_more">컨텐츠더보기</a>
+                    </article>
+                    <article class="box_conts">
+                        <h3 class="block_title">로또팡 조합기</h3>
+                        <span class="thumb_img">
+                            <img src="../../resources/img/content/main_conts_thumbs4.jpg" alt="">
+                        </span>
+                        <p class="thumb_desc">최고의 조합기! 로또팡의 자랑
+                            지금 만나보세요.
+                        </p>
+                        <a href="#" class="link_more">컨텐츠더보기</a>
+                    </article>
+                </div>
+            </div>
+            <div class="box_cont_cols">
+                <article class="box_conts">
+                    <h3 class="block_title">자유이용권 구매</h3>
+                    <span class="thumb_img">
+                        <img src="../../resources/img/content/main_conts_thumbs5.jpg" alt="">
+                    </span>
+                    <p class="thumb_desc">VIP 회원 한분 한분이 만족할  수 있는
+                        최적화된 서비스
+                    </p>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+                <article class="box_conts">
+                    <h3 class="block_title">1등에 당첨된다면!</h3>
+                    <span class="thumb_img">
+                        <img src="../../resources/img/content/main_conts_thumbs6.jpg" alt="">
+                    </span>
+                    <p class="thumb_desc">1등에 당첨된다면!! <br>
+                        상상만 해도 짜릿한 기분!
+                    </p>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+                <article class="box_conts">
+                    <h3 class="block_title">대세 추천번호</h3>
+                    <span class="thumb_img">
+                        <img src="../../resources/img/content/main_conts_thumbs7.jpg" alt="">
+                    </span>
+                    <p class="thumb_desc">로또팡 대세추천번호 받아보세요. <br>
+                        후회하지 않으실 거예요~
+                    </p>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+                <article class="box_conts long">
+                    <h3 class="block_title">고객센터</h3>
+                    <span class="thumb_img">
+                        <img src="../../resources/img/content/main_conts_thumbs8.jpg" alt="">
+                    </span>
+                    <p class="tel">070-822-6031</p>
+                    <p class="thumb_desc">운영시간 : 월~ 금  09:00 ~ 18:00
+                    </p>
+                    <dl class="etc">
+                        <dt>무통장 입금 계좌번호</dt>
+                        <dd><strong>국민</strong> 443101-01-118753</dd>
+                        <dd><strong>우리</strong> 1005-402-148847</dd>
+                        <dd><strong>신한</strong> 110-214-719112</dd>
+                        <dd>(예금주 : 서주형)</dd>
+                    </dl>
+                    <dl class="etc">
+                        <dt>유의사항</dt>
+                        <dd>- 1:1 회원 게시판에 입금 확인을 요청.</dd>
+                        <dd>- 주문자와 입금자 이름이 일치해야 함.</dd>
+                    </dl>
+                    <a href="#" class="link_more">컨텐츠더보기</a>
+                </article>
+            </div>
+        </div>
+        <p class="site_warning">당사의 분석시스템은 누적패턴을 분석/필터링한 정보제공만을 목적으로 하며, 당첨확률 개선서비스가 아니므로 서비스 이용 과정에서 기대이익을 얻지 못하거나 발생한 손해 등에 대한 최종책임은 서비스 이용자 본인에게 있습니다.
+        </p>
+    </section>
 </div>
 <!-- footer include -->
 <footer id="footer" class="main">
@@ -147,6 +516,19 @@
     </div>
 </footer>
 <script src="../../resources/lib/jquery-1.12.4.min.js"></script>
+<script src="../../resources/lib/jquery.bxslider.min.js"></script>
 <script src="../../resources/js/common-ui.min.js"></script>
+<script>
+    $(function(){
+        $('#mainSlider').bxSlider({
+            auto: true,
+            controls : false,
+            useCss : true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true
+        });
+    })
+</script>
 </body>
 </html>
