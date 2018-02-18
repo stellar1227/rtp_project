@@ -559,6 +559,8 @@ select{
 
 /*input, selector, textares size*/
 $dataWidth: (
+  50:  50px,
+  100: 100px,
   200: 200px,
   250: 250px,
   300: 300px,
@@ -569,7 +571,14 @@ $dataWidth: (
   [data-width='#{$elemWidth}'] {
     width:$value
   }
+  @if $elemWidth < 200 {
+    input[data-width='#{$elemWidth}'] {
+      min-width:0
+    }
+  }
 }
+
+
 
 //특정 data아닌 단순 사이즈 ex)data_table내부 사용?
 $dataFontSize: (

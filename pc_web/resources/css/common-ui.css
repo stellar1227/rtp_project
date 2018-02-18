@@ -265,6 +265,14 @@ select[disabled] { border: 1px solid #cfcfcf; background-color: #f4f4f4; }
 select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f4; }
 
 /*input, selector, textares size*/
+[data-width='50'] { width: 50px; }
+
+input[data-width='50'] { min-width: 0; }
+
+[data-width='100'] { width: 100px; }
+
+input[data-width='100'] { min-width: 0; }
+
 [data-width='200'] { width: 200px; }
 
 [data-width='250'] { width: 250px; }
@@ -274,6 +282,8 @@ select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f
 [data-width='500'] { width: 500px; }
 
 [data-width='100p'] { width: 100%; }
+
+input[data-width='100p'] { min-width: 0; }
 
 [data-font='16'] { font-size: 16px; }
 
@@ -1046,5 +1056,11 @@ input[data-align="right"] { text-align: right; }
 .about_technjoy .list_skills li:nth-child(3):after { background-image: url("../img/content/ico_about_person.png"); background-position: center 25px; }
 
 .tit_about { font-size: 24px; }
+
+.list_primary { padding: 18px 30px; margin-top: 50px; border-style: dashed; border-width: 1px 0; border-color: #ddd; background-color: #fcfcfc; }
+
+.list_primary li { padding: 5px 0 6px; }
+
+.list_primary li:before { display: inline-block; content: "\2022"; margin-top: -8px; margin-right: 10px; font-size: 20px; line-height: 1.1em; vertical-align: middle; color: #9ea8b9; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
