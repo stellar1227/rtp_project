@@ -141,9 +141,9 @@
     & + label{
       &:before{
         @if $type == checkbox{
-          background-position:0 -22px
+          background-position:-22px -22px
         }@else if $type == radio{
-          background-position:0 0
+          background-position:-22px 0
         }
       }
     }
@@ -158,9 +158,9 @@
 
       @extend %ico_form_sprite;
       @if $type == checkbox{
-        background-position:-22px -22px;
+        background-position:0 -22px;
       }@else if $type == radio{
-        background-position:-22px 0
+        background-position:0 0
       }
     }
     span{
@@ -197,6 +197,7 @@
 }
 //추가설정을위한 mixin
 @mixin button($wid:24.7%, $bg:off, $hei:off, $font:off, $color:off, $border:off){
+  @include boxSizing();
   width:$wid;
   @if $bg != off{
     background:$bg;

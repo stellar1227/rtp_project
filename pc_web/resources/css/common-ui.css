@@ -266,14 +266,6 @@ select[disabled] { border: 1px solid #cfcfcf; background-color: #f4f4f4; }
 select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f4; }
 
 /*input, selector, textares size*/
-[data-width='50'] { width: 50px; }
-
-input[data-width='50'] { min-width: 0; }
-
-[data-width='100'] { width: 100px; }
-
-input[data-width='100'] { min-width: 0; }
-
 [data-width='200'] { width: 200px; }
 
 [data-width='250'] { width: 250px; }
@@ -283,8 +275,6 @@ input[data-width='100'] { min-width: 0; }
 [data-width='500'] { width: 500px; }
 
 [data-width='100p'] { width: 100%; }
-
-input[data-width='100p'] { min-width: 0; }
 
 [data-font='16'] { font-size: 16px; }
 
