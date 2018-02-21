@@ -1282,6 +1282,28 @@ input[data-align="right"] { text-align: right; }
 
 .trend_about_service .list_trend_service li:last-child { padding-bottom: 0; border-bottom: 0; }
 
+.trend_about_service .desc_strong { padding: 18px 40px; margin: 0 -10px 30px; font-size: 1.25em; line-height: 1.5em; background-color: #f9f9f9; border-radius: 5px; text-align: center; color: #333; }
+
+.trend_about_service .btn_wrap { margin: 15px 0 5px; }
+
+.trend_about_service .btn_wrap button { height: 60px; min-width: 260px; font-size: 20px; }
+
+.trend_about_service[data-type="join_done"] { background-position: right -180px; }
+
+.trend_about_service[data-type="join_done"] .tit_trend_about { padding-left: 160px; background: url("../img/content/bg_join_done.png") no-repeat 38px 64px; background-size: 100px auto; }
+
+.trend_about_service[data-type="join_done"] .tit_trend_about .desc { font-size: 17px; }
+
+.trend_about_service[data-type="join_done"] .link_rec_hurry { top: 61px; right: 40px; padding: 29px 32px; }
+
+.trend_about_service[data-type="join_done"] .list_trend_service { padding: 20px 70px; }
+
+.trend_about_service[data-type="join_done"] .list_trend_service li { padding: 5px 0 25px 95px; font-size: .9em; }
+
+.trend_about_service[data-type="join_done"] .list_trend_service .num { top: 0; width: 40px; height: 40px; padding-top: 10px; font-size: 1.7em; background-color: #3d4a63; box-shadow: none; letter-spacing: -2px; }
+
+.trend_about_service[data-type="join_done"] .list_trend_service .tit { margin-bottom: 0; }
+
 .btn_wrap_sns [data-type="phone"] { border: 1px solid #ccc; background: url("../img/common/bg_login_phone.png") no-repeat 0 0; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */

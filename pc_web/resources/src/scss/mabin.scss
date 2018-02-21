@@ -1102,6 +1102,64 @@ input{
 			}
 		}
 	}
+
+	.desc_strong {
+	    padding: 18px 40px;
+	    margin: 0 -10px 30px;
+	    font-size: 1.25em;
+	    line-height:1.5em;
+	    background-color: #f9f9f9;
+	    border-radius: 5px;
+	    text-align: center;
+	    color: #333;
+	}
+	.btn_wrap {
+		margin:15px 0 5px;
+		button {
+			height:60px;min-width:260px;
+			font-size:20px;
+
+		}
+	}
+
+
+	&[data-type="join_done"] {
+		background-position:right -180px;
+		.tit_trend_about {
+			padding-left:160px;
+			background:url('#{$content-img}bg_join_done.png') no-repeat 38px 64px;
+			background-size:100px auto;
+			.desc {font-size:17px}
+		}
+		.link_rec_hurry {
+			top:61px;
+			right:40px;
+			padding:29px 32px;
+		}
+
+		.list_trend_service {
+			padding:20px 70px;
+
+			li {
+				padding:5px 0 25px 95px;
+				font-size:.9em;
+			}
+			.num {
+				top:0;
+			    width: 40px;
+			    height: 40px;
+			    padding-top: 10px;
+			    font-size: 1.7em;
+			    background-color: #3d4a63;
+			    box-shadow: none;
+			    letter-spacing: -2px;
+			}
+			.tit {
+				margin-bottom:0;
+			}
+		}
+
+	}
 }
 
 
