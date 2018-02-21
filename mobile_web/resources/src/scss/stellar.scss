@@ -326,12 +326,15 @@
 /*member*/
 //회원가입
 .box_contents{
-  padding:25px 0;
-  border-bottom:1px solid $border-base;
   .input_custom{
-    padding:0 0 0 60px;
+    vertical-align: middle;
+    &:last-child{
+      display: block;
+      margin-top:10px;
+    }
   }
-  .link_more{
+  .link_privacy_more{
+    display: inline-block;
     vertical-align: middle;
     color:$strong-color;
     text-decoration: underline;
@@ -375,8 +378,74 @@
   }
 }
 
+/*member*/
+
+.id_search{
+  margin-bottom:27px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  li{
+    padding:10px 0 0 0;
+  }
+  .validate_notice{
+    margin-top:6px;
+    color:$notice-color;
+    font-size: $font15px;
+    margin-bottom:10px;
+    &:first-child{
+      margin-top: 0;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .table_notice{
+    margin-top: 8px;
+    color:$light-color;
+    font-size:$font14px;/*
+    padding-left: 15px;*/
+    line-height:150%;
+  }
+  .verify-time{
+    color:$notice-color
+  }
+}
+.i_sec{
+  position: relative;
+  padding-right:95px;
+  .btn_primary, & .btn_strong{
+    position: absolute;
+    right:0;
+    top:0;
+    width:91px;
+  }
+
+}
+.id_info{
+  span{
+    display: block;
+  }
+}
+.select_list{
+  margin-bottom:15px;
+  [data-width="67p"]{
+    width:67%;
+  }
+  li{
+    margin-bottom:5px;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+}
+
+
 /*고객센터*/ //ok
 .qna_write{
+  &.input_table{
+    border-bottom:0;
+  }
   textarea{
     height:265px;
     overflow-x:hidden;

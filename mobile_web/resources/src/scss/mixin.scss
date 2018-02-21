@@ -93,7 +93,6 @@
     border-color:$input-b-strong;
     background:$input-g-strong;
     color:$strong-color;
-    font-weight:$extra-bold;
     &[readonly]{
       border-color:$input-b-strong;
       background:$input-g-disabled;
@@ -181,13 +180,13 @@
   display: inline-block;
   @include boxSizing();
   @include borderRadius(2px);
-  min-width:24.7%;
+  min-width:91px;
   height:44px;
   padding: 0 7px;
   line-height:44px;
   font : {
-    size : $font14px;
-    weight:$bold;
+    size : $font14px;/*
+    weight:$bold;*/
   }
   color:#fff;
   text-align: center;

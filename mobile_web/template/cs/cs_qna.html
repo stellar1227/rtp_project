@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>page layout</title>
-    <script src="../resources/lib/swiper.min.css"></script>
-    <link rel="stylesheet" href="../resources/css/common-ui.css">
+    <title>1 : 1 고객센터 | 로또팡</title>
+    <script src="../../resources/lib/swiper.min.css"></script>
+    <link rel="stylesheet" href="../../resources/css/common-ui.css">
 </head>
 <body>
 <div id="skipnavi">
     <a href="#container">본문바로가기</a>
 </div>
-<header id="header">
+<header id="header"><!-- include -->
     <h1 class="logo">
         <a href="#">
-            <img src="../resources/img/common/img_header_logo.png" alt="로또팡">
+            <img src="../../resources/img/common/img_header_logo.png" alt="로또팡">
         </a>
     </h1>
     <nav id="gnb" class="swiper-container">
@@ -133,21 +133,116 @@
         </section>
     </div>
     <a href="#" class="btn_member_join">회원가입</a>
-</header>
+</header><!-- //include -->
 <div id="container">
     <section id="content">
-        <h2 class="page_title">로또 통계자료 전체보기</h2>
-        <div class="sub_title">
-            <h3>당첨번호 재출현 주기분석</h3>
-            <a href="#" class="prev_menu">이전메뉴</a><!-- 통계자료, 비법자료에서만 있는 링크 -->
-            <a href="#" class="next_menu">다음메뉴</a><!-- 통계자료, 비법자료에서만 있는 링크 -->
+        <h2 class="page_title">1:1 고객센터</h2>
+        <div class="box_wrap">
+            <p class="box_desc">
+                고객님! 무엇을 도와드릴까요? <br>
+                최대한 자세히 문의해 주시면 빠른 시일 내에 답변 드리겠습니다.
+            </p>
+            <div class="input_table qna_write">
+                <table>
+                    <caption>문의할 내용 작성</caption>
+                    <colgroup>
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" data-width="100p" title="제목">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="" title="내용" cols="30" rows="10"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="file_upload">
+                                <input type="file" id="file_id">
+                                <label for="file_id" class="btn_primary btn_file_find">파일 찾기</label>
+                                <div class="file_name">
+                                    <span class="name"></span>
+                                    <button type="button" class="btn_file_del">삭제</button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn_wrap" data-align="center">
+                <button type="button" class="btn_strong">문의하기</button>
+            </div>
         </div>
         <div class="box_wrap">
-            <div class="box_title">제목제목</div>
+            <h3 class="box_title">
+                문의 목록
+            </h3>
+            <div class="accodian_list qna"><!-- qna가 세부 class -->
+                <article><!-- loop -->
+                    <header class="list_title">
+                        <span class="numbering"  title="순번">3</span>
+                        <h1 class="tit">쿠폰 사용이 매우 어렵긔</h1>
+                        <span class="status" data-type="submit_ok">접수완료</span>
+                    </header>
+                    <div class="list_contents">
+                        <div class="comment"><!-- editor에서 뿌려지는 영역 -->
+                            안녕하세요. 쿠폰사용이 매우 어렵습니다.. <br>
+                            <br>
+                            국민  443101-01-118753 <br>
+                            우리 1005-402-148847 <br>
+                            신한 110-214-719112 <br>
+                            <br> <br>
+                            예금주 : 서주형
+                        </div><!-- //editor에서 뿌려지는 영역 -->
+                    </div>
+                </article><!-- //loop -->
+                <article>
+                    <header class="list_title">
+                        <span class="numbering"  title="순번">2</span>
+                        <h1 class="tit">무통장입금 결제가 안 되네요. </h1>
+                        <span class="status" data-type="answer_ok">답변완료</span>
+                    </header>
+                    <div class="list_contents">
+                        <div class="comment"><!-- editor에서 뿌려지는 영역 -->
+                            휴...<br>
+                            <br>
+                            국민  443101-01-118753 <br>
+                            우리 1005-402-148847 <br>
+                            신한 110-214-719112 <br>
+                            <br> <br>
+                            예금주 : 서주형
+                        </div><!-- //editor에서 뿌려지는 영역 -->
+                    </div>
+                </article>
+                <article>
+                    <header class="list_title">
+                        <span class="numbering"  title="순번">1</span>
+                        <h1 class="tit">제품문의</h1>
+                        <span class="status" data-type="answer_ok">답변완료</span>
+                    </header>
+                    <div class="list_contents">
+                        <div class="comment"><!-- editor에서 뿌려지는 영역 -->
+                            휴...<br>
+                            <br>
+                            국민  443101-01-118753 <br>
+                            우리 1005-402-148847 <br>
+                            신한 110-214-719112 <br>
+                            <br> <br>
+                            예금주 : 서주형
+                        </div><!-- //editor에서 뿌려지는 영역 -->
+                    </div>
+                </article>
+            </div>
+            <button type="button" class="btn_page_more">더보기</button>
         </div>
     </section>
 </div>
-<div class="bottom_section">
+<div class="bottom_section"><!-- include -->
     <p class="site_warnning">
         당사의 분석시스템은 누적패턴을 분석/필터링한 정보제공만을 목적으로 하며, <br>
         당첨확률 개선서비스가 아니므로 서비스 이용 과정에서 기대이익을 얻지 못하<br>
@@ -196,15 +291,9 @@
             </dd>
         </dl>
     </aside>
-</div>
-<script src="../resources/lib/jquery-1.12.4.min.js"></script>
-<script src="../resources/lib/swiper.min.js"></script>
-<script src="../resources/js/common-ui.min.js"></script>
-<!--<script> common-ui.js로 이동
-    var swiper = new Swiper('#gnb', {
-        slidesPerView: 'auto',
-        spaceBetween: 0
-    });
-</script>-->
+</div><!-- //include -->
+<script src="../../resources/lib/jquery-1.12.4.min.js"></script>
+<script src="../../resources/lib/swiper.min.js"></script>
+<script src="../../resources/js/common-ui.min.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ $header-height:88px;
   position: fixed;
   left:0;
   top:0;
-  z-index:20;
+  z-index:50;
   width:100%;
   background:#282564;
   height:$header-height;
@@ -195,8 +195,10 @@ $header-height:88px;
     }
     .mini_info{
       position: relative;
-      padding:0 90px 0 18px;
+      padding:0 0 0 0;
+      background: #f1f1f1;
       .desc{
+        padding-left:18px;
         height:55px;
         line-height:55px;
         color:$strong-color;
@@ -206,6 +208,7 @@ $header-height:88px;
         }
       }
       .my_coin{
+        padding-left:18px;
         height:55px;
         line-height:55px;
         font-size:$font16px;
@@ -238,6 +241,16 @@ $header-height:88px;
         &:focus{
           text-decoration: none;
         }
+      }
+      .tit{
+        text-align: center;
+        line-height:55px;
+        height:55px;
+        font:{
+          weight:$bold;
+          size:$font16px;
+        }
+        color:$sub-color
       }
     }
   }
@@ -300,6 +313,9 @@ $header-height:88px;
       text-align: center;
       font-size:$font15px;
       margin-bottom:18px;
+    }
+    &.join{
+      background: #fff;
     }
   }
   .btn_nav_close{
@@ -383,6 +399,7 @@ $header-height:88px;
   }
 }
 .bottom_util{
+  padding-bottom:55px;
   .btn_home_add{
     &:before{
       display: inline-block;
@@ -430,6 +447,10 @@ $header-height:88px;
     }
   }
   .week_lotto_info{
+    position: fixed;
+    left:0;
+    bottom:0;
+    z-index:20;
     overflow: hidden;
     background: #fff;
     display: table;
@@ -477,6 +498,11 @@ $header-height:88px;
     line-height:100%;
     margin-bottom:18px;
   }
+  & > .box_desc{
+    font-size:$font13px;
+    margin-bottom:20px;
+    letter-spacing: -1px;
+  }
   .box_title{
     font : {
       weight:500;
@@ -484,6 +510,18 @@ $header-height:88px;
     }
     color:$sub-color;
     margin-bottom:18px;
+    line-height:100%;
+    letter-spacing:-1px;
+  }
+  .block_title{
+    font : {
+      weight:500;
+      size:$font16px;
+    }
+    color:$sub-color;
+    padding-bottom:11px;
+    border-bottom:1px solid $border-base;
+    margin-bottom:15px;
     line-height:100%;
     letter-spacing:-1px;
   }
@@ -604,7 +642,7 @@ textarea{
   padding:10px;
 }
 select{
-  min-width:24.7%;
+  min-width:91px;
   width:auto;
   height:44px;
   padding:0 26px 0 10px;
@@ -634,10 +672,10 @@ select{
 
 /*input, selector, textares size*/ //todo 확인해서 추가
 $dataWidth: (
-  /*200: 200px,
-  300: 300px,
-  500: 500px,
-  100p : 100%*/
+  200: 200px,
+ /* 300: 300px,
+  500: 500px,*/
+  100p : 100%
 );
 @each $elemWidth, $value in $dataWidth {
   [data-width='#{$elemWidth}'] {
@@ -714,6 +752,8 @@ button{
 }
 
 .btn_wrap{
+
+  margin-top:15px; //todo 확인
   font-size:0;
   display:-webkit-box;
   -webkit-box-orient:horizontal;
@@ -803,7 +843,7 @@ button{
     }
   }
   td{
-    padding:7px 15px 7px 0;
+    padding:7px 0 7px 0;
     font-size:0;
     background: #fff;
     %elStyle{

@@ -248,6 +248,10 @@ var rtp = (function($){
         sideNavi.init();
         $(".accodian_list").length && toggleList.init(); //toggleList
         $(".file_upload").length && fileUpload.init(); //inputFile
+        var swiper = new Swiper('#gnb', {
+            slidesPerView: 'auto',
+            spaceBetween: 0
+        });
 
     });
 

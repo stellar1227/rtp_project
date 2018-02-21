@@ -229,3 +229,53 @@ input{
 	}
 }
 
+
+
+//  toggle title , cotents  todo ok
+[data-show="termsDetailWrap"]{
+	margin-top:20px;
+	border-top:1px solid $border-base;
+}
+[data-toggle] {
+	position:relative;
+	button {
+		width:100%;
+		text-align:left;
+	}
+
+	&.block_title {
+		padding:0;
+		margin-top:0;
+		margin-bottom:0;
+		button {
+			padding:12px 5px;
+		}
+	}
+
+	&:after {
+		display:block;content:"";
+		position:absolute;right:10px;top:9px;
+		width:33px;height:17px;
+		background:url("#{$content-img}ico_toggle.gif") 0 -31px no-repeat;
+		transition:background-position ease .2s;
+	}
+	&:hover:after {
+		background-position:0 0
+	}
+
+	&.open:after {
+		transform: rotate(180deg)
+	}
+}
+[data-toggle].open + [data-toggle-cont] {
+	display:block;
+	padding:10px 0;
+}
+
+[data-toggle-cont] {
+	display:none;
+	height:300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
