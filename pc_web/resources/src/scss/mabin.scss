@@ -1103,3 +1103,13 @@ input{
 		}
 	}
 }
+
+
+
+//[COMMENT] .btn_wrap_sns - 휴대폰 회원가입 추가
+.btn_wrap_sns {
+	[data-type="phone"] {
+		border:1px solid #ccc;
+		background:url('#{$common-img}bg_login_phone.png') no-repeat 0 0;
+	}
+}
