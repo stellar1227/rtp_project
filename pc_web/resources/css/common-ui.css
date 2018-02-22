@@ -1050,7 +1050,7 @@ input[data-align="right"] { text-align: right; }
 
 .page_title_banner[data-type~="desctype"] { padding-left: 80px; }
 
-.page_title_banner[data-type="stats_suggest"] { background-image: url("../img/content/banner_stats_suggest.png"); min-height: 165px; }
+.page_title_banner[data-type="stats_suggest"] { padding-right: 55px; background-image: url("../img/content/banner_stats_suggest.png"); min-height: 165px; }
 
 .page_title_banner[data-type="lotto_mix"] { background-position: 59px center; background-image: url("../img/content/banner_lotto_mix.png"); }
 

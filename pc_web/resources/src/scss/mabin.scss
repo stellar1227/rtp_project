@@ -325,6 +325,7 @@ input{
 		padding-left:80px;
 	}
 	&[data-type="stats_suggest"] {
+		padding-right:55px;
 		background-image:url("#{$content-img}banner_stats_suggest.png");
 		min-height:165px;
 		
