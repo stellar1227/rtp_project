@@ -140,167 +140,155 @@
         <div class="sub_title">
             <h3>로또 조합법 찾기</h3>
         </div>
-        <div class="box_wrap">
-            <div class="block_title">회원님께 딱 맞는 조합법을 찾아보세요!</div>
 
-            <div class="input_table">
+
+        <div class="box_wrap">
+
+
+            <p class="box_desc">
+선택하신 조합법에 따른 로또 번호가 추천되었습니다.<br> 
+추천받으신 번호는 <b data-color="red">마이페이지 &gt; 마이조합 관리</b>에 자동 저장됩니다.<br>
+아래 출력된 번호 중 원하는 번호를 선택 인쇄 또는 전체 인쇄 하실 수 있습니다.  
+            </p>
+
+            <div class="btn_wrap" data-align="center">
+                <button type="button" class="btn_strong">더 많은 번호 추천받기</button>
+            </div>
+
+          <div class="data_table">
                 <table>
+                    <caption>로또팡 조합기 결과</caption>
                     <colgroup>
-                        <col style="width:auto">
-                        <col style="width:35%">
+                        <col style="width:11%">
+                        <col style="width:14%">
+                        <col style="width:15%">
+                        <col style="width:auto%">
+                        <col style="width:auto%">
+                        <col style="width:auto%">
+                        <col style="width:auto%">
+                        <col style="width:auto%">
+                        <col style="width:auto%">
                     </colgroup>
-                    <caption>로또 조합법찾기</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">
+                                <div class="input_custom">
+                                    <input type="checkbox" id="all_chk" name="">
+                                    <label for="all_chk"><span class="blind">전체 선택</span></label>
+                                </div>
+                            </th>
+                            <th scope="col">no</th>
+                            <th scope="col"></th>
+                            <th scope="col">번호1</th>
+                            <th scope="col">번호2</th>
+                            <th scope="col">번호3</th>
+                            <th scope="col">번호4</th>
+                            <th scope="col">번호5</th>
+                            <th scope="col">번호6</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">예상번호는 몇 개인가요?</th>
+                        <tr class="divide">
                             <td>
-                                <select name="" title="번호갯수" data-width="100p">
-                                    <option value="7">7개</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">원하는 최소 당첨 보장 등수는</th>
-                            <td>
-                                <select name="" title="번호갯수" data-width="100p">
-                                    <option value="nothing">원하지 않음</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">시스템 예상번호 추가를 원하시나요?</th>
-                            <td>
-                                <div class="mix_t_radio">
-                                    <div class="input_custom">
-                                        <input type="radio" id="add_ok" name="add_num" checked >
-                                        <label for="add_ok"><span>네</span></label>
-                                    </div>
-                                    <div class="input_custom">
-                                        <input type="radio" id="add_no" name="add_num">
-                                        <label for="add_no"><span>아니오</span></label>
-                                    </div>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_1" name="">
+                                    <label for="mix_chk1_1"><span class="blind">1번용지 조합1 선택</span></label>
                                 </div>
                             </td>
+                            <td rowspan="5">1번 용지</td><!-- 마지막 rowspan에는 class=last_cell -->
+                            <td>조합 1</td>
+                            <td>13</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>32</td>
+                            <td>38</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_2" name="">
+                                    <label for="mix_chk1_2"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td>조합 2</td>
+                            <td>13</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>32</td>
+                            <td>38</td>
+                            <td>42</td>
+                        </tr>
+                        <tr class="divide">
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_3" name="">
+                                    <label for="mix_chk1_3"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td>조합 3</td>
+                            <td>13</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>32</td>
+                            <td>38</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_4" name="">
+                                    <label for="mix_chk1_4"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td>조합 4</td>
+                            <td>13</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>32</td>
+                            <td>38</td>
+                            <td>42</td>
+                        </tr>
+                        <tr class="divide">
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk1_5" name="">
+                                    <label for="mix_chk1_5"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td>조합 5</td>
+                            <td>13</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>32</td>
+                            <td>38</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="input_custom">
+                                    <input type="checkbox" id="mix_chk2_1" name="">
+                                    <label for="mix_chk2_1"><span class="blind">1번용지 조합1 선택</span></label>
+                                </div>
+                            </td>
+                            <td>2번 용지</td>
+                            <td>조합 1</td>
+                            <td>13</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>32</td>
+                            <td>38</td>
+                            <td>42</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="btn_wrap" data-align="center">
-                <button type="button" class="btn_strong">이 조건으로 조합법 찾기</button>
+                <a href="#" class="btn_primary">선택삭제</a>
             </div>
+        
         </div>
 
-        <div class="box_wrap">
-            <h3 class="block_title">
-                <span class="tit">세상의 모든 로또 조합법!</span>
-            </h3>
-            <ul class="lotto_mix_list">
-                <li>
-                    <div class="info">
-                        <span class="number_ribbons">
-                            <strong>5등</strong>보장
-                            <span>최소 5등 보장</span>
-                        </span>
-                        <p class="desc">
-                            <b>7개</b> 예상번호 중 당첨번호 <b>6개</b> 포함 시
-                        </p>
-                    </div>
-                    <span class="how_many">
-                        <strong>4</strong>
-                        생성
-                    </span>
-                    <span class="mix_go">
-                        <button type="button" class="btn_primary">조합<br>시작</button>
-                    </span>
-                </li>
-                <li>
-                    <div class="info">
-                        <span class="number_ribbons">
-                            <strong>1등</strong>
-                            보장
-                            <span>최대 1등, 최소 1등 보장</span>
-                        </span>
-                        <p class="desc">
-                            <b>7개</b> 예상번호 중 당첨번호 <b>6개</b> 포함 시
-                        </p>
-                    </div>
-                    <span class="how_many">
-                        <strong>7</strong>
-                        생성
-                    </span>
-                    <span class="mix_go">
-                        <button type="button" class="btn_primary">조합<br>시작</button>
-                    </span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="box_wrap">
-            <h3 class="block_title">
-                <span class="tit">회원님의 조건에 맞는 로또 조합법</span>
-            </h3>
-            <ul class="lotto_mix_list">
-                <li>
-                    <div class="info">
-                        <span class="number_ribbons">
-                            <strong>5등</strong>
-                            보장
-                            <span>최소 5등 보장</span>
-                        </span>
-                        <p class="desc">
-                            <b>7개</b> 예상번호 중 당첨번호 <b>6개</b> 포함 시
-                        </p>
-                    </div>
-                    <span class="how_many">
-                        <strong>4</strong>
-                        생성
-                    </span>
-                    <span class="mix_go">
-                        <button type="button" class="btn_primary">조합<br>시작</button>
-                    </span>
-                </li>
-                <li>
-                    <div class="info">
-                        <span class="number_ribbons">
-                            <strong>1등</strong>
-                            보장
-                            <span>최대 1등, 최소 1등 보장</span>
-                        </span>
-                        <p class="desc">
-                            <b>7개</b> 예상번호 중 당첨번호 <b>6개</b> 포함 시
-                        </p>
-                    </div>
-                    <span class="how_many">
-                        <strong>7</strong>
-                        생성
-                    </span>
-                    <span class="mix_go">
-                        <button type="button" class="btn_primary">조합<br>시작</button>
-                    </span>
-                </li>
-                <li>
-                    <div class="info">
-                        <span class="number_ribbons">
-                            <strong>5등</strong>
-                            보장
-                            <span>최소 5등 보장</span>
-                        </span>
-                        <p class="desc">
-                            <b>7개</b> 예상번호 중 당첨번호 <b>6개</b> 포함 시
-                        </p>
-                    </div>
-                    <span class="how_many">
-                        <strong>4</strong>
-                        생성
-                    </span>
-                    <span class="mix_go">
-                        <button type="button" class="btn_primary">조합<br>시작</button>
-                    </span>
-                </li>
-            </ul>
-
-        </div>
-    
 
     </section>
 </div>

@@ -997,6 +997,12 @@ input[data-align="right"] { text-align: right; }
 
 .mix_t_radio .input_custom:last-child { margin-right: 0; }
 
+.btn_top_wrap { margin-right: 0; margin-left: 0; margin-top: 0; }
+
+.btn_wrap + .data_table { margin-top: 15px; }
+
+.input_table td { height: 35px; }
+
 select { min-width: 0; border-radius: 0; }
 
 .lotto_mix_list { margin: 0; }

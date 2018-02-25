@@ -471,11 +471,29 @@ input{
 
 
 
-// [COMMENT] 모바일에서 간격조정 
+// [COMMENT] 이하 모바일에서 간격조정 
 .mix_t_radio .input_custom {
 	margin-right:15px;
 	&:last-child {margin-right:0;}
 }
+.btn_top_wrap {
+	margin : {
+		right:0;
+		left:0;
+		top:0;
+	}
+}
+.btn_wrap + .data_table {
+	margin-top:15px
+}
+
+.input_table {
+	td {
+		// [COMMENT]service_saju_mix.html - 성별 row 참고. td의 min-height 지정이 없어서 지정했습니다!
+		height:35px;
+	}
+}
+
 
 
 // [COMMENT] 모바일에서 select min-width 제거..'ㅅ'
@@ -560,7 +578,6 @@ select {
 			}
 		}
 	}
-	
 
 	
 }
