@@ -135,62 +135,251 @@ input{
 
 //stats_reemergence.html
 .ball_desc {
-	margin-right:25px;
-	margin-left:5px;
+
 	font-weight:$extra-bold;
-	&:last-child {margin-right:0;}
 }
 
 
 
-//page_title_banner - [COMMENT] 갑 : 임시
+//page_title_banner - [COMMENT] 미 : pc꺼 옮겨놨습니다. 이미지랑 사이즈, 디자인 조절 부탁합니다.
 .page_title_banner {
+	position:relative;
+	overflow:hidden;
 	margin-bottom: 35px;
 	margin-top:-1px;
-    border : {
-    	width: 1px 0;
-    	style: solid;
-    	color:#ebebeb transparent #c6c6c6;
-    }
+	border : {
+		width: 1px 0;
+		style: solid;
+		color:#ebebeb transparent #c6c6c6;
+	}
 
 	& > a {
 		display:block;
-	    height: 103px;
-	    padding-left: 390px;padding-top: 34px;
-	    margin-top:-1px;
-	    font-size: 22px;
+		height: 103px;
+		padding-left: 390px;padding-top: 34px;
+		margin-top:-1px;
+		font-size: 22px;
+		p {
+			margin-top: 8px;
+			font-size: 19px;
+			span {
+				font-size: 16px;
+				margin-left: 12px;
+				text-decoration: underline;
+				color: #5b5b5b;
+			}
+		}
 	}
 
-    letter-spacing: -2px;
+	letter-spacing: -2px;
 	background:#fbfbfb url("#{$content-img}banner_stats.png") no-repeat 160px 15px;
 
-	p {
-		margin-top: 8px;
-	    font-size: 19px;
-	    span {
-    	    font-size: 16px;
-		    margin-left: 12px;
-		    text-decoration: underline;
-		    color: #5b5b5b;
-	    }
-	}
 
 	strong {
-		font-size:24px;
+		font-size:1.1em;
 
 		span {
 			position: relative;top: -2px;
-		    font-size: 18px;
-		    margin: 5px;
+			font-size: 18px;
+			margin: 5px;
 			padding: 1px 11px 6px;
-		    border-radius: 50px;
-		    background-color: #18699b;
-		    letter-spacing: 0;
-		    color: #fff;
+			border-radius: 50px;
+			letter-spacing: 0;
+			background-color: #18699b;
+			color: #fff;
+		}
+	}
+
+	.sub_tit {
+		display:inline-block;
+		font-size:1.2em;
+		padding: 3px 17px 5px;
+		margin-bottom:17px;
+		border-radius: 50px;
+		background-color: #18699b;
+		color: #fff;
+	}
+
+	.sub_desc {
+		position:relative;
+		float:left;
+		margin-right:40px;
+		min-width:190px;
+		padding: 15px 28px 20px;
+		border-radius:100px;
+
+		font-size: 1.2em;
+		line-height: 1.5em;
+		box-shadow: 0px 5px 0px rgba(0,0,0,.08);
+		background-color: #305a97;
+		text-align: center;
+		color: #fff;
+
+		&:after {
+			content:"";
+			position:absolute;right:-20px;top:50%;
+			margin-top:-27px;
+			border : {
+				style:solid;
+				width:25px 0 25px 50px;
+				color:transparent transparent transparent #305a97;
+			}
+		}
+	}
+	.tit_area {
+		float:left;
+	}
+
+	.desc {
+		padding-left:7px;
+		font-size:1.1em;
+		line-height:1.3em;
+
+		p {
+			font:inherit;
+		}
+		.result {
+			margin-top:15px
+		}
+	}
+
+	.forms {
+		padding:0 5px 0;
+		margin-top:10px;
+	}
+
+	// 로또통계 비법자료 [COMMENT] 갑 : data-type 으로 각 서브 큰 줄기 나눠서 bg 이미지 바꾸고.. 등등 할 생각이옵니다.
+	&[data-type] {
+		padding:25px 0;
+		padding-left:240px;
+		background : {
+			image:none;
+			position:100px center;
+		}
+		letter-spacing:-1px;
+	}
+	&[data-type~="desctype"] {
+		// page_title_banner 공통배너 하단에 description 타입으로 붙는 banner
+		padding-left:80px;
+	}
+	&[data-type="stats_suggest"] {
+		padding-right:55px;
+		background-image:url("#{$content-img}banner_stats_suggest.png");
+		min-height:165px;
+
+	}
+	&[data-type="lotto_mix"] {
+		background : {
+			position:59px center;
+			image:url("#{$content-img}banner_lotto_mix.png");
+		}
+	}
+	&[data-type="fortune"] {
+		background : {
+			position:65px 60%;
+			image:url("#{$content-img}banner_fortune.png");
+		}
+	}
+
+	&[data-type="odd_analysis"] {
+		background : {
+			position:65px 60%;
+			image:url("#{$content-img}banner_odd_analysis.png");
+		}
+	}
+	&[data-type="mix_six"] {
+		padding-left:305px;
+		background : {
+			position:115px 60%;
+			// image:url("#{$content-img}banner_mix_six.png");
+		}
+	}
+	&[data-type="halogen_venus"] {
+		padding: {
+			left:370px;
+			bottom:45px;
+		}
+		background : {
+			position:95px 54%;
+			image:url("#{$content-img}banner_halogen_venus.png");
+		}
+	}
+	span[class^="ball_n"] {
+		letter-spacing:normal;
+	}
+
+
+
+
+	& + .page_title_banner {
+		box-shadow:0 4px 0px #fcfcfc;
+		.sub_tit {
+			margin-bottom:5px;
+			padding : {
+				top:0;bottom:0;
+				left:27px;
+			}
+			background:transparent url("#{$content-img}ico_desc_chk.png") 0 bottom no-repeat;
+			color:#333
+		}
+		margin-top:-36px;
+		background-color:#fff;
+	}
+}
+// graph_odd_even 홀짝 출현현황 그래프 - [COMMENT] 미 : pc꺼 옮겨놨습니다. 이미지랑 사이즈, 디자인 조절 부탁합니다.
+.graph_odd_even {
+	display:flex;
+	position:relative;
+	overflow:hidden;
+	width:358px;
+	margin:0 auto;
+	border-radius:20px;
+	border:1px solid #bbb;
+	background-color:#f9f9f9;
+
+	&:after {
+		display:block;content:"";
+		position:absolute;
+		left:0;right:0;top:0;bottom:0;
+		background:url("#{$content-img}bg_odd_even_graph.png") 0 center no-repeat;
+
+	}
+	[data-graph] {
+		flex:1;
+		position:relative;
+		height:26px;
+		font-size:0;
+		&:after {
+			display:inline-block;content:"";
+			position:absolute;top:0;bottom:0;
+		}
+	}
+
+	$dataGraphStack: (
+					1: 30px,
+					2: 60px,
+					3: 90px,
+					4: 120px,
+					5: 150%
+	);
+	@each $grapStack, $value in $dataGraphStack {
+		[data-count='#{$grapStack}']:after {
+			width:$value
+		}
+	}
+	[data-graph="odd"] {
+		&:after {
+			right:0;
+			background-image:linear-gradient(#ffdb74 30%, #fbba58 100%)
+		}
+	}
+	[data-graph="even"] {
+		&:after {
+			left:0;
+			background-image:linear-gradient(#517eb1 30%, #3c5d82 100%)
 		}
 	}
 }
-
 
 
 .data_table {

@@ -498,6 +498,11 @@ $header-height:88px;
     line-height:100%;
     margin-bottom:18px;
   }
+  & > .desc_primary{
+    font-size:$font15px;
+    line-height:140%;
+    margin-bottom:18px;
+  }
   & > .box_desc{
     font-size:$font13px;
     margin-bottom:20px;
@@ -922,6 +927,18 @@ button{
   }
 }
 .data_table{
+  &[data-font="small"]{
+    td{
+      font-size:$font13px;
+      padding-right:2px;
+      padding-left:2px;
+    }
+    th{
+      padding-right:2px;
+      padding-left:2px;
+      font-size:$font13px;
+    }
+  }
   & + &{
     margin-top:10px; //todo 나중에 확인
   }
