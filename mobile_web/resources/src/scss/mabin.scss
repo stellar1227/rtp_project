@@ -468,3 +468,99 @@ input{
 	overflow-y: auto;
 }
 
+
+
+
+// [COMMENT] 모바일에서 간격조정 
+.mix_t_radio .input_custom {
+	margin-right:15px;
+	&:last-child {margin-right:0;}
+}
+
+
+// [COMMENT] 모바일에서 select min-width 제거..'ㅅ'
+select {
+	min-width:0;
+	border-radius:0;
+}
+
+
+
+// [COMMENT] 로또 조합기 전체보기 service_mix_all_search.html
+.lotto_mix_list {
+	margin:0;
+
+	li {
+		height:5.6em;
+		border:0;
+		border-left:1px solid #e5e5e5;
+
+		.info, .how_many {
+			height:100%;
+			border: {
+				width:1px 0;
+				style:solid;
+				color:#e5e5e5;
+			}
+		}
+
+		.info {
+			width:66%;
+			box-sizing:border-box;
+			padding:0;
+			background-color:#fbfbfb;
+			vertical-align:top;
+
+			.number_ribbons {
+				display:block;
+				box-sizing:border-box;
+				width:100%;height:auto;
+				padding:10px 15px;
+				font-weight:$bold;
+				border-bottom:1px solid #e5e5e5;
+				background-color:#f3f6fb;
+				text-align:left;	
+
+				strong {
+					display:inline;
+					margin-bottom:0;padding-top:0;
+					font:inherit;
+				}
+
+				span {
+					font-weight:$normal;
+					font-size:.9em;
+					color:#7b8caf;
+				}
+			}
+
+			.desc {
+				padding:10px 0 10px 15px;
+				font-size:.95em;
+				letter-spacing:-1px;
+
+			}	
+		}
+
+
+		.how_many {
+			width:13.5%;
+			background-color:#fbfbfb;
+			border-width:1px;
+		}
+
+		.mix_go {
+			height:100%;
+			padding:0 0 0 10px;
+	
+			.btn_primary {
+				width:100%;min-width:0;
+				height:100%;
+				line-height:1.7em;
+			}
+		}
+	}
+	
+
+	
+}

@@ -993,4 +993,32 @@ input[data-align="right"] { text-align: right; }
 
 [data-toggle-cont] { display: none; height: 300px; overflow-x: hidden; overflow-y: auto; }
 
+.mix_t_radio .input_custom { margin-right: 15px; }
+
+.mix_t_radio .input_custom:last-child { margin-right: 0; }
+
+select { min-width: 0; border-radius: 0; }
+
+.lotto_mix_list { margin: 0; }
+
+.lotto_mix_list li { height: 5.6em; border: 0; border-left: 1px solid #e5e5e5; }
+
+.lotto_mix_list li .info, .lotto_mix_list li .how_many { height: 100%; border-width: 1px 0; border-style: solid; border-color: #e5e5e5; }
+
+.lotto_mix_list li .info { width: 66%; box-sizing: border-box; padding: 0; background-color: #fbfbfb; vertical-align: top; }
+
+.lotto_mix_list li .info .number_ribbons { display: block; box-sizing: border-box; width: 100%; height: auto; padding: 10px 15px; font-weight: 700; border-bottom: 1px solid #e5e5e5; background-color: #f3f6fb; text-align: left; }
+
+.lotto_mix_list li .info .number_ribbons strong { display: inline; margin-bottom: 0; padding-top: 0; font: inherit; }
+
+.lotto_mix_list li .info .number_ribbons span { font-weight: 400; font-size: .9em; color: #7b8caf; }
+
+.lotto_mix_list li .info .desc { padding: 10px 0 10px 15px; font-size: .95em; letter-spacing: -1px; }
+
+.lotto_mix_list li .how_many { width: 13.5%; background-color: #fbfbfb; border-width: 1px; }
+
+.lotto_mix_list li .mix_go { height: 100%; padding: 0 0 0 10px; }
+
+.lotto_mix_list li .mix_go .btn_primary { width: 100%; min-width: 0; height: 100%; line-height: 1.7em; }
+
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
