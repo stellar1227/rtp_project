@@ -1021,25 +1021,37 @@ button{
   }
 }
 
-/*board*/ //todo 간격확인
+/*board*/
 .board_table{
   thead{
-    th{
+    th {
+      position:relative;
       border-bottom:1px solid $border-base;
       padding:14px 0;
       font-size:$font15px;
       font-weight:$bold;
       background: $bg-light;
+      &:first-child:after {display:none}
+      &:after {
+        display:block;content:"";
+        position:absolute;left:0;top:50%;
+        width:1px;height:16px;
+        margin-top:-6px;
+        background-color:#9e9e9e;
+      }
     }
   }
   tbody{
     td{
-      padding:12px 0;
+      padding:15px 0;
       border-bottom:1px solid $border-base;
       text-align: center;
       word-break:break-all;
       &[data-align="left"]{
         text-align: left;
+      }
+      &.no {
+        font-weight:$bold;
       }
       a.link{
         -webkit-box-sizing: border-box;
@@ -1050,82 +1062,69 @@ button{
         overflow:hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        /*padding-right:20px;*/
       }
       .edit_contents{
         text-align: left;
-        /*padding:20px 40px;
-        min-height: 300px;*/
+        padding:20px 15px;
+        min-height: 150px;
       }
     }
   }
-}
-.mini_board_list{//todo 간격확인
-  /*margin-top:70px;*/
-  border:{
-    width: 1px 0;
-    style : solid;
-    color :$border-base
-  }
-  li{
-   /* padding:13px 30px;*/
-    overflow: hidden;
-    word-break:break-all;
-    &.prev{
-      border-bottom:1px solid $border-base;
 
-      .dir{
-        &:after{
-          /*top:3px;*/
-          border:{
-            width : 5px;
-            style :solid;
-            color : transparent transparent $border-darken transparent;
-          }
+}
+.mini_board_list { //todo 간격확인
+  margin-top: -2px;
+  background-color: #fff;
+  border: {
+    width: 1px 0;
+    style: solid;
+    color: $border-base
+  }
+  li {
+    padding: 13px 0;
+    overflow: hidden;
+    word-break: break-all;
+    &.prev {
+      border-bottom: 1px solid $border-base;
+    }
+    &.next {
+      .dir {
+        &:after {
+          transform: rotate(180deg)
         }
       }
     }
-    &.next{
-      .dir{
-        &:after{
-          /*top:8px;*/
-          border:{
-            width : 5px;
-            style :solid;
-            color : $border-darken transparent transparent transparent;
-          }
-        }
-      }
-    }
-    .dir{
+    .dir {
+      @include boxSizing();
       position: relative;
-      float:left;
-      /*padding-right:40px;*/
-      &:after{
-        position: absolute;
-        /*right:15px;*/
-        content:"";
-        width:0;
-        height:0;
-      }
+      float: left;
+      width:15%;
+      padding-left:10px;
+/*
+      &:after {
+        display: block; content: "";
+        width: 15px; height: 8px;
+        position: absolute; top: 50%; left: -5px;
+        margin-top: -4px;
+        background: url("#{$content-img}ico_board_page.gif") no-repeat 0 0;
+      }*/
     }
-    .tit{
-      float:left;
-      /*width:720px;*/
+    .tit {
+      float: left;
+      width: 85%;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
     }
-    a.tit{
-
+    a.tit {
     }
-    span.tit{
-      color:$light-color
+    span.tit {
+      color: $light-color
     }
   }
 }
 
-/*tab*/ //todo 디자인변경
+/*tab*/
 .tab{
   border-bottom:1px solid $strong-color;
   height:43px;
