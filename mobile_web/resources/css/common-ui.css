@@ -55,7 +55,7 @@ textarea { font-family: "Noto Sans KR", sans-serif; font-size: 14px; font-weight
 
 #skipnavi { position: absolute; left: -9999px; width: 0; height: 0; }
 
-caption { position: absolute; left: -9999px; width: 0; height: 0; }
+caption { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; }
 
 /*style.css*/
 /*layout*/

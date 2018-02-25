@@ -65,5 +65,5 @@ textarea{
   @include blind(absolute);
 }
 caption{
-  @include blind(absolute);
+  @include blind(indent);
 }
