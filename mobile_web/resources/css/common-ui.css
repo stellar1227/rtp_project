@@ -672,11 +672,6 @@ span.ball_n40th { background: #58ca7b; }
 
 .main #footer .inner_footer .footer_logo { display: block; position: absolute; right: 0; top: 60px; }
 
-/*한눈에 보는테이블*/
-.wide_table { margin: 0 60px; height: 500px; overflow: auto; }
-
-.wide_table .data_table { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 400%; margin: 0; }
-
 /*조합기 전체보기*/
 .input_table.banner_type { overflow: hidden; }
 
@@ -833,6 +828,13 @@ select + .mix_t_radio { margin-left: 15px; }
 
 /*각페이지별 레이어*/
 .charge_layer { padding-bottom: 30px; }
+
+/*로또용어정리*/
+.lotto_word { border-top: 1px solid #e5e5e5; }
+
+.lotto_word article .list_contents { padding-left: 15px; padding-right: 15px; }
+
+.lotto_word article .list_title { padding-left: 15px; padding-right: 15px; }
 
 input[data-align="center"] { text-align: center; }
 

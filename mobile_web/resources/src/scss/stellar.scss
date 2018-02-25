@@ -81,17 +81,7 @@
   }
 }
 
-/*한눈에 보는테이블*/
-.wide_table{
-  margin:0 60px;
-  height:500px;
-  overflow:auto;
-  .data_table{
-    @include boxSizing();
-    width:400%;
-    margin:0;
-  }
-}
+
 
 /*조합기 전체보기*/
 .input_table{
@@ -525,4 +515,20 @@
 /*각페이지별 레이어*/ //ok
 .charge_layer{
   padding-bottom:30px;
+}
+
+/*로또용어정리*/
+.lotto_word{
+  border-top:1px solid $border-base;
+  article{
+
+    .list_contents{
+      padding-left:15px;
+      padding-right:15px;
+    }
+    .list_title{
+      padding-left:15px;
+      padding-right:15px;
+    }
+  }
 }
