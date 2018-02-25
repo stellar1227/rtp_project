@@ -333,14 +333,14 @@ $header-height:88px;
 #container{
   @include boxSizing();
   min-height:100%;
-  padding:$header-height 0 388px 0;
+  padding:$header-height 0 304px 0;
 }
 #content{
 
 }
 .bottom_section{
-  height:388px;
-  margin-top:-388px;
+  height:304px;
+  margin-top:-304px;
 }
 #footer{
   position: relative;
@@ -748,6 +748,19 @@ button{
     &:hover{
       background:$btn-disabled;
     }
+  }
+}
+/*더보기버튼*/
+.btn_page_more{
+  @include button(100%,#fff,44px,$font14px,$base-color);
+  &:after{
+    content:"";
+    display: inline-block;
+    width:12px;
+    height:7px;
+    background:url('#{$common-img}btn_data_more.png') no-repeat 0 0;
+    background-size:12px 7px;
+    margin-left:9px;
   }
 }
 

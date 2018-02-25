@@ -165,9 +165,9 @@ caption { position: absolute; left: -9999px; width: 0; height: 0; }
 
 .side_menu_section .btn_nav_close { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; position: absolute; right: 0; top: 0; z-index: 11; width: 55px; height: 55px; background: url("../img/common/btn_nav_close.png") no-repeat 50% 50%; background-size: 18px auto; }
 
-#container { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-height: 100%; padding: 88px 0 388px 0; }
+#container { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-height: 100%; padding: 88px 0 304px 0; }
 
-.bottom_section { height: 388px; margin-top: -388px; }
+.bottom_section { height: 304px; margin-top: -304px; }
 
 #footer { position: relative; height: 155px; z-index: 10; background: #dfdfe0; text-align: center; }
 
@@ -327,6 +327,13 @@ select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f
 button[disabled] { background: #b8b8b8; }
 
 button[disabled]:hover { background: #b8b8b8; }
+
+/*더보기버튼*/
+.btn_page_more { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; background: #fff; height: 44px; line-height: 44px; font-size: 1rem; color: #555; text-align: center; }
+
+.btn_page_more:focus { background: #cccccc; }
+
+.btn_page_more:after { content: ""; display: inline-block; width: 12px; height: 7px; background: url("../img/common/btn_data_more.png") no-repeat 0 0; background-size: 12px 7px; margin-left: 9px; }
 
 .btn_wrap { margin-top: 15px; font-size: 0; display: -webkit-box; -webkit-box-orient: horizontal; display: flex; }
 
