@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 .input_custom input[type='checkbox'] + label:before, .input_custom input[type='radio'] + label:before { background: url("../img/common/ico_form_sprite.png") no-repeat; background-size: 85px auto; }
 
-input[type="text"], input[type="password"], textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /*min-width:53%;*/ height: 44px; line-height: 44px; padding: 0 10px; border-style: solid; border-width: 1px; font-size: 1rem; border-color: #ccc; background: #fff; color: #555; }
+input[type="text"], input[type="password"], textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /*min-width:53%;*/ height: 44px; line-height: 44px; padding: 0 10px; border-style: solid; border-width: 1px; border-radius: 0; font-size: 1rem; border-color: #ccc; background: #fff; color: #555; -webkit-appearance: none; }
 
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus { border-color: #528dff; outline: 0; }
 
@@ -915,51 +915,15 @@ input[data-align="right"] { text-align: right; }
 
 .ball_desc { font-weight: 800; }
 
-.page_title_banner { position: relative; overflow: hidden; margin-bottom: 35px; margin-top: -1px; border-width: 1px 0; border-style: solid; border-color: #ebebeb transparent #c6c6c6; letter-spacing: -2px; background: #fbfbfb url("../img/content/banner_stats.png") no-repeat 160px 15px; }
+.page_title_banner { position: relative; overflow: hidden; padding: 0 15px 18px; margin-bottom: 35px; border-width: 0 1px 1px; border-style: solid; border-color: #ccc; background-color: #fafafa; text-align: center; border-radius: 6px; box-shadow: 0 3px #f3f3f3; }
 
-.page_title_banner > a { display: block; height: 103px; padding-left: 390px; padding-top: 34px; margin-top: -1px; font-size: 22px; }
+.page_title_banner:after, .page_title_banner:before { display: block; content: ""; height: 5px; position: absolute; top: 0; }
 
-.page_title_banner > a p { margin-top: 8px; font-size: 19px; }
+.page_title_banner:before { left: 0; right: 66.6%; background-color: #eb7767; }
 
-.page_title_banner > a p span { font-size: 16px; margin-left: 12px; text-decoration: underline; color: #5b5b5b; }
+.page_title_banner:after { left: 66.6%; right: 0; background-color: #7cb0dd; }
 
-.page_title_banner strong { font-size: 1.1em; }
-
-.page_title_banner strong span { position: relative; top: -2px; font-size: 18px; margin: 5px; padding: 1px 11px 6px; border-radius: 50px; letter-spacing: 0; background-color: #18699b; color: #fff; }
-
-.page_title_banner .sub_tit { display: inline-block; font-size: 1.2em; padding: 3px 17px 5px; margin-bottom: 17px; border-radius: 50px; background-color: #18699b; color: #fff; }
-
-.page_title_banner .sub_desc { position: relative; float: left; margin-right: 40px; min-width: 190px; padding: 15px 28px 20px; border-radius: 100px; font-size: 1.2em; line-height: 1.5em; box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.08); background-color: #305a97; text-align: center; color: #fff; }
-
-.page_title_banner .sub_desc:after { content: ""; position: absolute; right: -20px; top: 50%; margin-top: -27px; border-style: solid; border-width: 25px 0 25px 50px; border-color: transparent transparent transparent #305a97; }
-
-.page_title_banner .tit_area { float: left; }
-
-.page_title_banner .desc { padding-left: 7px; font-size: 1.1em; line-height: 1.3em; }
-
-.page_title_banner .desc p { font: inherit; }
-
-.page_title_banner .desc .result { margin-top: 15px; }
-
-.page_title_banner .forms { padding: 0 5px 0; margin-top: 10px; }
-
-.page_title_banner[data-type] { padding: 25px 0; padding-left: 240px; background-image: none; background-position: 100px center; letter-spacing: -1px; }
-
-.page_title_banner[data-type~="desctype"] { padding-left: 80px; }
-
-.page_title_banner[data-type="stats_suggest"] { padding-right: 55px; background-image: url("../img/content/banner_stats_suggest.png"); min-height: 165px; }
-
-.page_title_banner[data-type="lotto_mix"] { background-position: 59px center; background-image: url("../img/content/banner_lotto_mix.png"); }
-
-.page_title_banner[data-type="fortune"] { background-position: 65px 60%; background-image: url("../img/content/banner_fortune.png"); }
-
-.page_title_banner[data-type="odd_analysis"] { background-position: 65px 60%; background-image: url("../img/content/banner_odd_analysis.png"); }
-
-.page_title_banner[data-type="mix_six"] { padding-left: 305px; background-position: 115px 60%; }
-
-.page_title_banner[data-type="halogen_venus"] { padding-left: 370px; padding-bottom: 45px; background-position: 95px 54%; background-image: url("../img/content/banner_halogen_venus.png"); }
-
-.page_title_banner span[class^="ball_n"] { letter-spacing: normal; }
+.page_title_banner .sub_tit, .page_title_banner .sub_desc { display: block; margin: 0 -15px 17px; padding: 17px 40px 14px; border-bottom: 1px solid #192243; border-top: 5px solid #f8b623; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); font-size: 1.12em; font-weight: 400; background-color: #50597b; line-height: 1.3em; text-align: center; color: #fff; }
 
 .page_title_banner + .page_title_banner { box-shadow: 0 4px 0px #fcfcfc; margin-top: -36px; background-color: #fff; }
 
@@ -989,13 +953,15 @@ input[data-align="right"] { text-align: right; }
 
 .data_table tbody tr td[data-bg="diff"] { background-color: #ffff99; font-weight: 700; color: #e10200; }
 
-.data_table tbody tr td [data-sign] { display: inline-block; width: 2em; height: 2em; font-weight: 700; border-radius: 50px; line-height: 1.8em; color: #fff; }
+.data_table tbody tr td [data-sign] { display: inline-block; width: 2em; height: 2em; font-size: 1.25em; font-weight: 700; border-radius: 50px; line-height: 2em; color: #fff; }
 
-.data_table tbody tr td [data-sign="big"] { background-color: #6196d4; text-indent: 2px; }
+.data_table tbody tr td [data-sign="big"] { background-color: #4395f7; text-indent: 2px; }
 
-.data_table tbody tr td [data-sign="small"] { background-color: #ffc500; text-indent: -2px; }
+.data_table tbody tr td [data-sign="small"] { background-color: #ffbb23; text-indent: -2px; }
 
 .data_table tbody tr td [data-sign="equal"] { background-color: #949494; }
+
+.data_table .b_arr { display: inline-block; width: 1em; height: 1.5em; margin: 0 -2px; background: url("../img/content/ico_next_ball.png") 0 0 no-repeat; background-size: auto 100%; text-indent: -1000px; vertical-align: middle; }
 
 [data-show="termsDetailWrap"] { margin-top: 20px; border-top: 1px solid #e5e5e5; }
 

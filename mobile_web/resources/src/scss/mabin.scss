@@ -173,17 +173,12 @@ input{
 	}
 
 
-	.sub_tit {
-		display:inline-block;
-		font-size:1em;
-		margin-bottom:17px;
-		color: #000e43;
-	}
 
-	.sub_desc {
+
+	.sub_tit,.sub_desc {
 		display:block;
 		margin:0 -15px 17px;
-		padding:17px 0 14px;
+		padding:17px 40px 14px;
 		border-bottom:1px solid #192243;
 		border-top:5px solid #f8b623;
 		box-shadow:0 0 5px rgba(0,0,0,.5);
@@ -288,25 +283,38 @@ input{
 		[data-sign] {
 			display:inline-block;
 			width:2em;height:2em;
-			font-weight:$bold;
+			font: {
+				size:1.25em;
+				weight:$bold;
+			}
 			border-radius:50px;
-			line-height:1.8em;
+			line-height:2em;
 			color:#fff;
 		} 
 
 		[data-sign="big"] {
-			background-color:#6196d4;
+			background-color:#4395f7;
 			text-indent:2px;
 		}
 
 		[data-sign="small"] {
-			background-color:#ffc500;
+			background-color:#ffbb23;
 			text-indent:-2px;
 		}
 
 		[data-sign="equal"] {
 			background-color:#949494;
 		}
+	}
+
+	.b_arr {
+		display:inline-block;
+		width:1em;height:1.5em;
+		margin:0 -2px;
+		background:url("#{$content-img}ico_next_ball.png") 0 0 no-repeat;
+		background-size:auto 100%;
+		text-indent:-1000px;
+		vertical-align:middle;
 	}
 }
 
