@@ -532,3 +532,15 @@
     }
   }
 }
+
+/*연금복권*/
+.title_plus_desc{
+  padding-top:30px;
+  margin-bottom:15px;
+  .box_title{
+    margin-bottom:10px;
+  }
+  .desc_primary{
+    font-size:$font13px;
+  }
+}

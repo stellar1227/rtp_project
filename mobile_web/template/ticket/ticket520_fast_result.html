@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>로그인 |로또팡</title>
+    <title>연금복권 빠른 당첨조회 | 로또팡</title>
     <script src="../../resources/lib/swiper.min.css"></script>
     <link rel="stylesheet" href="../../resources/css/common-ui.css">
 </head>
@@ -84,32 +84,51 @@
     <div class="side_wrap" id="sideMenu">
         <section class="side_menu_section">
             <h2 class="blind">사이드메뉴영역</h2>
-            <div class="login_before_sec"><!-- 로그인 전 -->
+            <div class="login_after_sec"><!--  로그인 후 -->
                 <div class="head_info">
-                    <a href="#" class="login_status">로그인 해주세요</a>
+                    <a href="#" class="login_status">로또팡 아이디 <span>님</span></a>
                 </div>
                 <div class="mini_info">
-                    <p class="desc">로또 예상번호는 <b>로또팡!!</b></p>
-                    <a href="#" class="link_btn">회원가입</a>
+                    <p class="my_coin">
+                        <span class="name">MY 코인</span>
+                        <span class="money">500원</span>
+                    </p>
+                    <button type="button" class="link_btn">로그아웃</button>
                 </div>
+                <div class="box_wrap"><!-- 이용권 구매전 -->
+                    <strong class="my_fee">무료회원</strong>
+                    <p class="terms">자유이용권을 구매해주세요.</p>
+                    <div class="btn_wrap" data-align="center">
+                        <a href="#" class="btn_link">자유이용권 구매</a>
+                    </div>
+                </div><!-- //이용권 구매전 -->
+                <div class="box_wrap"><!-- 이용권 구매후 -->
+                    <strong class="my_fee">3개월 자유이용권</strong>
+                    <p class="terms">2017.10.19 ~ 2018.01.18 (30일 남음)</p>
+                    <div class="btn_wrap" data-align="center">
+                        <a href="#" class="btn_link">로또팡 로또 조합기</a>
+                    </div>
+                </div><!-- //이용권 구매후 -->
                 <div class="box_wrap">
-                    <p class="desc">복잡한 회원가입 없이 빠르게 로그인!</p>
-                    <ul class="sns_login">
-                        <li class="login_naver"><a href="#">네이버 로그인</a></li>
-                        <li class="login_google"><a href="#">Google 로그인</a></li>
-                        <li class="login_facebook"><a href="#">Facebook 로그인</a></li>
-                        <li class="login_kakao"><a href="#">kakao 로그인</a></li>
-                        <li class="login_phone"><a href="#">휴대폰 번호 로그인</a></li>
+                    <h3 class="box_title">마이페이지</h3>
+                    <ul class="link_list">
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">마이조합 관리</a></li>
+                        <li><a href="#">자유이용권 구매</a></li>
+                        <li><a href="#">쿠폰 결제하기</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">내 정보</a></li>
                     </ul>
                 </div>
                 <div class="box_wrap">
-                    <p class="desc">가입했는지 기억이 안 난다면?</p>
-                    <div class="btn_wrap" data-align="center">
-                        <a href="" class="btn_link link_account_find">가입 계정 찾기</a>
-                    </div>
+                    <h3 class="box_title">고객센터</h3>
+                    <ul class="link_list">
+                        <li><a href="#">1:1 고객센터</a></li>
+                        <li><a href="#">자주하는 질문 및 답변</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
                 </div>
-            </div><!-- //로그인 전 -->
-
+            </div><!-- //로그인 후 -->
             <button type="button" class="btn_nav_close">닫기</button>
         </section>
     </div>
@@ -117,14 +136,49 @@
 </header>
 <div id="container">
     <section id="content">
-        <h2 class="page_title">로또 통계자료 전체보기</h2>
-        <div class="sub_title">
-            <h3>당첨번호 재출현 주기분석</h3>
-            <a href="#" class="prev_menu">이전메뉴</a><!-- 통계자료, 비법자료에서만 있는 링크 -->
-            <a href="#" class="next_menu">다음메뉴</a><!-- 통계자료, 비법자료에서만 있는 링크 -->
-        </div>
+        <h2 class="page_title">연금복권 빠른 당첨조회</h2>
         <div class="box_wrap">
-            <div class="box_title">제목제목</div>
+            <div class="box_title">연금복권 당첨번호 확인, 회차별로 당첨 확인 가능!</div>
+            <div class="input_table"><!-- input_table -->
+                <table>
+                    <caption>연금복권 정보입력</caption>
+                    <colgroup>
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <select name="" title="연금복권 회차 선택" id="ticketTurn">
+                                <option value="">310회차 당첨 확인</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <input type="text" id="ticketTurnTeam" data-width="35">
+                            <label for="ticketTurnTeam" class="bars">조</label>
+
+                            <input type="text" id="" data-width="35">
+                            <input type="text" id="" data-width="35">
+                            <input type="text" id="" data-width="35">
+                            <input type="text" id="" data-width="35">
+                            <input type="text" id="" data-width="35">
+                            <input type="text" id="" data-width="35">
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div><!-- input_table -->
+            <div class="btn_wrap" data-align="center">
+                <button type="button" class="btn_strong">조회</button>
+            </div>
+            <ul class="list_primary">
+                <li>입력한 번호를 기준으로 +1. -1씩 총 10개 조합을 추가로 당첨 확인이 가능합니다.</li>
+                <li>복권방을 비롯한 연금복권 판매점은 현 페이지를 즐겨찾기 후 사용하시면 편리합니다.</li>
+            </ul>
         </div>
     </section>
 </div>
@@ -175,6 +229,11 @@
 <script src="../../resources/lib/jquery-1.12.4.min.js"></script>
 <script src="../../resources/lib/swiper.min.js"></script>
 <script src="../../resources/js/common-ui.min.js"></script>
-
+<!--<script> common-ui.js로 이동
+    var swiper = new Swiper('#gnb', {
+        slidesPerView: 'auto',
+        spaceBetween: 0
+    });
+</script>-->
 </body>
 </html>

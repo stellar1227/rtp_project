@@ -61,7 +61,7 @@
 @mixin inputStyle($type){
   @if $type == default{
     @include boxSizing();
-    min-width:53%;
+    /*min-width:53%;*/
     height:44px;
     line-height:44px;
     padding:0 10px;

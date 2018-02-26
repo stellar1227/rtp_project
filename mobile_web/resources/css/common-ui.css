@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 .input_custom input[type='checkbox'] + label:before, .input_custom input[type='radio'] + label:before { background: url("../img/common/ico_form_sprite.png") no-repeat; background-size: 85px auto; }
 
-input[type="text"], input[type="password"], textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; min-width: 53%; height: 44px; line-height: 44px; padding: 0 10px; border-style: solid; border-width: 1px; font-size: 1rem; border-color: #ccc; background: #fff; color: #555; }
+input[type="text"], input[type="password"], textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /*min-width:53%;*/ height: 44px; line-height: 44px; padding: 0 10px; border-style: solid; border-width: 1px; font-size: 1rem; border-color: #ccc; background: #fff; color: #555; }
 
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus { border-color: #528dff; outline: 0; }
 
@@ -157,6 +157,14 @@ caption { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; 
 
 .side_menu_section .login_before_sec .sns_login li.login_kakao a { background-image: url("../img/common/bg_login_kakao.png"); background-size: auto 23px; background-position: 10px 50%; }
 
+.side_menu_section .login_before_sec .sns_login li.login_kakao a { color: #555; }
+
+.side_menu_section .login_before_sec .sns_login li.login_phone { background: #fff; border: 1px solid #ccc; }
+
+.side_menu_section .login_before_sec .sns_login li.login_phone a { background-image: url("../img/common/bg_login_phone.png"); background-size: auto 23px; background-position: 10px 50%; }
+
+.side_menu_section .login_before_sec .sns_login li.login_phone a { color: #555; }
+
 .side_menu_section .login_after_sec .my_fee { display: block; text-align: center; margin-bottom: 5px; letter-spacing: -1px; font-size: 1.15rem; font-weight: 700; color: #6998f4; }
 
 .side_menu_section .login_after_sec .terms { text-align: center; font-size: 1.07rem; margin-bottom: 18px; }
@@ -292,6 +300,8 @@ select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f
 
 /*input, selector, textares size*/
 [data-width='200'] { width: 200px; }
+
+[data-width='35'] { width: 35px; }
 
 [data-width='100p'] { width: 100%; }
 
@@ -637,6 +647,13 @@ span.ball_n40th { background: #58ca7b; }
 
 .common_layer .btn_layer_close { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; position: absolute; top: -40px; right: 0; width: 31px; height: 31px; background: url("../img/common/btn_layer_close.png") no-repeat 0 0; background-size: 31px auto; }
 
+/*블릿 리스트*/
+.list_primary { padding: 18px 15px; margin-top: 30px; border-style: dashed; border-width: 1px 0; border-color: #ddd; background-color: #fcfcfc; }
+
+.list_primary li { padding: 5px 0 6px; }
+
+.list_primary li:before { display: inline-block; content: "\2022"; margin-top: -8px; margin-right: 10px; font-size: 20px; line-height: 1.1em; vertical-align: middle; color: #9ea8b9; }
+
 /*main*/
 .main #container { padding-bottom: 223px; }
 
@@ -835,6 +852,13 @@ select + .mix_t_radio { margin-left: 15px; }
 .lotto_word article .list_contents { padding-left: 15px; padding-right: 15px; }
 
 .lotto_word article .list_title { padding-left: 15px; padding-right: 15px; }
+
+/*연금복권*/
+.title_plus_desc { padding-top: 30px; margin-bottom: 15px; }
+
+.title_plus_desc .box_title { margin-bottom: 10px; }
+
+.title_plus_desc .desc_primary { font-size: 0.92rem; }
 
 input[data-align="center"] { text-align: center; }
 
