@@ -139,6 +139,9 @@ input{
 	font-weight:$extra-bold;
 }
 
+.box_wrap {
+	font-size:1rem;
+}
 
 
 //page_title_banner 
@@ -147,6 +150,7 @@ input{
 	overflow:hidden;
 	padding:0 15px 18px;
 	margin-bottom: 35px;
+	font-size:1rem;
 	border: {
 		width:0 1px 1px;
 		style: solid;
@@ -173,6 +177,16 @@ input{
 	}
 
 
+	.keyword {
+		display: inline-block;
+	    padding: 3px 13px 3px 11px;
+	    margin-left:5px;
+	    border-radius: 30px;
+	    letter-spacing: -1px;
+		background-color:#eb6555;
+		color:#fff;
+	}
+
 
 
 	.sub_tit,.sub_desc {
@@ -183,7 +197,7 @@ input{
 		border-top:5px solid #f8b623;
 		box-shadow:0 0 5px rgba(0,0,0,.5);
 		font: {
-			size:1.12em;
+			size:1.12rem;
 			weight:$normal;
 		};
 
@@ -191,11 +205,20 @@ input{
 		line-height:1.3em;
 		text-align: center;
 		color: #fff;
-
-		
 	}
 
+	.desc {
+		font-size:1.07rem;
+		> a {
+			font-size:1.05rem;
+			.link_fake {
+				padding-left:5px;
+				text-decoration:underline;
+				color:#6599ff;
+			}
 
+		}
+	}
 
 
 	& + .page_title_banner {
@@ -212,7 +235,24 @@ input{
 		margin-top:-36px;
 		background-color:#fff;
 	}
+
+	&[data-type="banner"] {
+		.sub_tit {
+			font-size:1.3em;
+		}
+	}
+	&[data-type="halogen_venus"] {
+		.desc {
+			padding-top:193px;
+			background:url("#{$content-img}banner_halogen_venus.png") center 0 no-repeat;
+		}
+		
+	}
 }
+
+
+
+
 // graph_odd_even 홀짝 출현현황 그래프 - [COMMENT] 미 : pc꺼 옮겨놨습니다. 이미지랑 사이즈, 디자인 조절 부탁합니다.
 .graph_odd_even {
 	display:flex;
@@ -535,3 +575,122 @@ select {
 		}
 	}
 }
+
+// list_all_item - 로또 통계/비법자료 전체보기
+.list_all_item {
+
+	li {
+		display:table;
+		width:100%;	
+		position:relative;
+		padding-bottom:20px;
+		margin-bottom:20px;
+		border-bottom:1px solid #e7e7e7;
+		cursor:pointer;
+		
+		&:after {
+			display:block;content:"";
+			position:absolute;right:10px;top:50%;
+			width:19px;height:35px;
+			margin-top:-27.5px;
+			background:url("#{$content-img}ico_all_more.gif") -31px 0 no-repeat;
+			transition:background-position ease .2s;
+		}
+
+		&:hover:after {
+			background-position:0 0;
+		}
+		&:hover a {
+			text-decoration:underline;
+
+		}
+			
+
+		.img,.desc {
+			display:table-cell;
+		}
+		.img {
+			overflow:hidden;
+			width:110px;height:100px;
+			border:1px solid #ddd;
+			a {
+				display:block;
+				height:100%;
+			}
+			img {
+				max-width:100%;
+			}
+		}
+		.desc {
+			padding: {
+				left:15px;
+			}
+			strong {
+				display:block;
+				margin-bottom:8px;
+			}
+			a {
+				display:block;
+			}
+			.tip {
+				padding : {
+					left:28px;
+					top:8px;
+				}
+			    margin-top: 10px;
+			    border-top: 1px dashed #dfdede;
+				background:url("#{$content-img}ico_all_tip.png") 0 8px no-repeat;
+			    color: #006d56;
+			}
+		}
+	}
+}
+
+
+
+
+// list_all_keyitem - 임시
+.list_all_keyitem {
+	display:flex;
+	margin-bottom:40px;
+	border : {
+		style:solid;
+		width:1px;
+		color:#e6e6e6;
+		radius:4px;
+	}
+	
+	li {
+		flex:1;
+		padding:27px 0 19px;
+		border-left:1px solid #f2f2f2;
+		text-align:center;
+		color:#555;
+
+		&:first-child {
+			border-left:0;
+		}
+		&:before {
+			display:block;content:"";
+			width:80px;height:43px;
+			margin:0 auto 10px;
+			//background:url("#{$content-img}ico_all_keyitem.png") no-repeat 0 0;
+		}
+		&[data-icon=type1]:before{background-position:12px 0;}
+		&[data-icon=type2]:before{background-position:-84px 0;}
+		&[data-icon=type3]:before{background-position:-188px 0;}
+		&[data-icon=type4]:before{width:105px;background-position:-303px 0;}
+		&[data-icon=type5]:before{background-position:-432px 0;}
+
+		p {line-height:150%}
+	}
+}
+
+
+//[COMMENT] 스크롤링 되었을때 하단 Fixed 상태에서 다른 컨텐츠랑 오버랩될때 구분주려고 추가
+.week_lotto_info {
+	box-shadow:0 0 3px rgba(0,0,0,.3)
+}
+
+
+
