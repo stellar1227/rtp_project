@@ -68,6 +68,7 @@
     border:{
       style : solid;
       width : 1px;
+      radius:0;
     }
     font-size:$font14px;
     &:focus{
@@ -78,6 +79,7 @@
     border-color:$input-b-primary;
     background:$input-g-primary;
     color:$base-color;
+    -webkit-appearance:none;
 
     &[readonly]{
       border-color:$input-b-disabled;
