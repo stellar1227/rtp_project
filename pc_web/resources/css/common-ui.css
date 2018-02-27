@@ -1158,15 +1158,15 @@ input[data-align="right"] { text-align: right; }
 
 .graph_odd_even [data-graph]:after { display: inline-block; content: ""; position: absolute; top: 0; bottom: 0; }
 
-.graph_odd_even [data-count='1']:after { width: 30px; }
+.graph_odd_even [data-count='1']:after { width: 16.6%; }
 
-.graph_odd_even [data-count='2']:after { width: 60px; }
+.graph_odd_even [data-count='2']:after { width: 33.2%; }
 
-.graph_odd_even [data-count='3']:after { width: 90px; }
+.graph_odd_even [data-count='3']:after { width: 49.8%; }
 
-.graph_odd_even [data-count='4']:after { width: 120px; }
+.graph_odd_even [data-count='4']:after { width: 66.4%; }
 
-.graph_odd_even [data-count='5']:after { width: 150%; }
+.graph_odd_even [data-count='5']:after { width: 83%; }
 
 .graph_odd_even [data-graph="odd"]:after { right: 0; background-image: linear-gradient(#ffdb74 30%, #fbba58 100%); }
 

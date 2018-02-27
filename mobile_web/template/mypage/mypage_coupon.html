@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>당첨번호 홀짝 출현현황 | 로또팡</title>
+    <title>쿠폰결제하기 | 로또팡</title>
     <script src="../../resources/lib/swiper.min.css"></script>
     <link rel="stylesheet" href="../../resources/css/common-ui.css">
 </head>
@@ -136,114 +136,59 @@
 </header>
 <div id="container">
     <section id="content">
-        <h2 class="page_title">로또 통계자료 전체보기</h2>
-        <div class="sub_title">
-            <h3>당첨번호 홀짝 출현현황</h3>
-            <a href="#" class="prev_menu">이전메뉴</a><!-- 통계자료, 비법자료에서만 있는 링크 -->
-            <a href="#" class="next_menu">다음메뉴</a><!-- 통계자료, 비법자료에서만 있는 링크 -->
-        </div>
+        <h2 class="page_title">쿠폰결제하기</h2>
         <div class="box_wrap">
-            <div class="box_title">당첨번호 홀짝 출현현황</div>
 
-            <div class="data_table"><!-- data_table  -->
+            <ul class="list_mem_benefit">
+                <li data-icon="type1">
+                    <span data-color="blue">혜택1</span>
+                    <p>매주 10개씩<br>대세추천번호 무료!</p>
+                </li>
+                <li data-icon="type2">
+                    <span data-color="blue">혜택2</span>
+                    <p>1등<br>싹슬이 비법!</p>
+                </li>
+                <li data-icon="type3">
+                    <span data-color="blue">혜택3</span>
+                    <p>예상번호 뽑을 때<br>꼭 필요한 비법자료</p>
+                </li>
+                <li data-icon="type4">
+                    <span data-color="blue">혜택4</span>
+                    <p>로또팡 내 모든<br>서비스 무제한 이용</p>
+                </li>
+            </ul>
+
+
+
+            <h3 class="block_title">
+                <span class="tit">쿠폰번호 입력</span>
+            </h3>
+            
+            <div class="input_table"><!-- input_table -->
                 <table>
-                    <caption class="table_caption">당첨번호 홀짝 출현현황</caption>
+                    <caption>쿠폰번호 입력</caption>
                     <colgroup>
-                        <col style="width:12%">
-                        <col style="width:10%">
-                        <col style="width:10%">
-                        <col style="width:12%">
-                        <col style="width:10%"> 
+                        <col style="width:21.7%">
+                        <col style="width:auto">
                     </colgroup>
-                    <thead>
-                    <tr>
-                        <th scope="col">회차</th>
-                        <th scope="col">홀수</th>
-                        <th scope="col">짝수</th>
-                        <th scope="col">출현우위<br>/연속</th>
-                        <th scope="col">올인</th>
-                    </tr>
-                    </thead>
                     <tbody>
-                    <tr class="divide">
-                        <th rowspan="2">
-                            <b data-color="blue">767</b>회
-                            /<br>이미지
-                        </th>
-                        <td>5</td>
-                        <td>1</td>
-                        <td>
-                            <!-- [Design] 홀: data-color="red" / 짝 : data-color="blue" -->
-                            <b data-color="red">홀</b>
-                        </td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="graph_odd_even">
-                                <!-- [Design] :
-                                    1. 각 홀/짝 그래프는 data-count 속성에 숫자로 표현해주시면 됩니다. data-count="(n)"
-
-                                    2. 각 data-type="odd"/ data-type="even" 내부 출현 횟수에 대한 수치데이터 (1~6) 를 Case에 맞게 출력 해주세요.
-                                -->
-                                <div data-graph="odd" data-count="5">홀수 출현 횟수 5</div>
-                                <div data-graph="even" data-count="1">짝수 출현 횟수 1</div>
-                            </div>
-                        </td>
-                    </tr>
-
-
-                    <tr>
-                        <th rowspan="2">
-                            <b data-color="blue">766</b>회
-                            /<br>이미지
-                        </th>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>
-                            <!-- [Design] 홀: data-color="red" / 짝 : data-color="blue" -->
-                            <b data-color="red">홀</b>
-                        </td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="graph_odd_even">
-                                <div data-graph="odd" data-count="3">홀수 출현 횟수 3</div>
-                                <div data-graph="even" data-count="3">짝수 출현 횟수 3</div>
-                            </div>
-                        </td>
-                    </tr>
-
-
-                    <tr class="divide">
-                        <th rowspan="2">
-                            <b data-color="blue">766</b>회
-                            /<br>이미지
-                        </th>
-                        <td>4</td>
-                        <td>2</td>
-                        <td>
-                            <!-- [Design] 홀: data-color="red" / 짝 : data-color="blue" -->
-                            <b data-color="red">홀</b>
-                        </td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="graph_odd_even">
-                                <div data-graph="odd" data-count="4">홀수 출현 횟수 4</div>
-                                <div data-graph="even" data-count="2">짝수 출현 횟수 2</div>
-                            </div>
-                        </td>
-                    </tr>
-
-
+                        <tr>
+                            <th scope="row"><label for="couponNum">쿠폰번호</label></th>
+                            <td>
+                                <input type="text" data-width="100p" id="couponNum"  title="쿠폰번호 입력">
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-            </div><!-- //data_table -->
+            </div><!-- //input_table  -->
+            
 
-            <button type="button" class="btn_page_more">더보기</button>
+
+            <div class="btn_wrap" data-align="center">
+                <button class="btn_strong" type="button">확인</button>
+            </div>
+
+            
         </div>
     </section>
 </div>

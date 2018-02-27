@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>회원가입 완료 | 로또팡</title>
+    <script src="../../resources/lib/swiper.min.css"></script>
+    <link rel="stylesheet" href="../../resources/css/common-ui.css">
+</head>
+<body>
+<div id="skipnavi">
+    <a href="#container">본문바로가기</a>
+</div>
+<header id="header">
+    <h1 class="logo">
+        <a href="#">
+            <img src="../../resources/img/common/img_header_logo.png" alt="로또팡">
+        </a>
+    </h1>
+    <nav id="gnb" class="swiper-container">
+        <h2 class="blind">글로벌 네비게이션</h2>
+        <ul class="gnb swiper-wrapper">
+            <li class="swiper-slide"><!-- class="on" 활성화 -->
+                <a href="#subMenu1">로또팡 조합기</a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#subMenu2">비법 자료</a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#subMenu3">조합 서비스</a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#subMenu4">대세 추천번호</a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#subMenu5">연금복권</a>
+            </li>
+        </ul>
+        <ul class="sub_gnb">
+            <li class="depth" id="subMenu1">
+                <ul>
+                    <li><a href="#">로또팡 조합기 안내</a></li>
+                    <li><a href="#">로또팡 조합기 실행</a></li>
+                    <li><a href="#">[통계]역대 그룹핑 결과</a></li>
+                    <li><a href="#">[통계]그룹출현현황 분석</a></li>
+                    <li><a href="#">[통계]회차별 그룹핑 현황</a></li>
+                </ul>
+            </li>
+            <li class="depth" id="subMenu2">
+                <ul>
+                    <li><a href="#">로또 통계자료 전체보기</a></li>
+                    <li><a href="#">로또 비법자료 전체보기</a></li>
+                </ul>
+            </li>
+            <li class="depth" id="subMenu3">
+                <ul>
+                    <li><a href="#">로또팡 조합법 전체보기</a></li>
+                    <li><a href="#">사주로 확인하는 조합법</a></li>
+                    <li><a href="#">추천! 조합법</a></li>
+                    <li><a href="#">2등~5등 최소보장조합법</a></li>
+                    <li><a href="#">로또팡 추천조합법</a></li>
+                    <li><a href="#">독점공개! 올인조합법</a></li>
+                    <li><a href="#">my 조합법</a></li>
+                </ul>
+            </li>
+            <li class="depth" id="subMenu4">
+                <ul>
+                    <li><a href="#">대세 추천번호 안내</a></li>
+                    <li><a href="#">추천번호 빨리 받기</a></li>
+                    <li><a href="#">사용자조건 추천번호 받기</a></li>
+                    <li><a href="#">3등, 4등 보장조합</a></li>
+                </ul>
+            </li>
+            <li class="depth" id="subMenu5">
+                <ul>
+                    <li><a href="#">연금복권 당첨결과 종합</a></li>
+                    <li><a href="#">연금복권 빠른 당첨 조회</a></li>
+                    <li><a href="#">연금복권 지난 당첨 결과</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <button type="button" class="btn_side_navi">사이드메뉴보기</button>
+    <div class="side_wrap" id="sideMenu">
+        <section class="side_menu_section">
+            <h2 class="blind">사이드메뉴영역</h2>
+            <div class="login_after_sec">
+                <div class="head_info">
+                    <a href="#" class="login_status">로그인 해주세요</a>
+                </div>
+                <div class="mini_info">
+                    <h3 class="tit">로또팡 추가 정보 입력</h3>
+                </div>
+                <div class="box_wrap">
+                    <p class="id_info">
+                        <b>N602221122</b>님
+                        <span data-color="blue">melissah@naver.com</span>
+                    </p>
+                </div>
+                <div class="box_wrap">
+                    <h3 class="block_title">기본사항 입력 <span data-color="red">(필수)</span></h3>
+                    <ul class="id_search">
+                        <li>
+                             <div class="i_sec">
+                                 <input type="text" data-width="100p" required id="joinNickNm" title="닉네임 입력" placeholder="닉네임(필수)">
+                                 <button class="btn_primary">중복확인</button>
+                             </div>
+                            <p class="table_notice">이미 사용중입니다. 다른 닉네임을 입력해주세요.</p>
+                        </li>
+                        <li>
+                            <div class="i_sec">
+                                <input type="text" data-width="100p" required id="joinCellNum" title="휴대전화 인증번호 입력" placeholder="휴대폰(필수)">
+                                <button class="btn_primary">인증하기</button>
+                            </div>
+                            <p class="table_notice">하이픈(-)또는 숫자로만 작성해 주세요.</p>
+                        </li>
+                        <li>
+                            <div class="i_sec">
+                                <input type="text" data-width="100p" required id="joinVerifyNum" title="휴대전화 인증번호 입력" placeholder="인증번호입력">
+                                <button class="btn_strong">확인</button>
+                            </div>
+                            <p class="table_notice"><span class="verify-time">4분 55초</span> 인증이 필요합니다.</p>
+                            <p class="validate_notice">인증이 성공했습니다.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box_wrap">
+                    <h3 class="block_title">생년월일 입력 <span data-color="gray">(선택)</span></h3>
+                    <ul class="select_list">
+                        <li>
+                            <input type="text" id="birthDate" data-width="67p" title="생년월일시 입력" placeholder="예)19831227">
+                            <select name="" title="생년월일시 양력 음력 선택">
+                                <option value="">양력</option>
+                                <option value="">음력</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" title="생년월일시 십이지지 선택" data-width="100p">
+                                <option value="">子(자) 23:30 ~ 01:29</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select name="" title="성별 선택">
+                                <option value="">남자</option>
+                                <option value="">여자</option>
+                            </select>
+                            <select name="" title="평달 윤달 선택">
+                                <option value="">평달</option>
+                                <option value="">윤달</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <p data-color="gray">매주 추천번호 2개 조합이 무료로 발송됩니다.</p>
+                    <p data-color="gray">현재 사용중이신 번호로 정확하게 기재 바랍니다</p>
+                </div>
+                <div class="box_wrap">
+                    <div class="box_contents">
+                        <div class="input_custom">
+                            <input type="checkbox" id="chkTermsAgree" title="이용약관 동의">
+                            <label for="chkTermsAgree"><span>이용약관에 동의합니다.</span></label>
+                        </div>
+                        <a href="#" class="link_privacy_more" id="BtnTermsDetail">자세히 보기</a>
+                        <div class="input_custom">
+                            <input type="checkbox" id="chkPrivacyAgree" title="개인정보 취급방침 동의">
+                            <label for="chkPrivacyAgree"><span>개인정보 취급방침에 동의합니다.</span></label>
+                        </div>
+                    </div>
+                    <div data-show="termsDetailWrap"><!-- termsDetailWrap -->
+
+                        <h3 class="block_title"  data-toggle="termsDetail_terms"><!-- 개인정보 이용약관 -->
+                            <button class="tit">개인정보 이용약관</button>
+                        </h3>
+                        <article class="text_box" data-toggle-cont="termsDetail_terms">
+                            <h1>제1조 (목적)</h1>
+                            <p>이 약관은 <b>㈜테크앤조이(이하 ‘회사’)</b>가 회원에게 온라인 서비스를 제공하기 위하여 운영하는 www.lottopang.com (이하 ‘로또팡’)의 이용과 관련하여 회사와 회원의 권리 및 의무 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+
+                            <h1>제 2 조 (정의)</h1>
+                            <p>이 약관에서 사용하는 용어의 정의는 다음 각호와 같습니다. </p>
+
+                            <ol>
+                                <li>1. 서비스 : 사유 여하를 불문하고, 회사가 운영하는 로또팡을 통하여 회원에게 제공하는 일체의 용역(회사와 제휴한 온라인서비스 제공자가 제공하는 용역을 회원이 이용하는 경우에는 제휴 온라인서비스 제공자가 제공하는 용역을 포함합니다)</li>
+                                <li>2. 유료서비스 : 회사가 유료로 제공하는 각종 온라인디지털콘텐츠(각종 정보콘텐츠, 아이템 기타 유료콘텐츠를 포함) 기타 일체의 서비스</li>
+                                <li>3. 회원 : 회사의 서비스에 접속하여 이 약관에 따라 회사와 이용계약을 체결한 뒤 회사가 제공하는 서비스를 이용하는 고객</li>
+                                <li>4. 아이디(ID) : 회원의 식별 및 서비스 이용을 위하여 회원이 선정하고 회사가 승인하는 문자 또는 숫자의 조합</li>
+                                <li>5. 비밀번호 : 서비스를 이용함에 있어, 회원의 아이디(ID)와 일치되는 회원임을 확인하고, 회원의 비밀 보호를 위해 회원 자신이 설정한 문자 또는 숫자의 조합</li>
+                                <li>6. 포인트 : 마일리지 등과 같이 서비스의 효율적 이용을 위해 회사가 임의로 책정 또는 지급, 조정할 수 있는 재산적 가치 없는 서비스상의 가상 데이터</li>
+                                <li>7. 게시물 : 회원이 서비스를 이용함에 있어, 서비스상에 게시한 부호ㆍ문자ㆍ음성ㆍ음향ㆍ화상ㆍ동영상 기타 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크</li>
+                                <li>8. 해지 : 서비스 개통 후 회사 또는 회원이 이용계약의 효력을 상실시키는 행위</li>
+                            </ol>
+
+                            <h1>제3조 (약관의 게시 및 개정)</h1>
+                            <ol>
+                                <li>1. 회사는 이 약관의 내용을 회원이 쉽게 확인할 수 있도록 회사의 인터넷 홈페이지(www.happycampus.com)서비스 초기 화면에 이를 게시합니다.</li>
+                                <li>2. 회사는 회원에게 제공하는 서비스의 품질 향상 기타 필요한 경우, ‘정보통신망이용촉진및정보보호등에관한법률(이하 ‘정보보호법’)’, ‘약관의규제에관한법률(이하 ‘약관규제법’)’ 기타 관련법령을 위배하지 아니하는 범위 내에서 이 약관을 개정할 수 있습니다.</li>
+                                <li>3. 회사가 이 약관을 개정하고자 할 경우, 회사는 개정 약관의 효력발생일을 명시하여 현행 약관과 함께 개정 약관의 효력발생일 30일 전부터 1항의 방법으로 개정약관을 공지합니다. 단, 회원의 권리ㆍ의무에 중대한 영향을 미치는 개정이 아닌 때에는 효력발생일 7일 전부터 이를 공지할 수 있습니다.</li>
+                                <li>4. 개정 약관의 효력발생일 이후 회원이 서비스를 이용하는 경우, 회사는 회원이 개정 약관에 동의한 것으로 봅니다. 단, 회원이 개정 약관에 동의하지 아니할 때에는 회원은 회사에 대하여 회원의 탈퇴 기타 이용계약을 해지할 수 있습니다.</li>
+                                <li>5. 유료서비스를 이용하는 회원이 이 약관의 개정에 동의하지 아니하여 이용계약을 해지한 때에는 이 약관이 정한 환불정책에 따릅니다.</li>
+                                <li>6. 회사는 서비스의 품질 향상, 회원 의사의 충족 기타 필요한 경우, 이 약관과 달리 개별약관을 둘 수 있고, 이 경우 1항 내지 5항을 준용합니다.</li>
+                            </ol>
+
+                            <h1>제4조 (약관의 적용)</h1>
+                            <p>전기통신사업법, 정보보호법, 약관규제법 기타 관련법령의 규정 중 강행규정과 이 약관의 내용이 서로 다른 경우에는 강행규정을 적용하고, 전기통신사업법, 정보보호법, 약관규제법 기타 관련법령의 규정 중 임의규정 또는 전기통신사업법, 정보보호법, 약관규제법 기타 관련법령에 규정되지 아니한 사항에 대하여는 이 약관을 적용합니다.</p>
+                        </article><!-- //개인정보 이용약관 -->
+
+
+                        <h3 class="block_title"  data-toggle="termsDetail_privacy"><!-- 개인정보 취급방침 -->
+                            <button class="tit">개인정보 취급방침</button>
+                        </h3>
+                        <article class="text_box" data-toggle-cont="termsDetail_privacy">
+                            내용준비중
+                        </article><!-- 개인정보 취급방침 -->
+
+
+
+                        <h3 class="block_title"  data-toggle="termsDetail_law"><!-- 책임한계 및 법적고지 -->
+                            <button class="tit">책임한계 및 법적고지</button>
+                        </h3>
+                        <article class="text_box" data-toggle-cont="termsDetail_law">
+                            내용준비중
+                        </article><!-- 책임한계 및 법적고지 -->
+
+                    </div><!-- //termsDetailWrap -->
+                </div>
+                <div class="box_wrap">
+                    <div class="btn_wrap" data-align="center">
+                        <button type="button" class="btn_strong">가입하기</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn_nav_close">닫기</button>
+        </section>
+    </div>
+    <a href="#" class="btn_member_join">회원가입</a>
+</header>
+<div id="container">
+    <section id="content">
+        <h2 class="page_title">회원가입 완료</h2>
+        <div class="box_wrap">
+
+
+            <div class="trend_about_service" data-type="join_done"><!-- trend_about_service(S) -->
+                
+                <h1 class="tit_trend_about">가입을 축하합니다.
+                    <span class="desc">로또예상번호는 로또팡!!<br>로또팡과 함께 부~자 되세요!!</span>
+                </h1>
+
+                <a class="link_rec_hurry" href="#">메인으로 가기</a>
+                
+                <div class="lotto_ball">
+                    <span class="ball_n1th">1</span>    
+                    <span class="ball_n10th">12</span>  
+                    <span class="ball_n20th">23</span>  
+                    <span class="ball_n30th">34</span>  
+                    <span class="ball_n40th">48</span>
+                    <span class="ball_n1th">7</span>    
+                </div>
+                
+                
+                <div class="list_trend_service">
+                    <p class="desc_strong">플러스 회원권을 구입하면 대세 추천번호가 따라온다!<br> <b>로또팡 플러스 회원만을 위한 특급 혜택</b></p>
+                    <ol>
+                        <li>
+                            <span class="num">01</span>
+                            <strong class="tit">매주 대세 추천번호 제공</strong>
+                        </li>
+                        <li>
+                            <span class="num">02</span>
+                            <strong class="tit">로또팡 조합기 제공(플러스 1개월 20조합 제외)</strong>
+                        </li>
+                        <li>
+                            <span class="num">03</span>
+                            <strong class="tit">로또 통계 비법자료 사용권한</strong>
+                        </li>
+                        <li>
+                            <span class="num">04</span>
+                            <strong class="tit">로또팡 조합서비스 제공</strong>
+                        </li>
+                        <li>
+                            <span class="num">05</span>
+                            <strong class="tit">대세 추천번호 제공</strong>
+                        </li>
+                        <li>
+                            <span class="num">06</span>
+                            <strong class="tit">고급 분석 자료 제공</strong>
+                        </li>
+                        <li>
+                            <span class="num">07</span>
+                            <strong class="tit">추천번호 출력 서비스</strong>
+                        </li>
+                        <li>
+                            <span class="num">08</span>
+                            <strong class="tit">마이페이지 개별 설정 서비스</strong>
+                        </li>
+                        <li>
+                            <span class="num">09</span>
+                            <strong class="tit">사주에 따른 나만의 운명의 추천번호 제공</strong>
+                        </li>
+                        <li>
+                            <span class="num">10</span>
+                            <strong class="tit">운세 서비스 제공</strong>
+                        </li>
+                        <li>
+                            <span class="num">11</span>
+                            <strong class="tit">다양한 이벤트 참여 혜택</strong>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="btn_wrap" data-align="center">
+                    <button class="btn_strong">메인으로 가기</button>
+                </div>
+
+            </div><!-- trend_about_service(E) -->
+            
+        </div>
+    </section>
+</div>
+<div class="bottom_section">
+    <footer id="footer">
+        <ul class="foot_util">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">PC버전</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">제휴문의</a></li>
+        </ul>
+        <address>
+            <span class="company">(주)테크앤조이</span>
+            대표자 : 서주형 ㅣ  사업자 등록번호 :  000-00-000000 <br>
+            통신판매업 신고번호 : 제2017-서울용산-00000호  ㅣ  TEL : 02-000 - 0000 <br>
+            FAX : 02-0000-0000  ㅣ  E-mail : <a href="mailto:help@lottopang.co.kr">help@lottopang.co.kr</a><br>
+            주소 : 도로명주소:서울특별시 용산구 한강대로7길 38(한강로3가) 
+        </address>
+        <p class="copyright">
+            copyright&copy;lottopang all right reserved.
+        </p>
+    </footer>
+    <aside class="bottom_util">
+        <button type="button" class="btn_home_add">로또팡 홈화면에 바로가기 추가</button>
+        <div class="link_spot">
+            <a href="#" class="home">홈으로</a>
+            <a href="#header" class="up">위로</a>
+        </div>
+        <dl class="week_lotto_info">
+            <dt>
+                <b>782</b>회차 <br>
+                <strong>로또 당첨 번호</strong>
+            </dt>
+            <dd>
+                <span class="ball_n1th">6</span>
+                <span class="ball_n10th">18</span>
+                <span class="ball_n10th">19</span>
+                <span class="ball_n20th">24</span>
+                <span class="ball_n30th">34</span>
+                <span class="ball_n40th">41</span>
+                <span class="plus">+</span>
+                <span class="ball_n20th" title="보너스번호">20</span>
+            </dd>
+        </dl>
+    </aside>
+</div>
+<script src="../../resources/lib/jquery-1.12.4.min.js"></script>
+<script src="../../resources/lib/swiper.min.js"></script>
+<script src="../../resources/js/common-ui.min.js"></script>
+<script>
+    // 약관 자세히보기 전체 Wrap Show/Hide
+    var $termsDetailWrap = $('[data-show="termsDetailWrap"]');
+    // 약관 전체 : 초기상태 Hide
+    $termsDetailWrap.hide();
+
+    $('#BtnTermsDetail').on('click',function(e){
+        e.preventDefault();
+        $termsDetailWrap.toggle();
+    });
+
+
+    // Toggle Action
+    var $toggleTitle = $('[data-toggle]');
+    $toggleTitle.on('click',function(){
+        $(this).toggleClass('open');
+    });
+
+
+</script>
+</body>
+</html>

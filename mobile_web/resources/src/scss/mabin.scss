@@ -12,24 +12,48 @@ input{
 //member_free_ticket 커스텀
 // list_mem_benefit
 .list_mem_benefit {
-	display:flex;
-	padding:33px 60px 0;
+	overflow:hidden;
+	margin-bottom:40px;
+	padding:15px;
+	border:{
+		style:solid;
+		width:1px 0;
+		color:#a5c3ff;
+	}	
+
 	li {
-		flex:1;
-		padding:32px 0 26px;
-		margin:0 9px;
-		border:1px solid #d6d6d6;
+		box-sizing:border-box;
+		float:left;
+		width:50%;
+		padding:15px 0 ;
+		border:{
+			style:solid;
+			color:#d2e1ff;
+			width:0 1px 1px 0;
+		}	
 		text-align:center;
+
+		&:nth-child(even) {border-right:0;}
+		&:nth-child(3),&:nth-child(4) {
+			padding-bottom:10px;
+			border-bottom:0;
+		}
 
 		> span:after {
 			display:block;content:"";
-			width:60px;height:60px;
-			margin:17px auto 8px;
-			background:url("#{$content-img}ico_coupon_benefit.png") no-repeat 0 0;
+			width:50px;height:50px;
+			margin:15px auto 7px;
+			background:{
+				repeat: no-repeat;
+				position: center center;
+				size:contain;
+			};
 		}
-		&[data-icon=type2] >span:after{background-position:-60px 0;}
-		&[data-icon=type3] >span:after{background-position:-120px 0;}
-		&[data-icon=type4] >span:after{background-position:-180px 0;}
+
+		@for $iconType from 1 through 4 {
+		  &[data-icon='type#{$iconType}']>span:after{background-image:url("#{$content-img}ico_coupon_benefit0#{$iconType}.png")}
+		}
+
 
 		p {line-height:150%}
 	}
@@ -252,13 +276,241 @@ input{
 
 
 
+// 대세추천번호 - 서비스안내 recommend_about.html
+.trend_about_service {
+	position:relative;
+	box-sizing:border-box;	
+	overflow:hidden;
+	padding: 0 2px 15px;
+	background-color:#223863;	
+	border-radius:3px;
+	color:#fff;
+
+	.link_rec_hurry {
+		position:relative;
+		display:block;
+	    margin: -10px 25px;
+	    padding:10px 0;
+	    font-size: 1rem;
+	    background-color: rgba(67, 177, 220, 0.88);
+	    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.7);
+	    letter-spacing: -1px;
+	    border-radius: 3px;
+	    color: #fff;
+	    text-align: center;
+	    z-index:20;
+
+		span {
+			display:block;
+			font-size:16px;
+			letter-spacing:0;
+			text-decoration:underline
+
+		}
+	}
+
+	.btn_wrap {
+		padding:0 15px;
+	}
+	
+
+	p.desc {
+		display:inline-block;
+		padding-top:14px;
+		font-size:1.1em;
+		line-height:1.5em;
+		letter-spacing:-.7px;
+		
+		b {
+			display:block;
+			font-size:1.2em;
+			letter-spacing:-1px;
+		}
+	}
+
+	.lotto_ball {
+		overflow:hidden;
+		height:33px;
+		padding-right:30px;
+		text-align:right;
+		opacity:.6;
+		span[class^="ball"] {
+			box-sizing:border-box;
+			width:50px;height:50px;
+			font-size:1.8rem;
+			padding-top:14px;
+		}
+	}
+	.tit_trend_about {
+	    padding: 25px 0 15px;
+	    margin:0 15px 18px;
+	    font-size: 1.7rem;
+	    border-bottom:1px solid #657799;
+    	line-height: 45px;
+    	letter-spacing: -3px;
+    	text-shadow:0 0 15px rgba(0,0,0,.7);
+    	text-align:center;
+
+    	b {
+		    display: inline-block;
+		    box-sizing: border-box;
+		    width: 40px;height: 40px;
+		    margin-left:-5px;
+		    font-size: 1.27rem;
+		    padding-top: 0;
+		    margin-right: 12px;
+		    border-radius: 100px;
+		    background-color: #4081ff;
+		    vertical-align: unset;
+		    text-align: center;
+		    text-shadow: none;
+		    line-height: 2.2em;
+    	}
+
+		.desc {
+			display:block;
+			padding:10px 10px 0;
+			font: { 
+				size :1rem;
+				weight:$normal;
+			}
+			letter-spacing:-.5px;
+			line-height:1.5rem;
+		}
+	}
+
+	.desc_key {
+		padding:0 25px 10px;
+		font-size:1rem;
+ 
+		li {
+			margin-bottom:17px;
+			line-height:25px;
+			span {
+				display:block;
+				color:#9db7e8;
+			}
+		}
+	}
+	.list_trend_service {
+		position:relative;
+		padding:30px 40px;
+		background-color:#fff;
+		border-radius:3px;
+		box-shadow:0 -5px 10px rgba(0,0,0,.2);
+		z-index:10;
+
+		li {
+			position:relative;
+			margin-bottom:25px;	
+			padding-bottom:30px;	
+			border-bottom:1px solid #dadada;
+			color:#333;
+
+			.num {
+				display:inline-block;
+				box-sizing:border-box;
+
+				width:37px;height:37px;
+				padding : {
+					top:9px;
+					left:10px;
+				}
+				border-radius:100px;
+				font-size:1.8rem;
+				font-weight:$extra-bold;
+				background-color:#4378dc;
+				box-shadow: 2px 2px 0 rgb(30, 71, 123);
+				line-height:1em;
+				text-align:center;
+				vertical-align:middle;
+				letter-spacing:-3px;
+				color:#fff;
+			}
+
+			.tit {
+				display:inline-block;
+				width:70%;
+				width:calc(100% - 70px);
+				margin-left:10px;
+				font-size:1.2em;
+				line-height:1.8rem;
+				vertical-align:middle;
+				letter-spacing:-1px;
+				color:#333;
+			}
+
+			&:last-child {
+				padding-bottom:0;
+				border-bottom:0
+			}
+		}
+
+	}
+
+	.desc_strong {
+	    padding: 18px 20px;
+	    margin: -10px -20px 30px;
+	    font-size: 1.1rem;
+	    background-color: #f2f2f2;
+	    border-radius: 5px;
+	    text-align: center;
+	    color: #333;
+	}
+	.btn_wrap {
+		margin:15px 0 5px;
+		button {
+			height:60px;min-width:260px;
+			font-size:20px;
+
+		}
+	}
+
+
+
+	&[data-type="join_done"] {
+		.list_trend_service  {
+			li {
+				margin-bottom:20px;
+				padding-bottom:20px;
+				.tit {
+					font-size:1.1rem;
+				}
+				.num {
+					width:34px;height:34px;
+					font-size:1.6rem;
+				}
+			}
+		}
+
+		.link_rec_hurry {
+			margin-top:25px;
+			font-size:1.4rem;
+		}
+		.tit_trend_about {
+			.desc {
+			    font-size: 1.2rem;
+				line-height: normal;
+				color: #d9dfeb;
+			}
+		}
+
+	}
+
+
+
+}
+
+
+
 
 // graph_odd_even 홀짝 출현현황 그래프 - [COMMENT] 미 : pc꺼 옮겨놨습니다. 이미지랑 사이즈, 디자인 조절 부탁합니다.
 .graph_odd_even {
 	display:flex;
 	position:relative;
 	overflow:hidden;
-	width:358px;
+	width:100%;
+	max-width:358px;
 	margin:0 auto;
 	border-radius:20px;
 	border:1px solid #bbb;
@@ -269,6 +521,7 @@ input{
 		position:absolute;
 		left:0;right:0;top:0;bottom:0;
 		background:url("#{$content-img}bg_odd_even_graph.png") 0 center no-repeat;
+		background-size:100% 100%;
 
 	}
 	[data-graph] {
@@ -281,19 +534,13 @@ input{
 			position:absolute;top:0;bottom:0;
 		}
 	}
+	
 
-	$dataGraphStack: (
-					1: 30px,
-					2: 60px,
-					3: 90px,
-					4: 120px,
-					5: 150%
-	);
-	@each $grapStack, $value in $dataGraphStack {
-		[data-count='#{$grapStack}']:after {
-			width:$value
-		}
+	@for $grapStack from 1 through 5 {
+	  [data-count='#{$grapStack}']:after { width: 16.6% * $grapStack; }
 	}
+
+
 	[data-graph="odd"] {
 		&:after {
 			right:0;
@@ -684,6 +931,200 @@ select {
 
 		p {line-height:150%}
 	}
+}
+
+// 로또팡 서비스 안내 mypage_about_service.html
+.list_about_service {
+	background-color:#fff;
+	border-radius:2px;
+
+
+	li {
+		position:relative;
+		overflow:hidden;
+		padding:20px 0;
+		
+		border-bottom:1px solid #eee;
+		&:last-child {border-bottom:0;}
+
+		.question {
+			display:inline-block;
+			position: relative;
+			max-width:74%;
+		    padding: 10px 20px 20px;
+		    font-size: 15px;
+		    border: 1px solid #dfdfdf;
+		    border-radius: 50px;
+		    background-color: #fcfcfc;
+		    letter-spacing: -.2px;
+		}
+
+		.link_about {
+			position:relative;
+			float:right;
+		    padding: 6px 15px 9px 40px;
+		    margin-top:-13px;
+		    font-weight: 700;
+		    font-size: 15px;
+		    background:#fff url('#{$content-img}ico_chk_about_service.png') no-repeat 8px center;
+		    border-radius: 3px;
+		    border: 1px solid #b7b7b7;
+		    color: #2c2c2c;
+		    letter-spacing: -.4px;
+		    box-shadow:0 0 10px rgba(0,0,0,.07);
+		    text-decoration:underline;
+		}
+	}
+}
+
+
+// 테크앤조이 소개 - mypage_technjoy
+.about_technjoy {
+
+	.about_title {
+		display:block;
+		margin:0 0 25px;
+    	padding: 6px 0 9px;
+    	font-size: 1.3rem;
+    	border-bottom:1px solid #ddd;
+    	letter-spacing: -1px;
+    	text-align: center;
+    	color:#000;
+	}
+
+	
+	.list_portfolio {
+		padding-bottom:40px;
+		font-size:16px;
+
+		li {
+			padding:5px 30px 20px;
+			text-align:center;
+
+			&:before {
+				display:block;content:"";
+				width:64px;height:64px;
+				margin:12px auto 16px;
+				background : {
+					repeat:no-repeat;
+					size:contain;
+					position:center 0;
+				}
+			}
+			&.mobile:before {
+				background-image:url("#{$content-img}ico_about_mobile.png");	
+			}
+			&.iptv:before {
+				background-image:url("#{$content-img}ico_about_tv.png");	
+			}
+			&.offline:before {
+				background-image:url("#{$content-img}ico_about_offline.png");	
+			}
+			&:last-child {
+				margin-right:0;
+			}
+
+			strong {
+				display:block;
+				margin-bottom:10px;
+				text-align:center;
+			}
+
+			p {
+				font-size:15px;
+				line-height:20px;
+				text-align:left;
+			}
+		}
+	}
+
+	.list_skills {
+		margin-bottom:40px;
+		text-align:center;
+
+		li {
+			display:inline-block;
+			box-sizing:border-box;
+			overflow:hidden;
+			position:relative;
+			height:150px;width:150px;
+
+			padding-top:95px;
+
+			border: {
+				style:solid;
+				width:0 0 5px;
+				color:#ccc;
+				radius:100px;
+			}
+
+			font-size:1rem;
+			line-height:1.25em;
+			text-align:center;
+			letter-spacing:-1px;
+
+			color:#fff;
+			&:last-child {margin-right:0;}
+
+			> span {
+				position:absolute;
+				left:0;right:0;bottom:0;
+				padding-top:8px;padding-bottom:10px;
+				background:inherit;
+				box-shadow:0 -2px 5px rgba(0, 0, 0, 0.12);
+
+				z-index:10;
+			}
+
+			&:after {
+				display:block;content:"";
+				position:absolute;
+				top:10px;right:10px;bottom:8px;left:10px;
+				border-radius:100px;
+				background-color:#fff;
+				background-repeat:no-repeat;
+				background-size:62% auto;
+			}
+
+
+			
+			&:nth-child(1) {
+				margin-right:10px;
+				background-color: #ef7967;
+				border-color:#b54d3d;
+				&:after {
+					background-image:url("#{$content-img}ico_about_exp.png");
+					background-position:44% 24%;
+				}
+			}
+
+
+			&:nth-child(2) {
+				background-color: #f8b623;
+				border-color: #ab7b0f;
+				&:after {
+					background-image:url("#{$content-img}ico_about_skill.png");
+					background-position:center 28%;
+				}
+			}
+
+			&:nth-child(3) {
+				background-color: #11487e;
+				border-color: #153553;
+				&:after {
+					background-image:url("#{$content-img}ico_about_person.png");
+					background-position:center 42%;
+				}
+			}
+
+			
+		}
+
+	}
+}
+.tit_about {
+	font-size:24px;
+
 }
 
 

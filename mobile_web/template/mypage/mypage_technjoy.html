@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>당첨번호 홀짝 출현현황 | 로또팡</title>
+    <title>테크앤조이 소개 | 로또팡</title>
     <script src="../../resources/lib/swiper.min.css"></script>
     <link rel="stylesheet" href="../../resources/css/common-ui.css">
 </head>
@@ -136,114 +136,35 @@
 </header>
 <div id="container">
     <section id="content">
-        <h2 class="page_title">로또 통계자료 전체보기</h2>
-        <div class="sub_title">
-            <h3>당첨번호 홀짝 출현현황</h3>
-            <a href="#" class="prev_menu">이전메뉴</a><!-- 통계자료, 비법자료에서만 있는 링크 -->
-            <a href="#" class="next_menu">다음메뉴</a><!-- 통계자료, 비법자료에서만 있는 링크 -->
-        </div>
+        <h2 class="page_title">테크앤조이 소개</h2>
         <div class="box_wrap">
-            <div class="box_title">당첨번호 홀짝 출현현황</div>
 
-            <div class="data_table"><!-- data_table  -->
-                <table>
-                    <caption class="table_caption">당첨번호 홀짝 출현현황</caption>
-                    <colgroup>
-                        <col style="width:12%">
-                        <col style="width:10%">
-                        <col style="width:10%">
-                        <col style="width:12%">
-                        <col style="width:10%"> 
-                    </colgroup>
-                    <thead>
-                    <tr>
-                        <th scope="col">회차</th>
-                        <th scope="col">홀수</th>
-                        <th scope="col">짝수</th>
-                        <th scope="col">출현우위<br>/연속</th>
-                        <th scope="col">올인</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="divide">
-                        <th rowspan="2">
-                            <b data-color="blue">767</b>회
-                            /<br>이미지
-                        </th>
-                        <td>5</td>
-                        <td>1</td>
-                        <td>
-                            <!-- [Design] 홀: data-color="red" / 짝 : data-color="blue" -->
-                            <b data-color="red">홀</b>
-                        </td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="graph_odd_even">
-                                <!-- [Design] :
-                                    1. 각 홀/짝 그래프는 data-count 속성에 숫자로 표현해주시면 됩니다. data-count="(n)"
+            <article class="about_technjoy"><!-- about_technjoy -->
+                <h1 class="about_title">IT SERVICE 전문기업 테크앤조이</h1>
+                <ul class="list_skills">
+                    <li><span>다양하고<br>풍부한 경험</span></li>
+                    <li><span>기술 개발<br>활용성 다양</span></li>
+                    <li><span>인재<br>관리 능력</span></li>
+                </ul>
 
-                                    2. 각 data-type="odd"/ data-type="even" 내부 출현 횟수에 대한 수치데이터 (1~6) 를 Case에 맞게 출력 해주세요.
-                                -->
-                                <div data-graph="odd" data-count="5">홀수 출현 횟수 5</div>
-                                <div data-graph="even" data-count="1">짝수 출현 횟수 1</div>
-                            </div>
-                        </td>
-                    </tr>
+                <h2 class="about_title">BUSINESS AREA</h2>
+                <ul class="list_portfolio">
+                    <li class="mobile">
+                        <strong>MOBILE</strong>
+                        <p>SK,KT,LGT 통신사 앱 개발 및 운영 SkyLife, 교보문고, 한국인터넷진흥원, 방송통신 위원회 등과 다수 APP개발</p>
+                    </li>
+                    <li class="iptv">
+                        <strong>WEB/IPTV</strong>
+                        <p>방송송출용 관리툴 제작, 국책연구소 쇼핑몰, <br>KT IPTV 엔터테인먼트 서비스 개발, SKB/SKT 스마트박스 엔터테인먼트 서비스 개발</p>
+                    </li>
+                    <li class="offline">
+                        <strong>OFFLINE</strong>
+                        <p>책출판 전문,전문 촬영/편집, 모니터링/전화상담 인력파견, 홈쇼핑대상 상품 판매 위탁, 연예인 매니지먼트, 영화제작</p>
+                    </li>
+                </ul>
 
-
-                    <tr>
-                        <th rowspan="2">
-                            <b data-color="blue">766</b>회
-                            /<br>이미지
-                        </th>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>
-                            <!-- [Design] 홀: data-color="red" / 짝 : data-color="blue" -->
-                            <b data-color="red">홀</b>
-                        </td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="graph_odd_even">
-                                <div data-graph="odd" data-count="3">홀수 출현 횟수 3</div>
-                                <div data-graph="even" data-count="3">짝수 출현 횟수 3</div>
-                            </div>
-                        </td>
-                    </tr>
-
-
-                    <tr class="divide">
-                        <th rowspan="2">
-                            <b data-color="blue">766</b>회
-                            /<br>이미지
-                        </th>
-                        <td>4</td>
-                        <td>2</td>
-                        <td>
-                            <!-- [Design] 홀: data-color="red" / 짝 : data-color="blue" -->
-                            <b data-color="red">홀</b>
-                        </td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td colspan="4">
-                            <div class="graph_odd_even">
-                                <div data-graph="odd" data-count="4">홀수 출현 횟수 4</div>
-                                <div data-graph="even" data-count="2">짝수 출현 횟수 2</div>
-                            </div>
-                        </td>
-                    </tr>
-
-
-                    </tbody>
-                </table>
-            </div><!-- //data_table -->
-
-            <button type="button" class="btn_page_more">더보기</button>
+            </article><!-- //about_technjoy -->
+            
         </div>
     </section>
 </div>

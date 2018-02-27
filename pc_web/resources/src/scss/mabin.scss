@@ -659,18 +659,10 @@ input{
 		}
 	}
 
-	$dataGraphStack: (
-	  1: 30px,
-	  2: 60px,
-	  3: 90px,
-	  4: 120px,
-	  5: 150%
-	);
-	@each $grapStack, $value in $dataGraphStack {
-	  [data-count='#{$grapStack}']:after {
-	    width:$value
-	  }
+	@for $grapStack from 1 through 5 {
+	  [data-count='#{$grapStack}']:after { width: 16.6% * $grapStack; }
 	}
+	
 	[data-graph="odd"] {
 		&:after {
 			right:0;
@@ -1175,12 +1167,6 @@ input{
 
 
 // 로또팡 서비스 안내 mypage_about_service.html
-
-
-.desc_about_service {
-
-
-}
 .list_about_service {
 	padding:40px 25px;
 	background-color:#fff;
