@@ -232,6 +232,8 @@ caption { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; 
 
 .box_wrap > .box_desc { font-size: 0.92rem; margin-bottom: 20px; letter-spacing: -1px; }
 
+.box_wrap .data_table + .box_title { margin-top: 40px; }
+
 .box_wrap .box_title { font-weight: 500; font-size: 1.15rem; color: #000; margin-bottom: 18px; line-height: 100%; letter-spacing: -1px; }
 
 .box_wrap .block_title { font-weight: 500; font-size: 1.15rem; color: #000; padding-bottom: 11px; border-bottom: 1px solid #e5e5e5; margin-bottom: 15px; line-height: 100%; letter-spacing: -1px; }
@@ -741,19 +743,15 @@ select + .mix_t_radio { margin-left: 15px; }
 
 .data_table .we td { background: #ffecd5; color: #ea614e; font-weight: 700; }
 
-.data_table .we .point { position: relative; }
+.contents_hurry_up { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 30px 14px; width: 325px; height: 619px; margin: 0 auto; background: url("../img/content/cont_hurry_up.png") no-repeat 0 0; background-size: 325px 619px; }
 
-.data_table .we .point span { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; position: absolute; left: -30px; top: -37px; width: 42px; height: 42px; background: url("../img/content/ico_point.png") no-repeat 0 0; }
+.contents_hurry_up strong { display: block; margin-bottom: 17px; font-weight: 700; font-size: 1.64rem; color: #555; }
 
-.contents_hurry_up { margin: 55px 60px 0; padding: 40px; background: url("../img/content/cont_hurry_up.png") no-repeat 50% 0; }
-
-.contents_hurry_up strong { display: block; margin-bottom: 17px; font-weight: 700; font-size: 28px; color: #6998f4; }
-
-.contents_hurry_up p { line-height: 170%; margin-bottom: 27px; }
+.contents_hurry_up p { line-height: 170%; margin-bottom: 27px; font-size: 0.92rem; }
 
 .contents_hurry_up p:last-of-type { margin-bottom: 0; }
 
-.contents_hurry_up em { margin-top: 70px; display: block; font-weight: 700; font-size: 16px; }
+.contents_hurry_up em { margin-top: 27px; display: block; font-weight: 700; font-size: 0.92rem; }
 
 .lotto_pang_slogan .point { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; color: #fff; width: 61px; height: 61px; padding: 10px 0 0 0; margin-right: 8px; background: url("../img/content/ico_slogan_point.png") no-repeat 0 0; text-align: center; line-height: 140%; font-family: "Gulim", "굴림", sans-serif; font-size: 12px; }
 
@@ -854,7 +852,7 @@ select + .mix_t_radio { margin-left: 15px; }
 .lotto_word article .list_title { padding-left: 15px; padding-right: 15px; }
 
 /*연금복권*/
-.title_plus_desc { padding-top: 30px; margin-bottom: 15px; }
+.title_plus_desc { margin-bottom: 15px; }
 
 .title_plus_desc .box_title { margin-bottom: 10px; }
 

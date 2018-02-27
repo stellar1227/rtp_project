@@ -214,32 +214,25 @@
       color:#ea614e;
       font-weight:$bold;
     }
-    .point{
-      position: relative;
-      span{
-        @include blind(indent);
-        position: absolute;
-        left:-30px;
-        top:-37px;
-        width:42px;
-        height:42px;
-        background:url('#{$content-img}ico_point.png') no-repeat 0 0;
-      }
-    }
+
   }
 }
 .contents_hurry_up{
-  margin:55px 60px 0;
-  padding:40px;
-  background: url('#{$content-img}cont_hurry_up.png') no-repeat 50% 0;
+  @include boxSizing();
+  padding:30px 14px;
+  width:325px;
+  height:619px;
+  margin:0 auto;
+  background: url('#{$content-img}cont_hurry_up.png') no-repeat 0 0;
+  background-size:325px 619px;
   strong{
     display: block;
     margin-bottom:17px;
     font :{
       weight:$bold;
-      size:28px;
+      size:$font23px
     }
-    color:$strong-color;
+    color:$base-color;
   }
   p{
     line-height:170%;
@@ -247,13 +240,16 @@
     &:last-of-type{
       margin-bottom:0;
     }
+    font : {
+      size : $font13px;
+    }
   }
   em{
-    margin-top:70px;
+    margin-top:27px;
     display: block;
     font :{
       weight:$bold;
-      size:16px
+      size:$font13px
     }
   }
 }
@@ -535,7 +531,6 @@
 
 /*연금복권*/
 .title_plus_desc{
-  padding-top:30px;
   margin-bottom:15px;
   .box_title{
     margin-bottom:10px;
