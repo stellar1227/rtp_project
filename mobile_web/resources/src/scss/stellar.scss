@@ -539,3 +539,12 @@
     font-size:$font13px;
   }
 }
+
+.has_data + .input_custom{
+  margin-left:10px;
+  vertical-align: top;
+}
+
+[data-hide="phoneNum"]{
+  margin-bottom:5px;
+}

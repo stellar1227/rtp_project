@@ -16,9 +16,9 @@ input[required][readonly][type="text"], input[required][readonly][type="password
 
 input[required][disabled][type="text"], input[required][disabled][type="password"], textarea[required][disabled] { border-color: #528dff; background: #f4f4f4; color: #969696; }
 
-.btn_primary, .btn_strong, .btn_link, .link_list li a, #gnb .sub_gnb .depth ul li a, button[disabled] { display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; min-width: 91px; height: 44px; padding: 0 7px; line-height: 44px; font-size: 1rem; /* weight:$bold;*/ color: #fff; text-align: center; }
+.btn_primary, .btn_strong, .btn_link, .link_list li a, #gnb .sub_gnb .depth ul li a, .btn_table, button[disabled] { display: inline-block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; min-width: 91px; height: 44px; padding: 0 7px; line-height: 44px; font-size: 1rem; /* weight:$bold;*/ color: #fff; text-align: center; }
 
-.btn_primary:focus, .btn_strong:focus, .btn_link:focus, .link_list li a:focus, #gnb .sub_gnb .depth ul li a:focus, button[disabled]:focus { text-decoration: none; }
+.btn_primary:focus, .btn_strong:focus, .btn_link:focus, .link_list li a:focus, #gnb .sub_gnb .depth ul li a:focus, .btn_table:focus, button[disabled]:focus { text-decoration: none; }
 
 /*reset*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, #footer .copyright, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; }
@@ -320,24 +320,10 @@ select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f
 
 .btn_link:focus, .link_list li a:focus, #gnb .sub_gnb .depth ul li a:focus { background: #528dff; color: #fff; }
 
-/*.btn_table{
-    @extend %btn;
-    min-width: 80px;
-    height: 35px;
-    margin-left:10px;
-    margin-right:10px;
-    border:1px solid #bbbf;
-    background:$btn-table;
-    vertical-align: middle;
-    line-height: 35px;
-    color:#333;
-    &:hover{
-      background:darken($btn-strong, 20%);
-      border-color:darken($btn-strong, 20%);
-      color:#fff;
-    }
-  }
-*/
+.btn_table { min-width: 80px; height: 35px; margin-left: 10px; margin-right: 10px; border: 1px solid #bbbf; background: #fff; vertical-align: middle; line-height: 35px; color: #333; }
+
+.btn_table:hover { background: #0050eb; border-color: #0050eb; color: #fff; }
+
 button[disabled] { background: #b8b8b8; }
 
 button[disabled]:hover { background: #b8b8b8; }
@@ -374,7 +360,7 @@ button[disabled]:hover { background: #b8b8b8; }
 
 .input_table tbody { /*& + tbody{ tr:first-child{ border-top:1px solid $border-base; td{ padding-top:40px; } th{ padding-top:55px; } } } tr:last-child{ td, & th{ padding-bottom:40px; } }*/ }
 
-.input_table th { padding: 14px 0 14px 15px; vertical-align: top; text-align: left; }
+.input_table th { padding: 14px 0; vertical-align: top; text-align: left; }
 
 .input_table th:before { -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; display: inline-block; content: ""; vertical-align: middle; margin-right: 7px; width: 4px; height: 4px; background: #8a9fc7; }
 
@@ -857,6 +843,10 @@ select + .mix_t_radio { margin-left: 15px; }
 .title_plus_desc .box_title { margin-bottom: 10px; }
 
 .title_plus_desc .desc_primary { font-size: 0.92rem; }
+
+.has_data + .input_custom { margin-left: 10px; vertical-align: top; }
+
+[data-hide="phoneNum"] { margin-bottom: 5px; }
 
 input[data-align="center"] { text-align: center; }
 

@@ -742,7 +742,7 @@ $dataFontSize: (
   font-weight:400;
 }
 //todo 테이블안의 하양이버튼이로구나 있는지 확인
-/*.btn_table{
+.btn_table{
     @extend %btn;
     min-width: 80px;
     height: 35px;
@@ -759,7 +759,6 @@ $dataFontSize: (
       color:#fff;
     }
   }
-*/
 button{
   &[disabled]{
     @extend %btn;
@@ -860,7 +859,7 @@ button{
     }*/
   }
   th{
-    padding:14px 0 14px 15px;
+    padding:14px 0;
     vertical-align: top;
     text-align: left;
     &:before{
