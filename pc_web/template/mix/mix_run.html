@@ -107,8 +107,30 @@
 
             <div class="mix_run_article"><!-- mix_run_article -->
 
-                <div class="mix_data"><!-- mix_data : 좌측 조합결과 Table -->
+                <div class="mix_run_stat">
+                    <div class="mix_run_desc">
+                        <p class="desc_mix_run">
+                            <span class="progress">당첨체험용 (지난 로또767회) 로또팡 조합기가 실행중입니다...</span>
+                            <br><b data-color="red">지난 회차 당첨그룹은 "그룹"이 붉은색입니다!</b>
+                            <br><b>6개의 그룹을 선택해주세요!</b>
+                        </p>
+                    </div>
 
+                    <div class="mix_grp_chk">
+                        <strong>선택된 그룹에서 뽑은 예상번호 목록</strong>
+                        <span class="num">
+                            1,39,40,11,13,14,16,17,24
+                        </span>
+                        <p class="grp_count">
+                            <b data-color="red">총 0개 예상번호</b> / 45개중 
+                        </p>
+                    </div>
+                </div>  
+
+
+
+                <div class="mix_data"><!-- mix_data : 좌측 조합결과 Table -->
+                    
                     <div class="data_table"><!-- data_table  -->
                         <table>
                             <caption>로또팡 조합 실행</caption>
@@ -116,7 +138,7 @@
                                 <col style="width:25%">
                                 <col style="width:auto">
                                 <col style="width:20%">
-                                <col style="width:20%">
+                                <col style="width:18%">
                             </colgroup>
                             <thead>
                                 <tr>
@@ -136,7 +158,7 @@
                                     <td>
                                         <div class="input_custom">
                                             <input type="checkbox" id="grp1">
-                                            <label for="grp1"><span>그룹 1</span></label>
+                                            <label for="grp1"><span data-color="red">그룹 1</span></label>
                                         </div>
                                     </td>
                                     <td>
@@ -180,6 +202,110 @@
                                     <td></td>
                                     <td></td>
                                 </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp4">
+                                            <label for="grp4"><span>그룹 4</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n1th">9</span>
+                                        <span class="ball_n10th">12</span>
+                                        <span class="ball_n30th">31</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr class="divide">
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp5">
+                                            <label for="grp5"><span>그룹 5</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n10th">11</span>
+                                        <span class="ball_n20th">21</span>
+                                        <span class="ball_n40th">44</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp6">
+                                            <label for="grp6"><span>그룹 4</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n1th">9</span>
+                                        <span class="ball_n10th">12</span>
+                                        <span class="ball_n30th">31</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr class="divide">
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp7">
+                                            <label for="grp7"><span>그룹 6</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n10th">11</span>
+                                        <span class="ball_n20th">21</span>
+                                        <span class="ball_n40th">44</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                               
+
+                                <tr>
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp7">
+                                            <label for="grp7"><span>그룹 7</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n1th">9</span>
+                                        <span class="ball_n10th">12</span>
+                                        <span class="ball_n30th">31</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr class="divide">
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp8">
+                                            <label for="grp8"><span>그룹 8</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n10th">11</span>
+                                        <span class="ball_n20th">21</span>
+                                        <span class="ball_n40th">44</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                               
+                               
                                
                             </tbody>
                         </table>
@@ -190,19 +316,12 @@
 
                 <div class="mix_result"><!-- mix_result : 우측 조합요약 -->
 
-                    <div class="mix_grp_chk">
-                        <span>1,39,40,11,13,14,16,17,24</span>
-                        <p class="grp_count">
-                            <b data-color="red">총 0개 예상번호</b> / 45개중 
-                        </p>
-                    </div>
-
 
                     <div class="data_table"><!-- data_table  -->
                         <table>
                             <caption>로또팡 조합 실행 요약</caption>
                             <colgroup>
-                                <col style="width:17%">
+                                <col style="width:26%">
                                 <col style="width:auto">
                             </colgroup>
                             <thead>

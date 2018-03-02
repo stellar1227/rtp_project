@@ -910,6 +910,13 @@ input{
 
 
 // [COMMENT] list_primary - 기본 목록형 디자인
+.data_table + .list_primary {
+	margin-top:30px
+}
+.mix_contents + .list_primary {
+	margin-top:-1px;
+
+}
 .list_primary {
 	padding:18px 30px;
 	margin-top:50px;
@@ -1227,3 +1234,202 @@ input{
 	}
 }
 
+
+// 로또팡 조합기 실행 
+.mix_run_article {
+	overflow:hidden;
+	padding: {
+		top:30px;
+		bottom:50px;
+	};
+
+	.data_table {
+		margin:0 ;
+	}
+
+	border-bottom:1px solid #ddd;
+
+	.mix_data , .mix_result {
+		float:left;
+
+		
+	}
+
+
+	.mix_run_stat {
+		display:table;
+		box-sizing:border-box;
+
+		width:100%;
+		height:60px;
+		margin-bottom:20px;
+		background-color:#fff;
+
+		border: {
+			style:solid;
+			width:1px 1px 3px;
+			color:#eee #ddd $strong-color;
+		}
+
+		.mix_run_desc, .mix_grp_chk {
+			display:table-cell;
+			padding:20px 40px 30px;
+		}
+
+		.mix_run_desc {
+			width:64%;
+			padding:{
+				left:120px;
+				right:0;
+				bottom:20px;
+			};
+
+			background:url("#{$content-img}ico_mix_desc.png") no-repeat 40px 55%;
+			border-right:1px dashed #ddd;
+			vertical-align:middle;
+
+			&:first-child:last-child {
+				width:100%;
+				padding:{
+					top:25px;
+					left:0;
+					bottom:0;
+				}
+				background-position:40px 50px;
+				.desc_mix_run {
+					padding-left:130px;
+					.progress {
+						margin-bottom:10px;
+					}
+				}
+			}
+	
+			.desc_mix_run {
+				line-height:1.9em;
+
+				.progress {
+					display:inline-block;
+					padding:2px 15px 4px;
+					margin: {
+						left:-10px;
+						bottom:5px;
+					}
+					background-color:$strong-color;
+					border-radius:50px;
+					color:#fff;
+
+				}
+			}
+
+			.list_primary {
+				margin-top:30px;
+				padding: {
+					left:70px;
+					right:70px;
+					bottom:22px;
+				}
+				border-bottom:0;
+			}
+
+			.txt_under {
+				padding:{
+					bottom:5px;
+					left:5px;right:5px;
+				}
+				border-bottom:1px solid #ccc;
+				letter-spacing:-.5px;
+			}
+		}
+
+		.mix_grp_chk {
+			padding:{
+				left:25px;right:20px;
+			};
+			line-height:2em;
+			strong {
+				display:block;
+				padding:10px 20px 5px;
+				margin-bottom:10px;
+				border-bottom:1px solid #ccc;
+				letter-spacing:-1px; 
+			}
+			.num {
+				font-size:1.2em;
+				font-weight:$bold;
+				color:#000;
+
+			}
+			text-align:center;
+			vertical-align:middle;
+
+			.grp_count {
+				margin-top:10px;
+				font-size:1.1em;
+			}
+		}
+		
+	}
+
+
+	.mix_data {
+		box-sizing:border-box;
+		width:64%;
+		padding-right:30px;
+	}
+
+
+	.mix_result {
+		width:36%;
+		.btn_wrap {
+			margin: { 
+				top:20px;
+				left:0;right:0;
+			}
+
+			.btn_primary,.btn_strong {
+				width:calc(50% - 5px)
+			}
+		}
+	}
+
+
+
+	// 지난회차 당첨그룹 Label - color red 처리
+	.input_custom input[type='checkbox'] + label span[data-color="red"] {
+		font-weight:$bold;
+		color:$notice-color;
+	}
+}
+.desc_mix_run {
+
+}
+
+// 그룹출현현황 분석 - 단,2,3,4합수 mix_group_appear.html
+.data_table {
+	tbody {
+		tr, .tr.divide {
+			td[data-appear="grp_1"] {
+				box-shadow:inset 0 -3px 0 #999;
+				color:#000;
+			}
+			td[data-appear="grp_2"] {
+				box-shadow:inset 0 -3px 0 #92d0fc;
+				background-color:#f9fcff;
+				border-bottom-color:#006ebc;
+				color:#083651;
+			}
+			td[data-appear="grp_3"] {
+				box-shadow:inset 0 -3px 0 #ff9c6d;
+				background-color:#fffbfb;
+				border-bottom-color:#eb763e;
+				color:#8f0000;
+			}
+			td[data-appear="grp_4"] {
+				box-shadow:inset 0 -3px 0 #9def9c;
+				background-color:#f8fef9;
+				border-bottom-color:#158928;
+				color:#2e7a00;
+			}
+		}
+	}
+}

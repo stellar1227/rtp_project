@@ -1238,6 +1238,10 @@ input[data-align="right"] { text-align: right; }
 
 .tit_about { font-size: 24px; }
 
+.data_table + .list_primary { margin-top: 30px; }
+
+.mix_contents + .list_primary { margin-top: -1px; }
+
 .list_primary { padding: 18px 30px; margin-top: 50px; border-style: dashed; border-width: 1px 0; border-color: #ddd; background-color: #fcfcfc; }
 
 .list_primary li { padding: 5px 0 6px; }
@@ -1321,5 +1325,57 @@ input[data-align="right"] { text-align: right; }
 .list_about_service li .link_about:hover { background-color: #ffffbf; border-color: #e5c982; }
 
 .btn_wrap_sns [data-type="phone"] { border: 1px solid #ccc; background: url("../img/common/bg_login_phone.png") no-repeat 0 0; }
+
+.mix_run_article { overflow: hidden; padding-top: 30px; padding-bottom: 50px; border-bottom: 1px solid #ddd; }
+
+.mix_run_article .data_table { margin: 0; }
+
+.mix_run_article .mix_data, .mix_run_article .mix_result { float: left; }
+
+.mix_run_article .mix_run_stat { display: table; box-sizing: border-box; width: 100%; height: 60px; margin-bottom: 20px; background-color: #fff; border-style: solid; border-width: 1px 1px 3px; border-color: #eee #ddd #528dff; }
+
+.mix_run_article .mix_run_stat .mix_run_desc, .mix_run_article .mix_run_stat .mix_grp_chk { display: table-cell; padding: 20px 40px 30px; }
+
+.mix_run_article .mix_run_stat .mix_run_desc { width: 64%; padding-left: 120px; padding-right: 0; padding-bottom: 20px; background: url("../img/content/ico_mix_desc.png") no-repeat 40px 55%; border-right: 1px dashed #ddd; vertical-align: middle; }
+
+.mix_run_article .mix_run_stat .mix_run_desc:first-child:last-child { width: 100%; padding-top: 25px; padding-left: 0; padding-bottom: 0; background-position: 40px 50px; }
+
+.mix_run_article .mix_run_stat .mix_run_desc:first-child:last-child .desc_mix_run { padding-left: 130px; }
+
+.mix_run_article .mix_run_stat .mix_run_desc:first-child:last-child .desc_mix_run .progress { margin-bottom: 10px; }
+
+.mix_run_article .mix_run_stat .mix_run_desc .desc_mix_run { line-height: 1.9em; }
+
+.mix_run_article .mix_run_stat .mix_run_desc .desc_mix_run .progress { display: inline-block; padding: 2px 15px 4px; margin-left: -10px; margin-bottom: 5px; background-color: #528dff; border-radius: 50px; color: #fff; }
+
+.mix_run_article .mix_run_stat .mix_run_desc .list_primary { margin-top: 30px; padding-left: 70px; padding-right: 70px; padding-bottom: 22px; border-bottom: 0; }
+
+.mix_run_article .mix_run_stat .mix_run_desc .txt_under { padding-bottom: 5px; padding-left: 5px; padding-right: 5px; border-bottom: 1px solid #ccc; letter-spacing: -.5px; }
+
+.mix_run_article .mix_run_stat .mix_grp_chk { padding-left: 25px; padding-right: 20px; line-height: 2em; text-align: center; vertical-align: middle; }
+
+.mix_run_article .mix_run_stat .mix_grp_chk strong { display: block; padding: 10px 20px 5px; margin-bottom: 10px; border-bottom: 1px solid #ccc; letter-spacing: -1px; }
+
+.mix_run_article .mix_run_stat .mix_grp_chk .num { font-size: 1.2em; font-weight: 700; color: #000; }
+
+.mix_run_article .mix_run_stat .mix_grp_chk .grp_count { margin-top: 10px; font-size: 1.1em; }
+
+.mix_run_article .mix_data { box-sizing: border-box; width: 64%; padding-right: 30px; }
+
+.mix_run_article .mix_result { width: 36%; }
+
+.mix_run_article .mix_result .btn_wrap { margin-top: 20px; margin-left: 0; margin-right: 0; }
+
+.mix_run_article .mix_result .btn_wrap .btn_primary, .mix_run_article .mix_result .btn_wrap .btn_strong { width: calc(50% - 5px); }
+
+.mix_run_article .input_custom input[type='checkbox'] + label span[data-color="red"] { font-weight: 700; color: #ea614e; }
+
+.data_table tbody tr td[data-appear="grp_1"], .data_table tbody .tr.divide td[data-appear="grp_1"] { box-shadow: inset 0 -3px 0 #999; color: #000; }
+
+.data_table tbody tr td[data-appear="grp_2"], .data_table tbody .tr.divide td[data-appear="grp_2"] { box-shadow: inset 0 -3px 0 #92d0fc; background-color: #f9fcff; border-bottom-color: #006ebc; color: #083651; }
+
+.data_table tbody tr td[data-appear="grp_3"], .data_table tbody .tr.divide td[data-appear="grp_3"] { box-shadow: inset 0 -3px 0 #ff9c6d; background-color: #fffbfb; border-bottom-color: #eb763e; color: #8f0000; }
+
+.data_table tbody tr td[data-appear="grp_4"], .data_table tbody .tr.divide td[data-appear="grp_4"] { box-shadow: inset 0 -3px 0 #9def9c; background-color: #f8fef9; border-bottom-color: #158928; color: #2e7a00; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */
