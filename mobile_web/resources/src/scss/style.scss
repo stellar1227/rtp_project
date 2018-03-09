@@ -532,6 +532,7 @@ $header-height:88px;
     letter-spacing:-1px;
   }
   .block_title{
+    position: relative;
     font : {
       weight:500;
       size:$font16px;
@@ -542,6 +543,15 @@ $header-height:88px;
     margin-bottom:15px;
     line-height:100%;
     letter-spacing:-1px;
+    .m_select{
+      position: absolute;
+      right:0;
+      font-size:$font12px;
+      height:18px;
+      border:0;
+      background:url('#{$common-img}ico_main_select.png') no-repeat 100% 0;
+      background-size:18px auto;
+    }
   }
   & > .link_more{
     @include blind(indent);
@@ -552,6 +562,9 @@ $header-height:88px;
     height:45px;
     background:url('#{$common-img}link_more.png') no-repeat 50% 50%;
     background-size:7px auto;
+  }
+  .btn_wrap:first-child{
+    margin-top:0;
   }
 } //컨텐츠 섹션마다 들어가는 래퍼
 .link_list{
@@ -735,11 +748,26 @@ $dataFontSize: (
   background:$btn-link ;
   color:$base-color;
   border:1px solid #e5e5e5;
+  line-height:42px;
   &:focus{
     background:$btn-strong;
     color:#fff;
   }
   font-weight:400;
+  &[data-type="arrow"]{
+    position: relative;
+    &:after{
+      content:"";
+      position: absolute;
+      right:12px;
+      top:50%;
+      width:7px;
+      height:13px;
+      margin-top:-6px;
+      background: url('#{$common-img}btn_link_arrow.png') no-repeat 0 0;
+      background-size:7px auto;
+    }
+  }
 }
 //todo 테이블안의 하양이버튼이로구나 있는지 확인
 .btn_table{
