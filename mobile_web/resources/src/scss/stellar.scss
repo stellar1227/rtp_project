@@ -53,7 +53,170 @@
     }
   }
 }
+.main_win_sec{
+  .win_info{
+    text-align: center;
+    margin-bottom: 19px;
+    font-size:$font15px
+  }
+  .win_num{
+    text-align: center;
+    margin-bottom: 26px;
+    span[class^="ball_n"]{
+      width:32px;
+      height:32px;
+      line-height:32px;
+      font-size:$font16px;
+      + .plus{
+        font-size:22px;
+        color:#bfc1c2;
+      }
+    }
+  }
+}
+.btn_question{
+  @include blind(indent);
+  vertical-align: middle;
+  margin-left:5px;
+  width:18px;
+  height:18px;
+  background:url('#{$common-img}/ico_question.png') no-repeat 0 0;
+  background-size:18px 18px;
+}
+.appear_num{
+  margin-left:10px;
+  display: inline-block;
+  vertical-align: middle;
+  .desc{
+    color:#969696;
+  }
+}
+.double_wrap{
+  overflow: hidden;
+  .box_wrap{
+    @include boxSizing();
+    float:left;
+    width:49%;
+    height:206px;
+    &:first-child{
+      margin-right:2%
+    }
+  }
+}
+.box_wrap{
+  .thumb_img{
+    display: block;
+    margin-bottom:9px;
+  }
+  .thumb_desc{
+    font-size:$font14px;
+    line-height:140%
+  }
+  .main_notice_list{
+    li{
+      padding-bottom:10px;
+      &:last-child{
+        padding-bottom: 0;
+      }
+      position: relative;
+      a{
+        @include boxSizing();
+        padding-right: 100px;
+        display: block;
+        width:100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        color:#787878;
+        .name{
+          position: absolute;
+          width:100px;
+          right:0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          color:$strong-color;
+          text-align: right;
 
+        }
+        .date{
+          position: absolute;
+          width:100px;
+          right:0;
+          text-align: right;
+          font-size:$font13px;
+          color:#969696
+        }
+      }
+    }
+  }
+}
+[data-type="data_more"]{
+  .btn_block_prev{
+    @include blind(indent);
+    position: absolute;
+    left:7px;
+    top:50%;
+    width:15px;
+    height:28px;
+    margin-top:-7px;
+    background:url('#{$common-img}btn_block_prev.png') no-repeat 0 0;
+    background-size:15px 28px;
+  }
+  .btn_block_next{
+    @include blind(indent);
+    position: absolute;
+    right:7px;
+    top:50%;
+    margin-top:-7px;
+    width:15px;
+    height:28px;
+    background:url('#{$common-img}btn_block_next.png') no-repeat 0 0;
+    background-size:15px 28px;
+  }
+}
+.main_ticket_sec{
+  .ticket_info{
+    text-align: center;
+    margin-bottom:12px;
+  }
+  .ticket_win{
+    font:{
+      family:Arial, sans-serif;
+    }
+    li{
+      font-size:0;
+      background: url('#{$content-img}bg_main_num.png') no-repeat 50% 0;
+      background-size:306px 35px;
+      &:first-child{
+        margin-bottom:6px;
+      }
+      text-align: center;
+      span{
+        text-align: center;
+        width:39px;
+        height:35px;
+        line-height:35px;
+        display: inline-block;
+        color:#fff;
+        font-size:$font20px;
+        font-weight:$bold;
+      }
+      .h{
+        width:67px;
+        font-size:$font14px;
+        font-weight:$normal;
+        em{
+          color:#fff077;
+          font-size:$font20px;
+          font-weight:$bold;
+          margin-right:3px;
+        }
+
+      }
+    }
+  }
+}
 
 
 /*조합기 전체보기*/

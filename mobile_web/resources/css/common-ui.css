@@ -669,6 +669,58 @@ span.ball_n40th { background: #58ca7b; }
 
 .main_sec .visual_sec .swiper-pagenation .swiper-pagination-bullet.swiper-pagination-bullet-active { background: #9f9f9f; }
 
+.main_win_sec .win_info { text-align: center; margin-bottom: 19px; font-size: 1.07rem; }
+
+.main_win_sec .win_num { text-align: center; margin-bottom: 26px; }
+
+.main_win_sec .win_num span[class^="ball_n"] { width: 32px; height: 32px; line-height: 32px; font-size: 1.15rem; }
+
+.main_win_sec .win_num span[class^="ball_n"] + .plus { font-size: 22px; color: #bfc1c2; }
+
+.btn_question { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; vertical-align: middle; margin-left: 5px; width: 18px; height: 18px; background: url("../img/common//ico_question.png") no-repeat 0 0; background-size: 18px 18px; }
+
+.appear_num { margin-left: 10px; display: inline-block; vertical-align: middle; }
+
+.appear_num .desc { color: #969696; }
+
+.double_wrap { overflow: hidden; }
+
+.double_wrap .box_wrap { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 49%; height: 206px; }
+
+.double_wrap .box_wrap:first-child { margin-right: 2%; }
+
+.box_wrap .thumb_img { display: block; margin-bottom: 9px; }
+
+.box_wrap .thumb_desc { font-size: 1rem; line-height: 140%; }
+
+.box_wrap .main_notice_list li { padding-bottom: 10px; position: relative; }
+
+.box_wrap .main_notice_list li:last-child { padding-bottom: 0; }
+
+.box_wrap .main_notice_list li a { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding-right: 100px; display: block; width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color: #787878; }
+
+.box_wrap .main_notice_list li a .name { position: absolute; width: 100px; right: 0; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; color: #6998f4; text-align: right; }
+
+.box_wrap .main_notice_list li a .date { position: absolute; width: 100px; right: 0; text-align: right; font-size: 0.92rem; color: #969696; }
+
+[data-type="data_more"] .btn_block_prev { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; position: absolute; left: 7px; top: 50%; width: 15px; height: 28px; margin-top: -7px; background: url("../img/common/btn_block_prev.png") no-repeat 0 0; background-size: 15px 28px; }
+
+[data-type="data_more"] .btn_block_next { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; position: absolute; right: 7px; top: 50%; margin-top: -7px; width: 15px; height: 28px; background: url("../img/common/btn_block_next.png") no-repeat 0 0; background-size: 15px 28px; }
+
+.main_ticket_sec .ticket_info { text-align: center; margin-bottom: 12px; }
+
+.main_ticket_sec .ticket_win { font-family: Arial, sans-serif; }
+
+.main_ticket_sec .ticket_win li { font-size: 0; background: url("../img/content/bg_main_num.png") no-repeat 50% 0; background-size: 306px 35px; text-align: center; }
+
+.main_ticket_sec .ticket_win li:first-child { margin-bottom: 6px; }
+
+.main_ticket_sec .ticket_win li span { text-align: center; width: 39px; height: 35px; line-height: 35px; display: inline-block; color: #fff; font-size: 1.43rem; font-weight: 700; }
+
+.main_ticket_sec .ticket_win li .h { width: 67px; font-size: 1rem; font-weight: 400; }
+
+.main_ticket_sec .ticket_win li .h em { color: #fff077; font-size: 1.43rem; font-weight: 700; margin-right: 3px; }
+
 /*조합기 전체보기*/
 .input_table.banner_type { overflow: hidden; }
 
