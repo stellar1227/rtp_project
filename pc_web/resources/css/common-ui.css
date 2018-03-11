@@ -708,9 +708,7 @@ span.ball_n40th { background: #58ca7b; }
 
 .main .box_contents_section .box_conts .table_title { margin: 0; padding: 28px 0 11px; letter-spacing: -1px; }
 
-.main .box_contents_section .box_conts .table_title .date { margin-left: 15px; display: inline-block; vertical-align: middle; font-size: 14px; font-weight: 400; }
-
-.main .box_contents_section .box_conts .table_title .date .btn_arrow { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; display: inline-block; vertical-align: middle; width: 19px; height: 19px; background: url("../img/common//ico_main_arrow.png") no-repeat 0 0; margin-right: 5px; }
+.main .box_contents_section .box_conts .table_title .m_select { margin-left: 15px; display: inline-block; padding: 0 10px 0 30px; font-size: 14px; height: 27px; line-height: 27px; border: 0; background: url("../img/common//ico_main_arrow.png") no-repeat 0 50%; }
 
 .main .box_contents_section .box_conts .box_win_info { position: relative; background: #f3f4f8; height: 148px; border: 1px solid #e9e9ea; padding: 20px 0; text-align: center; }
 
@@ -738,7 +736,7 @@ span.ball_n40th { background: #58ca7b; }
 
 .main .box_contents_section .box_conts .box_win_info .ticket_win { margin-bottom: 15px; display: table; width: 100%; margin-top: 25px; }
 
-.main .box_contents_section .box_conts .box_win_info .ticket_win dt { display: table-cell; padding: 0 20px; vertical-align: middle; width: 95px; font-size: 18px; line-height: 150%; }
+.main .box_contents_section .box_conts .box_win_info .ticket_win dt { display: table-cell; padding: 0 10px 0 30px; vertical-align: middle; width: 95px; font-size: 18px; line-height: 150%; }
 
 .main .box_contents_section .box_conts .box_win_info .ticket_win dt b { display: block; }
 

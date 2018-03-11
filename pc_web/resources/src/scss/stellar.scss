@@ -261,21 +261,15 @@
         margin:0;
         padding:28px 0 11px;
         letter-spacing: -1px;
-        .date{
+        .m_select{
           margin-left:15px;
           display: inline-block;
-          vertical-align: middle;
-          .btn_arrow{
-            @include blind(indent);
-            display: inline-block;
-            vertical-align: middle;
-            width:19px;
-            height:19px;
-            background:url('#{$common-img}/ico_main_arrow.png') no-repeat 0 0;
-            margin-right:5px;
-          }
-          font-size:14px;
-          font-weight:$normal;
+          padding:0 10px 0 30px;
+          font-size: 14px;
+          height: 27px;
+          line-height:27px;
+          border: 0;
+          background:url('#{$common-img}/ico_main_arrow.png') no-repeat 0 50%;
         }
       }
       .box_win_info{
@@ -348,7 +342,7 @@
           margin-top:25px;
           dt{
             display: table-cell;
-            padding:0 20px;
+            padding:0 10px 0 30px;
             vertical-align: middle;
             width:95px;
             font-size:18px;
