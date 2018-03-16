@@ -503,10 +503,12 @@ $header-height:88px;
   &:last-child{
     margin-bottom:0;
   }
+
   & > .desc{
     font-size:$font15px;
     line-height:100%;
     margin-bottom:18px;
+    letter-spacing: -1px;
   }
   & > .desc_primary{
     font-size:$font15px;

@@ -684,3 +684,18 @@
 [data-hide="phoneNum"]{
   margin-bottom:5px;
 }
+
+/*로그인*/
+.login_box{
+  input:first-child{
+    display: inline-block;
+    margin-bottom:5px;
+  }
+}
+.srch_info_link{
+  margin-top:10px;
+  text-align: right;
+  font-size:$font13px;
+  color:$sub-color;
+  text-decoration: underline;
+}

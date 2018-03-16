@@ -226,7 +226,7 @@ caption { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; 
 
 .box_wrap:last-child { margin-bottom: 0; }
 
-.box_wrap > .desc { font-size: 1.07rem; line-height: 100%; margin-bottom: 18px; }
+.box_wrap > .desc { font-size: 1.07rem; line-height: 100%; margin-bottom: 18px; letter-spacing: -1px; }
 
 .box_wrap > .desc_primary { font-size: 1.07rem; line-height: 140%; margin-bottom: 18px; }
 
@@ -891,6 +891,11 @@ select + .mix_t_radio { margin-left: 15px; }
 .has_data + .input_custom { margin-left: 10px; vertical-align: top; }
 
 [data-hide="phoneNum"] { margin-bottom: 5px; }
+
+/*로그인*/
+.login_box input:first-child { display: inline-block; margin-bottom: 5px; }
+
+.srch_info_link { margin-top: 10px; text-align: right; font-size: 0.92rem; color: #000; text-decoration: underline; }
 
 input[data-align="center"] { text-align: center; }
 
