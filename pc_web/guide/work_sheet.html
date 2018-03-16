@@ -78,6 +78,10 @@
             background-color:#c61919;
             color:#fff;
         }
+        .guideTable .add{
+            background-color:#ec6800;
+            color:#fff;
+        }
 
 
         .designTable {
@@ -465,12 +469,13 @@
             <td></td>
             <td>로그인</td>
             <td><a href="../template/member/member_login.html" target="_blank" title="새창">member_login.html</a></td>
-            <td>완료</td>
-            <td class="date">02-28</td>
+            <td>추가</td>
+            <td class="date">03-19</td>
             <td>
                 <ul>
                     <li><span data-date>2018-02-08</span>하단 슬로건 문구변경(로또 예상번호는 로또팡!) </li>
                     <li><span data-date>2018-02-28</span>휴대폰 번호 로그인-추가</li>
+                    <li><span data-date>2018-03-19</span>휴대폰 번호 로그인 입력필드추가(sb p30)</li>
                 </ul>
             </td>
         </tr>
@@ -504,7 +509,7 @@
             <td>로또팡 조합기</td>
             <td>로또팡 조합기 실행</td>
             <td><a href="../template/mix/mix_run.html" target="_blank" title="새창">mix_run.html</a></td>
-            <td>완료</td>
+            <td>추가</td>
             <td class="date">03-11</td>
             <td>
                 <ul>
@@ -517,7 +522,7 @@
             <td>로또팡 조합기</td>
             <td>로또팡 조합기 실행 - 결과</td>
             <td><a href="../template/mix/mix_run_result.html" target="_blank" title="새창">mix_run_result.html</a></td>
-            <td>완료</td>
+            <td>추가</td>
             <td class="date">03-11</td>
             <td>기획상 필요한 HTML 구성은 전부 넣었습니다.<br>경우의 수에 따라 조합해서 출력해주시기바랍니다.</td>
         </tr>
@@ -544,7 +549,7 @@
             <td>그룹핑</td>
             <td>그룹출현</td>
             <td><a href="../template/mix/mix_group_appear.html" target="_blank" title="새창">mix_group_appear.html</a></td>
-            <td>완료</td>
+            <td>추가</td>
             <td class="date">03-11</td>
             <td>
                 <ul>
@@ -557,7 +562,7 @@
             <td>그룹핑</td>
             <td>회차별통계</td>
             <td><a href="../template/mix/mix_group_stats.html" target="_blank" title="새창">mix_group_stats</a></td>
-            <td>완료</td>
+            <td>추가</td>
             <td class="date">03-11</td>
             <td>
                 <ul>
@@ -623,9 +628,14 @@
             <td></td>
             <td>테크앤조이 소개</td>
             <td><a href="../template/mypage/mypage_technjoy.html" target="_blank" title="새창">mypage_technjoy.html</a></td>
-            <td>진행</td>
-            <td class="date">02-28</td>
-            <td>디자인 컨펌 대기</td>
+            <td>완료</td>
+            <td class="date">03-19</td>
+            <td>
+                <ul>
+                    <li><span data-date>2018-02-08</span>1차 컨펌요청</li>
+                    <li><span data-date>2018-03-19</span>2차 컨펌완료</li>
+                </ul>
+            </td>
         </tr><!-- //MYPAGE -->
         
 
@@ -1430,6 +1440,9 @@
             case "삭제" :
                 _statuscell.setAttribute("class","issue");
                 break;
+            case "추가" :
+                _statuscell.setAttribute("class","add");
+                break;
             default :
                 _linkcell.setAttribute("class","ready");
                 a[i].setAttribute("onclick","return false")
@@ -1439,7 +1452,7 @@
 
 
     var newDateCell = Table.getElementsByClassName('date'),
-        newDate     = '03-11';
+        newDate     = '03-19';
 
     for(var i = 0,len=newDateCell.length; i < len; i++){
         if ( newDateCell[i].textContent == newDate )  {

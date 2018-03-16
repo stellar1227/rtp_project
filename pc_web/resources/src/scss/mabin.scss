@@ -750,7 +750,8 @@ input{
 
 
 // 테크앤조이 소개 - mypage_technjoy
-.about_technjoy {
+//제꺼로 옮겼어요 'ㅅ') 확인 후 삭제 해주세요.
+/*.about_technjoy {
 
 	.about_title {
 		margin:40px 0 35px;
@@ -762,10 +763,10 @@ input{
     	text-align: center;
 	}
 
-	
+
 	padding:10px 50px 70px;
 
-	
+
 	.list_portfolio {
 		display:flex;
 		margin-top:20px;
@@ -792,13 +793,13 @@ input{
 				margin:12px auto 16px;
 			}
 			&.mobile:before {
-				background:url("#{$content-img}ico_about_mobile.png") center 0 no-repeat;	
+				background:url("#{$content-img}ico_about_mobile.png") center 0 no-repeat;
 			}
 			&.iptv:before {
-				background:url("#{$content-img}ico_about_tv.png") center center no-repeat;	
+				background:url("#{$content-img}ico_about_tv.png") center center no-repeat;
 			}
 			&.offline:before {
-				background:url("#{$content-img}ico_about_offline.png") center 0 no-repeat;	
+				background:url("#{$content-img}ico_about_offline.png") center 0 no-repeat;
 			}
 			&:last-child {
 				margin-right:0;
@@ -868,7 +869,7 @@ input{
 			}
 
 
-			
+
 			&:nth-child(1) {
 				background-color: #ef7967;
 				border-color:#b54d3d;
@@ -897,15 +898,14 @@ input{
 				}
 			}
 
-			
+
 		}
 
 	}
 }
 .tit_about {
 	font-size:24px;
-
-}
+}*/
 
 
 

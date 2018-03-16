@@ -885,3 +885,123 @@
 .charge_layer{
   padding-bottom:60px;
 }
+
+/*휴대폰 로그인*/
+.login_box{
+  width:400px;
+  margin:0 auto;
+  .input_sec{
+    input:first-child{
+      display: inline-block;
+      margin-bottom:10px;
+    }
+  }
+  .srch_info_link{
+    margin-top:10px;
+    text-align: right;
+    font-size:14px;
+    color:$sub-color;
+    text-decoration: underline;
+  }
+  .btn_wrap{
+    margin-left:0;
+    margin-right:0;
+    .btn_strong{
+      width:100%
+    }
+  }
+}
+
+/*테크앤조이 소개*/
+.about_technjoy{
+  .about_title{
+    color:#333;
+    text-align: center;
+    padding-top:50px;
+    margin-bottom: 50px;
+    b{
+      display: block;
+      font-size:30px;
+      margin-bottom:12px;
+    }
+    font-size:21px;
+  }
+  .list_skills{
+    padding-bottom:65px;
+    border-bottom:1px solid $border-base;
+    font-size:0;
+    text-align: center;
+    li{
+      @include boxSizing();
+      padding-top:53px;
+      display: inline-block;
+      font-size:19px;
+      margin:0 20px;
+      span{
+        line-height:120%;
+        letter-spacing:-1px;
+      }
+      &:nth-child(1){
+        width:243px;
+        height:244px;
+        color:#510b00;
+        background: url('#{$content-img}bg_about_skill1.png') no-repeat 0 0;
+      }
+      &:nth-child(2){
+        width:252px;
+        height:241px;
+        color:#5f4100;
+        background: url('#{$content-img}bg_about_skill2.png') no-repeat 0 0;
+      }
+      &:nth-child(3){
+        width:240px;
+        height:241px;
+        color:#00294b;
+        background: url('#{$content-img}bg_about_skill3.png') no-repeat 0 0;
+      }
+    }
+  }
+  .list_portfolio{
+    text-align: center;
+    font-size:0;
+    li{
+      display: inline-block;
+      width:243px;
+      height:343px;
+      background: url('#{$content-img}bg_about_port.png') no-repeat 0 0;
+      margin:0 20px;
+      strong{
+        display: block;
+        padding-top:110px;
+        height:50px;
+        margin-bottom:35px;
+        color:#fff;
+        font-size:18px;
+        font-weight:$bold;
+      }
+      p{
+        color:$base-color;
+        font-size:16px;
+        line-height:150%;
+        letter-spacing:-1px;
+        padding-left:30px;
+        text-align: left;
+      }
+      &.mobile{
+        strong{
+          background: url('#{$content-img}ico_about_mobile.png') no-repeat 50% 23px;
+        }
+      }
+      &.iptv{
+        strong{
+          background: url('#{$content-img}ico_about_tv.png') no-repeat 50% 33px;
+        }
+      }
+      &.offline{
+        strong{
+          background: url('#{$content-img}ico_about_offline.png') no-repeat 50% 23px;
+        }
+      }
+    }
+  }
+}
