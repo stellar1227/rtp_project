@@ -973,6 +973,39 @@ select + .mix_t_radio { margin-left: 15px; }
 
 .about_technjoy .list_portfolio li.offline strong { background: url("../img/content/ico_about_offline.png") no-repeat 50% 23px; }
 
+/*대세추천번호 서비스 안내*/
+.about_wrapper { margin: -1px auto 0; padding-top: 45px; width: 880px; background: url("../img/content/bg_about_wrapper.png") no-repeat 0 0; }
+
+.about_ltp_service { border: 1px solid #d6d6d6; border-top: 0; padding-bottom: 85px; }
+
+.about_ltp_service .list_about_tit { position: relative; top: -15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 35px; -moz-border-radius: 35px; border-radius: 35px; display: block; width: 680px; margin: 0 auto; border: 1px solid #949494; height: 74px; line-height: 74px; background: #fff; font-size: 26px; font-weight: 400; letter-spacing: -1px; text-align: center; }
+
+.about_ltp_service .list_about_desc { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; width: 730px; height: 33px; margin: 30px auto 58px; border-bottom: 1px solid #7991a8; padding-bottom: 10px; background: url("../img/content/txt_about_desc.png") no-repeat 50% 0; }
+
+.about_ltp_service .list_about_service { position: relative; }
+
+.about_ltp_service .list_about_service li { width: 710px; height: 48px; line-height: 48px; border-bottom: 1px solid #d0d0d0; margin: 0 auto 15px; padding-left: 20px; letter-spacing: -1px; }
+
+.about_ltp_service .list_about_service li .question { float: left; font-size: 16px; }
+
+.about_ltp_service .list_about_service li .link_about { float: right; padding: 0 65px 0 25px; border: 1px solid #d0d0d0; border-bottom: 0; font-size: 14px; color: #004a6d; text-decoration: underline; }
+
+.about_ltp_service .list_about_service li:last-child { margin-bottom: 0; }
+
+.about_ltp_service .list_about_service li:nth-child(1) .link_about { background: url("../img/content/ico_link_about1.png ") no-repeat 109px 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(2) .link_about { background: url("../img/content/ico_link_about2.png ") no-repeat 148px 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(3) .link_about { background: url("../img/content/ico_link_about3.png ") no-repeat 168px 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(4) .link_about { background: url("../img/content/ico_link_about4.png ") no-repeat 183px 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(5) .link_about { background: url("../img/content/ico_link_about5.png ") no-repeat 198px 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(6) .link_about { background: url("../img/content/ico_link_about6.png ") no-repeat 146px 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(7) .link_about { background: url("../img/content/ico_link_about7.png ") no-repeat 283px 50%; }
+
 input[data-align="center"] { text-align: center; }
 
 input[data-align="right"] { text-align: right; }
@@ -1459,20 +1492,56 @@ input[data-align="right"] { text-align: right; }
 
 .trend_about_service[data-type="join_done"] .list_trend_service .tit { margin-bottom: 0; }
 
-.list_about_service { padding: 40px 25px; background-color: #fff; border-radius: 2px; }
+/*.list_about_service {
+	padding:40px 25px;
+	background-color:#fff;
+	border-radius:2px;
 
-.list_about_service li { position: relative; padding: 25px 40px; border-bottom: 1px solid #eee; }
 
-.list_about_service li:last-child { border-bottom: 0; }
+	li {
+		position:relative;
+		padding:25px 40px;
+		
+		border-bottom:1px solid #eee;
+		&:last-child {border-bottom:0;}
+		&:before {
+			display:block;content:"";
+			position:absolute;left:60px;right:40px;top:50%;
+			height:1px;
+			border-bottom:1px dashed #ddd;
+		}
 
-.list_about_service li:before { display: block; content: ""; position: absolute; left: 60px; right: 40px; top: 50%; height: 1px; border-bottom: 1px dashed #ddd; }
+		.question {
+			position: relative;
+		    padding: 6px 20px 8px;
+		    font-size: 15px;
+		    border: 1px solid #dfdfdf;
+		    border-radius: 50px;
+		    background-color: #fcfcfc;
+		    letter-spacing: -.2px;
+		}
 
-.list_about_service li .question { position: relative; padding: 6px 20px 8px; font-size: 15px; border: 1px solid #dfdfdf; border-radius: 50px; background-color: #fcfcfc; letter-spacing: -.2px; }
-
-.list_about_service li .link_about { position: absolute; right: 40px; padding: 6px 15px 9px 40px; top: 50%; margin-top: -18px; font-weight: 700; font-size: 15px; background: #fff url("../img/content/ico_chk_about_service.png") no-repeat 8px center; border-radius: 3px; border: 1px solid #b7b7b7; color: #2c2c2c; letter-spacing: -.4px; transition: background-color ease .4s; }
-
-.list_about_service li .link_about:hover { background-color: #ffffbf; border-color: #e5c982; }
-
+		.link_about {
+			position: absolute;
+		    right: 40px;
+		    padding: 6px 15px 9px 40px;
+		    top: 50%;
+		    margin-top: -18px;
+		    font-weight: 700;
+		    font-size: 15px;
+		    background:#fff url('../img/content/ico_chk_about_service.png') no-repeat 8px center;
+		    border-radius: 3px;
+		    border: 1px solid #b7b7b7;
+		    color: #2c2c2c;
+		    letter-spacing: -.4px;
+		    transition:background-color ease .4s;
+		    &:hover {
+		    	background-color: #ffffbf;
+    			border-color: #e5c982;
+		    }
+		}
+	}
+} */
 .btn_wrap_sns [data-type="phone"] { border: 1px solid #ccc; background: url("../img/common/bg_login_phone.png") no-repeat 0 0; }
 
 .mix_run_article { overflow: hidden; padding-top: 30px; padding-bottom: 50px; border-bottom: 1px solid #ddd; }

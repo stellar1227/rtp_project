@@ -1005,3 +1005,84 @@
     }
   }
 }
+
+/*대세추천번호 서비스 안내*/
+.about_wrapper{
+  margin:-1px auto 0;
+  padding-top:45px;
+  width:880px;
+  background:url('#{$content-img}bg_about_wrapper.png') no-repeat 0 0;
+}
+.about_ltp_service{
+  border:1px solid $border-base;
+  border-top:0;
+  padding-bottom:85px;
+    .list_about_tit{
+      position: relative;
+      top:-15px;
+      @include boxSizing();
+      @include borderRadius(35px);
+        display: block;
+        width:680px;
+        margin:0 auto;
+        border:1px solid #949494;
+        height:74px;
+        line-height:74px;
+        background:#fff;
+        font-size:26px;
+        font-weight:$normal;
+        letter-spacing:-1px;
+        text-align: center;
+    }
+    .list_about_desc{
+      @include blind(indent);
+        width:730px;
+        height:33px;
+        margin:30px auto 58px;
+        border-bottom:1px solid #7991a8;
+        padding-bottom:10px;
+        background:url('#{$content-img}txt_about_desc.png') no-repeat 50% 0;
+    }
+    .list_about_service{
+      position: relative;
+      li {
+        width: 710px;
+        height: 48px;
+        line-height: 48px;
+        border-bottom: 1px solid #d0d0d0;
+        margin: 0 auto 15px;
+        padding-left: 20px;
+        letter-spacing: -1px;
+        .question {
+          float: left;
+          font-size: 16px;
+        }
+        .link_about {
+          float: right;
+          padding: 0 65px 0 25px;
+          border: 1px solid #d0d0d0;
+          border-bottom: 0;
+          font-size: 14px;
+          color: #004a6d;
+          text-decoration: underline;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @mixin nthChildStyle($index,$left) {
+          &:nth-child(#{$index}) {
+            .link_about {
+               background: url('#{$content-img}ico_link_about#{$index}.png ') no-repeat $left 50%;
+             }
+          }
+        }
+        @include nthChildStyle(1, 109px);
+        @include nthChildStyle(2, 148px);
+        @include nthChildStyle(3, 168px);
+        @include nthChildStyle(4, 183px);
+        @include nthChildStyle(5, 198px);
+        @include nthChildStyle(6, 146px);
+        @include nthChildStyle(7, 283px);
+      }
+    }
+}
