@@ -1006,6 +1006,59 @@ select + .mix_t_radio { margin-left: 15px; }
 
 .about_ltp_service .list_about_service li:nth-child(7) .link_about { background: url("../img/content/ico_link_about7.png ") no-repeat 283px 50%; }
 
+/*대세 추천번호*/
+.trend_about_service { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; padding: 45px 1px 1px; background: #dadada url("../img/content/bg_about_wrapper.png") 0 0 no-repeat; }
+
+.trend_about_service .tit_trend_about { position: absolute; left: 160px; top: -27px; font-size: 0; overflow: hidden; z-index: 1; }
+
+.trend_about_service .tit_trend_about b { vertical-align: top; position: relative; z-index: 1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: inline-block; padding: 73px 0 0 74px; line-height: 100%; width: 128px; height: 139px; background: url("../img/content/bg_trend_num1.png") no-repeat 0 0; font-size: 31px; letter-spacing: -3px; color: #e36001; /*display: inline-block; box-sizing: border-box; width: 60px;height: 60px; font-size: 26px; padding-top: 5px; margin-right: 15px; border-radius: 100px; background-color: #1f4a9e; vertical-align: text-top; text-align: center; text-shadow: none;*/ }
+
+.trend_about_service .tit_trend_about .mark_desc { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 39px; -moz-border-radius: 39px; border-radius: 39px; display: inline-block; vertical-align: top; width: 376px; height: 74px; border: 1px solid #dadada; font-size: 31px; padding-top: 11px; background: #fff; text-align: center; letter-spacing: -3px; margin-left: -30px; margin-top: 58px; }
+
+.trend_about_service .trend_about_info { position: relative; background: #fff; padding-top: 95px; padding-bottom: 130px; }
+
+.trend_about_service .trend_about_info .desc { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; width: 730px; height: 32px; margin: 0 auto; padding-bottom: 11px; border-bottom: 1px solid #7991a8; background: url("../img/content/txt_trend_desc.png") no-repeat 50% 0; }
+
+.trend_about_service .trend_about_info .desc_key { margin: 0 auto; width: 730px; }
+
+.trend_about_service .trend_about_info .desc_key li { margin-top: 50px; padding-left: 90px; background: url("../img/content/ico_trend_desc.png") no-repeat 50px 0; font-size: 20px; font-weight: 700; }
+
+.trend_about_service .trend_about_info .desc_key li span { margin-top: 8px; display: block; font-size: 16px; font-weight: 400; }
+
+.trend_about_service .trend_about_info .link_rec_hurry { width: 100%; height: 69px; position: absolute; left: 0; bottom: 3px; text-align: center; color: #fff; font-size: 23px; background: #fff url("../img/content/bg_hurry_ref.png") no-repeat 0 0; line-height: 65px; }
+
+.trend_about_service .trend_about_info .link_rec_hurry span { font-weight: 700; letter-spacing: 0; text-decoration: underline; margin-left: 23px; }
+
+.trend_about_service .list_trend_service { padding: 30px 40px; background-color: #fff; }
+
+.trend_about_service .list_trend_service li { position: relative; padding: 15px 0 35px 116px; margin-bottom: 20px; border-bottom: 1px solid #dadada; color: #333; }
+
+.trend_about_service .list_trend_service li .tit { display: block; margin-bottom: 8px; font-size: 1.4em; color: #333; }
+
+.trend_about_service .list_trend_service li:last-child { padding-bottom: 0; border-bottom: 0; }
+
+.trend_about_service .desc_strong { padding: 18px 40px; margin: 0 -10px 30px; font-size: 1.25em; line-height: 1.5em; background-color: #f9f9f9; border-radius: 5px; text-align: center; color: #333; }
+
+.trend_about_service .btn_wrap { margin: 15px 0 5px; }
+
+.trend_about_service .btn_wrap button { height: 60px; min-width: 260px; font-size: 20px; }
+
+.trend_about_service[data-type="join_done"] { background-position: right -180px; }
+
+.trend_about_service[data-type="join_done"] .tit_trend_about { padding-left: 160px; background: url("../img/content/bg_join_done.png") no-repeat 38px 64px; background-size: 100px auto; }
+
+.trend_about_service[data-type="join_done"] .tit_trend_about .desc { font-size: 17px; }
+
+.trend_about_service[data-type="join_done"] .link_rec_hurry { top: 61px; right: 40px; padding: 29px 32px; }
+
+.trend_about_service[data-type="join_done"] .list_trend_service { padding: 20px 70px; }
+
+.trend_about_service[data-type="join_done"] .list_trend_service li { padding: 5px 0 25px 95px; font-size: .9em; }
+
+.trend_about_service[data-type="join_done"] .list_trend_service .num { top: 0; width: 40px; height: 40px; padding-top: 10px; font-size: 1.7em; background-color: #3d4a63; box-shadow: none; letter-spacing: -2px; }
+
+.trend_about_service[data-type="join_done"] .list_trend_service .tit { margin-bottom: 0; }
+
 input[data-align="center"] { text-align: center; }
 
 input[data-align="right"] { text-align: right; }
@@ -1434,64 +1487,213 @@ input[data-align="right"] { text-align: right; }
 
 .list_download li a { display: block; padding: 2px 0 4px 32px; background: url("../img/content/ico_download.png") 0 0 no-repeat; color: #528dff; }
 
-.trend_about_service { position: relative; box-sizing: border-box; overflow: hidden; padding: 0 2px 15px; background: #223863 url("../img/content/bg_banner_rec_num.png") right -60px no-repeat; border-radius: 3px; color: #fff; }
+/*.trend_about_service {
+	position:relative;
+	box-sizing:border-box;	
+	overflow:hidden;
+	padding: 0 2px 15px;
+	background:#223863 url("../img/content/bg_banner_rec_num.png") right -60px no-repeat;	
+	border-radius:3px;
+	color:#fff;
 
-.trend_about_service .link_rec_hurry { position: absolute; right: 50px; top: 278px; padding: 15px 45px 18px; font-size: 1.6em; background-color: rgba(67, 120, 220, 0.88); box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.7); letter-spacing: -1px; border-radius: 3px; color: #fff; text-align: center; }
+	.link_rec_hurry {
+		position:absolute;right:50px;top:278px;
+		padding:15px 45px 18px;
+		font-size:1.6em;
+		background-color:rgba(67, 120, 220, 0.88);
+		box-shadow:0px 2px 11px rgba(0,0,0,.7);
 
-.trend_about_service .link_rec_hurry span { display: block; font-size: 16px; letter-spacing: 0; text-decoration: underline; }
+		letter-spacing:-1px;
+		border-radius:3px;
+		color:#fff;
+		text-align:center;
 
-.trend_about_service p.desc { display: inline-block; font-size: 1.1em; line-height: 1.5em; letter-spacing: -.7px; }
+		span {
+			display:block;
+			font-size:16px;
+			letter-spacing:0;
+			text-decoration:underline
 
-.trend_about_service p.desc b { display: block; font-size: 1.2em; letter-spacing: -1px; }
+		}
+	}
+	
 
-.trend_about_service .lotto_ball { overflow: hidden; height: 38px; padding-right: 30px; text-align: right; opacity: .6; }
+	p.desc {
+		display:inline-block;
+		font-size:1.1em;
+		line-height:1.5em;
+		letter-spacing:-.7px;
+		
+		b {
+			display:block;
+			font-size:1.2em;
+			letter-spacing:-1px;
+		}
+	}
 
-.trend_about_service .lotto_ball span[class^="ball"] { box-sizing: border-box; width: 70px; height: 70px; font-size: 26px; padding-top: 17px; }
+	.lotto_ball {
+		overflow:hidden;
+		height:38px;
+		padding-right:30px;
+		text-align:right;
+		opacity:.6;
+		span[class^="ball"] {
+			box-sizing:border-box;
+			width:70px;height:70px;
+			font-size:26px;
+			padding-top:17px;
+		}
+	}
+	.tit_trend_about {
+	    padding: 70px 80px 25px;
+    	line-height: 45px;
+	    font-size: 45px;
+    	letter-spacing: -3px;
+    	text-shadow:0 0 15px rgba(0,0,0,.7);
 
-.trend_about_service .tit_trend_about { padding: 70px 80px 25px; line-height: 45px; font-size: 45px; letter-spacing: -3px; text-shadow: 0 0 15px rgba(0, 0, 0, 0.7); }
+    	b {
+		    display: inline-block;
+		    box-sizing: border-box;
+		    width: 60px;height: 60px;
+		    font-size: 26px;
+		    padding-top: 5px;
+		    margin-right: 15px;
+		    border-radius: 100px;
+		    background-color: #1f4a9e;
+		    vertical-align: text-top;
+		    text-align: center;
+		    text-shadow: none;
+    	}
 
-.trend_about_service .tit_trend_about b { display: inline-block; box-sizing: border-box; width: 60px; height: 60px; font-size: 26px; padding-top: 5px; margin-right: 15px; border-radius: 100px; background-color: #1f4a9e; vertical-align: text-top; text-align: center; text-shadow: none; }
+		.desc {
+			display:block;
+			font-size:20px;
+			letter-spacing:-.5px;
+		}
+	}
 
-.trend_about_service .tit_trend_about .desc { display: block; font-size: 20px; letter-spacing: -.5px; }
+	.desc_key {
+		padding:0 80px 20px;
+		font-size:16px;
+ 
+		li {
+			margin-bottom:17px;
+			line-height:25px;
+			span {
+				display:block;
+				color:#9db7e8;
+			}
+		}
+	}
+	.list_trend_service {
+		position:relative;
+		padding:30px 40px;
+		background-color:#fff;
+		border-radius:3px;
+		box-shadow:0 -5px 10px rgba(0,0,0,.2);
+		z-index:10;
 
-.trend_about_service .desc_key { padding: 0 80px 20px; font-size: 16px; }
+		li {
+			position:relative;
+			padding:15px 0 35px 116px;
+			margin-bottom:20px;	
+			border-bottom:1px solid #dadada;
+			color:#333;
 
-.trend_about_service .desc_key li { margin-bottom: 17px; line-height: 25px; }
+			.num {
+				display:inline-block;
+				box-sizing:border-box;
+				position:absolute;left:30px;
 
-.trend_about_service .desc_key li span { display: block; color: #9db7e8; }
+				width:52px;height:52px;
+				padding : {
+					top:13px;
+					left:14px;
+				}
+				border-radius:100px;
+				font-size:2.7em;
+				font-weight:$extra-bold;
+				background-color:#4378dc;
+				box-shadow: 2px 2px 0 rgb(30, 71, 123);
+				line-height:1em;
+				text-align:center;
+				vertical-align:middle;
+				letter-spacing:-4px;
+				color:#fff;
+			}
 
-.trend_about_service .list_trend_service { position: relative; padding: 30px 40px; background-color: #fff; border-radius: 3px; box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2); z-index: 10; }
+			.tit {
+				display:block;
+				margin-bottom:8px;
+				font-size:1.4em;
+				color:#333;
+			}
 
-.trend_about_service .list_trend_service li { position: relative; padding: 15px 0 35px 116px; margin-bottom: 20px; border-bottom: 1px solid #dadada; color: #333; }
+			&:last-child {
+				padding-bottom:0;
+				border-bottom:0
+			}
+		}
+	}
 
-.trend_about_service .list_trend_service li .num { display: inline-block; box-sizing: border-box; position: absolute; left: 30px; width: 52px; height: 52px; padding-top: 13px; padding-left: 14px; border-radius: 100px; font-size: 2.7em; font-weight: 800; background-color: #4378dc; box-shadow: 2px 2px 0 #1e477b; line-height: 1em; text-align: center; vertical-align: middle; letter-spacing: -4px; color: #fff; }
+	.desc_strong {
+	    padding: 18px 40px;
+	    margin: 0 -10px 30px;
+	    font-size: 1.25em;
+	    line-height:1.5em;
+	    background-color: #f9f9f9;
+	    border-radius: 5px;
+	    text-align: center;
+	    color: #333;
+	}
+	.btn_wrap {
+		margin:15px 0 5px;
+		button {
+			height:60px;min-width:260px;
+			font-size:20px;
 
-.trend_about_service .list_trend_service li .tit { display: block; margin-bottom: 8px; font-size: 1.4em; color: #333; }
+		}
+	}
 
-.trend_about_service .list_trend_service li:last-child { padding-bottom: 0; border-bottom: 0; }
 
-.trend_about_service .desc_strong { padding: 18px 40px; margin: 0 -10px 30px; font-size: 1.25em; line-height: 1.5em; background-color: #f9f9f9; border-radius: 5px; text-align: center; color: #333; }
+	&[data-type="join_done"] {
+		background-position:right -180px;
+		.tit_trend_about {
+			padding-left:160px;
+			background:url('../img/content/bg_join_done.png') no-repeat 38px 64px;
+			background-size:100px auto;
+			.desc {font-size:17px}
+		}
+		.link_rec_hurry {
+			top:61px;
+			right:40px;
+			padding:29px 32px;
+		}
 
-.trend_about_service .btn_wrap { margin: 15px 0 5px; }
+		.list_trend_service {
+			padding:20px 70px;
 
-.trend_about_service .btn_wrap button { height: 60px; min-width: 260px; font-size: 20px; }
+			li {
+				padding:5px 0 25px 95px;
+				font-size:.9em;
+			}
+			.num {
+				top:0;
+			    width: 40px;
+			    height: 40px;
+			    padding-top: 10px;
+			    font-size: 1.7em;
+			    background-color: #3d4a63;
+			    box-shadow: none;
+			    letter-spacing: -2px;
+			}
+			.tit {
+				margin-bottom:0;
+			}
+		}
 
-.trend_about_service[data-type="join_done"] { background-position: right -180px; }
-
-.trend_about_service[data-type="join_done"] .tit_trend_about { padding-left: 160px; background: url("../img/content/bg_join_done.png") no-repeat 38px 64px; background-size: 100px auto; }
-
-.trend_about_service[data-type="join_done"] .tit_trend_about .desc { font-size: 17px; }
-
-.trend_about_service[data-type="join_done"] .link_rec_hurry { top: 61px; right: 40px; padding: 29px 32px; }
-
-.trend_about_service[data-type="join_done"] .list_trend_service { padding: 20px 70px; }
-
-.trend_about_service[data-type="join_done"] .list_trend_service li { padding: 5px 0 25px 95px; font-size: .9em; }
-
-.trend_about_service[data-type="join_done"] .list_trend_service .num { top: 0; width: 40px; height: 40px; padding-top: 10px; font-size: 1.7em; background-color: #3d4a63; box-shadow: none; letter-spacing: -2px; }
-
-.trend_about_service[data-type="join_done"] .list_trend_service .tit { margin-bottom: 0; }
-
+	}
+}*/
 /*.list_about_service {
 	padding:40px 25px;
 	background-color:#fff;
