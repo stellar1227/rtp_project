@@ -708,7 +708,7 @@ span.ball_n40th { background: #58ca7b; }
 
 .main .box_contents_section .box_conts .table_title { margin: 0; padding: 28px 0 11px; letter-spacing: -1px; }
 
-.main .box_contents_section .box_conts .table_title .m_select { margin-left: 15px; display: inline-block; padding: 0 10px 0 30px; font-size: 14px; height: 27px; line-height: 27px; border: 0; background: url("../img/common//ico_main_arrow.png") no-repeat 0 50%; }
+.main .box_contents_section .box_conts .table_title .m_select { margin-left: 15px; display: inline-block; padding: 0 10px 0 30px; font-size: 14px; height: 27px; line-height: 27px; border: 0; background: url("../img/common/ico_main_arrow.png") no-repeat 0 50%; }
 
 .main .box_contents_section .box_conts .box_win_info { position: relative; background: #f3f4f8; height: 148px; border: 1px solid #e9e9ea; padding: 20px 0; text-align: center; }
 
@@ -762,7 +762,7 @@ span.ball_n40th { background: #58ca7b; }
 
 .main .box_contents_section .box_conts .lotto_list li .appear_num span { color: #787878; }
 
-.main .box_contents_section .box_conts .link_more { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; position: absolute; right: 40px; top: 38px; width: 8px; height: 15px; background: url("../img/common//link_contents_more.png") no-repeat 0 0; }
+.main .box_contents_section .box_conts .link_more { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; position: absolute; right: 40px; top: 38px; width: 8px; height: 15px; background: url("../img/common/link_contents_more.png") no-repeat 0 0; }
 
 .main .box_contents_section .box_conts .thumb_img { display: block; width: 215px; height: 137px; margin-bottom: 18px; }
 
@@ -814,7 +814,7 @@ span.ball_n40th { background: #58ca7b; }
 
 .site_warning { font-family: "Gulim", "굴림", sans-serif; font-size: 11px; color: #6e6e6e; }
 
-.btn_question { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; vertical-align: middle; margin-left: 5px; width: 15px; height: 15px; background: url("../img/common//ico_question.png") no-repeat 0 0; }
+.btn_question { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; vertical-align: middle; margin-left: 5px; width: 15px; height: 15px; background: url("../img/common/ico_question.png") no-repeat 0 0; }
 
 /*한눈에 보는테이블*/
 .wide_table { margin: 0 60px; height: 500px; overflow: auto; }
@@ -1070,13 +1070,71 @@ select + .mix_t_radio { margin-left: 15px; }
 
 .list_join_benefits .j_list li.odd { width: 380px; }
 
+/*플러스 회원권 구매*/
+.ticket_plus_section { padding-top: 60px; }
+
+.ticket_plus_section .tab { position: relative; z-index: 1; }
+
+.ticket_plus_section .t_list { margin-top: -15px; }
+
+.ticket_plus_section .t_list:after { content: ""; display: block; clear: both; }
+
+.ticket_plus_section .t_list li { position: relative; display: table; width: 420px; height: 225px; float: right; margin-top: 70px; background: url("../img/content/bg_t_list.png") no-repeat 0 0; }
+
+.ticket_plus_section .t_list li.odd { float: left; }
+
+.ticket_plus_section .t_list li .t_name { display: table-cell; width: 160px; vertical-align: middle; padding: 0 15px; text-align: center; }
+
+.ticket_plus_section .t_list li .t_name .tit { padding-top: 22px; display: block; margin-bottom: 35px; }
+
+.ticket_plus_section .t_list li .t_name .tit span { color: #555; }
+
+.ticket_plus_section .t_list li .t_name .tit span:first-child { font-size: 16px; }
+
+.ticket_plus_section .t_list li .t_name .tit span:last-child { font-size: 17px; font-weight: 700; }
+
+.ticket_plus_section .t_list li .t_name .tit b { display: block; margin: 6px 0; color: #003681; font-size: 25px; letter-spacing: -1px; }
+
+.ticket_plus_section .t_list li .t_name .link_purchase { display: inline-block; width: 160px; height: 42px; line-height: 40px; color: #fff; font-weight: 700; text-align: center; background: #1746a3; font-size: 18px; }
+
+.ticket_plus_section .t_list li .t_name .link_purchase:before { display: inline-block; content: ""; background: url("../img/content/ico_link_purchase.png") no-repeat 0 0; vertical-align: middle; width: 19px; height: 13px; margin-right: 7px; }
+
+.ticket_plus_section .t_list li .t_price { display: table-cell; width: 230px; vertical-align: middle; text-align: center; }
+
+.ticket_plus_section .t_list li .t_price b { line-height: 100%; font-size: 26px; color: #444; letter-spacing: -1px; }
+
+.ticket_plus_section .t_list li .t_price p { margin-top: 8px; font-size: 14px; color: #e22b2b; letter-spacing: -1px; }
+
+.ticket_plus_section .t_list li .t_price p ins { text-decoration: none; }
+
+.ticket_plus_section .t_list li .t_price dl { margin-top: 15px; }
+
+.ticket_plus_section .t_list li .t_price dl dt { display: inline-block; -webkit-border-radius: 13px; -moz-border-radius: 13px; border-radius: 13px; width: 82px; height: 25px; line-height: 25px; color: #fff; background: #126cd2; font-size: 14px; margin-bottom: 10px; }
+
+.ticket_plus_section .t_list li .t_price dl dd { font-size: 14px; line-height: 150%; letter-spacing: -1px; }
+
+.ticket_plus_section .t_list li .tag_sale { position: absolute; left: 0; top: -30px; text-align: center; color: #fff; width: 61px; height: 61px; padding-top: 10px; background: url("../img/content/bg_t_list_sale.png") no-repeat 0 0; }
+
+/*tooltip*/
+.tip_wrap { margin-left: 20px; display: inline-block; position: relative; }
+
+.tip_wrap .btn_tip_question { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; width: 15px; height: 15px; background: url("../img/common/ico_question.png") no-repeat 0 0; vertical-align: middle; }
+
+.tip_wrap .pop_tooltip { display: none; position: absolute; left: 0; top: 20px; padding: 15px; line-height: 150%; font-size: 14px; color: #333; text-align: center; background: #fff; border: 2px solid #0493bc; letter-spacing: -1px; box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.08); }
+
+.tip_wrap .pop_tooltip.on { display: block; }
+
+.tip_wrap .pop_tooltip[data-tip="coin"] { width: 260px; }
+
 input[data-align="center"] { text-align: center; }
 
 input[data-align="right"] { text-align: right; }
 
-.list_mem_benefit { display: flex; padding: 33px 60px 0; }
+.list_mem_benefit { display: flex; padding: 33px 0 0; }
 
-.list_mem_benefit li { flex: 1; padding: 32px 0 26px; margin: 0 9px; border: 1px solid #d6d6d6; text-align: center; }
+.list_mem_benefit li { flex: 1; padding: 32px 0 26px; margin-right: 40px; border: 1px solid #d6d6d6; text-align: center; }
+
+.list_mem_benefit li:last-child { margin-right: 0; }
 
 .list_mem_benefit li > span:after { display: block; content: ""; width: 60px; height: 60px; margin: 17px auto 8px; background: url("../img/content/ico_coupon_benefit.png") no-repeat 0 0; }
 
@@ -1169,7 +1227,7 @@ input[data-align="right"] { text-align: right; }
 
 .page_title_banner .sub_tit { display: inline-block; font-size: 1.2em; padding: 3px 17px 5px; margin-bottom: 17px; border-radius: 50px; background-color: #18699b; color: #fff; }
 
-.page_title_banner .sub_desc { position: relative; float: left; margin-right: 40px; min-width: 190px; padding: 15px 28px 20px; border-radius: 100px; font-size: 1.2em; line-height: 1.5em; box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.08); background-color: #305a97; text-align: center; color: #fff; }
+.page_title_banner .sub_desc { position: relative; float: left; margin-right: 40px; min-width: 190px; padding: 15px 28px 20px; border-radius: 100px; font-size: 1.2em; line-height: 1.5em; box-shadow: 0 5px 0 rgba(0, 0, 0, 0.08); background-color: #305a97; text-align: center; color: #fff; }
 
 .page_title_banner .sub_desc:after { content: ""; position: absolute; right: -20px; top: 50%; margin-top: -27px; border-style: solid; border-width: 25px 0 25px 50px; border-color: transparent transparent transparent #305a97; }
 

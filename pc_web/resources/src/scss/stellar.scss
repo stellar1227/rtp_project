@@ -269,7 +269,7 @@
           height: 27px;
           line-height:27px;
           border: 0;
-          background:url('#{$common-img}/ico_main_arrow.png') no-repeat 0 50%;
+          background:url('#{$common-img}ico_main_arrow.png') no-repeat 0 50%;
         }
       }
       .box_win_info{
@@ -420,7 +420,7 @@
         top:38px;
         width:8px;
         height:15px;
-        background:url('#{$common-img}/link_contents_more.png') no-repeat 0 0;
+        background:url('#{$common-img}link_contents_more.png') no-repeat 0 0;
       }
       .thumb_img{
         display: block;
@@ -548,7 +548,7 @@
   margin-left:5px;
   width:15px;
   height:15px;
-  background:url('#{$common-img}/ico_question.png') no-repeat 0 0;
+  background:url('#{$common-img}ico_question.png') no-repeat 0 0;
 }
 
 /*한눈에 보는테이블*/
@@ -1326,6 +1326,171 @@
         width:380px;
       }
       background:url('#{$content-img}ico_join_desc.png') no-repeat 8px 50%;
+    }
+  }
+}
+
+/*플러스 회원권 구매*/
+.ticket_plus_section{
+  padding-top: 60px;
+  .tab{
+    position: relative;
+    z-index:1;
+  }
+  .t_list{
+    margin-top: -15px;
+    @include clearFix();
+    li{
+      position: relative;
+      display: table;
+      width:420px;
+      height:225px;
+      float:right;
+      margin-top:70px;
+      background: url('#{$content-img}bg_t_list.png') no-repeat 0 0;
+      &.odd{
+        float:left;
+      }
+      .t_name{
+        display: table-cell;
+        width:160px;
+        vertical-align: middle;
+        padding:0 15px;
+        text-align: center;
+        .tit{
+          padding-top:22px;
+          display: block;
+          margin-bottom: 35px;
+          span{
+            color:$sub-color;
+            &:first-child{
+              font-size:16px;
+            }
+            &:last-child{
+              font : {
+                size:17px;
+                weight:$bold;
+              }
+            }
+          }
+          b{
+            display: block;
+            margin:6px 0;
+            color:#003681;
+            font-size:25px;
+            letter-spacing: -1px;
+          }
+        }
+        .link_purchase{
+          &:before{
+            display: inline-block;
+            content:"";
+            background:url('#{$content-img}ico_link_purchase.png') no-repeat 0 0;
+            vertical-align: middle;
+            width:19px;
+            height:13px;
+            margin-right: 7px;
+          }
+          display: inline-block;
+          width:160px;
+          height:42px;
+          line-height:40px;
+          color:#fff;
+          font-weight:$bold;
+          text-align: center;
+          background: #1746a3;
+          font-size:18px;
+        }
+      }
+      .t_price{
+        display: table-cell;
+        width:230px;
+        vertical-align: middle;
+        text-align: center;
+        b{
+          line-height:100%;
+          font-size:26px;
+          color:#444;
+          letter-spacing: -1px;
+        }
+        p{
+          margin-top: 8px;
+          font-size: 14px;
+          color: #e22b2b;
+          letter-spacing: -1px;
+          del{
+
+          }
+          ins{
+            text-decoration: none;
+          }
+        }
+        dl{
+          margin-top: 15px;
+          dt{
+            display: inline-block;
+            @include borderRadius(13px);
+            width:82px;
+            height:25px;
+            line-height:25px;
+            color:#fff;
+            background: #126cd2;
+            font-size:14px;
+            margin-bottom: 10px;
+          }
+          dd{
+            font-size:14px;
+            line-height:150%;
+            letter-spacing: -1px;
+          }
+        }
+      }
+      .tag_sale{
+        position: absolute;
+        left:0;
+        top:-30px;
+        text-align: center;
+        color:#fff;
+        width:61px;
+        height:61px;
+        padding-top:10px;
+        background: url('#{$content-img}bg_t_list_sale.png') no-repeat 0 0;
+      }
+    }
+  }
+}
+
+/*tooltip*/
+.tip_wrap{
+  margin-left:20px;
+  display: inline-block;
+  position: relative;
+  .btn_tip_question{
+    @include blind(indent);
+    width:15px;
+    height:15px;
+    background: url('#{$common-img}ico_question.png') no-repeat 0 0;
+    vertical-align: middle;
+  }
+  .pop_tooltip{
+    display: none;
+    position: absolute;
+    left:0;
+    top:20px;
+    padding:15px;
+    line-height:150%;
+    font-size:14px;
+    color:#333;
+    text-align: center;
+    background: #fff;
+    border:2px solid #0493bc;
+    letter-spacing: -1px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,.08);
+    &.on{
+      display: block;
+    }
+    &[data-tip="coin"]{
+      width:260px;
     }
   }
 }
