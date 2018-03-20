@@ -92,18 +92,21 @@ input{
 	margin-top:18px;
 	background-color:#e6e6e6;	
 	
-	dt,dd {display:inline-block;}
+	dt,dd {display:inline-block;vertical-align:middle;}
 
 	dt {
+		width:10%;
 		padding:1px 10px 3px;
 		margin-right:8px;
 		background-color:#fff;
 		border:1px solid #cacaca;
 		border-radius:2px;
+		text-align:center;
 		color:#999;
 	}
 
 	dd {
+		width:75%;
 	}
 }
 
@@ -275,6 +278,27 @@ input{
 }
 
 
+.btn_wrap {
+	&[data-align] .flex_auto {
+			flex:auto;
+		}
+}
+.mix_contents + .list_primary,
+.box_wrap .list_primary:first-child {margin-top:20px;} 
+
+
+
+// TR-게시판형- No data
+.board_table {
+	.nodata {
+		td {
+			height:90px;
+			font-size:1rem;
+			letter-spacing:-1px;
+			color:#999;		}
+	}
+}
+
 
 // 대세추천번호 - 서비스안내 recommend_about.html
 .trend_about_service {
@@ -312,6 +336,8 @@ input{
 	.btn_wrap {
 		padding:0 15px;
 	}
+
+
 	
 
 	p.desc {
@@ -496,8 +522,6 @@ input{
 		}
 
 	}
-
-
 
 }
 
@@ -894,6 +918,17 @@ select {
 }
 
 
+.tab_wrapper {overflow:hidden}
+.tab.swiper-wrapper {
+	width:9999px;
+	li {
+		flex:none;
+		a {
+			padding-left:14px;padding-right:14px;
+		}
+	}
+}
+
 
 
 // list_all_keyitem - 임시
@@ -933,199 +968,6 @@ select {
 	}
 }
 
-// 로또팡 서비스 안내 mypage_about_service.html
-.list_about_service {
-	background-color:#fff;
-	border-radius:2px;
-
-
-	li {
-		position:relative;
-		overflow:hidden;
-		padding:20px 0;
-		
-		border-bottom:1px solid #eee;
-		&:last-child {border-bottom:0;}
-
-		.question {
-			display:inline-block;
-			position: relative;
-			max-width:74%;
-		    padding: 10px 20px 20px;
-		    font-size: 15px;
-		    border: 1px solid #dfdfdf;
-		    border-radius: 50px;
-		    background-color: #fcfcfc;
-		    letter-spacing: -.2px;
-		}
-
-		.link_about {
-			position:relative;
-			float:right;
-		    padding: 6px 15px 9px 40px;
-		    margin-top:-13px;
-		    font-weight: 700;
-		    font-size: 15px;
-		    background:#fff url('#{$content-img}ico_chk_about_service.png') no-repeat 8px center;
-		    border-radius: 3px;
-		    border: 1px solid #b7b7b7;
-		    color: #2c2c2c;
-		    letter-spacing: -.4px;
-		    box-shadow:0 0 10px rgba(0,0,0,.07);
-		    text-decoration:underline;
-		}
-	}
-}
-
-
-// 테크앤조이 소개 - mypage_technjoy
-.about_technjoy {
-
-	.about_title {
-		display:block;
-		margin:0 0 25px;
-    	padding: 6px 0 9px;
-    	font-size: 1.3rem;
-    	border-bottom:1px solid #ddd;
-    	letter-spacing: -1px;
-    	text-align: center;
-    	color:#000;
-	}
-
-	
-	.list_portfolio {
-		padding-bottom:40px;
-		font-size:16px;
-
-		li {
-			padding:5px 30px 20px;
-			text-align:center;
-
-			&:before {
-				display:block;content:"";
-				width:64px;height:64px;
-				margin:12px auto 16px;
-				background : {
-					repeat:no-repeat;
-					size:contain;
-					position:center 0;
-				}
-			}
-			&.mobile:before {
-				background-image:url("#{$content-img}ico_about_mobile.png");	
-			}
-			&.iptv:before {
-				background-image:url("#{$content-img}ico_about_tv.png");	
-			}
-			&.offline:before {
-				background-image:url("#{$content-img}ico_about_offline.png");	
-			}
-			&:last-child {
-				margin-right:0;
-			}
-
-			strong {
-				display:block;
-				margin-bottom:10px;
-				text-align:center;
-			}
-
-			p {
-				font-size:15px;
-				line-height:20px;
-				text-align:left;
-			}
-		}
-	}
-
-	.list_skills {
-		margin-bottom:40px;
-		text-align:center;
-
-		li {
-			display:inline-block;
-			box-sizing:border-box;
-			overflow:hidden;
-			position:relative;
-			height:150px;width:150px;
-
-			padding-top:95px;
-
-			border: {
-				style:solid;
-				width:0 0 5px;
-				color:#ccc;
-				radius:100px;
-			}
-
-			font-size:1rem;
-			line-height:1.25em;
-			text-align:center;
-			letter-spacing:-1px;
-
-			color:#fff;
-			&:last-child {margin-right:0;}
-
-			> span {
-				position:absolute;
-				left:0;right:0;bottom:0;
-				padding-top:8px;padding-bottom:10px;
-				background:inherit;
-				box-shadow:0 -2px 5px rgba(0, 0, 0, 0.12);
-
-				z-index:10;
-			}
-
-			&:after {
-				display:block;content:"";
-				position:absolute;
-				top:10px;right:10px;bottom:8px;left:10px;
-				border-radius:100px;
-				background-color:#fff;
-				background-repeat:no-repeat;
-				background-size:62% auto;
-			}
-
-
-			
-			&:nth-child(1) {
-				margin-right:10px;
-				background-color: #ef7967;
-				border-color:#b54d3d;
-				&:after {
-					background-image:url("#{$content-img}ico_about_exp.png");
-					background-position:44% 24%;
-				}
-			}
-
-
-			&:nth-child(2) {
-				background-color: #f8b623;
-				border-color: #ab7b0f;
-				&:after {
-					background-image:url("#{$content-img}ico_about_skill.png");
-					background-position:center 28%;
-				}
-			}
-
-			&:nth-child(3) {
-				background-color: #11487e;
-				border-color: #153553;
-				&:after {
-					background-image:url("#{$content-img}ico_about_person.png");
-					background-position:center 42%;
-				}
-			}
-
-			
-		}
-
-	}
-}
-.tit_about {
-	font-size:24px;
-
-}
 
 
 //[COMMENT] 스크롤링 되었을때 하단 Fixed 상태에서 다른 컨텐츠랑 오버랩될때 구분주려고 추가
@@ -1135,3 +977,745 @@ select {
 
 
 
+
+
+
+
+
+
+//1등에 당첨된다면
+.lotto_if_win {
+	
+
+	//desc_if_win
+	.desc_if_win {
+
+		padding: 16.5rem 20px 20px;
+	    margin-bottom:20px;
+	    font-size: 16px;
+	
+	    background:#fcfcfc url("#{$content-img}bg_if_win.png") center 2rem no-repeat;
+	    background-size:80% auto;
+		border-bottom:1px solid #ccc;
+	   
+		
+		.win_desc {
+			.cong {
+				display:inline-block;
+				font-size:1.2rem;
+				font-weight:$bold;
+				letter-spacing:-.5px;
+				color:#333;
+			}
+
+
+			.money {
+				display:block;
+				padding:6px 20px 10px;
+				margin-top:25px;
+				font-size:1.3rem;
+				border-radius:100px;
+				border:1px solid #ccc;
+				background:linear-gradient(#fff 70%, #f8f8f8 100%);
+				text-align:center;
+				b {
+					font-size:1.4rem;
+					letter-spacing:-1px;
+					color:#4471ca;
+				}
+			}
+			
+			.other {
+				display:block;
+				color:#333;
+
+			}
+			.desc_sub {
+				display:block;
+				padding-top:10px;
+				text-decoration:underline;
+			}
+		}	
+	}
+
+	
+	.list_if_win {
+
+		> li {
+			margin-bottom:10px;
+			border-bottom:15px solid #fbfbfb;
+			.tit_list_win {
+				display:block;
+				margin-bottom:10px;
+			}
+		}
+
+		.block_title {
+			padding-top:20px;
+		}	
+
+		.list_item {
+			overflow:hidden;
+
+			li {
+				box-sizing:border-box;
+				padding:10px 20px 20px;
+				margin-bottom:15px;
+				border-bottom:1px dashed #ddd;
+				text-align:center;
+
+				&:last-child {
+					margin-bottom:0;
+				}
+
+				.img_list_win {
+					display:block;
+					overflow:hidden;
+					height:12rem;
+					margin-bottom:15px;
+					border:1px solid #ccc;
+					img {
+						width:115%;
+						max-width:none;
+						height:12rem;
+					}
+				}
+			}
+		}
+
+	}
+
+	.btn_strong.btn_if_win{
+		font-size: 1.2rem;
+	    width: auto;height: 45px;
+	    letter-spacing:-1px;
+	}
+
+}
+
+
+
+
+// 로또팡 조합기 서비스 안내
+.mix_about_service {
+
+
+	background-color:#fff;
+
+
+	//mix_about_desc
+	.mix_about_desc {
+		padding:0 80px;
+		background:url("#{$content-img}bg_mix_about.png") 540px 190px no-repeat;
+
+		
+		.tit_mix_about {
+			position:relative;top:-39px;
+			height:146px;
+			padding-bottom:25px;
+			margin-bottom:20px;
+			border-bottom:1px solid #7991a8;
+
+			background:url("#{$content-img}tit_mix_about_service.png") 210px 0 no-repeat;
+			font-size:0;
+			line-height:0;
+			letter-spacing:-2000px;
+
+		}
+
+		.calc {
+			width:701px;height:61px;
+			padding-left:82px;
+			background:url("#{$content-img}bg_mix_about_calc.png") 0 8px no-repeat;
+			font-size:22px;
+			letter-spacing:-.8px;
+			color:#333;
+			>b {
+				position:relative;top:3px;	
+				margin-right:20px;
+				font-weight:$normal;
+			}
+			.plus {
+				display:inline-block;
+				width:36px;height:36px;
+				margin:0 13px 0 11px;
+				font-size:0;
+				border-radius:100px;
+				border:1px solid #c2c0c0;
+				background:#fff url("#{$content-img}ico_plus_mix_about.png") center center no-repeat;
+				box-shadow:2px 2px 3px rgba(0,0,0,.15);
+				vertical-align:middle;
+			}
+
+			[class^="calc"] {
+				display:inline-block;
+				box-sizing:border-box;
+				width:61px;height:61px;
+				padding-top:18px;
+				font-size:21px;	
+				border-radius:100px;
+				text-align:center;
+				letter-spacing:-.8px;
+				line-height:20px;
+				color:#fff;
+
+				&.calc1 {
+					background-color:#f35d48;
+					box-shadow:2px 2px 0 #d9402b;
+				}
+				&.calc2 {
+					background-color:#ff9555;
+					box-shadow:2px 2px 0 #ef6a19;
+					text-shadow:0 0 3px #d05500;
+					
+				}
+			}
+			.plus {
+
+			}
+
+		}
+
+		.desc {
+			padding:50px 39px 80px;
+			font-size:19px;
+			line-height:31px;
+			letter-spacing:-.4px;
+			color:#333;
+		}
+
+		.btn_mix_run {
+			display:block;
+			box-sizing:content-box;
+			width:674px;height:58px;
+			margin:auto;
+			padding-bottom:8px;
+			font-size:23px;
+			background:url("#{$content-img}btn_mix_about.png") 0 0 no-repeat;
+
+			
+			text-align:center;
+			letter-spacing:-.4px;
+			color:#fff;
+			&:hover {
+				text-decoration:underline;
+			}
+			b {
+				margin-left:15px;
+				font-weight:$bold;
+				text-decoration:underline;
+
+			}
+		}
+
+	}
+
+
+	//mix_service_benefit
+	.mix_service_benefit {
+		padding-bottom:50px;
+		margin:65px 25px 0;
+		border-top:1px solid #7991a8;
+
+		.tit_mix_service {
+
+			padding:35px 0 25px;
+			font-size:23px;
+			text-align:center;
+		}
+
+		.mix_service {
+			text-align:center;
+		}
+		
+		//list_benefit
+		.list_benefit {
+
+
+			
+			display:flex;
+			margin:15px -1px 0;
+			border:1px solid #0e3f6f;
+			border-radius:3px;
+
+
+			li {
+				position:relative;
+				flex:1;
+				font-size:17px;
+				border-right:1px solid #d3d3d3;
+				line-height:60px;
+				letter-spacing:-1px;
+				color:#2a2a2a;
+				text-align:center;
+
+
+				&:last-child {
+					border-right:0;
+				}
+
+				.order {
+					position:absolute;left:50%;top:-15px;
+					margin:{
+						left:-14px;
+					}
+					width:27px;height:27px;
+					font-size:16px;
+					font-weight:$extra-bold;
+					border-radius:100px;
+					background-color:#1b32a5;
+					text-align:center;
+					line-height:23px;
+					letter-spacing:-.75px;
+					color:#fff;
+
+				}
+			}
+		}
+
+
+		//list_step
+		.list_step {
+			padding:50px 30px 90px;
+			border:1px solid #d2d2d2;
+			border-top:0;
+			background-color:#fafafa;
+			&:after {
+				display:block;content:"";clear:both;
+			}
+
+			li {
+				float:left;
+				width:263px;height:264px;
+				font-size:0;
+				line-height:0;
+				text-align:center;
+
+				&:nth-child(1){
+					margin-right:-12px;
+					background:url("#{$content-img}mix_about_step1.png") 0 0 no-repeat;
+				}
+				&:nth-child(2){
+					margin-right:-12px;
+					background:url("#{$content-img}mix_about_step2.png") 0 0 no-repeat;
+				}
+				&:nth-child(3){
+					background:url("#{$content-img}mix_about_step3.png") 0 0 no-repeat;
+				}
+
+				.step {
+					display:inline-block;
+					position:relative;top:-18px;
+					padding:15px 28px 20px;
+					font-size:18px;
+					font-weight:$extra-bold;
+					border-radius:100px;
+					background-color:#3371e8;
+					color:#fff;
+				}
+			}
+		}
+
+		.desc_benefit {
+			margin:-55px 37px 0;
+			padding:15px 0;
+			border-radius:100px;
+			border:1px solid #d3d1d1;
+			background-color:#fff;
+			box-shadow:0 0 10px rgba(0,0,0,.08);
+			font-size:16px;
+			line-height:23px;
+			text-align:center;
+			b {
+				color:#3371e8;
+			}
+			b.strong {
+				color:#083da3;
+			}
+		}
+
+	}
+}
+
+
+
+
+// 그룹출현현황 분석 - 단,2,3,4합수 mix_group_appear.html
+.data_table {
+	tbody {
+		tr, .tr.divide {
+			td[data-appear="grp_1"] {
+				box-shadow:inset 0 -3px 0 #ddd;
+				border-bottom-color:#8a8a8a;
+				color:#000;
+			}
+			td[data-appear="grp_2"] {
+				box-shadow:inset 0 -3px 0 #6ebef7;
+				background-color:#eff7ff;
+				border-bottom-color:#00487b;
+				color:#083651;
+			}
+			td[data-appear="grp_3"] {
+				box-shadow:inset 0 -3px 0 #ff7b7b;
+				background-color:#fffaf4;
+				border-bottom-color:#ce2e2e;
+				color:#8f0000;
+			}
+			td[data-appear="grp_4"] {
+				box-shadow:inset 0 -3px 0 #5dd65b;
+				background-color:#d9ffdf;
+				border-bottom-color:#006d12;
+				color:#2e7a00;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/******************* 이하 by stellar *******************************/
+/*테크앤조이 소개  */
+.about_technjoy{
+  .about_title{
+    color:#333;
+    text-align: center;
+    margin-bottom: 1.7rem;
+    padding-bottom: 1rem;
+    font-size:1.3rem;
+    border-bottom:1px solid #ccc;
+  }
+  .list_skills{
+    padding-bottom:3rem;
+    font-size:0;
+    text-align: center;
+    li{
+      @include boxSizing();
+
+      	display: inline-block;
+		width:11rem;height:11rem;
+      	padding-top:2.2rem;
+      	font-size:1.1rem;
+		background: {
+			position:0 center;
+			repeat:no-repeat;
+			size:100% auto;
+		}
+	
+
+      span{
+        line-height:120%;
+        letter-spacing:-1px;
+      }
+      
+      &:nth-child(1){
+        color:#510b00;
+        background-image: url('#{$content-img}bg_about_skill1.png');
+      }
+      &:nth-child(2){
+      	margin-left:1.1rem;
+        color:#5f4100;
+        background-image: url('#{$content-img}bg_about_skill2.png');
+      }
+      &:nth-child(3){
+        color:#00294b;
+        background-image: url('#{$content-img}bg_about_skill3.png');
+      }
+    }
+  }
+  .list_portfolio{
+    padding:0 20px;
+    font-size:0;
+    text-align: center;
+
+    li{
+	    margin-bottom: 20px;
+	    padding-bottom: 18px;
+	    border-bottom: 1px solid #ddd;
+    
+      strong{
+        display: block;
+	    background: {
+	    	repeat:no-repeat;
+	    	position:50% 18px;
+			color:#219ce4;
+	    };
+	    box-shadow: 0 4px 0 #1c81bb;
+	    border-radius: 100px;
+	    display: inline-block;
+	    width: 9.5rem;
+	    height: 2.9rem;
+	    padding-top: 6.4rem;
+	    font-size: 1.1rem;
+	    margin-bottom: 20px;
+
+        color:#fff;
+        font-weight:$bold;
+      }
+      p{
+        color:$base-color;
+        font-size:16px;
+        line-height:150%;
+        letter-spacing:-1px;
+        text-align: left;
+      }
+      &.mobile{
+        strong{
+          background-image: url('#{$content-img}ico_about_mobile.png') ;
+        }
+      }
+      &.iptv{
+        strong{
+          background-image: url('#{$content-img}ico_about_tv.png');
+          background-position:  50% 28px;
+        }
+      }
+      &.offline{
+        strong{
+          background-image: url('#{$content-img}ico_about_offline.png') ;
+        }
+      }
+    }
+  }
+}
+
+
+/*대세추천번호 서비스 안내*/
+.about_wrapper{
+  margin:-1px auto 0;
+  padding-top:6px;
+  background:url('#{$content-img}bg_about_wrapper.png') no-repeat 80% 0;
+}
+.about_ltp_service{
+	padding-top:15px;
+	padding-bottom:20px;
+	border:1px solid $border-base;
+	border-top:0;
+	background-color:#fff;
+    .list_about_tit{
+      @include boxSizing();
+      @include borderRadius(35px);
+        display: block;
+        width:90%;
+        margin:0 auto 15px;
+        padding:10px 20px;
+        border:1px solid #949494;
+        font-size:1.1rem;
+        font-weight:$normal;
+        line-height:1.2rem;
+        letter-spacing:-1px;
+        text-align: center;
+        background-image:linear-gradient(#fff 70%, #f7f7f7 100%)
+    }
+    .list_about_service{
+      position: relative;
+      margin:0 20px;
+
+      li {
+      	overflow:hidden;
+        border-bottom: 1px solid #ccc;
+        margin: 0 auto 15px;
+        letter-spacing: -1px;
+
+        .question {
+          float: left;
+          font-size: 1.1rem;
+          margin-bottom:8px;
+        }
+        .link_about {
+          float: right;
+          padding: .4rem 3.8rem .5rem 15px;
+          border: 1px solid #9cc7d8;
+          border-bottom: 0;
+          font-size: 14px;
+          background-size:auto 80%;
+          color: #0079b3;
+          text-decoration: underline;
+        }
+        &:last-child {
+          margin-bottom: 0;
+          .link_about {
+          	background-size:auto auto;
+          	padding-right:4.2rem;
+          }
+        }
+        @mixin nthChildStyle($index,$left) {
+          &:nth-child(#{$index}) {
+            .link_about {
+               background: {
+               		image:url('#{$content-img}ico_link_about#{$index}.png');
+               		repeat:no-repeat;
+               		position:$left 50%;
+             	}
+         	}
+          }
+        }
+        @include nthChildStyle(1, calc(100% - 10px));
+        @include nthChildStyle(2, calc(100% - 13px));
+        @include nthChildStyle(3, calc(100% - 15px));
+        @include nthChildStyle(4, calc(100% - 14px));
+        @include nthChildStyle(5, calc(100% - 15px));
+        @include nthChildStyle(6, calc(100% - 13px));
+        @include nthChildStyle(7, calc(100% - 10px));
+      }
+    }
+}
+
+
+/*플러스 회원권 구매*/
+.ticket_plus_section{
+  .tab{
+    position: relative;
+    z-index:1;
+  }
+  .t_list{
+    li{
+      position: relative;
+      display: table;
+      width:100%;
+      margin-top:50px;
+      border: {
+      	width:4px 1px 1px;
+      	color:#62a2e9 #ccc #ccc;
+      	style:solid;
+      }
+      &:first-child {margin-top:30px;}
+    
+      .t_name{
+        display: table-cell;
+        vertical-align: middle;
+        padding:0 15px 15px;
+        border-right:1px dashed #ccc;
+        background-color:#f9fbff;
+        text-align: center;
+        .tit{
+          padding-top:22px;
+          display: block;
+          margin-bottom: 15px;
+          font-weight:$normal;
+          span{
+            color:$sub-color;
+            &:first-child{
+              font-size:1rem;
+            }
+            &:last-child{
+              font : {
+                size:1rem;
+              }
+            }
+          }
+          b{
+            display: block;
+            margin-bottom:5px;
+            color:#004eba;
+            font-size:1.5rem;
+            letter-spacing: -1px;
+            white-space:nowrap;
+          }
+        }
+        .link_purchase{
+          display:block;
+          padding:3px 0 4px;
+          background: #1746a3;
+          font-size:1.2rem;
+          text-align: center;
+          color:#fff;
+        }
+      }
+      .t_price{
+        display: table-cell;
+        padding:15px 10px 10px;
+        vertical-align: middle;
+        text-align: center;
+        b{
+          line-height:100%;
+          font-size:1.6rem;
+          color:#444;
+          letter-spacing: -1px;
+        }
+        p{
+          margin-top: 8px;
+          font-size: 14px;
+          color: #e22b2b;
+          letter-spacing: -1px;
+          del{
+
+          }
+          ins{
+            text-decoration: none;
+          }
+        }
+        dl{
+          margin-top: 10px;
+          dt{
+            display: inline-block;
+            @include borderRadius(13px);
+            padding:2px 12px;
+            color:#fff;
+            background: #126cd2;
+            font-size:.9rem;
+            margin-bottom: 5px;
+          }
+          dd{
+            font-size:14px;
+            line-height:150%;
+            letter-spacing: -1px;
+          }
+        }
+      }
+      .tag_sale{
+        position: absolute;
+        left:10px;
+        top:-30px;
+        text-align: center;
+        color:#fff;
+        width:2.35rem;
+        height:2.35rem;
+        padding:8px;
+        line-height:1.1rem;
+
+        background-color:#ff5050;
+        border-radius:100px;
+      }
+    }
+  }
+}
+
+/*tooltip*/
+.tip_wrap{
+  margin-left:5px;
+  display: inline-block;
+  position: relative;
+  .btn_tip_question{
+    @include blind(indent);
+    width:1.8rem;
+    height:1.8rem;
+    background: url('#{$common-img}ico_question.png') no-repeat 0 0;
+    background-size:contain;
+    vertical-align: middle;
+  }
+  .pop_tooltip{
+    display: none;
+    position: absolute;
+    left:0;
+    top:20px;
+    padding:15px;
+    line-height:150%;
+    font-size:14px;
+    color:#333;
+    text-align: center;
+    background: #fff;
+    border:2px solid #0493bc;
+    letter-spacing: -1px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,.08);
+    &.on{
+      display: block;
+    }
+    &[data-tip="coin"]{
+      width:18rem;
+      left:-5rem;
+    }
+  }
+}

@@ -209,7 +209,7 @@ caption { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; 
 
 .bottom_util .link_spot a:first-child:before { width: 19px; background-position: 0 50%; }
 
-.bottom_util .link_spot a:before { content: ""; display: inline-block; vertical-align: top; width: 13px; height: 50px; margin-right: 7px; background: url("../img/common//ico_link_spot.png") no-repeat 100% 50%; background-size: auto 17px; }
+.bottom_util .link_spot a:before { content: ""; display: inline-block; vertical-align: top; width: 13px; height: 50px; margin-right: 7px; background: url("../img/common/ico_link_spot.png") no-repeat 100% 50%; background-size: auto 17px; }
 
 .bottom_util .week_lotto_info { position: fixed; left: 0; bottom: 0; z-index: 20; overflow: hidden; background: #fff; display: table; width: 100%; height: 55px; }
 
@@ -305,6 +305,8 @@ select[disabled] { border: 1px solid #cfcfcf; background-color: #f4f4f4; }
 select[disabled][required] { border: 1px solid #528dff; background-color: #f4f4f4; }
 
 /*input, selector, textares size*/
+[data-width='100'] { width: 100px; }
+
 [data-width='200'] { width: 200px; }
 
 [data-width='35'] { width: 35px; }
@@ -677,7 +679,7 @@ span.ball_n40th { background: #58ca7b; }
 
 .main_win_sec .win_num span[class^="ball_n"] + .plus { font-size: 22px; color: #bfc1c2; }
 
-.btn_question { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; vertical-align: middle; margin-left: 5px; width: 18px; height: 18px; background: url("../img/common//ico_question.png") no-repeat 0 0; background-size: 18px 18px; }
+.btn_question { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; vertical-align: middle; margin-left: 5px; width: 18px; height: 18px; background: url("../img/common/ico_question.png") no-repeat 0 0; background-size: 18px 18px; }
 
 .appear_num { margin-left: 10px; display: inline-block; vertical-align: middle; }
 
@@ -935,9 +937,11 @@ input[data-align="right"] { text-align: right; }
 
 .tip_notice { padding: 9px 13px 11px; margin-top: 18px; background-color: #e6e6e6; }
 
-.tip_notice dt, .tip_notice dd { display: inline-block; }
+.tip_notice dt, .tip_notice dd { display: inline-block; vertical-align: middle; }
 
-.tip_notice dt { padding: 1px 10px 3px; margin-right: 8px; background-color: #fff; border: 1px solid #cacaca; border-radius: 2px; color: #999; }
+.tip_notice dt { width: 10%; padding: 1px 10px 3px; margin-right: 8px; background-color: #fff; border: 1px solid #cacaca; border-radius: 2px; text-align: center; color: #999; }
+
+.tip_notice dd { width: 75%; }
 
 /* 휴대전화 + 인증번호 */
 .verify_phone_input { width: 222px; }
@@ -985,6 +989,12 @@ input[data-align="right"] { text-align: right; }
 .page_title_banner[data-type="banner"] .sub_tit { font-size: 1.3em; }
 
 .page_title_banner[data-type="halogen_venus"] .desc { padding-top: 193px; background: url("../img/content/banner_halogen_venus.png") center 0 no-repeat; }
+
+.btn_wrap[data-align] .flex_auto { flex: auto; }
+
+.mix_contents + .list_primary, .box_wrap .list_primary:first-child { margin-top: 20px; }
+
+.board_table .nodata td { height: 90px; font-size: 1rem; letter-spacing: -1px; color: #999; }
 
 .trend_about_service { position: relative; box-sizing: border-box; overflow: hidden; padding: 0 2px 15px; background-color: #223863; border-radius: 3px; color: #fff; }
 
@@ -1174,6 +1184,14 @@ select { min-width: 0; border-radius: 0; }
 
 .list_all_item li .desc .tip { padding-left: 28px; padding-top: 8px; margin-top: 10px; border-top: 1px dashed #dfdede; background: url("../img/content/ico_all_tip.png") 0 8px no-repeat; color: #006d56; }
 
+.tab_wrapper { overflow: hidden; }
+
+.tab.swiper-wrapper { width: 9999px; }
+
+.tab.swiper-wrapper li { flex: none; }
+
+.tab.swiper-wrapper li a { padding-left: 14px; padding-right: 14px; }
+
 .list_all_keyitem { display: flex; margin-bottom: 40px; border-style: solid; border-width: 1px; border-color: #e6e6e6; border-radius: 4px; }
 
 .list_all_keyitem li { flex: 1; padding: 27px 0 19px; border-left: 1px solid #f2f2f2; text-align: center; color: #555; }
@@ -1194,60 +1212,215 @@ select { min-width: 0; border-radius: 0; }
 
 .list_all_keyitem li p { line-height: 150%; }
 
-.list_about_service { background-color: #fff; border-radius: 2px; }
-
-.list_about_service li { position: relative; overflow: hidden; padding: 20px 0; border-bottom: 1px solid #eee; }
-
-.list_about_service li:last-child { border-bottom: 0; }
-
-.list_about_service li .question { display: inline-block; position: relative; max-width: 74%; padding: 10px 20px 20px; font-size: 15px; border: 1px solid #dfdfdf; border-radius: 50px; background-color: #fcfcfc; letter-spacing: -.2px; }
-
-.list_about_service li .link_about { position: relative; float: right; padding: 6px 15px 9px 40px; margin-top: -13px; font-weight: 700; font-size: 15px; background: #fff url("../img/content/ico_chk_about_service.png") no-repeat 8px center; border-radius: 3px; border: 1px solid #b7b7b7; color: #2c2c2c; letter-spacing: -.4px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.07); text-decoration: underline; }
-
-.about_technjoy .about_title { display: block; margin: 0 0 25px; padding: 6px 0 9px; font-size: 1.3rem; border-bottom: 1px solid #ddd; letter-spacing: -1px; text-align: center; color: #000; }
-
-.about_technjoy .list_portfolio { padding-bottom: 40px; font-size: 16px; }
-
-.about_technjoy .list_portfolio li { padding: 5px 30px 20px; text-align: center; }
-
-.about_technjoy .list_portfolio li:before { display: block; content: ""; width: 64px; height: 64px; margin: 12px auto 16px; background-repeat: no-repeat; background-size: contain; background-position: center 0; }
-
-.about_technjoy .list_portfolio li.mobile:before { background-image: url("../img/content/ico_about_mobile.png"); }
-
-.about_technjoy .list_portfolio li.iptv:before { background-image: url("../img/content/ico_about_tv.png"); }
-
-.about_technjoy .list_portfolio li.offline:before { background-image: url("../img/content/ico_about_offline.png"); }
-
-.about_technjoy .list_portfolio li:last-child { margin-right: 0; }
-
-.about_technjoy .list_portfolio li strong { display: block; margin-bottom: 10px; text-align: center; }
-
-.about_technjoy .list_portfolio li p { font-size: 15px; line-height: 20px; text-align: left; }
-
-.about_technjoy .list_skills { margin-bottom: 40px; text-align: center; }
-
-.about_technjoy .list_skills li { display: inline-block; box-sizing: border-box; overflow: hidden; position: relative; height: 150px; width: 150px; padding-top: 95px; border-style: solid; border-width: 0 0 5px; border-color: #ccc; border-radius: 100px; font-size: 1rem; line-height: 1.25em; text-align: center; letter-spacing: -1px; color: #fff; }
-
-.about_technjoy .list_skills li:last-child { margin-right: 0; }
-
-.about_technjoy .list_skills li > span { position: absolute; left: 0; right: 0; bottom: 0; padding-top: 8px; padding-bottom: 10px; background: inherit; box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.12); z-index: 10; }
-
-.about_technjoy .list_skills li:after { display: block; content: ""; position: absolute; top: 10px; right: 10px; bottom: 8px; left: 10px; border-radius: 100px; background-color: #fff; background-repeat: no-repeat; background-size: 62% auto; }
-
-.about_technjoy .list_skills li:nth-child(1) { margin-right: 10px; background-color: #ef7967; border-color: #b54d3d; }
-
-.about_technjoy .list_skills li:nth-child(1):after { background-image: url("../img/content/ico_about_exp.png"); background-position: 44% 24%; }
-
-.about_technjoy .list_skills li:nth-child(2) { background-color: #f8b623; border-color: #ab7b0f; }
-
-.about_technjoy .list_skills li:nth-child(2):after { background-image: url("../img/content/ico_about_skill.png"); background-position: center 28%; }
-
-.about_technjoy .list_skills li:nth-child(3) { background-color: #11487e; border-color: #153553; }
-
-.about_technjoy .list_skills li:nth-child(3):after { background-image: url("../img/content/ico_about_person.png"); background-position: center 42%; }
-
-.tit_about { font-size: 24px; }
-
 .week_lotto_info { box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+
+.lotto_if_win .desc_if_win { padding: 16.5rem 20px 20px; margin-bottom: 20px; font-size: 16px; background: #fcfcfc url("../img/content/bg_if_win.png") center 2rem no-repeat; background-size: 80% auto; border-bottom: 1px solid #ccc; }
+
+.lotto_if_win .desc_if_win .win_desc .cong { display: inline-block; font-size: 1.2rem; font-weight: 700; letter-spacing: -.5px; color: #333; }
+
+.lotto_if_win .desc_if_win .win_desc .money { display: block; padding: 6px 20px 10px; margin-top: 25px; font-size: 1.3rem; border-radius: 100px; border: 1px solid #ccc; background: linear-gradient(#fff 70%, #f8f8f8 100%); text-align: center; }
+
+.lotto_if_win .desc_if_win .win_desc .money b { font-size: 1.4rem; letter-spacing: -1px; color: #4471ca; }
+
+.lotto_if_win .desc_if_win .win_desc .other { display: block; color: #333; }
+
+.lotto_if_win .desc_if_win .win_desc .desc_sub { display: block; padding-top: 10px; text-decoration: underline; }
+
+.lotto_if_win .list_if_win > li { margin-bottom: 10px; border-bottom: 15px solid #fbfbfb; }
+
+.lotto_if_win .list_if_win > li .tit_list_win { display: block; margin-bottom: 10px; }
+
+.lotto_if_win .list_if_win .block_title { padding-top: 20px; }
+
+.lotto_if_win .list_if_win .list_item { overflow: hidden; }
+
+.lotto_if_win .list_if_win .list_item li { box-sizing: border-box; padding: 10px 20px 20px; margin-bottom: 15px; border-bottom: 1px dashed #ddd; text-align: center; }
+
+.lotto_if_win .list_if_win .list_item li:last-child { margin-bottom: 0; }
+
+.lotto_if_win .list_if_win .list_item li .img_list_win { display: block; overflow: hidden; height: 12rem; margin-bottom: 15px; border: 1px solid #ccc; }
+
+.lotto_if_win .list_if_win .list_item li .img_list_win img { width: 115%; max-width: none; height: 12rem; }
+
+.lotto_if_win .btn_strong.btn_if_win { font-size: 1.2rem; width: auto; height: 45px; letter-spacing: -1px; }
+
+.mix_about_service { background-color: #fff; }
+
+.mix_about_service .mix_about_desc { padding: 0 80px; background: url("../img/content/bg_mix_about.png") 540px 190px no-repeat; }
+
+.mix_about_service .mix_about_desc .tit_mix_about { position: relative; top: -39px; height: 146px; padding-bottom: 25px; margin-bottom: 20px; border-bottom: 1px solid #7991a8; background: url("../img/content/tit_mix_about_service.png") 210px 0 no-repeat; font-size: 0; line-height: 0; letter-spacing: -2000px; }
+
+.mix_about_service .mix_about_desc .calc { width: 701px; height: 61px; padding-left: 82px; background: url("../img/content/bg_mix_about_calc.png") 0 8px no-repeat; font-size: 22px; letter-spacing: -.8px; color: #333; }
+
+.mix_about_service .mix_about_desc .calc > b { position: relative; top: 3px; margin-right: 20px; font-weight: 400; }
+
+.mix_about_service .mix_about_desc .calc .plus { display: inline-block; width: 36px; height: 36px; margin: 0 13px 0 11px; font-size: 0; border-radius: 100px; border: 1px solid #c2c0c0; background: #fff url("../img/content/ico_plus_mix_about.png") center center no-repeat; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15); vertical-align: middle; }
+
+.mix_about_service .mix_about_desc .calc [class^="calc"] { display: inline-block; box-sizing: border-box; width: 61px; height: 61px; padding-top: 18px; font-size: 21px; border-radius: 100px; text-align: center; letter-spacing: -.8px; line-height: 20px; color: #fff; }
+
+.mix_about_service .mix_about_desc .calc [class^="calc"].calc1 { background-color: #f35d48; box-shadow: 2px 2px 0 #d9402b; }
+
+.mix_about_service .mix_about_desc .calc [class^="calc"].calc2 { background-color: #ff9555; box-shadow: 2px 2px 0 #ef6a19; text-shadow: 0 0 3px #d05500; }
+
+.mix_about_service .mix_about_desc .desc { padding: 50px 39px 80px; font-size: 19px; line-height: 31px; letter-spacing: -.4px; color: #333; }
+
+.mix_about_service .mix_about_desc .btn_mix_run { display: block; box-sizing: content-box; width: 674px; height: 58px; margin: auto; padding-bottom: 8px; font-size: 23px; background: url("../img/content/btn_mix_about.png") 0 0 no-repeat; text-align: center; letter-spacing: -.4px; color: #fff; }
+
+.mix_about_service .mix_about_desc .btn_mix_run:hover { text-decoration: underline; }
+
+.mix_about_service .mix_about_desc .btn_mix_run b { margin-left: 15px; font-weight: 700; text-decoration: underline; }
+
+.mix_about_service .mix_service_benefit { padding-bottom: 50px; margin: 65px 25px 0; border-top: 1px solid #7991a8; }
+
+.mix_about_service .mix_service_benefit .tit_mix_service { padding: 35px 0 25px; font-size: 23px; text-align: center; }
+
+.mix_about_service .mix_service_benefit .mix_service { text-align: center; }
+
+.mix_about_service .mix_service_benefit .list_benefit { display: flex; margin: 15px -1px 0; border: 1px solid #0e3f6f; border-radius: 3px; }
+
+.mix_about_service .mix_service_benefit .list_benefit li { position: relative; flex: 1; font-size: 17px; border-right: 1px solid #d3d3d3; line-height: 60px; letter-spacing: -1px; color: #2a2a2a; text-align: center; }
+
+.mix_about_service .mix_service_benefit .list_benefit li:last-child { border-right: 0; }
+
+.mix_about_service .mix_service_benefit .list_benefit li .order { position: absolute; left: 50%; top: -15px; margin-left: -14px; width: 27px; height: 27px; font-size: 16px; font-weight: 800; border-radius: 100px; background-color: #1b32a5; text-align: center; line-height: 23px; letter-spacing: -.75px; color: #fff; }
+
+.mix_about_service .mix_service_benefit .list_step { padding: 50px 30px 90px; border: 1px solid #d2d2d2; border-top: 0; background-color: #fafafa; }
+
+.mix_about_service .mix_service_benefit .list_step:after { display: block; content: ""; clear: both; }
+
+.mix_about_service .mix_service_benefit .list_step li { float: left; width: 263px; height: 264px; font-size: 0; line-height: 0; text-align: center; }
+
+.mix_about_service .mix_service_benefit .list_step li:nth-child(1) { margin-right: -12px; background: url("../img/content/mix_about_step1.png") 0 0 no-repeat; }
+
+.mix_about_service .mix_service_benefit .list_step li:nth-child(2) { margin-right: -12px; background: url("../img/content/mix_about_step2.png") 0 0 no-repeat; }
+
+.mix_about_service .mix_service_benefit .list_step li:nth-child(3) { background: url("../img/content/mix_about_step3.png") 0 0 no-repeat; }
+
+.mix_about_service .mix_service_benefit .list_step li .step { display: inline-block; position: relative; top: -18px; padding: 15px 28px 20px; font-size: 18px; font-weight: 800; border-radius: 100px; background-color: #3371e8; color: #fff; }
+
+.mix_about_service .mix_service_benefit .desc_benefit { margin: -55px 37px 0; padding: 15px 0; border-radius: 100px; border: 1px solid #d3d1d1; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); font-size: 16px; line-height: 23px; text-align: center; }
+
+.mix_about_service .mix_service_benefit .desc_benefit b { color: #3371e8; }
+
+.mix_about_service .mix_service_benefit .desc_benefit b.strong { color: #083da3; }
+
+.data_table tbody tr td[data-appear="grp_1"], .data_table tbody .tr.divide td[data-appear="grp_1"] { box-shadow: inset 0 -3px 0 #ddd; border-bottom-color: #8a8a8a; color: #000; }
+
+.data_table tbody tr td[data-appear="grp_2"], .data_table tbody .tr.divide td[data-appear="grp_2"] { box-shadow: inset 0 -3px 0 #6ebef7; background-color: #eff7ff; border-bottom-color: #00487b; color: #083651; }
+
+.data_table tbody tr td[data-appear="grp_3"], .data_table tbody .tr.divide td[data-appear="grp_3"] { box-shadow: inset 0 -3px 0 #ff7b7b; background-color: #fffaf4; border-bottom-color: #ce2e2e; color: #8f0000; }
+
+.data_table tbody tr td[data-appear="grp_4"], .data_table tbody .tr.divide td[data-appear="grp_4"] { box-shadow: inset 0 -3px 0 #5dd65b; background-color: #d9ffdf; border-bottom-color: #006d12; color: #2e7a00; }
+
+/******************* 이하 by stellar *******************************/
+/*테크앤조이 소개  */
+.about_technjoy .about_title { color: #333; text-align: center; margin-bottom: 1.7rem; padding-bottom: 1rem; font-size: 1.3rem; border-bottom: 1px solid #ccc; }
+
+.about_technjoy .list_skills { padding-bottom: 3rem; font-size: 0; text-align: center; }
+
+.about_technjoy .list_skills li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; display: inline-block; width: 11rem; height: 11rem; padding-top: 2.2rem; font-size: 1.1rem; background-position: 0 center; background-repeat: no-repeat; background-size: 100% auto; }
+
+.about_technjoy .list_skills li span { line-height: 120%; letter-spacing: -1px; }
+
+.about_technjoy .list_skills li:nth-child(1) { color: #510b00; background-image: url("../img/content/bg_about_skill1.png"); }
+
+.about_technjoy .list_skills li:nth-child(2) { margin-left: 1.1rem; color: #5f4100; background-image: url("../img/content/bg_about_skill2.png"); }
+
+.about_technjoy .list_skills li:nth-child(3) { color: #00294b; background-image: url("../img/content/bg_about_skill3.png"); }
+
+.about_technjoy .list_portfolio { padding: 0 20px; font-size: 0; text-align: center; }
+
+.about_technjoy .list_portfolio li { margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px solid #ddd; }
+
+.about_technjoy .list_portfolio li strong { display: block; background-repeat: no-repeat; background-position: 50% 18px; background-color: #219ce4; box-shadow: 0 4px 0 #1c81bb; border-radius: 100px; display: inline-block; width: 9.5rem; height: 2.9rem; padding-top: 6.4rem; font-size: 1.1rem; margin-bottom: 20px; color: #fff; font-weight: 700; }
+
+.about_technjoy .list_portfolio li p { color: #555; font-size: 16px; line-height: 150%; letter-spacing: -1px; text-align: left; }
+
+.about_technjoy .list_portfolio li.mobile strong { background-image: url("../img/content/ico_about_mobile.png"); }
+
+.about_technjoy .list_portfolio li.iptv strong { background-image: url("../img/content/ico_about_tv.png"); background-position: 50% 28px; }
+
+.about_technjoy .list_portfolio li.offline strong { background-image: url("../img/content/ico_about_offline.png"); }
+
+/*대세추천번호 서비스 안내*/
+.about_wrapper { margin: -1px auto 0; padding-top: 6px; background: url("../img/content/bg_about_wrapper.png") no-repeat 80% 0; }
+
+.about_ltp_service { padding-top: 15px; padding-bottom: 20px; border: 1px solid #e5e5e5; border-top: 0; background-color: #fff; }
+
+.about_ltp_service .list_about_tit { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 35px; -moz-border-radius: 35px; border-radius: 35px; display: block; width: 90%; margin: 0 auto 15px; padding: 10px 20px; border: 1px solid #949494; font-size: 1.1rem; font-weight: 400; line-height: 1.2rem; letter-spacing: -1px; text-align: center; background-image: linear-gradient(#fff 70%, #f7f7f7 100%); }
+
+.about_ltp_service .list_about_service { position: relative; margin: 0 20px; }
+
+.about_ltp_service .list_about_service li { overflow: hidden; border-bottom: 1px solid #ccc; margin: 0 auto 15px; letter-spacing: -1px; }
+
+.about_ltp_service .list_about_service li .question { float: left; font-size: 1.1rem; margin-bottom: 8px; }
+
+.about_ltp_service .list_about_service li .link_about { float: right; padding: .4rem 3.8rem .5rem 15px; border: 1px solid #9cc7d8; border-bottom: 0; font-size: 14px; background-size: auto 80%; color: #0079b3; text-decoration: underline; }
+
+.about_ltp_service .list_about_service li:last-child { margin-bottom: 0; }
+
+.about_ltp_service .list_about_service li:last-child .link_about { background-size: auto auto; padding-right: 4.2rem; }
+
+.about_ltp_service .list_about_service li:nth-child(1) .link_about { background-image: url("../img/content/ico_link_about1.png"); background-repeat: no-repeat; background-position: calc(100% - 10px) 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(2) .link_about { background-image: url("../img/content/ico_link_about2.png"); background-repeat: no-repeat; background-position: calc(100% - 13px) 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(3) .link_about { background-image: url("../img/content/ico_link_about3.png"); background-repeat: no-repeat; background-position: calc(100% - 15px) 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(4) .link_about { background-image: url("../img/content/ico_link_about4.png"); background-repeat: no-repeat; background-position: calc(100% - 14px) 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(5) .link_about { background-image: url("../img/content/ico_link_about5.png"); background-repeat: no-repeat; background-position: calc(100% - 15px) 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(6) .link_about { background-image: url("../img/content/ico_link_about6.png"); background-repeat: no-repeat; background-position: calc(100% - 13px) 50%; }
+
+.about_ltp_service .list_about_service li:nth-child(7) .link_about { background-image: url("../img/content/ico_link_about7.png"); background-repeat: no-repeat; background-position: calc(100% - 10px) 50%; }
+
+/*플러스 회원권 구매*/
+.ticket_plus_section .tab { position: relative; z-index: 1; }
+
+.ticket_plus_section .t_list li { position: relative; display: table; width: 100%; margin-top: 50px; border-width: 4px 1px 1px; border-color: #62a2e9 #ccc #ccc; border-style: solid; }
+
+.ticket_plus_section .t_list li:first-child { margin-top: 30px; }
+
+.ticket_plus_section .t_list li .t_name { display: table-cell; vertical-align: middle; padding: 0 15px 15px; border-right: 1px dashed #ccc; background-color: #f9fbff; text-align: center; }
+
+.ticket_plus_section .t_list li .t_name .tit { padding-top: 22px; display: block; margin-bottom: 15px; font-weight: 400; }
+
+.ticket_plus_section .t_list li .t_name .tit span { color: #000; }
+
+.ticket_plus_section .t_list li .t_name .tit span:first-child { font-size: 1rem; }
+
+.ticket_plus_section .t_list li .t_name .tit span:last-child { font-size: 1rem; }
+
+.ticket_plus_section .t_list li .t_name .tit b { display: block; margin-bottom: 5px; color: #004eba; font-size: 1.5rem; letter-spacing: -1px; white-space: nowrap; }
+
+.ticket_plus_section .t_list li .t_name .link_purchase { display: block; padding: 3px 0 4px; background: #1746a3; font-size: 1.2rem; text-align: center; color: #fff; }
+
+.ticket_plus_section .t_list li .t_price { display: table-cell; padding: 15px 10px 10px; vertical-align: middle; text-align: center; }
+
+.ticket_plus_section .t_list li .t_price b { line-height: 100%; font-size: 1.6rem; color: #444; letter-spacing: -1px; }
+
+.ticket_plus_section .t_list li .t_price p { margin-top: 8px; font-size: 14px; color: #e22b2b; letter-spacing: -1px; }
+
+.ticket_plus_section .t_list li .t_price p ins { text-decoration: none; }
+
+.ticket_plus_section .t_list li .t_price dl { margin-top: 10px; }
+
+.ticket_plus_section .t_list li .t_price dl dt { display: inline-block; -webkit-border-radius: 13px; -moz-border-radius: 13px; border-radius: 13px; padding: 2px 12px; color: #fff; background: #126cd2; font-size: .9rem; margin-bottom: 5px; }
+
+.ticket_plus_section .t_list li .t_price dl dd { font-size: 14px; line-height: 150%; letter-spacing: -1px; }
+
+.ticket_plus_section .t_list li .tag_sale { position: absolute; left: 10px; top: -30px; text-align: center; color: #fff; width: 2.35rem; height: 2.35rem; padding: 8px; line-height: 1.1rem; background-color: #ff5050; border-radius: 100px; }
+
+/*tooltip*/
+.tip_wrap { margin-left: 5px; display: inline-block; position: relative; }
+
+.tip_wrap .btn_tip_question { text-indent: -9999px; line-height: 0; font-size: 0; overflow: hidden; width: 1.8rem; height: 1.8rem; background: url("../img/common/ico_question.png") no-repeat 0 0; background-size: contain; vertical-align: middle; }
+
+.tip_wrap .pop_tooltip { display: none; position: absolute; left: 0; top: 20px; padding: 15px; line-height: 150%; font-size: 14px; color: #333; text-align: center; background: #fff; border: 2px solid #0493bc; letter-spacing: -1px; box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.08); }
+
+.tip_wrap .pop_tooltip.on { display: block; }
+
+.tip_wrap .pop_tooltip[data-tip="coin"] { width: 18rem; left: -5rem; }
 
 /*# sourceMappingURL=sourcemaps/common-ui.css.map */

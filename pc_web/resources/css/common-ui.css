@@ -1557,8 +1557,6 @@ input[data-align="right"] { text-align: right; }
 
 .lotto_if_win .desc_if_win .win_desc .cong { display: inline-block; font-size: 18px; font-weight: 700; letter-spacing: -.5px; color: #333; }
 
-.lotto_if_win .desc_if_win .win_desc .tit_sub { /* position:relative; display:inline-block; padding:3px 13px 7px 56px; margin-right:10px; font-size:20px; background-color:#ffc754; border-radius:100px; color:#fff; &:before { display:inline-block;content:""; position:absolute;top:-14px;left:3px; width:30px;height:45px; margin-right:5px; padding:1px 15px 0 0; background:url("../img/content/bg_tit_if_win.png") 0 0 no-repeat; background-size:100% auto; vertical-align:middle; } */ }
-
 .lotto_if_win .desc_if_win .win_desc .money { display: inline-block; padding: 8px 40px 13px; margin-top: 25px; font-size: 20px; border-radius: 100px; border: 1px solid #ccc; background: linear-gradient(#fff 70%, #f8f8f8 100%); }
 
 .lotto_if_win .desc_if_win .win_desc .money b { font-size: 23px; letter-spacing: -1px; color: #4471ca; }
