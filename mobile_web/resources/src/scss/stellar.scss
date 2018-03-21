@@ -699,3 +699,247 @@
   color:$sub-color;
   text-decoration: underline;
 }
+
+
+/*대세 추천번호*/
+.trend_about_service {
+  @include boxSizing();
+  position:relative;
+  padding:45px 1px 1px;
+  background:#dadada url("#{$content-img}bg_about_wrapper.png") 0 0 no-repeat;
+  .tit_trend_about {
+    position:absolute;
+    left:160px;
+    top:-27px;
+    font-size:0;
+    overflow: hidden;
+    z-index:1;
+    b {
+      vertical-align: top;
+      position: relative;
+      z-index:1;
+      @include boxSizing();
+      display: inline-block;
+      padding:73px 0 0 74px;
+      line-height:100%;
+      width:128px;
+      height:139px;
+      background:url('#{$content-img}bg_trend_num1.png') no-repeat 0 0;
+      font-size:31px;
+      letter-spacing: -3px;
+      color:#e36001;
+      /*display: inline-block;
+      box-sizing: border-box;
+      width: 60px;height: 60px;
+      font-size: 26px;
+      padding-top: 5px;
+      margin-right: 15px;
+      border-radius: 100px;
+      background-color: #1f4a9e;
+      vertical-align: text-top;
+      text-align: center;
+      text-shadow: none;*/
+    }
+    .mark_desc {
+      @include boxSizing();
+      @include borderRadius(39px);
+      display:inline-block;
+      vertical-align: top;
+      width:376px;
+      height:74px;
+      border:1px solid #dadada;
+      font-size:31px;
+      padding-top:11px;
+      background:#fff;
+      text-align: center;
+      letter-spacing: -3px;
+      margin-left:-30px;
+      margin-top:58px;
+    }
+  }
+  .trend_about_info{
+    position: relative;
+    background:#fff;
+    padding-top:95px;
+    padding-bottom:130px;
+    .desc{
+      @include blind(indent);
+      width:730px;
+      height:32px;
+      margin:0 auto;
+      padding-bottom:11px;
+      border-bottom:1px solid #7991a8;
+      background: url('#{$content-img}txt_trend_desc.png') no-repeat 50% 0;
+    }
+    .desc_key {
+      margin:0 auto;
+      width:730px;
+      li {
+        margin-top:50px;
+        padding-left:90px;
+        background:url('#{$content-img}ico_trend_desc.png') no-repeat 50px 0;
+        font-size:20px;
+        font-weight:$bold;
+        span {
+          margin-top: 8px;
+          display:block;
+          font-size:16px;
+          font-weight:$normal
+        }
+      }
+    }
+    .link_rec_hurry {
+      width:100%;
+      height:69px;
+      position: absolute;
+      left:0;
+      bottom:3px;
+      text-align: center;
+      color:#fff;
+      font-size:23px;
+      background:#fff url('#{$content-img}bg_hurry_ref.png') no-repeat 0 0;
+      line-height:65px;
+      span {
+        font-weight:$bold;
+        letter-spacing:0;
+        text-decoration:underline;
+        margin-left:23px;
+
+      }
+    }
+  }
+
+  .list_trend_service {
+    padding:30px 40px;
+    background-color:#fff;
+
+    li {
+      position:relative;
+      padding:15px 0 35px 116px;
+      margin-bottom:20px;
+      border-bottom:1px solid #dadada;
+      color:#333;
+
+      .tit {
+        display:block;
+        margin-bottom:8px;
+        font-size:1.4em;
+        color:#333;
+      }
+
+      &:last-child {
+        padding-bottom:0;
+        border-bottom:0
+      }
+    }
+  }
+
+}
+
+/*회원가입완료*/
+.join_about_info{
+  position: relative;
+  background: #fff;
+  text-align: center;
+  padding-top:110px;
+  padding-bottom:55px;
+  margin-bottom:1px;
+  .tit_join_completed{
+    position: absolute;
+    left:155px;
+    top:-22px;
+    width:477px;
+    height:66px;
+    background:url('#{$content-img}bg_join_tit.png') no-repeat 0 0;
+    padding-top:32px;
+    padding-left:182px;
+    line-height:100%;
+    font-size:31px;
+    letter-spacing: -2px;
+    text-align: left;
+  }
+  .join_desc{
+    width:730px;
+    padding-bottom:5px;
+    border-bottom:1px solid #7991a8;
+    margin:0 auto 44px;
+    font-size:23px;
+    color:#3f3f3f;
+    letter-spacing: -1px;
+  }
+  .link_go_home{
+    display: inline-block;
+    @include borderRadius(4px);
+    @include button(480px,#20a4f1,54px,20px,#fff);
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.list_join_benefits{
+  background: #fff;
+  position: relative;
+  padding:115px 0 40px;
+  .desc_strong{
+    @include boxSizing();
+      position: absolute;
+      left:50%;
+      top:50px;
+      margin-left:-345px;
+      padding:20px 170px 0 110px;
+      width:689px;
+      height:102px;
+      background:url('#{$content-img}bg_desc_strong.png') no-repeat 0 0;
+    text-align: center;
+      line-height: 170%;
+    font-size:18px;
+    letter-spacing: -1px;
+    b{
+      color:#114287;
+      margin-right:5px;
+    }
+    .tag{
+      position: absolute;
+      left:-27px;
+      top:-19px;
+      width:74px;
+      height:74px;
+      font-size:18px;
+      font-weight:$bold;
+      color:#fff;
+      text-align: center;
+      line-height:71px;
+      background:url('#{$content-img}bg_desc_strong_tag.png') no-repeat 0 0;
+    }
+  }
+  .j_list{
+    @include boxSizing();
+    width:790px;
+    @include borderRadius(4px);
+    border:1px solid #dadada;
+    margin:0 auto;
+    padding:75px 50px 45px;
+    @include clearFix();
+    li{
+      @include boxSizing();
+      float:left;
+      width:308px;
+      padding-left:38px;
+      margin-bottom: 24px;
+      font-size:16px;
+      letter-spacing: -1px;
+      line-height:24px;
+      .tit{
+        font-weight:$normal;
+        color:#222;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &.odd{
+        width:380px;
+      }
+      background:url('#{$content-img}ico_join_desc.png') no-repeat 8px 50%;
+    }
+  }
+}

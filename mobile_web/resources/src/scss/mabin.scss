@@ -300,232 +300,6 @@ input{
 }
 
 
-// 대세추천번호 - 서비스안내 recommend_about.html
-.trend_about_service {
-	position:relative;
-	box-sizing:border-box;	
-	overflow:hidden;
-	padding: 0 2px 15px;
-	background-color:#223863;	
-	border-radius:3px;
-	color:#fff;
-
-	.link_rec_hurry {
-		position:relative;
-		display:block;
-	    margin: -10px 25px;
-	    padding:10px 0;
-	    font-size: 1rem;
-	    background-color: rgba(67, 177, 220, 0.88);
-	    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.7);
-	    letter-spacing: -1px;
-	    border-radius: 3px;
-	    color: #fff;
-	    text-align: center;
-	    z-index:20;
-
-		span {
-			display:block;
-			font-size:16px;
-			letter-spacing:0;
-			text-decoration:underline
-
-		}
-	}
-
-	.btn_wrap {
-		padding:0 15px;
-	}
-
-
-	
-
-	p.desc {
-		display:inline-block;
-		padding-top:14px;
-		font-size:1.1em;
-		line-height:1.5em;
-		letter-spacing:-.7px;
-		
-		b {
-			display:block;
-			font-size:1.2em;
-			letter-spacing:-1px;
-		}
-	}
-
-	.lotto_ball {
-		overflow:hidden;
-		height:33px;
-		padding-right:30px;
-		text-align:right;
-		opacity:.6;
-		span[class^="ball"] {
-			box-sizing:border-box;
-			width:50px;height:50px;
-			font-size:1.8rem;
-			padding-top:14px;
-		}
-	}
-	.tit_trend_about {
-	    padding: 25px 0 15px;
-	    margin:0 15px 18px;
-	    font-size: 1.7rem;
-	    border-bottom:1px solid #657799;
-    	line-height: 45px;
-    	letter-spacing: -3px;
-    	text-shadow:0 0 15px rgba(0,0,0,.7);
-    	text-align:center;
-
-    	b {
-		    display: inline-block;
-		    box-sizing: border-box;
-		    width: 40px;height: 40px;
-		    margin-left:-5px;
-		    font-size: 1.27rem;
-		    padding-top: 0;
-		    margin-right: 12px;
-		    border-radius: 100px;
-		    background-color: #4081ff;
-		    vertical-align: unset;
-		    text-align: center;
-		    text-shadow: none;
-		    line-height: 2.2em;
-    	}
-
-		.desc {
-			display:block;
-			padding:10px 10px 0;
-			font: { 
-				size :1rem;
-				weight:$normal;
-			}
-			letter-spacing:-.5px;
-			line-height:1.5rem;
-		}
-	}
-
-	.desc_key {
-		padding:0 25px 10px;
-		font-size:1rem;
- 
-		li {
-			margin-bottom:17px;
-			line-height:25px;
-			span {
-				display:block;
-				color:#9db7e8;
-			}
-		}
-	}
-	.list_trend_service {
-		position:relative;
-		padding:30px 40px;
-		background-color:#fff;
-		border-radius:3px;
-		box-shadow:0 -5px 10px rgba(0,0,0,.2);
-		z-index:10;
-
-		li {
-			position:relative;
-			margin-bottom:25px;	
-			padding-bottom:30px;	
-			border-bottom:1px solid #dadada;
-			color:#333;
-
-			.num {
-				display:inline-block;
-				box-sizing:border-box;
-
-				width:37px;height:37px;
-				padding : {
-					top:9px;
-					left:10px;
-				}
-				border-radius:100px;
-				font-size:1.8rem;
-				font-weight:$extra-bold;
-				background-color:#4378dc;
-				box-shadow: 2px 2px 0 rgb(30, 71, 123);
-				line-height:1em;
-				text-align:center;
-				vertical-align:middle;
-				letter-spacing:-3px;
-				color:#fff;
-			}
-
-			.tit {
-				display:inline-block;
-				width:70%;
-				width:calc(100% - 70px);
-				margin-left:10px;
-				font-size:1.2em;
-				line-height:1.8rem;
-				vertical-align:middle;
-				letter-spacing:-1px;
-				color:#333;
-			}
-
-			&:last-child {
-				padding-bottom:0;
-				border-bottom:0
-			}
-		}
-
-	}
-
-	.desc_strong {
-	    padding: 18px 20px;
-	    margin: -10px -20px 30px;
-	    font-size: 1.1rem;
-	    background-color: #f2f2f2;
-	    border-radius: 5px;
-	    text-align: center;
-	    color: #333;
-	}
-	.btn_wrap {
-		margin:15px 0 5px;
-		button {
-			height:60px;min-width:260px;
-			font-size:20px;
-
-		}
-	}
-
-
-
-	&[data-type="join_done"] {
-		.list_trend_service  {
-			li {
-				margin-bottom:20px;
-				padding-bottom:20px;
-				.tit {
-					font-size:1.1rem;
-				}
-				.num {
-					width:34px;height:34px;
-					font-size:1.6rem;
-				}
-			}
-		}
-
-		.link_rec_hurry {
-			margin-top:25px;
-			font-size:1.4rem;
-		}
-		.tit_trend_about {
-			.desc {
-			    font-size: 1.2rem;
-				line-height: normal;
-				color: #d9dfeb;
-			}
-		}
-
-	}
-
-}
-
-
 
 
 // graph_odd_even 홀짝 출현현황 그래프 - [COMMENT] 미 : pc꺼 옮겨놨습니다. 이미지랑 사이즈, 디자인 조절 부탁합니다.
@@ -1369,7 +1143,193 @@ select {
 			}
 		}
 	}
+
+	[data-forms] {
+		select {
+			margin-bottom:10px;
+			&:last-child {margin-bottom:0;}
+		}
+	}
 }
+
+
+
+
+//대세추천번호 - result
+.list_sub {
+	padding:15px 25px;
+	font-size:1rem;	
+	border-radius:5px;
+	background-color:#f7faff;
+	li {
+		margin-bottom:8px;
+		&:last-child {margin-bottom:0;}
+		&:before {
+			display:inline-block;content:"";
+			position:relative;top:-2px;
+			width:6px;height:6px;
+			margin-right:10px;
+			border-radius:50px;
+			background-color:#396aa7;
+			vertical-align:middle;
+		}
+	}
+	.link_page {
+		font-weight:$bold;
+		vertical-align:top;
+	}
+}
+.rec_num_result {
+	padding:20px;
+	margin-top:15px;	
+	font-size:1.1rem;
+	box-shadow:4px 4px #f6f6f6;
+	background:linear-gradient(#fff 70%, #f8f8f8 100%);
+	
+
+	.tit {
+		font-size:1.4rem;
+		letter-spacing:-1px;
+	}
+
+
+	border:{
+		style:solid;
+		width:4px 1px 1px;
+		color:#9abbff #ccc #ccc;
+	}
+
+	.copy {
+		margin:10px 0 25px;
+		font-size:1.1rem;
+		font-weight:$bold;
+		letter-spacing:-1px;
+	}
+
+	.num_result {
+		display:block;
+		margin-top:20px;
+
+		[class^="ball_n"] {
+			width:50px;height:50px;
+			margin:0 5px 10px;
+			font-size:23px;
+			box-shadow:inset -3px -2px 0 rgba(0,0,0,.20);
+			line-height:50px;
+			text-shadow:1px 1px rgba(0,0,0,.2)
+		}
+	}
+
+	text-align:center;
+}
+
+
+
+//대세추천번호 서비스안내- 모바일 디자인 커스텀
+.trend_about_service {
+	padding:6px 0 0;
+	margin-top:10px;
+	
+	border:{
+		width:0 1px 1px;
+		style:solid;
+		color:#ddd;
+	}
+
+	.tit_trend_about {
+		width:90%;
+		left:10px;top:-14px;
+
+		b {
+			width:80px;height:89px;
+			padding:45px 0 0 46px;
+			font-size:1.5rem;
+			background-size:100% auto;
+		}
+		.mark_desc {
+		    position: relative;
+		    top: 33px;
+		    left: 12px;
+		    width: auto;height: auto;
+		    margin-top: 0;
+		    padding: 8px 29px 10px 29px;
+		    font-size: 1.4rem;
+
+		}
+	}
+
+  .trend_about_info {
+  	padding:{
+  		top:85px;
+  		bottom:20px;
+  	}
+  	.desc {
+  		width:80%;
+  		height:auto;
+  		padding-bottom:8px;
+  		font-size:1.1rem;
+  		letter-spacing:-1px;
+  		background:none;
+  		color:#000;
+  		text-indent:0;
+  		line-height:normal;
+  		text-align:center;
+
+  	}
+
+  	.link_rec_hurry {
+	    position: static;
+	    display: block;
+	    height: auto;width:87%;
+	    margin: 0 auto;
+	    padding: 8px 0 11px;
+	    font-size: 1.1rem;
+	    border-radius: 50px;
+	    background-image: linear-gradient(#ed7767 30%, #e96d5c 100%);
+	    line-height: normal;
+	    letter-spacing:-1px;
+
+	    span {
+	    	margin-left:5px
+	    }
+  	}
+
+  	.desc_key {
+  		width:auto;
+  		padding:0 20px 30px;
+  		li {
+  			padding-left:45px;
+  			margin-top:30px;
+  			font-size:1rem;
+  			background: {
+  				position:15px 0;
+  				size:21px auto;
+  			}
+
+  			span {
+  				font-size:1rem;
+  			}
+  		}
+  	}
+  }
+
+
+
+  .list_trend_service {
+    padding: 20px 35px 20px;
+    background-color: #fcfcfc;
+    border-top: 1px solid #eee;
+  	
+  	li {
+  		padding:0 0 20px;
+  		.tit {
+  			font-size:1.1rem;
+  		}
+  	}
+  }
+}
+
+
 
 
 
