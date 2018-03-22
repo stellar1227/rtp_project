@@ -1254,61 +1254,63 @@ select { min-width: 0; border-radius: 0; }
 
 .lotto_if_win .btn_strong.btn_if_win { font-size: 1.2rem; width: auto; height: 45px; letter-spacing: -1px; }
 
+.trend_about_service[data-type="mix_about"] { background-position: right 0; }
+
 .mix_about_service { background-color: #fff; }
 
-.mix_about_service .mix_about_desc { padding: 0 80px; background: url("../img/content/bg_mix_about.png") 540px 190px no-repeat; }
+.mix_about_service .mix_about_desc { padding: 0 20px; background: url("../img/content/bg_mix_about.png") 540px 190px no-repeat; }
 
-.mix_about_service .mix_about_desc .tit_mix_about { position: relative; top: -39px; height: 146px; padding-bottom: 25px; margin-bottom: 20px; border-bottom: 1px solid #7991a8; background: url("../img/content/tit_mix_about_service.png") 210px 0 no-repeat; font-size: 0; line-height: 0; letter-spacing: -2000px; }
+.mix_about_service .mix_about_desc .tit_mix_about { position: relative; max-width: 320px; padding-bottom: 65px; padding-top: 85px; margin: 0 auto 20px; border-bottom: 1px solid #7991a8; background: url("../img/content/tit_mix_about_service.png") center 36% no-repeat; background-size: 80% auto; font-size: 0; line-height: 0; text-align: center; }
 
-.mix_about_service .mix_about_desc .calc { width: 701px; height: 61px; padding-left: 82px; background: url("../img/content/bg_mix_about_calc.png") 0 8px no-repeat; font-size: 22px; letter-spacing: -.8px; color: #333; }
+.mix_about_service .mix_about_desc .tit_mix_about span { position: relative; top: 40px; padding: 3px 13px 5px; font-size: 1rem; background-color: #f6f6f6; /* border: 1px solid #ccc; */ border-radius: 50px; letter-spacing: -1px; color: #001374; }
 
-.mix_about_service .mix_about_desc .calc > b { position: relative; top: 3px; margin-right: 20px; font-weight: 400; }
+.mix_about_service .mix_about_desc .calc { font-size: 1.3rem; letter-spacing: -.8px; text-align: center; color: #333; }
 
-.mix_about_service .mix_about_desc .calc .plus { display: inline-block; width: 36px; height: 36px; margin: 0 13px 0 11px; font-size: 0; border-radius: 100px; border: 1px solid #c2c0c0; background: #fff url("../img/content/ico_plus_mix_about.png") center center no-repeat; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15); vertical-align: middle; }
+.mix_about_service .mix_about_desc .calc > b { position: relative; top: 3px; margin-right: 10px; font-weight: 400; line-height: 4rem; }
 
-.mix_about_service .mix_about_desc .calc [class^="calc"] { display: inline-block; box-sizing: border-box; width: 61px; height: 61px; padding-top: 18px; font-size: 21px; border-radius: 100px; text-align: center; letter-spacing: -.8px; line-height: 20px; color: #fff; }
+.mix_about_service .mix_about_desc .calc .plus { display: inline-block; position: relative; top: -3px; width: 26px; height: 26px; margin: 0 7px 0 9px; font-size: 0; border-radius: 100px; border: 1px solid #c2c0c0; background: #fff url("../img/content/ico_plus_mix_about.png") center center no-repeat; background-size: 60% auto; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15); vertical-align: middle; }
+
+.mix_about_service .mix_about_desc .calc [class^="calc"] { display: inline-block; box-sizing: border-box; width: 55px; height: 55px; padding-top: 17px; font-size: 1.4rem; border-radius: 100px; text-align: center; letter-spacing: -.8px; line-height: 20px; color: #fff; }
 
 .mix_about_service .mix_about_desc .calc [class^="calc"].calc1 { background-color: #f35d48; box-shadow: 2px 2px 0 #d9402b; }
 
 .mix_about_service .mix_about_desc .calc [class^="calc"].calc2 { background-color: #ff9555; box-shadow: 2px 2px 0 #ef6a19; text-shadow: 0 0 3px #d05500; }
 
-.mix_about_service .mix_about_desc .desc { padding: 50px 39px 80px; font-size: 19px; line-height: 31px; letter-spacing: -.4px; color: #333; }
+.mix_about_service .mix_about_desc .desc { padding: 30px 10px; font-size: 1.1rem; line-height: 31px; letter-spacing: -.4px; color: #333; }
 
-.mix_about_service .mix_about_desc .btn_mix_run { display: block; box-sizing: content-box; width: 674px; height: 58px; margin: auto; padding-bottom: 8px; font-size: 23px; background: url("../img/content/btn_mix_about.png") 0 0 no-repeat; text-align: center; letter-spacing: -.4px; color: #fff; }
+.mix_about_service .mix_about_desc .btn_mix_run { display: block; box-sizing: content-box; width: 90%; height: 2.5rem; margin: auto; padding: .4rem 15px; font-size: 1.2rem; background: linear-gradient(#1a8cd3 50%, #146ca7 100%); border-width: 0 2px 2px; border-style: solid; border-radius: 50px; border-color: transparent #1f6ba8 #185991; box-shadow: 0 5px #e5e5e5; text-align: center; letter-spacing: -.4px; color: #fff; }
 
-.mix_about_service .mix_about_desc .btn_mix_run:hover { text-decoration: underline; }
+.mix_about_service .mix_about_desc .btn_mix_run b { margin-left: 5px; font-weight: 700; text-decoration: underline; }
 
-.mix_about_service .mix_about_desc .btn_mix_run b { margin-left: 15px; font-weight: 700; text-decoration: underline; }
+.mix_about_service .mix_service_benefit { padding-bottom: 50px; margin: 40px 25px 0; border-top: 1px solid #7991a8; }
 
-.mix_about_service .mix_service_benefit { padding-bottom: 50px; margin: 65px 25px 0; border-top: 1px solid #7991a8; }
-
-.mix_about_service .mix_service_benefit .tit_mix_service { padding: 35px 0 25px; font-size: 23px; text-align: center; }
+.mix_about_service .mix_service_benefit .tit_mix_service { padding: 20px 0 15px; font-size: 1.4rem; text-align: center; }
 
 .mix_about_service .mix_service_benefit .mix_service { text-align: center; }
 
 .mix_about_service .mix_service_benefit .list_benefit { display: flex; margin: 15px -1px 0; border: 1px solid #0e3f6f; border-radius: 3px; }
 
-.mix_about_service .mix_service_benefit .list_benefit li { position: relative; flex: 1; font-size: 17px; border-right: 1px solid #d3d3d3; line-height: 60px; letter-spacing: -1px; color: #2a2a2a; text-align: center; }
+.mix_about_service .mix_service_benefit .list_benefit li { position: relative; flex: auto; padding: 16px 10px 13px; font-size: 1.2rem; border-right: 1px solid #d3d3d3; letter-spacing: -1px; color: #2a2a2a; text-align: center; }
 
-.mix_about_service .mix_service_benefit .list_benefit li:last-child { border-right: 0; }
+.mix_about_service .mix_service_benefit .list_benefit li:last-child { border-right: 0; white-space: nowrap; }
 
-.mix_about_service .mix_service_benefit .list_benefit li .order { position: absolute; left: 50%; top: -15px; margin-left: -14px; width: 27px; height: 27px; font-size: 16px; font-weight: 800; border-radius: 100px; background-color: #1b32a5; text-align: center; line-height: 23px; letter-spacing: -.75px; color: #fff; }
+.mix_about_service .mix_service_benefit .list_benefit li .order { position: absolute; left: 50%; top: -15px; margin-left: -14px; width: 27px; height: 27px; font-size: 1.1rem; font-weight: 800; border-radius: 100px; background-color: #1b32a5; text-align: center; line-height: 23px; letter-spacing: -.75px; color: #fff; }
 
-.mix_about_service .mix_service_benefit .list_step { padding: 50px 30px 90px; border: 1px solid #d2d2d2; border-top: 0; background-color: #fafafa; }
+.mix_about_service .mix_service_benefit .list_step { padding: 50px 0 30px; border: 1px solid #d2d2d2; border-top: 0; background-color: #fafafa; }
 
 .mix_about_service .mix_service_benefit .list_step:after { display: block; content: ""; clear: both; }
 
-.mix_about_service .mix_service_benefit .list_step li { float: left; width: 263px; height: 264px; font-size: 0; line-height: 0; text-align: center; }
+.mix_about_service .mix_service_benefit .list_step li { width: 230px; height: 230px; margin: 0 auto 50px; font-size: 0; line-height: 0; text-align: center; background-size: 100% auto; background-repeat: no-repeat; background-position: 0 0; }
 
-.mix_about_service .mix_service_benefit .list_step li:nth-child(1) { margin-right: -12px; background: url("../img/content/mix_about_step1.png") 0 0 no-repeat; }
+.mix_about_service .mix_service_benefit .list_step li:nth-child(1) { background-image: url("../img/content/mix_about_step1.png"); }
 
-.mix_about_service .mix_service_benefit .list_step li:nth-child(2) { margin-right: -12px; background: url("../img/content/mix_about_step2.png") 0 0 no-repeat; }
+.mix_about_service .mix_service_benefit .list_step li:nth-child(2) { background-image: url("../img/content/mix_about_step2.png"); }
 
-.mix_about_service .mix_service_benefit .list_step li:nth-child(3) { background: url("../img/content/mix_about_step3.png") 0 0 no-repeat; }
+.mix_about_service .mix_service_benefit .list_step li:nth-child(3) { background-image: url("../img/content/mix_about_step3.png"); }
 
 .mix_about_service .mix_service_benefit .list_step li .step { display: inline-block; position: relative; top: -18px; padding: 15px 28px 20px; font-size: 18px; font-weight: 800; border-radius: 100px; background-color: #3371e8; color: #fff; }
 
-.mix_about_service .mix_service_benefit .desc_benefit { margin: -55px 37px 0; padding: 15px 0; border-radius: 100px; border: 1px solid #d3d1d1; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); font-size: 16px; line-height: 23px; text-align: center; }
+.mix_about_service .mix_service_benefit .desc_benefit { margin: -55px 0 0; padding: 20px; border-radius: 20px; border: 1px solid #d3d1d1; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); font-size: 1.3rem; line-height: 23px; text-align: center; }
 
 .mix_about_service .mix_service_benefit .desc_benefit b { color: #3371e8; }
 
@@ -1346,7 +1348,7 @@ select { min-width: 0; border-radius: 0; }
 
 .rec_num_result .num_result [class^="ball_n"] { width: 50px; height: 50px; margin: 0 5px 10px; font-size: 23px; box-shadow: inset -3px -2px 0 rgba(0, 0, 0, 0.2); line-height: 50px; text-shadow: 1px 1px rgba(0, 0, 0, 0.2); }
 
-.trend_about_service { padding: 6px 0 0; margin-top: 10px; border-width: 0 1px 1px; border-style: solid; border-color: #ddd; }
+.trend_about_service { padding: 6px 0 0; margin: 20px 18px; border-width: 0 1px 1px; border-style: solid; border-color: #ddd; }
 
 .trend_about_service .tit_trend_about { width: 90%; left: 10px; top: -14px; }
 

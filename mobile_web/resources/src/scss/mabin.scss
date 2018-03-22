@@ -871,52 +871,72 @@ select {
 
 
 // 로또팡 조합기 서비스 안내
+.trend_about_service[data-type="mix_about"] {
+	background-position:right 0;
+}
 .mix_about_service {
-
 
 	background-color:#fff;
 
 
 	//mix_about_desc
 	.mix_about_desc {
-		padding:0 80px;
+		padding:0 20px;
 		background:url("#{$content-img}bg_mix_about.png") 540px 190px no-repeat;
 
 		
 		.tit_mix_about {
-			position:relative;top:-39px;
-			height:146px;
-			padding-bottom:25px;
-			margin-bottom:20px;
+			position:relative;
+			max-width:320px;
+			padding:{
+				bottom:65px;
+				top:85px;
+			}
+			margin:0 auto 20px;
 			border-bottom:1px solid #7991a8;
 
-			background:url("#{$content-img}tit_mix_about_service.png") 210px 0 no-repeat;
+			background:url("#{$content-img}tit_mix_about_service.png") center 36% no-repeat;
+			background-size:80% auto;
 			font-size:0;
 			line-height:0;
-			letter-spacing:-2000px;
+			text-align:center;
+
+			span {
+			    position: relative;
+			    top: 40px;
+			    padding: 3px 13px 5px;
+			    font-size: 1rem;
+			    background-color: #f6f6f6;
+			    /* border: 1px solid #ccc; */
+			    border-radius: 50px;
+			    letter-spacing:-1px;
+			    color: #001374;
+			}
 
 		}
 
 		.calc {
-			width:701px;height:61px;
-			padding-left:82px;
-			background:url("#{$content-img}bg_mix_about_calc.png") 0 8px no-repeat;
-			font-size:22px;
+			
+			font-size:1.3rem;
 			letter-spacing:-.8px;
+			text-align:center;
 			color:#333;
 			>b {
 				position:relative;top:3px;	
-				margin-right:20px;
+				margin-right:10px;
 				font-weight:$normal;
+				line-height:4rem;
 			}
 			.plus {
 				display:inline-block;
-				width:36px;height:36px;
-				margin:0 13px 0 11px;
+				position:relative;top:-3px;
+				width:26px;height:26px;
+				margin:0 7px 0 9px;
 				font-size:0;
 				border-radius:100px;
 				border:1px solid #c2c0c0;
 				background:#fff url("#{$content-img}ico_plus_mix_about.png") center center no-repeat;
+				background-size:60% auto;	
 				box-shadow:2px 2px 3px rgba(0,0,0,.15);
 				vertical-align:middle;
 			}
@@ -924,9 +944,9 @@ select {
 			[class^="calc"] {
 				display:inline-block;
 				box-sizing:border-box;
-				width:61px;height:61px;
-				padding-top:18px;
-				font-size:21px;	
+				width:55px;height:55px;
+				padding-top:17px;
+				font-size:1.4rem;	
 				border-radius:100px;
 				text-align:center;
 				letter-spacing:-.8px;
@@ -944,15 +964,13 @@ select {
 					
 				}
 			}
-			.plus {
 
-			}
 
 		}
 
 		.desc {
-			padding:50px 39px 80px;
-			font-size:19px;
+			padding:30px 10px;
+			font-size:1.1rem;
 			line-height:31px;
 			letter-spacing:-.4px;
 			color:#333;
@@ -961,21 +979,26 @@ select {
 		.btn_mix_run {
 			display:block;
 			box-sizing:content-box;
-			width:674px;height:58px;
+			width:90%;height:2.5rem;
 			margin:auto;
-			padding-bottom:8px;
-			font-size:23px;
-			background:url("#{$content-img}btn_mix_about.png") 0 0 no-repeat;
+			padding:.4rem 15px;
+			font-size:1.2rem;
+			background:linear-gradient(#1a8cd3 50%, #146ca7 100%);
+			border: {
+				width:0 2px 2px;
+				style:solid;
+				radius:50px;
+				color:transparent #1f6ba8 #185991;
+			}
+			box-shadow:0 5px #e5e5e5;
 
 			
 			text-align:center;
 			letter-spacing:-.4px;
 			color:#fff;
-			&:hover {
-				text-decoration:underline;
-			}
+			
 			b {
-				margin-left:15px;
+				margin-left:5px;
 				font-weight:$bold;
 				text-decoration:underline;
 
@@ -988,13 +1011,13 @@ select {
 	//mix_service_benefit
 	.mix_service_benefit {
 		padding-bottom:50px;
-		margin:65px 25px 0;
+		margin:40px 25px 0;
 		border-top:1px solid #7991a8;
 
 		.tit_mix_service {
 
-			padding:35px 0 25px;
-			font-size:23px;
+			padding:20px 0 15px;
+			font-size:1.4rem;
 			text-align:center;
 		}
 
@@ -1004,9 +1027,6 @@ select {
 		
 		//list_benefit
 		.list_benefit {
-
-
-			
 			display:flex;
 			margin:15px -1px 0;
 			border:1px solid #0e3f6f;
@@ -1015,17 +1035,18 @@ select {
 
 			li {
 				position:relative;
-				flex:1;
-				font-size:17px;
+				flex:auto;
+				padding:16px 10px 13px;
+				font-size:1.2rem;
 				border-right:1px solid #d3d3d3;
-				line-height:60px;
+				
 				letter-spacing:-1px;
 				color:#2a2a2a;
 				text-align:center;
 
-
 				&:last-child {
 					border-right:0;
+					white-space:nowrap;
 				}
 
 				.order {
@@ -1034,7 +1055,7 @@ select {
 						left:-14px;
 					}
 					width:27px;height:27px;
-					font-size:16px;
+					font-size:1.1rem;
 					font-weight:$extra-bold;
 					border-radius:100px;
 					background-color:#1b32a5;
@@ -1050,7 +1071,7 @@ select {
 
 		//list_step
 		.list_step {
-			padding:50px 30px 90px;
+			padding:50px 0 30px;
 			border:1px solid #d2d2d2;
 			border-top:0;
 			background-color:#fafafa;
@@ -1059,22 +1080,26 @@ select {
 			}
 
 			li {
-				float:left;
-				width:263px;height:264px;
+				width:230px;height:230px;
+				margin:0 auto 50px;
 				font-size:0;
 				line-height:0;
 				text-align:center;
+				background:{
+
+					size:100% auto;
+					repeat:no-repeat;
+					position:0 0;
+				}	
 
 				&:nth-child(1){
-					margin-right:-12px;
-					background:url("#{$content-img}mix_about_step1.png") 0 0 no-repeat;
+					background-image:url("#{$content-img}mix_about_step1.png");
 				}
 				&:nth-child(2){
-					margin-right:-12px;
-					background:url("#{$content-img}mix_about_step2.png") 0 0 no-repeat;
+					background-image:url("#{$content-img}mix_about_step2.png");
 				}
 				&:nth-child(3){
-					background:url("#{$content-img}mix_about_step3.png") 0 0 no-repeat;
+					background-image:url("#{$content-img}mix_about_step3.png");
 				}
 
 				.step {
@@ -1091,13 +1116,13 @@ select {
 		}
 
 		.desc_benefit {
-			margin:-55px 37px 0;
-			padding:15px 0;
-			border-radius:100px;
+			margin:-55px 0 0;
+			padding:20px;
+			border-radius:20px;
 			border:1px solid #d3d1d1;
 			background-color:#fff;
 			box-shadow:0 0 10px rgba(0,0,0,.08);
-			font-size:16px;
+			font-size:1.3rem;
 			line-height:23px;
 			text-align:center;
 			b {
@@ -1228,7 +1253,8 @@ select {
 //대세추천번호 서비스안내- 모바일 디자인 커스텀
 .trend_about_service {
 	padding:6px 0 0;
-	margin-top:10px;
+
+	margin:20px 18px;
 	
 	border:{
 		width:0 1px 1px;
