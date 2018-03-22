@@ -1374,6 +1374,40 @@ select { min-width: 0; border-radius: 0; }
 
 .trend_about_service .list_trend_service li .tit { font-size: 1.1rem; }
 
+.banner_retire_pension { margin-bottom: 30px; padding: 20px 0 15px; font-size: 1.1rem; letter-spacing: -1px; border-width: 4px 0 1px; border-color: #3e79ec #ccc #ccc; border-style: solid; }
+
+.banner_retire_pension > p { padding: 20px 0 20px 6.3rem; margin-bottom: 20px; background: url("../img/content/bg_retirement_pension.png") -10px center no-repeat; background-size: 25% auto; border: 1px solid #ddd; border-radius: 100px; box-shadow: 0 4px #f8f8f8; color: #333; }
+
+.banner_retire_pension > p .sign { display: block; font-size: 1.2rem; }
+
+.banner_retire_pension > p .sign .emp1 { text-decoration: underline; letter-spacing: normal; color: #f65050; }
+
+.banner_retire_pension > p .sign .emp2 { color: #00266f; }
+
+.join_about_info { padding-top: 10px; padding-bottom: 0; margin-bottom: 0; }
+
+.join_about_info .tit_join_completed { position: static; width: auto; height: auto; margin: auto; line-height: 3.5rem; font-size: 1.6rem; background: none; padding-top: .7rem; padding-left: 0; text-align: center; color: #282564; }
+
+.join_about_info .tit_join_completed:before { margin-left: -10px; position: relative; top: 2px; display: inline-block; content: ""; width: 2rem; height: 2rem; margin-right: 5px; background: url("../img/content/ico_trend_desc.png") 0 center no-repeat; }
+
+.join_about_info .link_go_home { width: 80%; height: auto; margin-bottom: 15px; font-size: 1.2rem; line-height: 3rem; }
+
+.join_about_info .join_desc { width: 78%; margin: 10px auto 20px; padding: 0 20px 25px; font-size: 1.3rem; }
+
+.list_join_benefits { padding-top: 30px; padding-bottom: 20px; padding-bottom: 20px; }
+
+.list_join_benefits .desc_strong { width: auto; height: auto; position: relative; left: 0; top: 0; padding: 15px 15px 20px; margin: 0 15px; font-size: 1.1rem; border-radius: 100px; background: #8fd5ff; color: #fff; }
+
+.list_join_benefits .desc_strong b { font-size: 1.2rem; }
+
+.list_join_benefits .desc_strong .tag { left: 0; top: -10px; width: 3.8rem; height: 3.8rem; font-size: 1rem; line-height: 3.8rem; background-size: 100% auto; }
+
+.list_join_benefits .j_list { width: auto; padding: 40px 30px; margin: -30px 15px 0; border: 0; background-color: #f9f9f9; }
+
+.list_join_benefits .j_list li.odd, .list_join_benefits .j_list li { font-size: 1rem; position: relative; float: none; width: auto; margin: 0; padding: 5px 5px 5px 15px; background: none; }
+
+.list_join_benefits .j_list li.odd:before, .list_join_benefits .j_list li:before { display: block; content: ""; position: absolute; top: 1rem; left: 0; width: 5px; height: 5px; border-radius: 50px; background-color: #ff6c6c; }
+
 /******************* 이하 by stellar *******************************/
 /*테크앤조이 소개  */
 .about_technjoy .about_title { color: #333; text-align: center; margin-bottom: 1.7rem; padding-bottom: 1rem; font-size: 1.3rem; border-bottom: 1px solid #ccc; }

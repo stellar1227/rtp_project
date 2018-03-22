@@ -1331,9 +1331,154 @@ select {
 
 
 
+//연금복권 중간배너
+.banner_retire_pension {
+	margin-bottom:30px;
+	padding:20px 0 15px;
+	font-size:1.1rem;
+	letter-spacing:-1px;
+
+	border:{
+		width:4px 0 1px;
+		color:#3e79ec #ccc #ccc;
+		style:solid;
+	}
+	
+	>p {
+		padding:20px 0 20px 6.3rem;
+		margin-bottom:20px;
+		background:url("#{$content-img}bg_retirement_pension.png") -10px center no-repeat;
+		background-size:25% auto;
+		border:1px solid #ddd;
+		border-radius:100px;
+		box-shadow:0 4px #f8f8f8;
+
+		color:#333;
+
+		.sign {
+			display:block;
+			font-size:1.2rem;
+			.emp1 {
+				text-decoration:underline;
+				letter-spacing:normal;
+				color:#f65050;
+			}
+			.emp2 {
+				color:#00266f;
+			}
+
+		}
+	}
+}
+
+//회원가입 완료 - 모바일 디자인 커스텀
+.join_about_info {
+	padding: {
+		top:10px;
+		bottom:0;
+	}
+	margin-bottom:0;
+
+	.tit_join_completed {
+		position:static;
+		width:auto;height:auto;
+		margin:auto;
+		line-height:3.5rem;
+		font-size:1.6rem;
+		background:none;
+		padding:{
+			top:.7rem;
+			left:0;
+		}
+
+		&:before {
+			margin-left:-10px;
+			position:relative;top:2px;
+			display:inline-block;content:"";
+			width:2rem;height:2rem;
+			margin-right:5px;
+
+			background:url("#{$content-img}ico_trend_desc.png") 0 center no-repeat;
+		}
+		text-align:center;
+		color:#282564;
+	}
+	.link_go_home {
+		width:80%;
+		height:auto;margin-bottom:15px;
+		font-size:1.2rem;
+		line-height:3rem;
+	}
+	.join_desc {
+		width:78%;
+		margin:10px auto 20px;
+		padding:0 20px 25px; 	
+		font-size:1.3rem;
+	}
+}
 
 
+.list_join_benefits  {
+	padding: {
+		top:30px;
+		bottom:20px;
+	}
+	padding-bottom:20px;
 
+	
+	.desc_strong {
+		width: auto;height:auto;
+	    position: relative;left:0;top:0;
+	    padding:15px 15px 20px; 
+	    margin: 0 15px;
+	    font-size: 1.1rem;
+	    border-radius:100px;
+	    background:#8fd5ff;
+	    color:#fff;
+	    b {
+	    	font-size:1.2rem
+	    }
+
+	    .tag {
+	    	left:0;top:-10px;	
+	    	width:3.8rem;
+	    	height:3.8rem;
+	    	font-size:1rem;
+	    	line-height:3.8rem;
+	    	background-size:100% auto;
+	    }
+	}
+
+	.j_list {
+		width:auto;
+		padding:40px 30px;
+		margin:-30px 15px 0;
+		border:0;
+		background-color:#f9f9f9;
+
+
+		li.odd,li {
+			font-size:1rem;
+			
+			position:relative;
+			float:none;
+			width:auto;
+			margin:0;
+			padding:5px 5px 5px 15px; 
+			background:none;
+			&:before {
+				display:block;content:"";
+				position:absolute;top:1rem;left:0;
+				width:5px;height:5px;
+				border-radius:50px;
+				background-color:#ff6c6c;
+
+			}
+
+		}
+	}
+}
+   
 
 
 /******************* 이하 by stellar *******************************/
