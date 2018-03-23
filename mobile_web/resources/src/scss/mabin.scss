@@ -623,6 +623,7 @@ select {
 
 // list_all_item - 로또 통계/비법자료 전체보기
 .list_all_item {
+	padding-top:20px;
 
 	li {
 		display:table;
@@ -638,7 +639,6 @@ select {
 			position:absolute;right:10px;top:50%;
 			width:19px;height:35px;
 			margin-top:-27.5px;
-			background:url("#{$content-img}ico_all_more.gif") -31px 0 no-repeat;
 			transition:background-position ease .2s;
 		}
 
@@ -650,17 +650,30 @@ select {
 
 		}
 			
+		.row {
+			display:table;
+			.img,.desc {
+				display:table-cell;
+			}
 
-		.img,.desc {
-			display:table-cell;
+		}
+		.tip {
+			padding : {
+				left:28px;
+				top:8px;
+			}
+		    margin-top: 10px;
+		    border-top: 1px dashed #dfdede;
+			background:url("#{$content-img}ico_all_tip.png") 0 8px no-repeat;
+		    color: #006d56;
 		}
 		.img {
 			overflow:hidden;
 			width:110px;height:100px;
-			border:1px solid #ddd;
 			a {
 				display:block;
-				height:100%;
+				border:1px solid #ddd;
+				height:8rem;
 			}
 			img {
 				max-width:100%;
@@ -677,16 +690,7 @@ select {
 			a {
 				display:block;
 			}
-			.tip {
-				padding : {
-					left:28px;
-					top:8px;
-				}
-			    margin-top: 10px;
-			    border-top: 1px dashed #dfdede;
-				background:url("#{$content-img}ico_all_tip.png") 0 8px no-repeat;
-			    color: #006d56;
-			}
+			
 		}
 	}
 }
@@ -705,21 +709,41 @@ select {
 
 
 
-// list_all_keyitem - 임시
+// list_all_keyitem 
 .list_all_keyitem {
-	display:flex;
-	margin-bottom:40px;
-	border : {
+	overflow:hidden;
+	padding:0 15px 20px;
+	
+	border: {
+		width:4px 1px 1px;
 		style:solid;
-		width:1px;
-		color:#e6e6e6;
-		radius:4px;
+		color:#7ba8ff #ccc #ccc
 	}
+	margin-bottom:40px;
+	text-align:center;
 	
 	li {
-		flex:1;
-		padding:27px 0 19px;
-		border-left:1px solid #f2f2f2;
+		display:inline-block;
+		
+
+		&:nth-child(1),&:nth-child(2) {
+			width:6.3rem;
+		}
+		&:nth-child(3) {
+			width:7.5rem;
+
+		}
+
+		&:nth-child(4),&:nth-child(5) {
+			width:10rem;
+		}
+
+		box-sizing:border-box;
+
+		text-align:center;
+
+		
+		padding:27px 0 0;
 		text-align:center;
 		color:#555;
 
@@ -730,7 +754,7 @@ select {
 			display:block;content:"";
 			width:80px;height:43px;
 			margin:0 auto 10px;
-			//background:url("#{$content-img}ico_all_keyitem.png") no-repeat 0 0;
+			background:url("#{$content-img}ico_all_keyitem.png") no-repeat 0 0;
 		}
 		&[data-icon=type1]:before{background-position:12px 0;}
 		&[data-icon=type2]:before{background-position:-84px 0;}
@@ -764,12 +788,12 @@ select {
 	//desc_if_win
 	.desc_if_win {
 
-		padding: 16.5rem 20px 20px;
+		padding: 230px 20px 20px;
 	    margin-bottom:20px;
 	    font-size: 16px;
 	
-	    background:#fcfcfc url("#{$content-img}bg_if_win.png") center 2rem no-repeat;
-	    background-size:80% auto;
+	    background:#fcfcfc url("#{$content-img}bg_if_win.png") center 30px no-repeat;
+	    background-size:300px auto;
 		border-bottom:1px solid #ccc;
 	   
 		
@@ -1174,6 +1198,194 @@ select {
 			margin-bottom:10px;
 			&:last-child {margin-bottom:0;}
 		}
+	}
+}
+
+
+
+// 로또팡 조합기 실행 
+.mix_run_article {
+	overflow:hidden;
+	padding: {
+		top:30px;
+		bottom:50px;
+	};
+
+	.data_table {
+		margin:0 ;
+	}
+
+	border-bottom:1px solid #ddd;
+
+
+
+	.mix_run_stat {
+		display:table;
+		box-sizing:border-box;
+
+		width:auto;
+		margin:20px 18px 20px;
+		&:first-child {
+			margin-top:0;
+		}
+		padding:25px 15px;
+		background-color:#fff;
+
+		border: {
+			style:solid;
+			width:1px 1px 3px;
+			color:#eee #ddd $strong-color;
+		}
+
+
+		.mix_run_desc {
+			padding:{
+				left:120px;
+				right:0;
+				bottom:20px;
+			};
+
+			background:url("#{$content-img}ico_mix_desc.png") no-repeat 40px 55%;
+			vertical-align:middle;
+			text-align:center;
+
+			&:first-child:last-child {
+				width:100%;
+
+				padding:{
+					left:0;
+					bottom:0;
+				}
+				
+				background-position:18px 88%;
+
+				.desc_mix_run {
+					.progress {
+						margin-bottom:15px;
+						padding:5px 20px;
+					}
+					b {
+						display:block;
+						padding:{
+							left:80px;
+							right:30px;
+						}
+						font-weight:normal;
+						text-align:left;
+					}
+				}
+
+				&[data-type="result"]{
+					.desc_mix_run {
+						b {
+							padding-left:0;
+							padding-right:0;
+							text-align:center;
+							text-decoration:underline;
+						}
+					}
+				}
+			}
+	
+			.desc_mix_run {
+				text-align:center;
+
+				.progress {
+					display:inline-block;
+					padding:2px 15px 4px;
+					margin: {
+						bottom:5px;
+					}
+					background-color:$strong-color;
+					border-radius:50px;
+					color:#fff;
+
+				}
+			}
+
+			.list_primary {
+				margin-top:30px;
+				padding: {
+					bottom:22px;
+				}
+				border-bottom:0;
+			}
+
+			.txt_under {
+				padding:{
+					bottom:5px;
+					left:5px;right:5px;
+				}
+				border-bottom:1px solid #ccc;
+				letter-spacing:-.5px;
+			}
+		}
+
+		
+		
+	}
+
+	.data_table[data-type="mix_result"] {
+		.btn_table {
+			min-width:50px;
+			margin-left:0;margin-right:0;
+		}
+	}
+
+	.mix_grp_chk {
+	    margin-bottom: 20px;
+	    background-color: #fff;
+	    padding: 15px 20px 25px;
+	    margin: 18px;
+    border-bottom: 4px solid #7da2ff;
+		line-height:2em;
+		strong {
+			display:block;
+			padding:10px 20px 5px;
+			margin-bottom:10px;
+			border-bottom:1px solid #ccc;
+			letter-spacing:-1px; 
+		}
+		.num {
+			font-size:1.2em;
+			font-weight:$bold;
+			color:#000;
+
+		}
+		text-align:center;
+		vertical-align:middle;
+
+		.grp_count {
+			margin-top:10px;
+			font-size:1.1em;
+		}
+	}
+
+
+	.mix_data {
+		box-sizing:border-box;
+	}
+
+
+	.mix_result {
+		.btn_wrap {
+			margin: { 
+				top:20px;
+				left:0;right:0;
+			}
+
+			.btn_primary,.btn_strong {
+				width:calc(50% - 5px)
+			}
+		}
+	}
+
+
+
+	// 지난회차 당첨그룹 Label - color red 처리
+	.input_custom input[type='checkbox'] + label span[data-color="red"] {
+		font-weight:$bold;
+		color:$notice-color;
 	}
 }
 

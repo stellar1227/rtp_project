@@ -1041,7 +1041,7 @@ input{
 
 
 //대세 추천번호받기 - progress
-.progress {
+.progress_mask { 
 	&:before {
 		display:block;content:"";
 		position:fixed;top:0;right:0;bottom:0;left:0;

@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>로또팡 조합기 실행 | 로또팡</title>
+    <script src="../../resources/lib/swiper.min.css"></script>
+    <link rel="stylesheet" href="../../resources/css/common-ui.css">
+</head>
+<body>
+<div id="skipnavi">
+    <a href="#container">본문바로가기</a>
+</div>
+<header id="header">
+    <h1 class="logo">
+        <a href="#">
+            <img src="../../resources/img/common/img_header_logo.png" alt="로또팡">
+        </a>
+    </h1>
+    <nav id="gnb" class="swiper-container">
+        <h2 class="blind">글로벌 네비게이션</h2>
+        <ul class="gnb swiper-wrapper">
+            <li class="swiper-slide"><!-- class="on" 활성화 -->
+                <a href="#subMenu1">로또팡 조합기</a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#subMenu2">비법 자료</a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#subMenu3">조합 서비스</a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#subMenu4">대세 추천번호</a>
+            </li>
+            <li class="swiper-slide">
+                <a href="#subMenu5">연금복권</a>
+            </li>
+        </ul>
+        <ul class="sub_gnb">
+            <li class="depth" id="subMenu1">
+                <ul>
+                    <li><a href="#">로또팡 조합기 안내</a></li>
+                    <li><a href="#">로또팡 조합기 실행</a></li>
+                    <li><a href="#">[통계]역대 그룹핑 결과</a></li>
+                    <li><a href="#">[통계]그룹출현현황 분석</a></li>
+                    <li><a href="#">[통계]회차별 그룹핑 현황</a></li>
+                </ul>
+            </li>
+            <li class="depth" id="subMenu2">
+                <ul>
+                    <li><a href="#">로또 통계자료 전체보기</a></li>
+                    <li><a href="#">로또 비법자료 전체보기</a></li>
+                </ul>
+            </li>
+            <li class="depth" id="subMenu3">
+                <ul>
+                    <li><a href="#">로또팡 조합법 전체보기</a></li>
+                    <li><a href="#">사주로 확인하는 조합법</a></li>
+                    <li><a href="#">추천! 조합법</a></li>
+                    <li><a href="#">2등~5등 최소보장조합법</a></li>
+                    <li><a href="#">로또팡 추천조합법</a></li>
+                    <li><a href="#">독점공개! 올인조합법</a></li>
+                    <li><a href="#">my 조합법</a></li>
+                </ul>
+            </li>
+            <li class="depth" id="subMenu4">
+                <ul>
+                    <li><a href="#">대세 추천번호 안내</a></li>
+                    <li><a href="#">추천번호 빨리 받기</a></li>
+                    <li><a href="#">사용자조건 추천번호 받기</a></li>
+                    <li><a href="#">3등, 4등 보장조합</a></li>
+                </ul>
+            </li>
+            <li class="depth" id="subMenu5">
+                <ul>
+                    <li><a href="#">연금복권 당첨결과 종합</a></li>
+                    <li><a href="#">연금복권 빠른 당첨 조회</a></li>
+                    <li><a href="#">연금복권 지난 당첨 결과</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <button type="button" class="btn_side_navi">사이드메뉴보기</button>
+    <div class="side_wrap" id="sideMenu">
+        <section class="side_menu_section">
+            <h2 class="blind">사이드메뉴영역</h2>
+            <div class="login_after_sec"><!--  로그인 후 -->
+                <div class="head_info">
+                    <a href="#" class="login_status">로또팡 아이디 <span>님</span></a>
+                </div>
+                <div class="mini_info">
+                    <p class="my_coin">
+                        <span class="name">MY 코인</span>
+                        <span class="money">500원</span>
+                    </p>
+                    <button type="button" class="link_btn">로그아웃</button>
+                </div>
+                <div class="box_wrap"><!-- 이용권 구매전 -->
+                    <strong class="my_fee">무료회원</strong>
+                    <p class="terms">자유이용권을 구매해주세요.</p>
+                    <div class="btn_wrap" data-align="center">
+                        <a href="#" class="btn_link">자유이용권 구매</a>
+                    </div>
+                </div><!-- //이용권 구매전 -->
+                <div class="box_wrap"><!-- 이용권 구매후 -->
+                    <strong class="my_fee">3개월 자유이용권</strong>
+                    <p class="terms">2017.10.19 ~ 2018.01.18 (30일 남음)</p>
+                    <div class="btn_wrap" data-align="center">
+                        <a href="#" class="btn_link">로또팡 로또 조합기</a>
+                    </div>
+                </div><!-- //이용권 구매후 -->
+                <div class="box_wrap">
+                    <h3 class="box_title">마이페이지</h3>
+                    <ul class="link_list">
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">마이조합 관리</a></li>
+                        <li><a href="#">자유이용권 구매</a></li>
+                        <li><a href="#">쿠폰 결제하기</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">내 정보</a></li>
+                    </ul>
+                </div>
+                <div class="box_wrap">
+                    <h3 class="box_title">고객센터</h3>
+                    <ul class="link_list">
+                        <li><a href="#">1:1 고객센터</a></li>
+                        <li><a href="#">자주하는 질문 및 답변</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </div>
+            </div><!-- //로그인 후 -->
+            <button type="button" class="btn_nav_close">닫기</button>
+        </section>
+    </div>
+    <a href="#" class="btn_member_join">회원가입</a>
+</header>
+<div id="container">
+    <section id="content">
+        <h2 class="page_title">로또팡 조합기 실행</h2>
+        
+        <div class="mix_run_article"><!-- mix_run_article -->
+
+            <div class="mix_run_stat">
+                <div class="mix_run_desc">
+                    <p class="desc_mix_run">
+                        <span class="progress">당첨체험용 (지난 로또767회) 로또팡 조합기가 실행중입니다...</span>
+                        <br><b data-color="red">지난 회차 당첨그룹은 "그룹"이 붉은색입니다!</b>
+                        <b>6개의 그룹을 선택해주세요!</b>
+                    </p>
+                </div>
+            </div>  
+
+
+
+            <ul class="tab">
+                <li><a href="#" data-tab="run">실행</a></li>
+                <li><a href="#" data-tab="exp">체험</a></li>
+                <li><a href="#" data-tab="stat">통계</a></li>
+            </ul>
+            
+            
+            <div class="tab_article_wrap"><!-- tab_article_wrap -->
+
+                <div class="tab_article" data-tab-cont="terms"><!-- 실행 -->
+
+
+
+                </div><!-- //실행 -->
+
+
+
+            </div><!-- //tab_article_wrap -->
+
+
+
+            <div class="box_wrap">
+
+                <div class="mix_data"><!-- mix_data : 조합결과 Table -->
+                        
+                    <div class="data_table"><!-- data_table  -->
+                        <table>
+                            <caption>로또팡 조합 실행</caption>
+                            <colgroup>
+                                <col style="width:25%">
+                                <col style="width:auto">
+                                <col style="width:20%">
+                                <col style="width:18%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp-all">
+                                            <label for="grp-all"><span>그룹 선택</span></label>
+                                        </div>
+                                    </th>
+                                    <th scope="col">이번회차<br>그룹현황</th>
+                                    <th scope="col">회원<br>인기도</th>
+                                    <th scope="col">지난<br>당첨그룹</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="divide">
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp1">
+                                            <label for="grp1"><span data-color="red">그룹 1</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n1th">4</span>
+                                        <span class="ball_n10th">13</span>
+                                        <span class="ball_n30th">34</span>
+                                    </td>
+                                    <td></td>
+                                    <td>지난회<br>당첨그룹</td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp2">
+                                            <label for="grp2"><span>그룹 2</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n1th">9</span>
+                                        <span class="ball_n10th">12</span>
+                                        <span class="ball_n30th">31</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr class="divide">
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp3">
+                                            <label for="grp3"><span>그룹 3</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n10th">11</span>
+                                        <span class="ball_n20th">21</span>
+                                        <span class="ball_n40th">44</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp4">
+                                            <label for="grp4"><span>그룹 4</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n1th">9</span>
+                                        <span class="ball_n10th">12</span>
+                                        <span class="ball_n30th">31</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr class="divide">
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp5">
+                                            <label for="grp5"><span>그룹 5</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n10th">11</span>
+                                        <span class="ball_n20th">21</span>
+                                        <span class="ball_n40th">44</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp6">
+                                            <label for="grp6"><span>그룹 4</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n1th">9</span>
+                                        <span class="ball_n10th">12</span>
+                                        <span class="ball_n30th">31</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr class="divide">
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp7">
+                                            <label for="grp7"><span>그룹 6</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n10th">11</span>
+                                        <span class="ball_n20th">21</span>
+                                        <span class="ball_n40th">44</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                               
+
+                                <tr>
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp7">
+                                            <label for="grp7"><span>그룹 7</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n1th">9</span>
+                                        <span class="ball_n10th">12</span>
+                                        <span class="ball_n30th">31</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+
+                                <tr class="divide">
+                                    <td>
+                                        <div class="input_custom">
+                                            <input type="checkbox" id="grp8">
+                                            <label for="grp8"><span>그룹 8</span></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="ball_n10th">11</span>
+                                        <span class="ball_n20th">21</span>
+                                        <span class="ball_n40th">44</span>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                               
+                               
+                               
+                            </tbody>
+                        </table>
+                    </div><!-- //data_table -->
+
+                </div><!-- mix_data : 조합결과 Table -->
+
+            </div>
+
+             <div class="mix_grp_chk">
+                <strong>선택된 그룹에서 뽑은 예상번호 목록</strong>
+                <span class="num">
+                    1,39,40,11,13,14,16,17,24
+                </span>
+                <p class="grp_count">
+                    <b data-color="red">총 0개 예상번호</b> / 45개중 
+                </p>
+            </div>
+
+            <div class="box_wrap">
+
+
+                 <div class="mix_result"><!-- mix_result : 하단 조합요약 -->
+
+                    <div class="data_table"><!-- data_table  -->
+                        <table>
+                            <caption>로또팡 조합 실행 요약</caption>
+                            <colgroup>
+                                <col style="width:26%">
+                                <col style="width:auto">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">최종 생성<br>조합 비교</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="divide">
+                                    <th scope="row">완전<br>조합시</th>
+                                    <td data-align="left">84개 vs 6개</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">조합기<br>사용 시 </th>
+                                    <td data-align="left">6개</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">기대효과</th>
+                                    <td data-align="left">
+                                        <strong data-color="red">78개조합(78,000 원) 세이브</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">해설</th>
+                                    <td data-align="left">
+                                        <p>
+                                            ‘완전조합’은 예상번호 내 당첨번호 6개가 들어있으면 당첨이 보장됩니다.
+
+                                            <br><br>‘조합기’를 사용하면 당첨보장은 되지 않지만 1등 당첨도 충분히 가능!
+                                            <br>또한 구매조합수를 줄일 수 있으며 그 금액만큼 다른 예상번호를 구성해 볼 수있어 기회비용이 생깁니다.
+
+                                            <br><br>예상번호 속에 1등당첨번호 6개 있다고 확신되면 아래 [완전조합]을 누르고, 구매비용도 줄이면서 1등당첨도 가능한 조합을 받고 싶으시면[압축조합]을 눌러주세요 
+                                        </p>
+
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div><!-- //data_table -->
+
+                    <div class="btn_wrap" data-align="center">
+                        <a href="#" class="btn_strong">완전조합</a>
+                        <a href="#" class="btn_primary">압축조합</a>
+                    </div>
+
+                </div><!-- //mix_result : 하단 조합요약 -->
+
+            </div>
+
+        </div><!-- //mix_run_article -->
+
+
+    </section>
+</div>
+<div class="bottom_section">
+    <footer id="footer">
+        <ul class="foot_util">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">PC버전</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">제휴문의</a></li>
+        </ul>
+        <address>
+            <span class="company">(주)테크앤조이</span>
+            대표자 : 서주형 ㅣ  사업자 등록번호 :  000-00-000000 <br>
+            통신판매업 신고번호 : 제2017-서울용산-00000호  ㅣ  TEL : 02-000 - 0000 <br>
+            FAX : 02-0000-0000  ㅣ  E-mail : <a href="mailto:help@lottopang.co.kr">help@lottopang.co.kr</a><br>
+            주소 : 도로명주소:서울특별시 용산구 한강대로7길 38(한강로3가) 
+        </address>
+        <p class="copyright">
+            copyright&copy;lottopang all right reserved.
+        </p>
+    </footer>
+    <aside class="bottom_util">
+        <button type="button" class="btn_home_add">로또팡 홈화면에 바로가기 추가</button>
+        <div class="link_spot">
+            <a href="#" class="home">홈으로</a>
+            <a href="#header" class="up">위로</a>
+        </div>
+        <dl class="week_lotto_info">
+            <dt>
+                <b>782</b>회차 <br>
+                <strong>로또 당첨 번호</strong>
+            </dt>
+            <dd>
+                <span class="ball_n1th">6</span>
+                <span class="ball_n10th">18</span>
+                <span class="ball_n10th">19</span>
+                <span class="ball_n20th">24</span>
+                <span class="ball_n30th">34</span>
+                <span class="ball_n40th">41</span>
+                <span class="plus">+</span>
+                <span class="ball_n20th" title="보너스번호">20</span>
+            </dd>
+        </dl>
+    </aside>
+</div>
+<script src="../../resources/lib/jquery-1.12.4.min.js"></script>
+<script src="../../resources/lib/swiper.min.js"></script>
+<script src="../../resources/js/common-ui.min.js"></script>
+<!--<script> common-ui.js로 이동
+    var swiper = new Swiper('#gnb', {
+        slidesPerView: 'auto',
+        spaceBetween: 0
+    });
+</script>-->
+
+
+<script>
+
+    // [COMMENT] 확인부탁드려요 'ㅁ '
+
+    var $tabItem = $('.tab li a');
+
+    $tabItem.on('click',function(e){
+        e.preventDefault();
+        
+        var $this = $(this),
+            $tabItem = $this.parent('li'),
+            $sibTabItem = $this.closest('ul').children('li').not($tabItem),
+            $tabCont = $('[data-tab-cont="'+ $this.attr('data-tab') +'"]');
+
+
+        if ( !$tabItem.hasClass('on') ) {
+            $tabItem.addClass('on');
+            $sibTabItem.removeClass('on');
+            $tabCont.show().siblings('[data-tab-cont]').hide();
+        }
+    });
+
+    //최초 로딩시 초기 on 셋팅
+    $tabItem.eq(0).click();
+
+
+
+</script>
+
+
+</body>
+</html>
