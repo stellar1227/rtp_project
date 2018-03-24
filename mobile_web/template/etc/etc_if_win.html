@@ -311,14 +311,33 @@
         </dl>
     </aside>
 </div>
+<div id="IfIWin" style="display:none"><!-- 레이어 -->
+    <div class="if_i_win">
+        <dl class="total">
+            <dt>총 쇼핑금액 : </dt>
+            <dd>3,711,111원</dd>
+        </dl>
+        <p class="balance">
+            지난 회차 1등 당첨금으로 쇼핑한 결과 <br>
+            <b>6,335,611,487원</b> 남았습니다.
+        </p>
+        <p class="please">
+            쇼핑도 마음껏 하셨으니 <br>
+            우리 사회의 불쌍한 이웃들도 한번 도와주세요!
+        </p>
+    </div>
+</div><!-- //레이어 -->
 <script src="../../resources/lib/jquery-1.12.4.min.js"></script>
 <script src="../../resources/lib/swiper.min.js"></script>
 <script src="../../resources/js/common-ui.min.js"></script>
-<!--<script> common-ui.js로 이동
-    var swiper = new Swiper('#gnb', {
-        slidesPerView: 'auto',
-        spaceBetween: 0
-    });
-</script>-->
+<script>
+    $(function(){
+        $(".btn_if_win").on("click", function(){
+            rtp.primaryUI({
+                contSelector : "IfIWin"
+            })
+        })
+    })
+</script>
 </body>
 </html>

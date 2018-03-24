@@ -963,6 +963,17 @@ select + .mix_t_radio { margin-left: 15px; }
 
 .list_join_benefits .j_list li.odd { width: 380px; }
 
+/*1등 레이어*/
+.if_i_win .total { text-align: center; margin-bottom: 15px; }
+
+.if_i_win .total dt { display: inline-block; font-size: 1.28rem; vertical-align: middle; }
+
+.if_i_win .total dd { display: inline-block; font-size: 1.64rem; vertical-align: middle; font-weight: 700; }
+
+.if_i_win .balance { text-align: center; font-size: 1.28rem; line-height: 160%; margin-bottom: 25px; }
+
+.if_i_win .please { text-align: center; font-size: 1.07rem; line-height: 150%; }
+
 input[data-align="center"] { text-align: center; }
 
 input[data-align="right"] { text-align: right; }

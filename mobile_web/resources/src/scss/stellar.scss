@@ -943,3 +943,32 @@
     }
   }
 }
+/*1등 레이어*/
+.if_i_win{
+  .total{
+    text-align: center;
+    dt{
+      display: inline-block;
+      font-size:$font18px;
+      vertical-align: middle;
+    }
+    dd{
+      display: inline-block;
+      font-size:$font23px;
+      vertical-align: middle;
+      font-weight:$bold;
+    }
+    margin-bottom: 15px;
+  }
+  .balance{
+    text-align: center;
+    font-size:$font18px;
+    line-height:160%;
+    margin-bottom: 25px;
+  }
+  .please{
+    text-align: center;
+    font-size:$font15px;
+    line-height:150%;
+  }
+}
